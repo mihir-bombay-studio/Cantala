@@ -1,0 +1,136 @@
+.header-anouncement {
+  background-color: var(--main-font-color);
+  color: var(--background-main);
+  padding: 16px 0;
+}
+
+#header-anouncement-close {
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+}
+
+#header-anouncement-close svg{
+  fill: #F4EDE2;
+  width: 9.27px;
+  height: 9.27px;
+}
+
+header{
+	background-color: var(--background-main);
+      padding-bottom: 68px;
+}
+
+.header-wrapper {
+    padding-top: 10.5px;
+  background-color: var(--background-main);
+}
+
+.header-upper-section {
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid var(--main-font-color);
+}
+
+.header-upper-left {
+  width: 45%;
+  max-width: 300px;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0;
+}
+
+.header-upper-right {
+    width: 45%;
+    max-width: 170px;
+  font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0;
+}
+
+.header-upper-right-icon {
+	max-height: 16px;
+}
+
+.header-upper-right-icon svg{
+	width: 16px;
+  height: 16px;
+}
+
+.header-nav-list-sub {
+    padding: 10px 26px 10px 0;
+    display: block;
+    border: 0;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: min-content;
+    min-width: 78px;
+    text-align: left;
+    top: 34px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    transition-delay: 0s;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.down-chevron{
+	transition: .4s ease;
+}
+
+.lang-icon .down-chevron svg{
+	margin-bottom: 3px;
+}
+
+.lang-icon:hover .header-nav-list-sub{
+	max-height: 999px;
+    opacity: 1;
+}
+
+.lang-icon:hover .down-chevron{
+	transform: rotate(180deg);
+}
+
+.header-lower {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+    padding-top: 36.5px;
+  padding-bottom: 5.5px;
+}
+
+.header-lower-left .down-chevron{
+  height: 4.37px;
+    display: inherit;
+	transition: .4s ease;
+}
+
+.lower-left-nav-item:hover .down-chevron{
+	transform: rotate(180deg);
+}
+
+.header-lower-left .down-chevron svg{
+	width: 7.5px;
+  margin-left: 2px;
+  height: 100%;
+}
+
+.header-lower-left {
+    width: 33%;
+/*     max-width: 450px; */
+}
+
+.header-lower-middle {
+    width: 33%;
+}
+
+.header-lower-right{
+	width: 33%;
+/*   max-width: 180px; */
+}
+
+.header-lower-right-inner {
+    width: 50%;
+    margin-left: auto;
+}

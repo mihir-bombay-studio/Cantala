@@ -1,0 +1,71 @@
+footer {
+    background-color: var(--main-font-color);
+    padding: 86px 0 55px;
+    color: var(--background-main);
+    letter-spacing: 0;
+}
+
+.footer-nav-list{
+	padding-bottom: 15px;
+}
+
+.footer-upper-section {
+    margin-bottom: 77px;
+}
+
+.social-title {
+    margin-bottom: 21px;
+}
+
+.social-icon {
+    margin-right: 16px;
+}
+
+.payment-cards {
+    width: 270px;
+}
+
+.payment-method img{
+	display: block;
+}
+
+.copyright-text, .designed-by {
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.designed-by-link {
+    text-decoration: underline;
+}
+
+.subscription-form-input {
+    padding: 16px 21px;
+  border: none;
+  width: 65%;
+}
+
+.fns-form-wrapper .submit-btn {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+  color: var(--background-main);
+    cursor: pointer;
+    width: 35%;
+}
+
+.mainLoginInput::-webkit-input-placeholder {
+  font-family: var(--font-body-family);
+    font-size: 16px;
+    line-height: 27px;
+}
+
+.social-icons.flex-box {
+    margin-bottom: 40px;
+}
+
+.fns-title {
+    margin-bottom: 24px;
+}
+
+.social-icons-newslatter-mail {
+    width: 30%;
+}

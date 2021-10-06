@@ -1,0 +1,96 @@
+{{ 'hero.css' | asset_url | stylesheet_tag }}
+
+<div class="hero-wrapper">
+  <div class="container">
+  <div class="hero flex-box justify-between align-center">
+    <div class="hero-left rel">
+      <h1 class="hero-heading main-title">{{ section.settings.hero_heading }}</h1>
+      <div class="hero-desc">{{ section.settings.hero_desc }}</div>
+      <div class="hero-btns flex-box">
+      	{% for block in section.blocks %}
+        {% if block.type == "button" %}
+        <a href="{{ block.settings.button_link }}" class="btn {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+        	{{ block.settings.button_text | escape }}
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="hero-right rel">
+    	<img class="hero-img" src="{{ section.settings.hero_img | img_url: '1280x' }}" alt = "hero-img">
+    </div>
+  </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Hero New",
+    "settings": [
+			{
+              "id": "hero_img",
+              "type": "image_picker",
+              "label": "Select Hero Image"
+            },
+			{
+				"id": "hero_heading",
+				"type": "text",
+				"label": "Hero Heading"
+			},
+			{
+				"id": "hero_desc",
+				"type": "text",
+				"label": "Hero Description"
+			}
+		],
+	"blocks": [
+			{
+                "type": "button",
+                "name": "Hero Button",
+				"limit": 2,
+                "settings": [
+
+                {
+                "id": "button_text",
+                "type": "text",
+                "label": "Button Text"
+
+                },
+                {
+                "id": "button_link",
+                "type": "url",
+                "label": "Button Link"
+                },
+				{
+                  "type": "select",
+                  "id": "button-color",
+                  "options": [
+                    {
+                      "value": "light",
+                      "label": "Light"
+                    },
+                    {
+                      "value": "dark",
+                      "label": "Dark"
+                    }
+                  ],
+                  "default": "dark",
+                  "label": "Dark"
+                }
+              ]
+            }
+		],
+    "presets": [
+        {
+          "name": "Hero New",
+            "category":"section"
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

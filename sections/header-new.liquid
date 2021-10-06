@@ -1,0 +1,147 @@
+{{ 'header.css' | asset_url | stylesheet_tag }}
+
+<header>
+  <div class="header-anouncement">
+    <span class="container flex-box justify-center small-font align-center rel">
+    	{{ section.settings.announcement_text }}
+			<span id="header-anouncement-close">{% include 'icon-close-white' %}</span>
+    </span>
+		</div>
+  <div class="header-wrapper container">
+    <div class="header-upper-section flex-box justify-between">
+      <div class="header-upper-left flex-box justify-between">
+        {% for block in section.blocks %}
+        {% for link in linklists[block.settings.nav_list].links %}
+        <li class="upper-left-nav-list"><a href="{{link.url}}">{{link.title}}</a></li>
+        {% endfor %}
+        {% endfor %}
+      </div>
+      <div class="header-upper-right flex-box justify-between align-center">
+        <div class="header-upper-right-icon search-icon">
+          <a href="#">{% include 'icon-search' %}</a>
+        </div>
+        <div class="header-upper-right-icon user-icon">
+        	<a href="#">{% include 'icon-search' %}</a>
+        </div>
+        <div class="header-upper-right-icon cart-icon">
+        	<a href="#">{% include 'icon-search' %}</a>
+        </div>
+        <div class="lang-icon rel">
+          <a href="#" class="flex-box align-center"><span class="main-lang">NL</span> <span class="down-chevron">{% include 'icon-down-chevron-brown' %}</span></a>
+          <ul class="header-nav-list-sub lang-selector">
+              <li id="lang-en">
+                <a href="#">ENG</a>
+              </li>
+              <li id="lang-nl">
+                <a href="#">FR</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header-lower flex-box justify-between align-center">
+      <div class="header-lower-left flex-box justify-between">
+        {% for block in section.blocks %}
+        {% for link in linklists[block.settings.nav_list_lower_left].links %}
+        <li class="lower-left-nav-list"><a href="{{link.url}}" class="lower-left-nav-item flex-box align-center">{{link.title}}<span class="down-chevron">{% include 'icon-down-chevron-brown' %}</span></a></li>
+        {% endfor %}
+        {% endfor %}
+      </div>
+      
+      <div class="header-lower-middle brand-logo flex-box justify-center">
+      	<a href="/">
+          {% if section.settings.brand_logo != blank %}
+          <img
+               srcset="{% if section.settings.brand_logo.width >= 174 %}{{ section.settings.brand_logo | img_url: '174x' }} 174w{% endif %}"
+               class="brand-logo-size" src="{{ section.settings.brand_logo  | img_url: '150x150', scale: 2 }}"
+               loading="lazy" alt = "brand-logo">
+          {% else %}{{ section.settings.brand_logo_svg }}{% endif %}
+        </a>
+      </div>
+      
+      <div class="header-lower-right">
+        <div class="header-lower-right-inner flex-box justify-between">
+          {% for block in section.blocks %}
+          {% for link in linklists[block.settings.nav_list_lower_right].links %}
+          <li class="lower-right-nav-list"><a href="{{link.url}}" class="lower-right-nav-item">{{link.title}}</a></li>
+          {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+{% schema %}
+  {
+    "name": "header",
+    "settings": [
+		{
+          "id": "announcement_text",
+          "type": "text",
+          "label": "Announcement"
+
+        },
+        {
+        "id": "brand_logo",
+        "type": "image_picker",
+        "label": "Select Brand Logo"
+
+        },
+        {
+        "id": "brand_logo_svg",
+        "type": "text",
+        "label": "Brand Logo SVG"
+
+        }
+	],
+	"blocks": [
+        {
+        "type": "select",
+        "name": "Header Upper Menu",
+        "settings": [
+
+        {
+        "id": "nav_list",
+        "type": "link_list",
+        "label": "Menu"
+
+        }
+      ]
+    },
+	{
+        "type": "add",
+        "name": "Header Lower Menu",
+        "settings": [
+
+        {
+        "id": "nav_list_lower_left",
+        "type": "link_list",
+        "label": "Menu Left"
+
+        },
+		{
+        "id": "nav_list_lower_right",
+        "type": "link_list",
+        "label": "Menu Right"
+
+        }
+      ]
+    }
+],
+"presets": [
+    {
+      "name": "Header New",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

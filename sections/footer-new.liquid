@@ -1,0 +1,249 @@
+{{ 'footer.css' | asset_url | stylesheet_tag }}
+
+<footer>
+
+  <div class="container">
+    <div class="footer-content-wrapper">
+      <div class="footer-upper-section flex-box justify-between">
+        <div class="footer-logo">
+          <a href="/">
+          {% if section.settings.brand_logo != blank %}
+          <img
+               srcset="{% if section.settings.brand_logo.width >= 174 %}{{ section.settings.brand_logo | img_url: '174x' }} 174w{% endif %}"
+               class="brand-logo-size" src="{{ section.settings.brand_logo  | img_url: '150x150', scale: 2 }}"
+               loading="lazy" alt = "brand-logo">
+          {% else %}{{ section.settings.brand_logo_svg }}{% endif %}
+        </a>
+        </div>
+        <div class="footer-left-menu">
+        	{% for block in section.blocks %}
+          {% for link in linklists[block.settings.nav_list_footer_left].links %}
+          <li class="footer-nav-list"><a href="{{link.url}}" class="footer-nav-item">{{link.title}}</a></li>
+          {% endfor %}
+          {% endfor %}
+        </div>
+        <div class="footer-right-menu">
+          {% for block in section.blocks %}
+          {% for link in linklists[block.settings.nav_list_footer_right].links %}
+          <li class="footer-nav-list"><a href="{{link.url}}" class="footer-nav-item">{{link.title}}</a></li>
+          {% endfor %}
+          {% endfor %}
+        </div>
+        <div class="social-icons-newslatter-mail">
+          <div class="social-title medium">Volg ons</div>
+          <div class="social-icons flex-box">
+          	{% for block in section.blocks %}
+            {% if block.type == "Social_Icons" %}
+            <div class="social-icon">
+              <a href="#" class="btn-footer-icons">
+                {% if block.settings.social_icons != blank %}
+                <img
+                     srcset="{% if block.settings.social_icons.width >= 24 %}{{ block.settings.social_icons | img_url: '24x' }} {% endif %}"
+                     src="{{ block.settings.social_icons | img_url : "icon" }}" loading="lazy" alt="">
+                {% elsif block.settings.social_icons_svg != blank %}{{ block.settings.social_icons_svg }}
+                {% else %}{{ 'lifestyle-2' | placeholder_svg_tag }}{% endif %}
+              </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+          <div class="footer-newslatter-subscription">
+            <div class="medium fns-title">
+              {% for block in section.blocks %}
+            {% if block.type == "nl_sub" %}
+              {{block.settings.subscription_heading}}
+              {% endif %}
+              {% endfor %}
+            </div>
+            <div class="fns-form-wrapper flex-box">
+            	{% form 'contact' %}
+                {%- if form.errors -%}
+                {{ form.errors | default_errors  }}
+                {%- endif -%}
+                {%- if form.posted_successfully? -%}
+
+                {%- endif -%}
+                {% endform %}
+                <input class="subscription-form-input" type="email" name="contact[email]" placeholder="Jouw e-mailadres" required>
+                <button class="submit-btn btn medium" type="submit" form="contact_form" value="Submit">
+                  {% for block in section.blocks %}
+                  {% if block.type == "nl_sub" %}
+                  {{block.settings.submit_btn_text}}
+                  {% endif %}
+              	  {% endfor %}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-lower-section flex-box justify-between align-center">
+        <div class="copyright-text">
+        	{% for block in section.blocks %}
+            {% if block.type == "copyright" %}
+            {{ block.settings.copyright_text }}
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="payment-cards flex-box justify-between">
+          {% for block in section.blocks %}
+          {% if block.type == "Payment_icons" %}
+
+          <div class="payment-method"> 
+            {% if block.settings.payment_icons != blank %}
+            <img
+                 srcset="{% if block.settings.payment_icons.width >= 32 %}{{ block.settings.payment_icons | img_url: '32x' }} {% endif %}"
+                 src="{{ block.settings.payment_icons | img_url : "icon" }}" loading="lazy" alt="">
+            {% else %}{{ 'lifestyle-2' | placeholder_svg_tag }}{% endif %}
+          </div>
+
+          {% endif %}
+          {% endfor %}
+    	</div>
+        <div class="designed-by">
+          {% for block in section.blocks %}
+            {% if block.type == "design" %}
+            {{ block.settings.designed_by_text }}
+          	<a href="{{ block.settings.designed_by_link }}" class="designed-by-link">{{ block.settings.designed_by_link_text }}</a>
+            {% endif %}
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</footer>
+{% schema %}
+  {
+    "name": "Footer New",
+    "settings": [
+        {
+        "id": "brand_logo",
+        "type": "image_picker",
+        "label": "Select Brand Logo"
+        },
+        {
+        "id": "brand_logo_svg",
+        "type": "text",
+        "label": "Brand Logo SVG"
+
+        }
+	],
+	"blocks": [
+	{
+        "type": "add",
+        "name": "Footer Menu",
+        "settings": [
+
+        {
+        "id": "nav_list_footer_left",
+        "type": "link_list",
+        "label": "Footer Menu Left"
+
+        },
+		{
+        "id": "nav_list_footer_right",
+        "type": "link_list",
+        "label": "Footer Menu Right"
+
+        }
+      ]
+    },
+	{
+        "type": "Social_Icons",
+        "name": "Social Icons",
+        "limit":4,
+        "settings": [
+        {
+          "id": "social_icons",
+          "type": "image_picker",
+          "label": "Social Icons"
+
+        },
+        {
+          "id": "social_icons_svg",
+          "type": "text",
+          "label": "Social Icons SVG"
+
+        }
+
+        ]
+    },
+	{
+        "type": "copyright",
+        "name": "Copyright Text",
+        "limit":1,
+        "settings": [
+        {
+          "id": "copyright_text",
+          "type": "text",
+          "label": "Copyright Text"
+        }
+        ]
+	},
+    {
+        "type": "design",
+        "name": "Designed By Text",
+        "limit":1,
+        "settings": [
+        {
+          "id": "designed_by_text",
+          "type": "text",
+          "label": "Designed by Text"
+        },
+		{
+          "id": "designed_by_link_text",
+          "type": "text",
+          "label": "Designed by Link Text"
+        },
+        {
+          "id": "designed_by_link",
+          "type": "text",
+          "label": "Designed by Link"
+        }
+        ]
+    },
+	
+    {
+        "type": "Payment_icons",
+        "name": "Payment Gateway",
+        "limit":8,
+        "settings": [
+        {
+          "id": "payment_icons",
+          "type": "image_picker",
+          "label": "Payment Icons"
+        }
+        ]
+    },
+	{
+		"type": "nl_sub",
+		"name": "Newslatter Sub Form",
+		"limit": 1,
+		"settings": [
+			{
+              "type": "text",
+              "id": "subscription_heading",
+              "label": "Subscription Heading"
+            },
+            {
+              "type": "text",
+              "id": "submit_btn_text",
+              "label": "Submit Button Text"
+            }
+		]
+	}
+],
+"presets": [
+    {
+      "name": "Footer New",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

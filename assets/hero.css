@@ -1,0 +1,38 @@
+.hero-wrapper {
+    background-color: var(--background-main);
+}
+
+.hero-left{
+	width: 28%;
+}
+
+.hero-right{
+	width: 68%;
+}
+
+.hero-right img{
+	width: 100%;
+  object-fit: cover;
+  display: block;
+  
+}
+
+.hero-heading {
+    color: var(--main-heading-color);
+      margin-bottom: 36px;
+      position: absolute;
+    width: 140%;
+      z-index: 1;
+}
+
+.hero-desc {
+    font-size: 25px;
+    line-height: 36px;
+  margin-bottom: 36px;
+  margin-top: 218px;
+}
+
+.hero .btn{
+	width: 45%;
+  margin-right: 10px;
+}
