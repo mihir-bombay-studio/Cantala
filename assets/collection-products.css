@@ -56,3 +56,8 @@
 	font-size: 18px;
   line-height: 44px;
 }
+
+.collection-products-wrapper .btn{
+	padding-left: 24px;
+  padding-right: 24px;
+}
