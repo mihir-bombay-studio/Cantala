@@ -87,12 +87,11 @@
 <div class="bg-block">
   <div class="container">
     <div class="margin-extend">
-      <div class="grid-box">
-        
+      <div class="grid-box">        
         {% for collection in collections %}
         {% assign modulo = forloop.index | modulo: 5 %}
         <div class="{% if forloop.first or modulo == 0 %}grid-wide{% else %}grid-normal{% endif %} grid-child">
-          <a class="" href="/products/wasstrips-zeebries">
+          <a class="" href="{{collection.url}}">
             <div class="grid-img-box">
               {% if collection.image %}
               {{ collection.image | img_url: '950x' | img_tag: collection.image.alt }}r
@@ -102,81 +101,13 @@
               {% endif %}
             </div>
             <div class="grid-text-box">
-              <h2 class="grid-heading-text">Alle koffie</h2>
+              <h2 class="grid-heading-text">{{collection.title}}</h2>
               <p class="grid-para">Shop now</p>
             </div>
           </a>
         </div>
         
-        {% endfor %}
-        
-        
-        <div class="grid-normal grid-child">
-          <a class="" href="/products/wasstrips-zeebries">
-            <div class="grid-img-box">
-              <img class="" src="{{ "delete-1.png" | asset_url }}" alt="">
-            </div>
-            <div class="grid-text-box">
-              <h2 class="grid-heading-text">Alle koffie</h2>
-              <p class="grid-para">Shop now</p>
-            </div>
-          </a>
-        </div>
-        <div class="grid-normal grid-child">
-          <a class="" href="/products/wasstrips-zeebries">
-            <div class="grid-img-box">
-              <img class="" src="{{ "delete-1.png" | asset_url }}" alt="">
-            </div>
-            <div class="grid-text-box">
-              <h2 class="grid-heading-text">Alle koffie</h2>
-              <p class="grid-para">Shop now</p>
-            </div>
-          </a>
-        </div>
-        <div class="grid-normal grid-child">
-          <a class="" href="/products/wasstrips-zeebries">
-            <div class="grid-img-box">
-              <img class="" src="{{ "delete-1.png" | asset_url }}" alt="">
-            </div>
-            <div class="grid-text-box">
-              <h2 class="grid-heading-text">Alle koffie</h2>
-              <p class="grid-para">Shop now</p>
-            </div>
-          </a>
-        </div>
-        <div class="grid-normal grid-child">
-          <a class="" href="/products/wasstrips-zeebries">
-            <div class="grid-img-box">
-              <img class="" src="{{ "delete-1.png" | asset_url }}" alt="">
-            </div>
-            <div class="grid-text-box">
-              <h2 class="grid-heading-text">Alle koffie</h2>
-              <p class="grid-para">Shop now</p>
-            </div>
-          </a>
-        </div>
-        <div class="grid-normal grid-child">
-          <a class="" href="/products/wasstrips-zeebries">
-            <div class="grid-img-box">
-              <img class="" src="{{ "delete-1.png" | asset_url }}" alt="">
-            </div>
-            <div class="grid-text-box">
-              <h2 class="grid-heading-text">Alle koffie</h2>
-              <p class="grid-para">Shop now</p>
-            </div>
-          </a>
-        </div>
-        <div class="grid-wide grid-child">
-          <a class="" href="/products/wasstrips-zeebries">
-            <div class="grid-img-box">
-              <img class="" src="{{ "delete-1.png" | asset_url }}" alt="">
-            </div>
-            <div class="grid-text-box">
-              <h2 class="grid-heading-text">Alle koffie</h2>
-              <p class="grid-para">Shop now</p>
-            </div>
-          </a>
-        </div>
+        {% endfor %}        
       </div>
     </div>
   </div>
