@@ -16,7 +16,7 @@
         <div class="gtk-btns flex-box">
       	{% for block in section.blocks %}
         {% if block.type == "button" %}
-        <a href="{{ block.settings.button_link }}" class="btn {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+        <a href="{{ block.settings.button_link }}" class="btn medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
         	{{ block.settings.button_text | escape }}
         </a>
         {% endif %}
