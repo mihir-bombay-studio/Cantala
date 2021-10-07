@@ -1,7 +1,24 @@
+{{ 'ytob.css' | asset_url | stylesheet_tag }}
+
+<div class="ytob-wrapper">
+  <div class="container">
+    <h3 class="ytob-title"></h3>
+    <div class="prod-collections flex-box">
+    	
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Your Taste Our Blend",
+    "settings": [
+		{
+        "id": "ytob-heading",
+        "type": "text",
+        "label": "Section Heading"
+        }	
+	]
   }
 {% endschema %}
 
