@@ -1,7 +1,24 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Collection Products",
+    "settings": [
+		{
+        "id": "collection_products_title",
+        "type": "text",
+        "label": "Section Heading"
+        },
+		{
+			"id": "collection_select",
+			"type": "collection",
+			"label": "Select Collection"
+		}
+	],
+	"presets": [
+    {
+      "name": "Collection Products",
+		"category":"section"
+    }
+  ]
   }
 {% endschema %}
 
