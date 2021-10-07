@@ -101,6 +101,19 @@
     },
     "16336060836f24e7e8": {
       "type": "get-to-know-video",
+      "blocks": {
+        "95b2fb78-a912-4b6d-84eb-de20bbf7b91e": {
+          "type": "button",
+          "settings": {
+            "button_text": "Meer over ons",
+            "button_link": "shopify:\/\/collections",
+            "button-color": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "95b2fb78-a912-4b6d-84eb-de20bbf7b91e"
+      ],
       "settings": {
         "yt-link": "https:\/\/www.youtube.com\/embed\/UqyT8IEBkvY",
         "yt-cover": "shopify:\/\/shop_images\/cover.png",
