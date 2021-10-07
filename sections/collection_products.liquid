@@ -5,8 +5,7 @@
   <div class="container">
     <h2 class="collection-products-title text-center heading-2">{{ section.settings.collection_products_title }}</h2>
     <div class="coll-products">
-    	{% for product in collections[product_handle].products %}
-      a
+    	{% for product in collections[product_handle].products limit:1 %}
       		{{ product.title | escape }}
       	{% endfor %}
     </div>
