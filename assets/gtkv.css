@@ -1,5 +1,10 @@
 .video-gtk{
 	width: 50%;
+  height: 45vh;
+}
+
+.text-gtk {
+    width: 40%;
 }
 
 #video-cover {
