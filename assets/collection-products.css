@@ -8,6 +8,7 @@
 
 .coll-product {
     width: 20%;
+  max-width: 249px;
 }
 
 .product-img-wrap{
