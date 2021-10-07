@@ -32,6 +32,17 @@
     },
     "1633586848e30c4728": {
       "type": "your-taste-our-blend",
+      "blocks": {
+        "b07f4150-9f59-49a4-9466-d22740759c03": {
+          "type": "collection_select",
+          "settings": {
+            "collection_sel": "koffie"
+          }
+        }
+      },
+      "block_order": [
+        "b07f4150-9f59-49a4-9466-d22740759c03"
+      ],
       "settings": {
         "ytob-heading": "Jouw smaak. Onze blends."
       }
