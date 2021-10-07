@@ -1,18 +1,18 @@
 {{ 'ytob.css' | asset_url | stylesheet_tag }}
-{% for block in section.blocks %}
-{% if block.type == "collection_select" %}
-{% assign collection_handle = block.settings.collection_sel %}
-{% endif %}
-{% endfor %}
+
+
+
 
 <div class="ytob-wrapper">
   <div class="container rel">
     <h2 class="ytob-title text-center heading-2">{{section.settings.ytob-heading}}</h2>
     <div class="prod-collections flex-box">
-      {{ collection_handle.title }}
-      {% for coll in collection_handle %}
-      	<div class="prod-collection">{{ coll.title }}</div>
-      {% endfor %}
+      {% for block in section.blocks %}
+		{% if block.type == "collection_select" %}
+      {% assign collection_handle = block.settings.collection_sel %}
+      	<div class="prod-collection">{{ collection_handle.title }}</div>
+      {% endif %}
+	{% endfor %}
     </div>
   </div>
 </div>
