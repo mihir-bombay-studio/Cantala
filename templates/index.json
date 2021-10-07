@@ -109,10 +109,19 @@
             "button_link": "shopify:\/\/collections",
             "button-color": "dark"
           }
+        },
+        "974b1a35-04aa-4f56-a166-590a3acf2e52": {
+          "type": "button",
+          "settings": {
+            "button_text": "Ontdek onze geheimen",
+            "button_link": "shopify:\/\/collections",
+            "button-color": "light"
+          }
         }
       },
       "block_order": [
-        "95b2fb78-a912-4b6d-84eb-de20bbf7b91e"
+        "95b2fb78-a912-4b6d-84eb-de20bbf7b91e",
+        "974b1a35-04aa-4f56-a166-590a3acf2e52"
       ],
       "settings": {
         "yt-link": "https:\/\/www.youtube.com\/embed\/UqyT8IEBkvY",
