@@ -60,10 +60,18 @@
       "settings": {
         "ytob-heading": "Jouw smaak. Onze blends."
       }
+    },
+    "16335966771c2e33e9": {
+      "type": "collection_products",
+      "settings": {
+        "collection_products_title": "Onze bestverkopende koffies",
+        "collection_select": "koffie"
+      }
     }
   },
   "order": [
     "1633523775dbe904ba",
-    "1633586848e30c4728"
+    "1633586848e30c4728",
+    "16335966771c2e33e9"
   ]
 }
