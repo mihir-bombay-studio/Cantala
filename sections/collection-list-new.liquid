@@ -1,7 +1,71 @@
+<style>
+</style>
+
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Collection list new",
+    "settings": [
+		{
+          "id": "announcement_text",
+          "type": "text",
+          "label": "Announcement"
+
+        },
+        {
+        "id": "brand_logo",
+        "type": "image_picker",
+        "label": "Select Brand Logo"
+
+        },
+        {
+        "id": "brand_logo_svg",
+        "type": "text",
+        "label": "Brand Logo SVG"
+
+        }
+	],
+	"blocks": [
+        {
+        "type": "select",
+        "name": "Header Upper Menu",
+        "settings": [
+
+        {
+        "id": "nav_list",
+        "type": "link_list",
+        "label": "Menu"
+
+        }
+      ]
+    },
+	{
+        "type": "add",
+        "name": "Header Lower Menu",
+        "settings": [
+
+        {
+        "id": "nav_list_lower_left",
+        "type": "link_list",
+        "label": "Menu Left"
+
+        },
+		{
+        "id": "nav_list_lower_right",
+        "type": "link_list",
+        "label": "Menu Right"
+
+        }
+      ]
+    }
+],
+"presets": [
+    {
+      "name": "Collection list new",
+		"category":"section"
+    }
+  ]
   }
 {% endschema %}
 
