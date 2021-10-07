@@ -44,11 +44,18 @@
           "settings": {
             "collection_sel": "thee"
           }
+        },
+        "beea1299-e4c5-4f59-8075-6a064a49bfe0": {
+          "type": "collection_select",
+          "settings": {
+            "collection_sel": "cantata-blends"
+          }
         }
       },
       "block_order": [
         "b07f4150-9f59-49a4-9466-d22740759c03",
-        "46a93612-f530-469d-bd8d-74b16b7cbd05"
+        "46a93612-f530-469d-bd8d-74b16b7cbd05",
+        "beea1299-e4c5-4f59-8075-6a064a49bfe0"
       ],
       "settings": {
         "ytob-heading": "Jouw smaak. Onze blends."
