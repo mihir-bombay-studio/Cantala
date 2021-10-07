@@ -4,7 +4,9 @@
   <div class="container rel">
     <h2 class="ytob-title text-center heading-2">{{section.settings.ytob-heading}}</h2>
     <div class="prod-collections flex-box">
-    	a
+      {%- for collection in collections -%}
+      	{{ collection.title }}
+      {% endfor %}
     </div>
   </div>
 </div>
