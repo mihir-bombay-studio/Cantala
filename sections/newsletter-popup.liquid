@@ -87,7 +87,7 @@
   
   
 </style>
-<div class="popup-block">    
+<div class="popup-block" style="display: none;">    
   <div class="rel">
     <h2 class="default-h2">{{ section.settings.header_text }}</h2><span class="pop-close">{% include "icon-x" %}</span>
     <p class="default-text">{{ section.settings.sub_header_text }}</p>
@@ -129,6 +129,23 @@
             {% endform %}
   </div>
 </div>
+
+<script>
+  $(window).scroll(function() { 
+    var t=$(window).scrollTop()+1; 
+    var c=$('html').outerHeight(); 
+    var p=(t/c*100).toFixed(0); 
+    if (p>50) { 
+      $(".popup-block:not(.active)").fadeIn();
+      $(".popup-block").addClass("active");
+    } 
+  }); 
+  
+  $(".popup-block.active").click(function() {
+  	$(".popup-block").fadeOut();
+  });
+  
+</script>
 
 
 {% schema %}
