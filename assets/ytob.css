@@ -20,6 +20,10 @@
     color: var(--background-main);
 }
 
+.coll-title {
+    margin-bottom: 17px;
+}
+
 .coll-url a{
 	font-size: 16px;
     line-height: 22px;
