@@ -87,11 +87,19 @@
 <div class="bg-block">
   <div class="container">
     <div class="margin-extend">
-      <div class="grid-box marg-bottom">
-        <div class="grid-wide grid-child">
+      <div class="grid-box">
+        
+        {% for collection in collections %}
+        {% assign modulo = forloop.index | modulo: 5 %}
+        <div class="{% if forloop.first or modulo == 0 %}grid-wide{% else %}grid-normal{% endif %} grid-child">
           <a class="" href="/products/wasstrips-zeebries">
             <div class="grid-img-box">
-              <img class="" src="{{ "delete-1.png" | asset_url }}" alt="">
+              {% if collection.image %}
+              {{ collection.image | img_url: '950x' | img_tag: collection.image.alt }}
+              {% else %}
+              {% assign alt = collection.title | escape %}
+              {{ collection.products.first.image | img_url: '950x' | img_tag: alt }}
+              {% endif %}
             </div>
             <div class="grid-text-box">
               <h2 class="grid-heading-text">Alle koffie</h2>
@@ -99,6 +107,10 @@
             </div>
           </a>
         </div>
+        
+        {% endfor %}
+        
+        
         <div class="grid-normal grid-child">
           <a class="" href="/products/wasstrips-zeebries">
             <div class="grid-img-box">
