@@ -143,6 +143,25 @@
   </div>
 </div>
 
+<script>
+  $(".grid-1-link").hover(function() {
+    $(".grid-1-link img").css("transform","scale(1.03)")
+    $(".grid-1-link img").css("opacity","0.8")
+  }, function(){
+    $(".grid-1-link img").css("transform","scale(1)")
+    $(".grid-1-link img").css("opacity","1")
+  });
+  
+  $(".grid-6-link").hover(function() {
+    $(".grid-6-link img").css("transform","scale(1.03)")
+    $(".grid-6-link img").css("opacity","0.8")
+  }, function(){
+    $(".grid-6-link img").css("transform","scale(1)")
+    $(".grid-6-link img").css("opacity","1")
+  });
+  
+</script>
+
 {% schema %}
   {
     "name": "Collection list new",
