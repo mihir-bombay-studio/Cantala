@@ -1,3 +1,7 @@
+.collection-products-wrapper{
+	background-color: var(--background-main);
+}
+
 .collection-products-title {
     margin-bottom: 83px;
 }
