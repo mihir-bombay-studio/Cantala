@@ -7,16 +7,21 @@
   margin: 0 auto;
   position: relative;
   flex-wrap: wrap;
-  
 }
 
-.grid-child {
-  background-color: var(--background-main);
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  max-width: none;
-  margin: 0; }
+  .grid-child {
+    background-color: var(--background-main);
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      max-width: none;
+      margin: 0; 
+      }
+
+  .grid-child:hover img {
+    transform: scale(1.03);
+    opacity: .9;
+  }
 
 .grid-wide {
   width: 66.66666%;
