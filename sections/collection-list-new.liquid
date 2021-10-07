@@ -98,7 +98,7 @@
               {{ collection.image | img_url: '950x' | img_tag: collection.image.alt }}r
               {% else %}
               {% assign alt = collection.title | escape %}
-              {{ collection.products[0].image | img_url: '950x' | img_tag: alt }}d
+              {{ collection.products[0].image | img_url: '950x' | img_tag: alt }}{{collection.products[0].title}}
               {% endif %}
             </div>
             <div class="grid-text-box">
