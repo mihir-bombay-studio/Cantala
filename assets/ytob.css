@@ -19,3 +19,9 @@
     left: 10%;
     color: var(--background-main);
 }
+
+.coll-url a{
+	font-size: 16px;
+    line-height: 22px;
+    text-decoration: underline;
+}
