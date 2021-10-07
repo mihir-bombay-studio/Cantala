@@ -9,4 +9,5 @@
 .product-tag{
 	font-size: 13px;
   line-height: 14px;
+  color: var(--main-heading-color);
 }
