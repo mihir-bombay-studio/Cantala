@@ -59,6 +59,23 @@
     letter-spacing: .8px;
     font-size: 16px;
 }
+  input::placeholder, textarea::placeholder {
+    color: #342D25; /* Firefox */
+    font-size: 16px;
+    font-family: var(--font-body-family);
+  }
+
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #342D25; /* Firefox */
+    font-size: 16px;
+    font-family: var(--font-body-family);
+  }
+
+  input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edge */
+    color: #342D25; /* Firefox */
+    font-size: 16px;
+    font-family: var(--font-body-family);
+  }
   
   
 </style>
