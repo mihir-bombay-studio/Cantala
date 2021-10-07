@@ -1,12 +1,13 @@
 {{ 'collection-products.css' | asset_url | stylesheet_tag }}
-{% assign collection_handle = block.settings.collection_select %}
+{% assign product_handle = block.settings.collection_select %}
 
 <div class="collection-products-wrapper">
   <div class="container">
     <h2 class="collection-products-title text-center heading-2">{{ section.settings.collection_products_title }}</h2>
     <div class="coll-products">
-    	{% for coll in collections[collection_handle].products %}
-      		{{ coll.title }}
+    	{% for product in collections[product_handle].products %}
+      a
+      		{{ product.title | escape }}
       	{% endfor %}
     </div>
   </div>
