@@ -1,5 +1,6 @@
 .hero-wrapper {
     background-color: var(--background-main);
+      padding-bottom: 160px;
 }
 
 .hero-left{
