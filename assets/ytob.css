@@ -2,3 +2,7 @@
     background-color: var(--background-slight-dark);
       padding: 102px 0 116px;
 }
+
+.ytob-title{
+	position: absolute;
+}
