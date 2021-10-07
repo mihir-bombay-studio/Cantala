@@ -5,4 +5,6 @@
 
 .ytob-title{
 	position: absolute;
+  top: -125px;
+    left: calc( 50% - 223px );
 }
