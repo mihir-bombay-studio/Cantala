@@ -14,7 +14,7 @@
         <div class="product-title">{{ product.title | escape }}</div>
         <div class="product-price-wrap flex-box align-center justify-between">
           <div class="from-text">vanaf</div>
-          <div class="product-price"><span class="currency">{{ currency.iso_code }}</span><span class="price">{{ product.price | money }}</span></div>
+          <div class="product-price"><span class="currency">{{ currency.iso_code }}</span><span class="price">{{ product.price | money_without_currency }}</span></div>
         </div>
       </div>
       		
