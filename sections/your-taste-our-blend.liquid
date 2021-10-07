@@ -12,7 +12,7 @@
       		{% assign collection_handle = block.settings.collection_sel %}
       		<div class="prod-collection rel">
               <div class="coll-img">
-                <img src="{{ 'hero img.png' | img_url: "540x" }}">
+                <img src="{{ 'hero img.png' | asset_img_url: '300x' }}">
                 {% comment %}
               	{% if collection_handle.image %}
 					{{ collection_handle.image | img_url: '2048x' | img_tag }}
