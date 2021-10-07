@@ -63,6 +63,19 @@
     },
     "16335966771c2e33e9": {
       "type": "collection_products",
+      "blocks": {
+        "0468a5a1-8f31-450e-bc49-b9ab507c987d": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop koffie",
+            "button_link": "shopify:\/\/collections\/koffie",
+            "button-color": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "0468a5a1-8f31-450e-bc49-b9ab507c987d"
+      ],
       "settings": {
         "collection_products_title": "Onze bestverkopende koffies",
         "collection_select": "koffie"
