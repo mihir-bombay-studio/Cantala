@@ -6,7 +6,7 @@
   <div class="container rel">
     <h2 class="ytob-title text-center heading-2">{{section.settings.ytob-heading}}</h2>
     <div class="prod-collections flex-box">
-      {% for coll in collections[collection_handle] %}
+      {% for coll in collections[collection_handle].products %}
       	<div class="prod-collection">{{ coll.title }}</div>
       {% endfor %}
     </div>
