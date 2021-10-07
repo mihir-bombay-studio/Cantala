@@ -13,3 +13,14 @@
     margin-bottom: 4px;
     font-family: 'Athelas';
 }
+
+.product-title {
+    font-size: 20px;
+    line-height: 44px;
+    margin-bottom: 28px;
+}
+
+.from-text {
+    font-size: 14px;
+    line-height: 44px;
+}
