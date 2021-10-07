@@ -20,7 +20,18 @@
 {% schema %}
   {
     "name": "Section name",
-    "settings": [],
+    "settings": [
+		{
+        "id": "yt-link",
+        "type": "text",
+        "label": "Youtube Embeded Link"
+        },
+		{
+			"id": "yt-cover",
+        	"type": "image_picker",
+        	"label": "Video Cover"
+		}
+	],
 	"presets": [
     {
       "name": "Get to know Video",
