@@ -25,3 +25,7 @@
     transform: translate(-50%, -50%);
     cursor: pointer;
 }
+
+.gtk-title {
+    margin-bottom: 35px;
+}
