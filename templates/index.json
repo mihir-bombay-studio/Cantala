@@ -82,6 +82,18 @@
     },
     "16336031087ad04252": {
       "type": "collection_products",
+      "blocks": {
+        "fd7100b7-0527-440c-b86e-5651cd03132c": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop thee",
+            "button-color": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "fd7100b7-0527-440c-b86e-5651cd03132c"
+      ],
       "settings": {
         "collection_products_title": "Thee die in de smaak valt",
         "collection_select": "thee"
