@@ -10,7 +10,7 @@
     <h2 class="ytob-title text-center heading-2">{{section.settings.ytob-heading}}</h2>
     <div class="prod-collections flex-box">
       {{ collection_handle }}
-      {% for coll in collections[collection_handle].products %}
+      {% for coll in collections[collection_handle] %}
       	<div class="prod-collection">{{ coll.title | escape }}</div>
       {% endfor %}
     </div>
