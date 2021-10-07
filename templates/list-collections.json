@@ -1,1 +1,12 @@
-{"sections":{"main":{"type":"main-list-collections","settings":{"image_ratio":"square"}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "collection-list-new",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
