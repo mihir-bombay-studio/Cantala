@@ -181,5 +181,15 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    
+    <script>
+    	$('#play').on('click', function(e) {
+          e.preventDefault();
+          $("#player")[0].src += "?autoplay=1";
+          $('#player').show();
+          $('#video-cover').hide();
+          $('#play').hide();
+		});
+    </script>
   </body>
 </html>
