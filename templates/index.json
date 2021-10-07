@@ -29,9 +29,16 @@
         "hero_heading": "Your Symphony of taste.",
         "hero_desc": "Ontdek het grootste en lekkerste aanbod koffie en thee in België."
       }
+    },
+    "1633586848e30c4728": {
+      "type": "your-taste-our-blend",
+      "settings": {
+        "ytob-heading": "Jouw smaak. Onze blends."
+      }
     }
   },
   "order": [
-    "1633523775dbe904ba"
+    "1633523775dbe904ba",
+    "1633586848e30c4728"
   ]
 }
