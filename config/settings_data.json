@@ -39,10 +39,18 @@
             "settings": {
               "nav_list": "header-upper-menu"
             }
+          },
+          "208d729e-aecd-4b0c-b7e1-3cd03952f32c": {
+            "type": "add",
+            "settings": {
+              "nav_list_lower_left": "header-lower-left",
+              "nav_list_lower_right": "header-lower-right"
+            }
           }
         },
         "block_order": [
-          "60c1e54c-020a-4f8a-b94a-fd3a5468a6df"
+          "60c1e54c-020a-4f8a-b94a-fd3a5468a6df",
+          "208d729e-aecd-4b0c-b7e1-3cd03952f32c"
         ],
         "settings": {
           "announcement_text": "Receive 20% off your next order using code ‘coffeeteagifts’",
