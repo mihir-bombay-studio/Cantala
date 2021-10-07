@@ -6,7 +6,18 @@
     <h2 class="collection-products-title text-center heading-2">{{ section.settings.collection_products_title }}</h2>
     <div class="coll-products">
     	{% for product in collections[product_handle].products limit:1 %}
-      		{{ product.title | escape }}
+      <div class="coll-product">
+        <div class="product-img-wrap">
+        	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x282' }}">
+        </div>
+        <div class="product-tag">{% for tag in product.tag limit:1 %}{{ product.tag }}{% endfor %}</div>
+        <div class="product-title">{{ product.title | escape }}</div>
+        <div class="product-price-wrap flex-box justify-between">
+          <div class="from-text">vanaf</div>
+          <div class="product-price">{{ product.price | money }}</div>
+        </div>
+      </div>
+      		
       	{% endfor %}
     </div>
   </div>
