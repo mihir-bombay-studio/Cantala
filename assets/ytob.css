@@ -12,3 +12,10 @@
 .prod-collection {
     width: 33%;
 }
+
+.coll-title-url {
+    position: absolute;
+    bottom: 47px;
+    left: 10%;
+    color: var(--background-main);
+}
