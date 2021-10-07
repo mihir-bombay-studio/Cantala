@@ -12,9 +12,9 @@
         </div>
         <div class="product-tag bold">{% for tag in product.tags limit:1 %}{{ tag }}{% endfor %}</div>
         <div class="product-title">{{ product.title | escape }}</div>
-        <div class="product-price-wrap flex-box justify-between">
+        <div class="product-price-wrap flex-box align-center justify-between">
           <div class="from-text">vanaf</div>
-          <div class="product-price">{{ product.price | money }}</div>
+          <div class="product-price"><span class="currency">EUR</span><span class="price">{{ product.price | money }}</span></div>
         </div>
       </div>
       		
