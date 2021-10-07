@@ -20,11 +20,19 @@
     padding: 14px 44px;
     margin-top: 30px;
   }
+  .popup-block {
+    position: fixed;
+    z-index: 10;
+    bottom: 21px;
+    right: 23px;
+    background-color: #EBDCC2;
+    padding: 37px 39px;
+  }
   
   
 </style>
 <div class="popup-block">    
-  <div class="more-block">
+  <div class="">
     <h2 class="default-h2">{{ section.settings.header_text }}</h2>
     <p class="default-text">{{ section.settings.sub_header_text }}</p>
     {% form 'customer', class: 'newsletter-form' %}
