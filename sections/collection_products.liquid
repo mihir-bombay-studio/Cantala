@@ -1,3 +1,11 @@
+{{ 'collection-products.css' | asset_url | stylesheet_tag }}
+
+<div class="collection-products-wrapper">
+  <div class="container">
+  	
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "Collection Products",
@@ -13,6 +21,43 @@
 			"label": "Select Collection"
 		}
 	],
+	"blocks": [
+			{
+                "type": "button",
+                "name": "Hero Button",
+				"limit": 1,
+                "settings": [
+
+                {
+                "id": "button_text",
+                "type": "text",
+                "label": "Button Text"
+
+                },
+                {
+                "id": "button_link",
+                "type": "url",
+                "label": "Button Link"
+                },
+				{
+                  "type": "select",
+                  "id": "button-color",
+                  "options": [
+                    {
+                      "value": "light",
+                      "label": "Light"
+                    },
+                    {
+                      "value": "dark",
+                      "label": "Dark"
+                    }
+                  ],
+                  "default": "dark",
+                  "label": "Dark"
+                }
+              ]
+            }
+		],
 	"presets": [
     {
       "name": "Collection Products",
