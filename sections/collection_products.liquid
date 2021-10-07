@@ -22,7 +22,7 @@
     </div>
     {% for block in section.blocks %}
         {% if block.type == "button" %}
-        <a href="{{ block.settings.button_link }}" class="btn center-it medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+        <a href="{{ product_handle.url }}" class="btn center-it medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
         	{{ block.settings.button_text | escape }}
         </a>
         {% endif %}
@@ -57,11 +57,6 @@
                 "type": "text",
                 "label": "Button Text"
 
-                },
-                {
-                "id": "button_link",
-                "type": "url",
-                "label": "Button Link"
                 },
 				{
                   "type": "select",
