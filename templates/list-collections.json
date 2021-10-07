@@ -8,9 +8,17 @@
         "button_text": "Ontdek onze geheimen",
         "button_url": "shopify:\/\/blogs\/news"
       }
+    },
+    "1633605615af98ec87": {
+      "type": "newsletter-popup",
+      "settings": {
+        "header_text": "Join the coffee and tea lovers club",
+        "sub_header_text": "Blijf op de hoogte van nieuwe producten en ontvang onze tips als eerste."
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1633605615af98ec87"
   ]
 }
