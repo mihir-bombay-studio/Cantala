@@ -95,7 +95,7 @@
           <a class="" href="/products/wasstrips-zeebries">
             <div class="grid-img-box">
               {% if collection.image %}
-              {{ collection.image | img_url: '950x' | img_tag: collection.image.alt }}
+              {{ collection.image | img_url: '950x' | img_tag: collection.image.alt }}r
               {% else %}
               {% assign alt = collection.title | escape %}
               {{ collection.products.first.image | img_url: '950x' | img_tag: alt }}d
