@@ -68,7 +68,6 @@
           "type": "button",
           "settings": {
             "button_text": "Shop koffie",
-            "button_link": "shopify:\/\/collections\/koffie",
             "button-color": "dark"
           }
         }
@@ -78,7 +77,7 @@
       ],
       "settings": {
         "collection_products_title": "Onze bestverkopende koffies",
-        "collection_select": "koffie"
+        "collection_select": "chai"
       }
     }
   },
