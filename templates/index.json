@@ -177,6 +177,13 @@
         "big_img_size": 60,
         "small_img_size": 50
       }
+    },
+    "1633685159dc1181f5": {
+      "type": "discover-blogs",
+      "settings": {
+        "dis_blog_heading": "Ontdek onze laatste blog posts",
+        "dis_blog_desc": "Onze reizen hebben ons een schat van informatie opgeleverd. Geheimen die we graag delen. Op zoek naar een nieuwe smaak? Je leest hier alle updates over ons assortiment."
+      }
     }
   },
   "order": [
@@ -186,6 +193,7 @@
     "16336031087ad04252",
     "1633672137a5d73e94",
     "16336060836f24e7e8",
-    "1633678277ec1a08eb"
+    "1633678277ec1a08eb",
+    "1633685159dc1181f5"
   ]
 }
