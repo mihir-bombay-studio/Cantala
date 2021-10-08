@@ -18,9 +18,13 @@
     line-height: 27px;
 }
 
-.ns-sub-form-input-wrap{
+.ns-form-wrapper form{
 	width: 100%;
     display: flex;
+}
+
+.ns-sub-form-input-wrap{
+	width: 100%;
 }
 
 .ns-form-wrapper.flex-box {
