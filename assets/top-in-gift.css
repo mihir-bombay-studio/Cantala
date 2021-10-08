@@ -24,6 +24,11 @@
     left: 83px;
 }
 
+.tig-desc-button-wrapper {
+    margin-left: 58px;
+    width: 80%;
+}
+
 .tig-content-right {
     width: 45%;
 }
