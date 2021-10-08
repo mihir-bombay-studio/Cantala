@@ -35,6 +35,10 @@
     width: 45%;
 }
 
+.tig-desc {
+    margin-bottom: 10px;
+}
+
 .tig-img-wrap{
 	position: absolute;
 }
