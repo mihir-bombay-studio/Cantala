@@ -194,11 +194,18 @@
           "settings": {
             "featured_article": "news\/koffie-article"
           }
+        },
+        "af5fa9fb-ed21-4273-bb89-ae3397906ef4": {
+          "type": "article_block",
+          "settings": {
+            "featured_article": "news\/thee-article"
+          }
         }
       },
       "block_order": [
         "5a95ce76-4c2d-4b15-9581-b205bc888245",
-        "2874687e-ea54-456d-8334-7781f1936997"
+        "2874687e-ea54-456d-8334-7781f1936997",
+        "af5fa9fb-ed21-4273-bb89-ae3397906ef4"
       ],
       "settings": {
         "dis_blog_heading": "Ontdek onze laatste blog posts",
