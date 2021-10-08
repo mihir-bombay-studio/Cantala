@@ -9,6 +9,7 @@
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
+  <p class="subheading">{% if template contains "legal" %}Legal{% endif %}</p>
   <div class="rte">
     {{ page.content }}
   </div>
