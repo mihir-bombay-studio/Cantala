@@ -189,16 +189,16 @@
             "button-color": "light"
           }
         },
-        "8cdc94d8-bb07-42a8-9751-a90aaeee98f2": {
-          "type": "blog_block",
+        "2874687e-ea54-456d-8334-7781f1936997": {
+          "type": "article_block",
           "settings": {
-            "featured_blog": ""
+            "featured_article": "news\/koffie-article"
           }
         }
       },
       "block_order": [
         "5a95ce76-4c2d-4b15-9581-b205bc888245",
-        "8cdc94d8-bb07-42a8-9751-a90aaeee98f2"
+        "2874687e-ea54-456d-8334-7781f1936997"
       ],
       "settings": {
         "dis_blog_heading": "Ontdek onze laatste blog posts",
