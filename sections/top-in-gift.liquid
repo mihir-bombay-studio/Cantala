@@ -8,7 +8,65 @@
 {% schema %}
   {
     "name": "Top in Gift",
-    "settings": [],
+    "settings": [
+		{
+        "id": "tig-heading",
+        "type": "text",
+        "label": "Section Heading"
+        },
+		{
+        "id": "tig-desc",
+        "type": "text",
+        "label": "Section Description"
+        },
+		{
+        "id": "tig-big-img",
+        "type": "image_picker",
+        "label": "Big Image"
+        },
+		{
+        "id": "tig-small-img",
+        "type": "image_picker",
+        "label": "Small Image"
+        }
+	],
+	"blocks": [
+			{
+                "type": "button",
+                "name": "Button",
+				"limit": 1,
+                "settings": [
+
+                {
+                "id": "button_text",
+                "type": "text",
+                "label": "Button Text"
+
+                },
+                {
+                "id": "button_link",
+                "type": "url",
+                "label": "Button Link"
+                },
+				{
+                  "type": "select",
+                  "id": "button-color",
+                  "options": [
+                    {
+                      "value": "light",
+                      "label": "Light"
+                    },
+                    {
+                      "value": "dark",
+                      "label": "Dark"
+                    }
+                  ],
+                  "default": "dark",
+                  "label": "Dark"
+                }
+              ]
+            }
+		],
 	"presets": [
     {
       "name": "Top in Gift",
