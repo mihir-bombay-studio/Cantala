@@ -9,6 +9,8 @@
 
 .dis-blog-title{
 	position: absolute;
+  width: 30%;
+    top: -84px;
 }
 
 .dis-blog-content-right{
