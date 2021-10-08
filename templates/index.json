@@ -152,6 +152,14 @@
         "gtk-title": "Maak kennis met Cantata",
         "gtk-desc": "Er zijn drie talen die iedereen ter wereld spreekt: die van emotie, muziek en … smaak. Cantata brengt ze samen. Cantata neemt jou mee doorheen een smaakvolle ontdekkingsreis, op zoek naar de koffie of thee die perfect bij jouw smaak past."
       }
+    },
+    "1633678277ec1a08eb": {
+      "type": "top-in-gift",
+      "settings": {
+        "tig_heading": "Diensten voor bedrijven",
+        "tig_desc": "Ook op kantoor wil je genieten van een stomend kopje koffie of thee. Cantata zorgt ervoor dat jij op tijd de juiste blends ontvangt zodat je nooit zonder voorraad zit. Contacteer ons voor meer informatie, we vertellen je graag meer over de mogelijkheden.",
+        "tig_big_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png"
+      }
     }
   },
   "order": [
@@ -160,6 +168,7 @@
     "16335966771c2e33e9",
     "16336031087ad04252",
     "1633672137a5d73e94",
-    "16336060836f24e7e8"
+    "16336060836f24e7e8",
+    "1633678277ec1a08eb"
   ]
 }
