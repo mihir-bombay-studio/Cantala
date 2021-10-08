@@ -1,5 +1,6 @@
 .discover-blogs-wrapper {
     background-color: var(--background-slight-dark);
+      padding: 60px 0 66px;
 }
 
 .dis-blog-content-left {
