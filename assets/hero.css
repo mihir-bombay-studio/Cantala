@@ -22,7 +22,7 @@
     color: var(--main-heading-color);
       margin-bottom: 36px;
       position: absolute;
-    width: 140%;
+    width: 540px;
       z-index: 1;
 }
 
