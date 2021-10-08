@@ -177,33 +177,6 @@
         "big_img_size": 60,
         "small_img_size": 50
       }
-    },
-    "1633685159dc1181f5": {
-      "type": "discover-blogs",
-      "blocks": {
-        "08c4b990-547e-4cd1-8b33-98069585e2e7": {
-          "type": "button",
-          "settings": {
-            "button_text": "Lees alle geheimen",
-            "button_link": "shopify:\/\/blogs\/news",
-            "button-color": "light"
-          }
-        },
-        "6b093fe5-a3f6-4859-83d7-ae588e348f05": {
-          "type": "blog_block",
-          "settings": {
-            "featured_blog": "news"
-          }
-        }
-      },
-      "block_order": [
-        "08c4b990-547e-4cd1-8b33-98069585e2e7",
-        "6b093fe5-a3f6-4859-83d7-ae588e348f05"
-      ],
-      "settings": {
-        "dis_blog_heading": "Ontdek onze laatste blog posts",
-        "dis_blog_desc": "Onze reizen hebben ons een schat van informatie opgeleverd. Geheimen die we graag delen. Op zoek naar een nieuwe smaak? Je leest hier alle updates over ons assortiment."
-      }
     }
   },
   "order": [
@@ -213,7 +186,6 @@
     "16336031087ad04252",
     "1633672137a5d73e94",
     "16336060836f24e7e8",
-    "1633678277ec1a08eb",
-    "1633685159dc1181f5"
+    "1633678277ec1a08eb"
   ]
 }
