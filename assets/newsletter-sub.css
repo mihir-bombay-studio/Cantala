@@ -47,7 +47,7 @@
   cursor: pointer;
 }
 
-.checkbox.selected {
+.checkbox.selected .checked {
 	width: 10px;
   height: 10px;
   margin-top: 2px;
