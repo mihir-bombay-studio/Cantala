@@ -155,6 +155,19 @@
     },
     "1633678277ec1a08eb": {
       "type": "top-in-gift",
+      "blocks": {
+        "887f038f-2e80-479b-ab0b-092cf60e53d2": {
+          "type": "button",
+          "settings": {
+            "button_text": "Ontdek meer",
+            "button_link": "shopify:\/\/collections",
+            "button-color": "light"
+          }
+        }
+      },
+      "block_order": [
+        "887f038f-2e80-479b-ab0b-092cf60e53d2"
+      ],
       "settings": {
         "tig_heading": "Diensten voor bedrijven",
         "tig_desc": "Ook op kantoor wil je genieten van een stomend kopje koffie of thee. Cantata zorgt ervoor dat jij op tijd de juiste blends ontvangt zodat je nooit zonder voorraad zit. Contacteer ons voor meer informatie, we vertellen je graag meer over de mogelijkheden.",
