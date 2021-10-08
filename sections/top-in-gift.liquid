@@ -22,7 +22,7 @@
       {% endif %}
     </div>
     <div class="tig-content-right rel">
-      <div class="tig-img-wrap tig-big-img-wrap" style="width: {{ section.settings.big_img_size }}px">
+      <div class="tig-img-wrap tig-big-img-wrap" style="width: {{ section.settings.big_img_size }}%">
         <img class="tig-img tig-big-img" src="{{ section.settings.tig_big_img | img_url: '1280x' }}" alt = "tig-img">
       </div>
     </div>
@@ -52,12 +52,12 @@
 		{
         "type": "range",
         "id": "big_img_size",
-        "min": 100,
-        "max": 1200,
-        "step": 50,
+        "min": 1,
+        "max": 100,
+        "step": 1,
         "unit": "%",
         "label": "Image size",
-        "default": 500
+        "default": 50
         },
 		{
         "id": "tig_small_img",
