@@ -9,3 +9,11 @@
 .dis-blog-content-right{
 	width: 65%;
 }
+
+.featured-article{
+	width: 30%;
+}
+
+.featured-article img{
+	width: 100%;
+}
