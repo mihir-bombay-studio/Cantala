@@ -22,7 +22,7 @@
               <div class="article-img">
                 {{ article.image | img_url: '2048x' | img_tag }}
               </div>
-              <div class="article-title">{{ article.title }}</div>
+              <a href="{{ article.url }}" class="article-title">{{ article.title }}</a>
         	</div>
         {% endif %}
         {% endfor %}
