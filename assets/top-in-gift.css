@@ -4,5 +4,11 @@
 }
 
 .top-in-gift-background{
-	width: 100%;
+	width: calc( 100% + 25px );
+    display: block !important;
+    height: 100%;
+    position: absolute;
+    left: 25px;
+    top: 0;
+    background-color: var(--background-slight-dark);
 }
