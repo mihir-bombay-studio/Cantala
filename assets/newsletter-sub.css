@@ -6,6 +6,7 @@
 
 .ns-form-wrapper .submit-btn {
     background-color: var(--main-font-color);
+      border: none;
   color: var(--background-main);
     cursor: pointer;
     width: 20%;
