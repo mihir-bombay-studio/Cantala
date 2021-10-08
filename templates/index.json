@@ -133,6 +133,19 @@
     },
     "1633672137a5d73e94": {
       "type": "top-in-gift",
+      "blocks": {
+        "abdc0a23-b60e-42d0-9d20-562a74ae9709": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop een geschenk",
+            "button_link": "shopify:\/\/collections",
+            "button-color": "light"
+          }
+        }
+      },
+      "block_order": [
+        "abdc0a23-b60e-42d0-9d20-562a74ae9709"
+      ],
       "settings": {
         "tig_heading": "Toppers in geschenken",
         "tig_desc": "Wie je ook in de bloemetjes wil zetten, hier vind je ongetwijfeld jouw match! Of je nu gaat voor koffie of thee, we hebben een mooi aanbod in alle prijscategorieën en voor iedere smaak.",
