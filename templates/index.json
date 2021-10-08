@@ -188,10 +188,17 @@
             "button_link": "shopify:\/\/blogs\/news",
             "button-color": "light"
           }
+        },
+        "6b093fe5-a3f6-4859-83d7-ae588e348f05": {
+          "type": "blog_block",
+          "settings": {
+            "featured_blog": "news"
+          }
         }
       },
       "block_order": [
-        "08c4b990-547e-4cd1-8b33-98069585e2e7"
+        "08c4b990-547e-4cd1-8b33-98069585e2e7",
+        "6b093fe5-a3f6-4859-83d7-ae588e348f05"
       ],
       "settings": {
         "dis_blog_heading": "Ontdek onze laatste blog posts",
