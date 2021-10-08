@@ -148,6 +148,7 @@ h1, h2, h3, h4, h5, h6{
     padding-bottom: 15px;
     text-align: center;
   	width: fit-content;
+  	transition: .4s ease;
 }
 
 .btn-dark {
@@ -157,6 +158,11 @@ h1, h2, h3, h4, h5, h6{
 
 .btn-light{
 	border: 1.5px solid;
+}
+
+.btn-light:hover{
+	background-color: var(--main-font-color);
+    color: var(--background-main);
 }
 
 @media (max-width: 1440px) {
