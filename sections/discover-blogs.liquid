@@ -1,10 +1,27 @@
 {{ 'discover-blogs.css' | asset_url | stylesheet_tag }}
 
 <div class="discover-blogs-wrapper">
-  <div class="container">
+  <div class="container rel">
     <div class="dis-blogs-content flex-box justify-between">
-      <div class="dis-blog-content-left"></div>
-      <div class="dis-blog-content-right flex-box justify-between"></div>
+      <div class="dis-blog-content-left">
+        <h2 class="dis-blog-title heading-2">{{ section.settings.dis_blog_heading }}</h2>
+        <div class="dis-blog-desc">{{ section.settings.dis_blog_desc }}</div>
+        {% for block in section.blocks %}
+        {% if block.type == "button" %}
+        <a href="{{ block.settings.button_link }}" class="btn medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+          {{ block.settings.button_text | escape }}
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <div class="dis-blog-content-right flex-box justify-between">
+      	{% for block in section.blocks %}
+        {% if block.type == "blog_block" %}
+        {% assign blog = block.settings.featured_blog %}
+        	<div
+        {% endif %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
