@@ -1,7 +1,81 @@
+{{ 'discover-blogs.css' | asset_url | stylesheet_tag }}
+
+<div class="discover-blogs-wrapper">
+  <div class="container">
+  	
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Discover Blogs",
+    "settings": [
+		{
+        "id": "dis_blog_heading",
+        "type": "text",
+        "label": "Section Heading"
+        },
+		{
+        "id": "dis_blog_desc",
+        "type": "text",
+        "label": "Section Description"
+        }
+	],
+	"blocks": [
+			{
+                "type": "button",
+                "name": "Button",
+				"limit": 1,
+                "settings": [
+
+                {
+                "id": "button_text",
+                "type": "text",
+                "label": "Button Text"
+
+                },
+                {
+                "id": "button_link",
+                "type": "url",
+                "label": "Button Link"
+                },
+				{
+                  "type": "select",
+                  "id": "button-color",
+                  "options": [
+                    {
+                      "value": "light",
+                      "label": "Light"
+                    },
+                    {
+                      "value": "dark",
+                      "label": "Dark"
+                    }
+                  ],
+                  "default": "dark",
+                  "label": "Dark"
+                }
+              ]
+            },
+			{
+				"type": "blog_block",
+				"name": "Blog",
+				"limit": 3,
+				"settings": [
+					{
+                      "type": "blog",
+                      "id": "featured_blog",
+                      "label": "Featured blog"
+					}
+				]
+			}
+		],
+	"presets": [
+    {
+      "name": "Discover Blogs",
+		"category":"section"
+    }
+  ]
   }
 {% endschema %}
 
