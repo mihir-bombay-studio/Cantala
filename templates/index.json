@@ -130,6 +130,11 @@
         "gtk-title": "Maak kennis met Cantata",
         "gtk-desc": "Er zijn drie talen die iedereen ter wereld spreekt: die van emotie, muziek en … smaak. Cantata brengt ze samen. Cantata neemt jou mee doorheen een smaakvolle ontdekkingsreis, op zoek naar de koffie of thee die perfect bij jouw smaak past."
       }
+    },
+    "1633672137a5d73e94": {
+      "type": "top-in-gift",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -137,6 +142,7 @@
     "1633586848e30c4728",
     "16335966771c2e33e9",
     "16336031087ad04252",
-    "16336060836f24e7e8"
+    "16336060836f24e7e8",
+    "1633672137a5d73e94"
   ]
 }
