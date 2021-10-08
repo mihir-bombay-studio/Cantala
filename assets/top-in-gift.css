@@ -44,7 +44,9 @@
 }
 
 .tig-big-img-wrap {
-	
+	right: 25px;
+    top: -139%;
+    height: 641px;
 }
 
 .tig-img-wrap img {
