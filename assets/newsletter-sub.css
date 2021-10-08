@@ -38,3 +38,16 @@
 .checkbox-wrap{
 	margin-top: 11px;
 }
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+    margin-top: 11px;
+}
+
+.checkbox-label {
+    line-height: 27px;
+    font-size: 12px;
+    margin-top: 7px;
+}
