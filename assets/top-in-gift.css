@@ -13,3 +13,9 @@
     background-color: var(--background-slight-dark);
       z-index: -1;
 }
+
+.tig-img-wrap img {
+	width: 100%;
+  object-fit: cover;
+  display: block;
+}
