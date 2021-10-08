@@ -4,9 +4,15 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "16336890810a74a79c": {
+      "type": "legal",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "16336890810a74a79c"
   ]
 }
