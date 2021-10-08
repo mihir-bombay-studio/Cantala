@@ -196,6 +196,12 @@
         "dis_blog_desc": "Onze reizen hebben ons een schat van informatie opgeleverd. Geheimen die we graag delen. Op zoek naar een nieuwe smaak? Je leest hier alle updates over ons assortiment."
       }
     },
+    "1633697619cc244f04": {
+      "type": "newsletter-subs",
+      "settings": {
+        "nl_sub_heading": "Schrijf je in op onze nieuwsbrief."
+      }
+    },
     "1633678277ec1a08eb": {
       "type": "top-in-gift",
       "blocks": {
@@ -218,12 +224,6 @@
         "big_img_size": 60,
         "small_img_size": 50
       }
-    },
-    "1633697619cc244f04": {
-      "type": "newsletter-subs",
-      "settings": {
-        "nl_sub_heading": "Schrijf je in op onze nieuwsbrief."
-      }
     }
   },
   "order": [
@@ -234,7 +234,7 @@
     "1633672137a5d73e94",
     "16336060836f24e7e8",
     "16336855830773a088",
-    "1633678277ec1a08eb",
-    "1633697619cc244f04"
+    "1633697619cc244f04",
+    "1633678277ec1a08eb"
   ]
 }
