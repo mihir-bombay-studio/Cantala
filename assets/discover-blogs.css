@@ -1,3 +1,7 @@
+.discover-blogs-wrapper {
+    background-color: var(--background-slight-dark);
+}
+
 .dis-blog-content-left {
     width: 30%;
 }
