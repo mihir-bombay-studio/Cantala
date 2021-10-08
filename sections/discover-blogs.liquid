@@ -15,14 +15,14 @@
         {% endfor %}
       </div>
       <div class="dis-blog-content-right flex-box justify-between">
-      	{% for block in section.blocks %}
-        {% if block.type == "blog_block" %}
-        {% assign blog = block.settings.featured_blog %}
+      	{% for article in section.blocks %}
+        {% if block.type == "article_block" %}
+        {% assign article = block.settings.featured_article %}
         	<div class="featured-blog">
               <div class="blog-img">
-                {{ article.image.src | img_url: '500x' }}
+                {{ article.image | img_url: '2048x' | img_tag }}
               </div>
-              <div class="blog-title">{{ blog.title }}</div>
+              <div class="blog-title">{{ article.title }}</div>
         	</div>
         {% endif %}
         {% endfor %}
@@ -83,14 +83,14 @@
               ]
             },
 			{
-				"type": "blog_block",
-				"name": "Blog",
+				"type": "article_block",
+				"name": "Article",
 				"limit": 3,
 				"settings": [
 					{
                       "type": "article",
-                      "id": "featured_blog",
-                      "label": "Featured blog"
+                      "id": "featured_article",
+                      "label": "Featured article"
 					}
 				]
 			}
