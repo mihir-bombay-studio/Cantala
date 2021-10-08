@@ -33,6 +33,10 @@
     width: 45%;
 }
 
+.tig-img-wrap{
+	position: absolute;
+}
+
 .tig-img-wrap img {
 	width: 100%;
   object-fit: cover;
