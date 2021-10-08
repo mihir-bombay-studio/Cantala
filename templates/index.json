@@ -155,29 +155,6 @@
         "gtk-desc": "Er zijn drie talen die iedereen ter wereld spreekt: die van emotie, muziek en … smaak. Cantata brengt ze samen. Cantata neemt jou mee doorheen een smaakvolle ontdekkingsreis, op zoek naar de koffie of thee die perfect bij jouw smaak past."
       }
     },
-    "1633678277ec1a08eb": {
-      "type": "top-in-gift",
-      "blocks": {
-        "887f038f-2e80-479b-ab0b-092cf60e53d2": {
-          "type": "button",
-          "settings": {
-            "button_text": "Ontdek meer",
-            "button_link": "shopify:\/\/collections",
-            "button-color": "light"
-          }
-        }
-      },
-      "block_order": [
-        "887f038f-2e80-479b-ab0b-092cf60e53d2"
-      ],
-      "settings": {
-        "tig_heading": "Diensten voor bedrijven",
-        "tig_desc": "Ook op kantoor wil je genieten van een stomend kopje koffie of thee. Cantata zorgt ervoor dat jij op tijd de juiste blends ontvangt zodat je nooit zonder voorraad zit. Contacteer ons voor meer informatie, we vertellen je graag meer over de mogelijkheden.",
-        "tig_big_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png",
-        "big_img_size": 60,
-        "small_img_size": 50
-      }
-    },
     "16336855830773a088": {
       "type": "discover-blogs",
       "blocks": {
@@ -218,6 +195,29 @@
         "dis_blog_heading": "Ontdek onze laatste blog posts",
         "dis_blog_desc": "Onze reizen hebben ons een schat van informatie opgeleverd. Geheimen die we graag delen. Op zoek naar een nieuwe smaak? Je leest hier alle updates over ons assortiment."
       }
+    },
+    "1633678277ec1a08eb": {
+      "type": "top-in-gift",
+      "blocks": {
+        "887f038f-2e80-479b-ab0b-092cf60e53d2": {
+          "type": "button",
+          "settings": {
+            "button_text": "Ontdek meer",
+            "button_link": "shopify:\/\/collections",
+            "button-color": "light"
+          }
+        }
+      },
+      "block_order": [
+        "887f038f-2e80-479b-ab0b-092cf60e53d2"
+      ],
+      "settings": {
+        "tig_heading": "Diensten voor bedrijven",
+        "tig_desc": "Ook op kantoor wil je genieten van een stomend kopje koffie of thee. Cantata zorgt ervoor dat jij op tijd de juiste blends ontvangt zodat je nooit zonder voorraad zit. Contacteer ons voor meer informatie, we vertellen je graag meer over de mogelijkheden.",
+        "tig_big_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png",
+        "big_img_size": 60,
+        "small_img_size": 50
+      }
     }
   },
   "order": [
@@ -227,7 +227,7 @@
     "16336031087ad04252",
     "1633672137a5d73e94",
     "16336060836f24e7e8",
-    "1633678277ec1a08eb",
-    "16336855830773a088"
+    "16336855830773a088",
+    "1633678277ec1a08eb"
   ]
 }
