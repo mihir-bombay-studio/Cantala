@@ -3,6 +3,16 @@
 <div class="top-in-gift-wrapper container rel">
     <div class="top-in-gift-background"></div>
   	<h2 class="tig-title heading-2">{{ section.settings.tig_heading }}</h2>
+  <div class="tig-desc-button-wrapper">
+    <div class="tig-desc">{{ section.settings.tig_desc }}</div>
+    {% for block in section.blocks %}
+    {% if block.type == "button" %}
+    <a href="{{ block.settings.button_link }}" class="btn {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+      {{ block.settings.button_text | escape }}
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
     
 </div>
 
