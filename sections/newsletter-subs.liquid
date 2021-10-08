@@ -11,11 +11,12 @@
       {%- if form.posted_successfully? -%}
 
       {%- endif -%}
-
+		<div class="ns-sub-form-input-wrap">
       <input class="subscription-form-input" type="email" name="contact[email]" placeholder="Jouw e-mailadres" required>
       <button class="submit-btn btn medium" type="submit" form="contact_form" value="Submit">
         Inschrijven
         </button>
+      </div>
       <input type="checkbox" id="tnc" name="tnc" value="Terms">
 		<label for="tnc"> Ik ga akkoord met de voorwaarden en heb de privacy policy gelezen.</label>
         {% endform %}
