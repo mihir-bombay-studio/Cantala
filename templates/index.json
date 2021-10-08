@@ -134,6 +134,8 @@
     "1633672137a5d73e94": {
       "type": "top-in-gift",
       "settings": {
+        "tig_heading": "Toppers in geschenken",
+        "tig_desc": ""
       }
     }
   },
