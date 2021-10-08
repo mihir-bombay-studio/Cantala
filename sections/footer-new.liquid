@@ -66,13 +66,13 @@
                 
                 <input class="subscription-form-input" type="email" name="contact[email]" placeholder="Jouw e-mailadres" required>
                 <button class="submit-btn btn medium" type="submit" form="contact_form" value="Submit">
-                  {% endform %}
                   {% for block in section.blocks %}
                   {% if block.type == "nl_sub" %}
                   {{block.settings.submit_btn_text}}
                   {% endif %}
               	  {% endfor %}
               </button>
+              {% endform %}
             </div>
           </div>
         </div>
