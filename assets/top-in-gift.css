@@ -38,8 +38,18 @@
 	position: absolute;
 }
 
+.tig-small-img-wrap {
+    left: 58px;
+    top: 200%;
+}
+
+.tig-big-img-wrap {
+	
+}
+
 .tig-img-wrap img {
 	width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
