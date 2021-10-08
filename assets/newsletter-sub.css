@@ -5,7 +5,7 @@
 }
 
 .ns-form-wrapper .submit-btn {
-    background-color: transparent;
+    background-color: var(--main-font-color);
     border: 1px solid #FFFFFF;
   color: var(--background-main);
     cursor: pointer;
@@ -21,4 +21,9 @@
 .ns-form-wrapper form{
 	width: 100%;
     display: flex;
+}
+
+.ns-form-wrapper.flex-box {
+    width: 50%;
+    margin-left: 25%;
 }
