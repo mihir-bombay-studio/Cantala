@@ -20,7 +20,7 @@
         {% assign blog = block.settings.featured_blog %}
         	<div class="featured-blog">
               <div class="blog-img">
-                {{ blog.image | img_url: '2048x' | img_tag }}
+                {{ article.image.src | img_url: '500x' }}
               </div>
               <div class="blog-title">{{ blog.title }}</div>
         	</div>
