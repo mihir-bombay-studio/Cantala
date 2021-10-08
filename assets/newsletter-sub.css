@@ -47,6 +47,14 @@
   cursor: pointer;
 }
 
+.checkbox.selected {
+	width: 10px;
+  height: 10px;
+  margin-top: 2px;
+  margin-left: 2px;
+  background-color: var(--main-font-color);
+}
+
 .checkbox-label {
     line-height: 27px;
     font-size: 12px;
