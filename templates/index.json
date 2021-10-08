@@ -99,6 +99,28 @@
         "collection_select": "thee"
       }
     },
+    "1633672137a5d73e94": {
+      "type": "top-in-gift",
+      "blocks": {
+        "abdc0a23-b60e-42d0-9d20-562a74ae9709": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop een geschenk",
+            "button_link": "shopify:\/\/collections",
+            "button-color": "light"
+          }
+        }
+      },
+      "block_order": [
+        "abdc0a23-b60e-42d0-9d20-562a74ae9709"
+      ],
+      "settings": {
+        "tig_heading": "Toppers in geschenken",
+        "tig_desc": "Wie je ook in de bloemetjes wil zetten, hier vind je ongetwijfeld jouw match! Of je nu gaat voor koffie of thee, we hebben een mooi aanbod in alle prijscategorieën en voor iedere smaak.",
+        "tig_big_img": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png",
+        "tig_small_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.03.11_2x_68e87a64-c5bd-4215-8078-6df7cf8b8a7a.png"
+      }
+    },
     "16336060836f24e7e8": {
       "type": "get-to-know-video",
       "blocks": {
@@ -130,28 +152,6 @@
         "gtk-title": "Maak kennis met Cantata",
         "gtk-desc": "Er zijn drie talen die iedereen ter wereld spreekt: die van emotie, muziek en … smaak. Cantata brengt ze samen. Cantata neemt jou mee doorheen een smaakvolle ontdekkingsreis, op zoek naar de koffie of thee die perfect bij jouw smaak past."
       }
-    },
-    "1633672137a5d73e94": {
-      "type": "top-in-gift",
-      "blocks": {
-        "abdc0a23-b60e-42d0-9d20-562a74ae9709": {
-          "type": "button",
-          "settings": {
-            "button_text": "Shop een geschenk",
-            "button_link": "shopify:\/\/collections",
-            "button-color": "light"
-          }
-        }
-      },
-      "block_order": [
-        "abdc0a23-b60e-42d0-9d20-562a74ae9709"
-      ],
-      "settings": {
-        "tig_heading": "Toppers in geschenken",
-        "tig_desc": "Wie je ook in de bloemetjes wil zetten, hier vind je ongetwijfeld jouw match! Of je nu gaat voor koffie of thee, we hebben een mooi aanbod in alle prijscategorieën en voor iedere smaak.",
-        "tig_big_img": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png",
-        "tig_small_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.03.11_2x_68e87a64-c5bd-4215-8078-6df7cf8b8a7a.png"
-      }
     }
   },
   "order": [
@@ -159,7 +159,7 @@
     "1633586848e30c4728",
     "16335966771c2e33e9",
     "16336031087ad04252",
-    "16336060836f24e7e8",
-    "1633672137a5d73e94"
+    "1633672137a5d73e94",
+    "16336060836f24e7e8"
   ]
 }
