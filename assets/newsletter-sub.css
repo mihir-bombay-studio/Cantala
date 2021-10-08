@@ -1,15 +1,15 @@
 .subscription-form-input {
     padding: 16px 21px;
   border: none;
-  width: 65%;
+  width: 80%;
 }
 
-.fns-form-wrapper .submit-btn {
+.ns-form-wrapper .submit-btn {
     background-color: transparent;
     border: 1px solid #FFFFFF;
   color: var(--background-main);
     cursor: pointer;
-    width: 35%;
+    width: 20%;
 }
 
 .mainLoginInput::-webkit-input-placeholder {
