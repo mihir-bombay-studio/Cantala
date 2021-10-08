@@ -17,3 +17,8 @@
     font-size: 16px;
     line-height: 27px;
 }
+
+.ns-form-wrapper form{
+	width: 100%;
+    display: flex;
+}
