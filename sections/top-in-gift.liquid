@@ -15,9 +15,11 @@
         {% endif %}
         {% endfor %}
       </div>
+      {% if section.settings.tig_small_img %}
       <div class="tig-img-wrap tig-small-img-wrap">
         <img class="tig-img tig-small-img" src="{{ section.settings.tig_small_img | img_url: '1280x' }}" alt = "tig-img">
       </div>
+      {% endif %}
     </div>
     <div class="tig-content-right rel">
       <div class="tig-img-wrap tig-big-img-wrap">
