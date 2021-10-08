@@ -39,6 +39,11 @@
     margin-bottom: 10px;
 }
 
+.tig-desc-button-wrapper{
+	padding-left: 22px;
+    padding-right: 22px;
+}
+
 .tig-img-wrap{
 	position: absolute;
 }
