@@ -118,7 +118,9 @@
         "tig_heading": "Toppers in geschenken",
         "tig_desc": "Wie je ook in de bloemetjes wil zetten, hier vind je ongetwijfeld jouw match! Of je nu gaat voor koffie of thee, we hebben een mooi aanbod in alle prijscategorieën en voor iedere smaak.",
         "tig_big_img": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png",
-        "tig_small_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.03.11_2x_68e87a64-c5bd-4215-8078-6df7cf8b8a7a.png"
+        "big_img_size": 500,
+        "tig_small_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.03.11_2x_68e87a64-c5bd-4215-8078-6df7cf8b8a7a.png",
+        "small_img_size": 500
       }
     },
     "16336060836f24e7e8": {
@@ -171,7 +173,9 @@
       "settings": {
         "tig_heading": "Diensten voor bedrijven",
         "tig_desc": "Ook op kantoor wil je genieten van een stomend kopje koffie of thee. Cantata zorgt ervoor dat jij op tijd de juiste blends ontvangt zodat je nooit zonder voorraad zit. Contacteer ons voor meer informatie, we vertellen je graag meer over de mogelijkheden.",
-        "tig_big_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png"
+        "tig_big_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png",
+        "big_img_size": 700,
+        "small_img_size": 500
       }
     }
   },
