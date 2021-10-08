@@ -180,6 +180,19 @@
     },
     "16336855830773a088": {
       "type": "discover-blogs",
+      "blocks": {
+        "5a95ce76-4c2d-4b15-9581-b205bc888245": {
+          "type": "button",
+          "settings": {
+            "button_text": "Lees alle geheimen",
+            "button_link": "shopify:\/\/blogs\/news",
+            "button-color": "light"
+          }
+        }
+      },
+      "block_order": [
+        "5a95ce76-4c2d-4b15-9581-b205bc888245"
+      ],
       "settings": {
         "dis_blog_heading": "Ontdek onze laatste blog posts",
         "dis_blog_desc": "Onze reizen hebben ons een schat van informatie opgeleverd. Geheimen die we graag delen. Op zoek naar een nieuwe smaak? Je leest hier alle updates over ons assortiment."
