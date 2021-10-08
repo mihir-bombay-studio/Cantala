@@ -1,0 +1,13 @@
+.subscription-form-input {
+    padding: 16px 21px;
+  border: none;
+  width: 65%;
+}
+
+.fns-form-wrapper .submit-btn {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+  color: var(--background-main);
+    cursor: pointer;
+    width: 35%;
+}
