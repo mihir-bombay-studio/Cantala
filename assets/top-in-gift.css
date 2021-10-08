@@ -18,6 +18,12 @@
     width: 40%;
 }
 
+.tig-title {
+    position: absolute;
+    top: -22px;
+    left: 58px;
+}
+
 .tig-content-right {
     width: 45%;
 }
