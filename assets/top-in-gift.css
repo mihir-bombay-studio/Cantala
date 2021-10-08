@@ -11,4 +11,5 @@
     left: 25px;
     top: 0;
     background-color: var(--background-slight-dark);
+      z-index: -1;
 }
