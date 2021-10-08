@@ -14,6 +14,14 @@
       z-index: -1;
 }
 
+.tig-content-left {
+    width: 40%;
+}
+
+.tig-content-right {
+    width: 45%;
+}
+
 .tig-img-wrap img {
 	width: 100%;
   object-fit: cover;
