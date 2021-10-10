@@ -1,0 +1,66 @@
+{{ 'ytob.css' | asset_url | stylesheet_tag }}
+
+<div class="ytob-wrapper">
+  <div class="container rel">
+    <h2 class="ytob-title text-center heading-2">{{section.settings.ytob-heading}}</h2>
+    <div class="prod-collections flex-box justify-between">
+      {% for block in section.blocks %}
+		{% if block.type == "collection_select" %}
+      		{% assign collection_handle = block.settings.collection_sel %}
+      		<div class="prod-collection rel">
+              <div class="coll-img">
+              	{% if collection_handle.image %}
+					{{ collection_handle.image | img_url: '2048x' | img_tag }}
+                {% else %}
+                	{{ 'collection-1' | placeholder_svg_tag }}
+				{% endif %}
+              </div>
+              <div class="coll-title-url">
+                <div class="coll-title heading-4">{{ collection_handle.title }}</div>
+                <div class="coll-url"><a href="{{ collection_handle.url }}">Shop hier</a></div>
+              </div>
+      		</div>
+      {% endif %}
+	{% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Your Taste Our Blend",
+    "settings": [
+		{
+        "id": "ytob-heading",
+        "type": "text",
+        "label": "Section Heading"
+        }	
+	],
+	"blocks": [
+		{
+		"name": "Select Collection",
+		"type": "collection_select",
+		"limit": 3,
+		"settings": [
+			{
+              "type": "collection",
+              "id": "collection_sel",
+              "label": "Select Collection"
+            }
+		]
+		}
+	],
+	"presets": [
+    {
+      "name": "YTOB Section",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

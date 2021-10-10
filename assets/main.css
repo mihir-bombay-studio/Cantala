@@ -11,7 +11,7 @@ body{
     font-size: 16px;
   line-height: 27px;
   letter-spacing: 0.08px;
-    background-color: var(--background-main);
+    background-color: var(--background-main) !important;
 }
 .container {
   display: block;
@@ -147,6 +147,8 @@ h1, h2, h3, h4, h5, h6{
     padding-top: 17px;
     padding-bottom: 15px;
     text-align: center;
+  	width: fit-content;
+  	transition: .4s ease;
 }
 
 .btn-dark {
@@ -156,6 +158,11 @@ h1, h2, h3, h4, h5, h6{
 
 .btn-light{
 	border: 1.5px solid;
+}
+
+.btn-light:hover{
+	background-color: var(--main-font-color);
+    color: var(--background-main);
 }
 
 @media (max-width: 1440px) {

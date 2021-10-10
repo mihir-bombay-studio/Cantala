@@ -1,0 +1,111 @@
+{{ 'discover-blogs.css' | asset_url | stylesheet_tag }}
+
+<div class="discover-blogs-wrapper">
+  <div class="container rel">
+    <div class="dis-blogs-content flex-box justify-between">
+      <div class="dis-blog-content-left">
+        <h2 class="dis-blog-title heading-2">{{ section.settings.dis_blog_heading }}</h2>
+        <div class="dis-blog-desc">{{ section.settings.dis_blog_desc }}</div>
+        {% for block in section.blocks %}
+        {% if block.type == "button" %}
+        <a href="{{ block.settings.button_link }}" class="btn medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+          {{ block.settings.button_text | escape }}
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <div class="dis-blog-content-right flex-box justify-between">
+      	{% for block in section.blocks %}
+        {% if block.type == "article_block" %}
+        {% assign article = block.settings.featured_article %}
+        	<div class="featured-article">
+              <div class="article-img">
+                {{ article.image | img_url: '2048x' | img_tag }}
+              </div>
+              <a href="{{ article.url }}" class="article-title">{{ article.title }}</a>
+        	</div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Discover Blogs",
+    "settings": [
+		{
+        "id": "dis_blog_heading",
+        "type": "text",
+        "label": "Section Heading"
+        },
+		{
+        "id": "dis_blog_desc",
+        "type": "text",
+        "label": "Section Description"
+        }
+	],
+	"blocks": [
+			{
+                "type": "button",
+                "name": "Button",
+				"limit": 1,
+                "settings": [
+
+                {
+                "id": "button_text",
+                "type": "text",
+                "label": "Button Text"
+
+                },
+                {
+                "id": "button_link",
+                "type": "url",
+                "label": "Button Link"
+                },
+				{
+                  "type": "select",
+                  "id": "button-color",
+                  "options": [
+                    {
+                      "value": "light",
+                      "label": "Light"
+                    },
+                    {
+                      "value": "dark",
+                      "label": "Dark"
+                    }
+                  ],
+                  "default": "dark",
+                  "label": "Dark"
+                }
+              ]
+            },
+			{
+				"type": "article_block",
+				"name": "Article",
+				"limit": 3,
+				"settings": [
+					{
+                      "type": "article",
+                      "id": "featured_article",
+                      "label": "Featured article"
+					}
+				]
+			}
+		],
+	"presets": [
+    {
+      "name": "Discover Blogs",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

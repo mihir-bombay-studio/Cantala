@@ -1,0 +1,37 @@
+.discover-blogs-wrapper {
+    background-color: var(--background-slight-dark);
+      padding: 60px 0 66px;
+      margin-bottom: 130px;
+}
+
+.dis-blog-content-left {
+    width: 30%;
+}
+
+.dis-blog-title{
+	position: absolute;
+  width: 30%;
+    top: -84px;
+}
+
+.dis-blog-desc {
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+
+.discover-blogs-wrapper .btn{
+	padding-left: 22px;
+    padding-right: 22px;
+}
+
+.dis-blog-content-right{
+	width: 65%;
+}
+
+.featured-article{
+	width: 30%;
+}
+
+.featured-article img{
+	width: 100%;
+}

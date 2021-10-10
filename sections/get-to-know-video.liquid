@@ -1,0 +1,111 @@
+{{ 'gtkv.css' | asset_url | stylesheet_tag }}
+
+<div class="get-to-know-wrapper">
+  <div class="container">
+    <div class="get-to-know flex-box align-center justify-between">
+      <div class="video-gtk rel">
+        <img  id="video-cover" src="{{ section.settings.yt-cover | img_url: '1280x' }}" alt="Video title">
+        <iframe id="player" width="100%" height="100%" src="{{ section.settings.yt-link }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <button id="play" class="play-btn">
+          {{ section.settings.play-btn }}
+        </button>
+      </div>
+      <div class="text-gtk">
+        <h2 class="gtk-title heading-2">{{ section.settings.gtk-title }}</h2>
+        <div class="gtk-desc">{{ section.settings.gtk-desc }}</div>
+        <div class="gtk-btns flex-box">
+      	{% for block in section.blocks %}
+        {% if block.type == "button" %}
+        <a href="{{ block.settings.button_link }}" class="btn medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+        	{{ block.settings.button_text | escape }}
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Get to Know Video",
+    "settings": [
+		{
+        "id": "yt-link",
+        "type": "text",
+        "label": "Youtube Embeded Link"
+        },
+		{
+			"id": "yt-cover",
+        	"type": "image_picker",
+        	"label": "Video Cover"
+		},
+		{
+        "id": "play-btn",
+        "type": "text",
+        "label": "Play Button SVG"
+        },
+		{
+		"id": "gtk-title",
+        "type": "text",
+        "label": "Section Title"
+		},
+		{
+		"id": "gtk-desc",
+        "type": "text",
+        "label": "Section Description"
+		}
+		
+	],
+	"blocks": [
+			{
+                "type": "button",
+                "name": "Button",
+				"limit": 2,
+                "settings": [
+
+                {
+                "id": "button_text",
+                "type": "text",
+                "label": "Button Text"
+
+                },
+                {
+                "id": "button_link",
+                "type": "url",
+                "label": "Button Link"
+                },
+				{
+                  "type": "select",
+                  "id": "button-color",
+                  "options": [
+                    {
+                      "value": "light",
+                      "label": "Light"
+                    },
+                    {
+                      "value": "dark",
+                      "label": "Dark"
+                    }
+                  ],
+                  "default": "dark",
+                  "label": "Dark"
+                }
+              ]
+            }
+		],
+	"presets": [
+    {
+      "name": "Get to know Video",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

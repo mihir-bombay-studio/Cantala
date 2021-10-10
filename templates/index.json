@@ -29,9 +29,212 @@
         "hero_heading": "Your Symphony of taste.",
         "hero_desc": "Ontdek het grootste en lekkerste aanbod koffie en thee in België."
       }
+    },
+    "1633586848e30c4728": {
+      "type": "your-taste-our-blend",
+      "blocks": {
+        "b07f4150-9f59-49a4-9466-d22740759c03": {
+          "type": "collection_select",
+          "settings": {
+            "collection_sel": "koffie"
+          }
+        },
+        "46a93612-f530-469d-bd8d-74b16b7cbd05": {
+          "type": "collection_select",
+          "settings": {
+            "collection_sel": "thee"
+          }
+        },
+        "beea1299-e4c5-4f59-8075-6a064a49bfe0": {
+          "type": "collection_select",
+          "settings": {
+            "collection_sel": "cantata-blends"
+          }
+        }
+      },
+      "block_order": [
+        "b07f4150-9f59-49a4-9466-d22740759c03",
+        "46a93612-f530-469d-bd8d-74b16b7cbd05",
+        "beea1299-e4c5-4f59-8075-6a064a49bfe0"
+      ],
+      "settings": {
+        "ytob-heading": "Jouw smaak. Onze blends."
+      }
+    },
+    "16335966771c2e33e9": {
+      "type": "collection_products",
+      "blocks": {
+        "0468a5a1-8f31-450e-bc49-b9ab507c987d": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop koffie",
+            "button-color": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "0468a5a1-8f31-450e-bc49-b9ab507c987d"
+      ],
+      "settings": {
+        "collection_products_title": "Onze bestverkopende koffies",
+        "collection_select": "koffie"
+      }
+    },
+    "16336031087ad04252": {
+      "type": "collection_products",
+      "blocks": {
+        "fd7100b7-0527-440c-b86e-5651cd03132c": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop thee",
+            "button-color": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "fd7100b7-0527-440c-b86e-5651cd03132c"
+      ],
+      "settings": {
+        "collection_products_title": "Thee die in de smaak valt",
+        "collection_select": "thee"
+      }
+    },
+    "1633672137a5d73e94": {
+      "type": "top-in-gift",
+      "blocks": {
+        "abdc0a23-b60e-42d0-9d20-562a74ae9709": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop een geschenk",
+            "button_link": "shopify:\/\/collections",
+            "button-color": "light"
+          }
+        }
+      },
+      "block_order": [
+        "abdc0a23-b60e-42d0-9d20-562a74ae9709"
+      ],
+      "settings": {
+        "tig_heading": "Toppers in geschenken",
+        "tig_desc": "Wie je ook in de bloemetjes wil zetten, hier vind je ongetwijfeld jouw match! Of je nu gaat voor koffie of thee, we hebben een mooi aanbod in alle prijscategorieën en voor iedere smaak.",
+        "tig_big_img": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png",
+        "big_img_size": 45,
+        "tig_small_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.03.11_2x_68e87a64-c5bd-4215-8078-6df7cf8b8a7a.png",
+        "small_img_size": 100
+      }
+    },
+    "16336060836f24e7e8": {
+      "type": "get-to-know-video",
+      "blocks": {
+        "95b2fb78-a912-4b6d-84eb-de20bbf7b91e": {
+          "type": "button",
+          "settings": {
+            "button_text": "Meer over ons",
+            "button_link": "shopify:\/\/collections",
+            "button-color": "dark"
+          }
+        },
+        "974b1a35-04aa-4f56-a166-590a3acf2e52": {
+          "type": "button",
+          "settings": {
+            "button_text": "Ontdek onze geheimen",
+            "button_link": "shopify:\/\/collections",
+            "button-color": "light"
+          }
+        }
+      },
+      "block_order": [
+        "95b2fb78-a912-4b6d-84eb-de20bbf7b91e",
+        "974b1a35-04aa-4f56-a166-590a3acf2e52"
+      ],
+      "settings": {
+        "yt-link": "https:\/\/www.youtube.com\/embed\/UqyT8IEBkvY",
+        "yt-cover": "shopify:\/\/shop_images\/cover.png",
+        "play-btn": "<svg id=\"Play_button\" data-name=\"Play button\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"90\" height=\"90\" viewbox=\"0 0 90 90\">   <g id=\"Ellipse_1099\" data-name=\"Ellipse 1099\" fill=\"none\" stroke=\"#f4ede2\" stroke-width=\"1.5\">     <circle cx=\"45\" cy=\"45\" r=\"45\" stroke=\"none\"><\/circle>     <circle cx=\"45\" cy=\"45\" r=\"44.25\" fill=\"none\"><\/circle>   <\/g>   <path id=\"Polygon_1\" data-name=\"Polygon 1\" d=\"M14,0,28,23H0Z\" transform=\"translate(60 31) rotate(90)\" fill=\"#f4ede2\"><\/path> <\/svg>",
+        "gtk-title": "Maak kennis met Cantata",
+        "gtk-desc": "Er zijn drie talen die iedereen ter wereld spreekt: die van emotie, muziek en … smaak. Cantata brengt ze samen. Cantata neemt jou mee doorheen een smaakvolle ontdekkingsreis, op zoek naar de koffie of thee die perfect bij jouw smaak past."
+      }
+    },
+    "16336855830773a088": {
+      "type": "discover-blogs",
+      "blocks": {
+        "5a95ce76-4c2d-4b15-9581-b205bc888245": {
+          "type": "button",
+          "settings": {
+            "button_text": "Lees alle geheimen",
+            "button_link": "shopify:\/\/blogs\/news",
+            "button-color": "light"
+          }
+        },
+        "2874687e-ea54-456d-8334-7781f1936997": {
+          "type": "article_block",
+          "settings": {
+            "featured_article": "news\/koffie-article"
+          }
+        },
+        "af5fa9fb-ed21-4273-bb89-ae3397906ef4": {
+          "type": "article_block",
+          "settings": {
+            "featured_article": "news\/thee-article"
+          }
+        },
+        "9dd3ce41-e13b-4bf5-bdda-f591d93cc494": {
+          "type": "article_block",
+          "settings": {
+            "featured_article": "news\/dummy"
+          }
+        }
+      },
+      "block_order": [
+        "5a95ce76-4c2d-4b15-9581-b205bc888245",
+        "2874687e-ea54-456d-8334-7781f1936997",
+        "af5fa9fb-ed21-4273-bb89-ae3397906ef4",
+        "9dd3ce41-e13b-4bf5-bdda-f591d93cc494"
+      ],
+      "settings": {
+        "dis_blog_heading": "Ontdek onze laatste blog posts",
+        "dis_blog_desc": "Onze reizen hebben ons een schat van informatie opgeleverd. Geheimen die we graag delen. Op zoek naar een nieuwe smaak? Je leest hier alle updates over ons assortiment."
+      }
+    },
+    "1633697619cc244f04": {
+      "type": "newsletter-subs",
+      "settings": {
+        "nl_sub_heading": "Schrijf je in op onze nieuwsbrief."
+      }
+    },
+    "1633678277ec1a08eb": {
+      "type": "top-in-gift",
+      "blocks": {
+        "887f038f-2e80-479b-ab0b-092cf60e53d2": {
+          "type": "button",
+          "settings": {
+            "button_text": "Ontdek meer",
+            "button_link": "shopify:\/\/collections",
+            "button-color": "light"
+          }
+        }
+      },
+      "block_order": [
+        "887f038f-2e80-479b-ab0b-092cf60e53d2"
+      ],
+      "settings": {
+        "tig_heading": "Diensten voor bedrijven",
+        "tig_desc": "Ook op kantoor wil je genieten van een stomend kopje koffie of thee. Cantata zorgt ervoor dat jij op tijd de juiste blends ontvangt zodat je nooit zonder voorraad zit. Contacteer ons voor meer informatie, we vertellen je graag meer over de mogelijkheden.",
+        "tig_big_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png",
+        "big_img_size": 60,
+        "small_img_size": 50
+      }
     }
   },
   "order": [
-    "1633523775dbe904ba"
+    "1633523775dbe904ba",
+    "1633586848e30c4728",
+    "16335966771c2e33e9",
+    "16336031087ad04252",
+    "1633672137a5d73e94",
+    "16336060836f24e7e8",
+    "16336855830773a088",
+    "1633697619cc244f04",
+    "1633678277ec1a08eb"
   ]
 }

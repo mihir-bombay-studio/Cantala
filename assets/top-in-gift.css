@@ -1,0 +1,67 @@
+.top-in-gift-wrapper{
+	padding-top: 52px;
+  padding-bottom: 392px;
+  margin-bottom: 212px;
+  margin-top: 235px;
+}
+
+.top-in-gift-background{
+	width: calc( 100% + 25px );
+    display: block !important;
+    height: 100%;
+    position: absolute;
+    left: 25px;
+    top: 0;
+    background-color: var(--background-slight-dark);
+      z-index: -1;
+}
+
+.tig-content-left {
+    width: 40%;
+}
+
+.tig-title {
+    position: absolute;
+    top: -78px;
+    left: 58px;
+}
+
+.tig-desc-button-wrapper {
+    margin-left: 58px;
+    width: 80%;
+}
+
+.tig-content-right {
+/*     width: 45%; */
+}
+
+.tig-desc {
+    margin-bottom: 10px;
+}
+
+.tig-desc-button-wrapper .btn{
+	padding-left: 22px;
+    padding-right: 22px;
+}
+
+.tig-img-wrap{
+	position: absolute;
+}
+
+.tig-small-img-wrap {
+    left: 58px;
+    top: 170%;
+}
+
+.tig-big-img-wrap {
+	right: 25px;
+    top: -170px;
+    height: 641px;
+}
+
+.tig-img-wrap img {
+	width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

@@ -1,0 +1,70 @@
+.ns-form-wrapper .subscription-form-input {
+    padding: 16px 21px;
+  border: none;
+  width: 80%;
+}
+
+.ns-form-wrapper .submit-btn {
+    background-color: var(--main-font-color);
+      border: none;
+  color: var(--background-main);
+    cursor: pointer;
+    width: 20%;
+}
+
+.mainLoginInput::-webkit-input-placeholder {
+  font-family: var(--font-body-family);
+    font-size: 16px;
+    line-height: 27px;
+}
+
+.ns-form-wrapper form{
+	width: 100%;
+}
+
+.ns-sub-form-input-wrap{
+	width: 100%;
+}
+
+.ns-form-wrapper.flex-box {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.newsletter-sub-heading {
+    margin-bottom: 31px;
+}
+
+.checkbox-wrap{
+	margin-top: 11px;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+  margin-right: 13px;
+  cursor: pointer;
+}
+
+.checkbox.selected .checked {
+	width: 10px;
+  height: 10px;
+  margin-top: 2px;
+  margin-left: 2px;
+  background-color: var(--main-font-color);
+    position: absolute;
+}
+
+.checkbox-label {
+    line-height: 27px;
+    font-size: 12px;
+}
+
+.newsletter-sub-wrapper {
+    margin-bottom: 131px;
+}
+
+.checkbox-label a{
+	text-decoration: underline;
+}

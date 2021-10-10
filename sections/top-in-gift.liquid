@@ -1,0 +1,128 @@
+{{ 'top-in-gift.css' | asset_url | stylesheet_tag }}
+
+<div class="top-in-gift-wrapper container rel">
+    <div class="top-in-gift-background"></div>
+  <div class="tig-content-wrapper flex-box justify-between">
+    <div class="tig-content-left rel">
+      <h2 class="tig-title heading-2">{{ section.settings.tig_heading }}</h2>
+      <div class="tig-desc-button-wrapper">
+        <div class="tig-desc">{{ section.settings.tig_desc }}</div>
+        {% for block in section.blocks %}
+        {% if block.type == "button" %}
+        <a href="{{ block.settings.button_link }}" class="btn medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+          {{ block.settings.button_text | escape }}
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% if section.settings.tig_small_img %}
+      <div class="tig-img-wrap tig-small-img-wrap" style="width: {{ section.settings.small_img_size }}%">
+        <img class="tig-img tig-small-img" src="{{ section.settings.tig_small_img | img_url: '1280x' }}" alt = "tig-img">
+      </div>
+      {% endif %}
+    </div>
+    <div class="tig-content-right rel" style="width: {{ section.settings.big_img_size }}%">
+      <div class="tig-img-wrap tig-big-img-wrap">
+        <img class="tig-img tig-big-img" src="{{ section.settings.tig_big_img | img_url: '1280x' }}" alt = "tig-img">
+      </div>
+    </div>
+  </div>
+  	
+</div>
+
+{% schema %}
+  {
+    "name": "Top in Gift",
+    "settings": [
+		{
+        "id": "tig_heading",
+        "type": "text",
+        "label": "Section Heading"
+        },
+		{
+        "id": "tig_desc",
+        "type": "text",
+        "label": "Section Description"
+        },
+		{
+        "id": "tig_big_img",
+        "type": "image_picker",
+        "label": "Big Image"
+        },
+		{
+        "type": "range",
+        "id": "big_img_size",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Image size",
+        "default": 50
+        },
+		{
+        "id": "tig_small_img",
+        "type": "image_picker",
+        "label": "Small Image"
+        },
+		{
+        "type": "range",
+        "id": "small_img_size",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Image size",
+        "default": 50
+        }
+	],
+	"blocks": [
+			{
+                "type": "button",
+                "name": "Button",
+				"limit": 1,
+                "settings": [
+
+                {
+                "id": "button_text",
+                "type": "text",
+                "label": "Button Text"
+
+                },
+                {
+                "id": "button_link",
+                "type": "url",
+                "label": "Button Link"
+                },
+				{
+                  "type": "select",
+                  "id": "button-color",
+                  "options": [
+                    {
+                      "value": "light",
+                      "label": "Light"
+                    },
+                    {
+                      "value": "dark",
+                      "label": "Dark"
+                    }
+                  ],
+                  "default": "dark",
+                  "label": "Dark"
+                }
+              ]
+            }
+		],
+	"presets": [
+    {
+      "name": "Top in Gift",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

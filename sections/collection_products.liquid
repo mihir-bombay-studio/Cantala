@@ -1,0 +1,93 @@
+{{ 'collection-products.css' | asset_url | stylesheet_tag }}
+{% assign product_handle = section.settings.collection_select %}
+
+<div class="collection-products-wrapper">
+  <div class="container">
+    <h2 class="collection-products-title text-center heading-2">{{ section.settings.collection_products_title }}</h2>
+    <div class="coll-products">
+    	{% for product in collections[product_handle].products %}
+      <div class="coll-product">
+        <div class="product-img-wrap">
+        	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
+        </div>
+        <div class="product-tag bold">{% for tag in product.tags limit:1 %}{{ tag }}{% endfor %}</div>
+        <div class="product-title"><a href="{{ product.url }}">{{ product.title | escape }}</a></div>
+        <div class="product-price-wrap flex-box align-center justify-between">
+          <div class="from-text">vanaf</div>
+          <div class="product-price"><span class="currency">EUR{{ currency.iso_code }}</span><span class="price medium">{{ product.price | money_without_currency }}</span></div>
+        </div>
+      </div>
+      		
+      	{% endfor %}
+    </div>
+    {% for block in section.blocks %}
+        {% if block.type == "button" %}
+        <a href="{{ product_handle.url }}" class="btn center-it medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+        	{{ block.settings.button_text | escape }}
+        </a>
+        {% endif %}
+        {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collection Products",
+    "settings": [
+		{
+        "id": "collection_products_title",
+        "type": "text",
+        "label": "Section Heading"
+        },
+		{
+			"id": "collection_select",
+			"type": "collection",
+			"label": "Select Collection"
+		}
+	],
+	"blocks": [
+			{
+                "type": "button",
+                "name": "Button",
+				"limit": 1,
+                "settings": [
+
+                {
+                "id": "button_text",
+                "type": "text",
+                "label": "Button Text"
+
+                },
+				{
+                  "type": "select",
+                  "id": "button-color",
+                  "options": [
+                    {
+                      "value": "light",
+                      "label": "Light"
+                    },
+                    {
+                      "value": "dark",
+                      "label": "Dark"
+                    }
+                  ],
+                  "default": "dark",
+                  "label": "Dark"
+                }
+              ]
+            }
+		],
+	"presets": [
+    {
+      "name": "Collection Products",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

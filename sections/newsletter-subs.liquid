@@ -1,0 +1,53 @@
+{{ 'newsletter-sub.css' | asset_url | stylesheet_tag }}
+
+<div class="newsletter-sub-wrapper">
+  <div class="container">
+    <h2 class="newsletter-sub-heading text-center heading-2">{{ section.settings.nl_sub_heading }}</h2>
+    <div class="ns-form-wrapper flex-box">
+      {% form 'contact' %}
+      {%- if form.errors -%}
+      {{ form.errors | default_errors  }}
+      {%- endif -%}
+      {%- if form.posted_successfully? -%}
+
+      {%- endif -%}
+		<div class="ns-sub-form-input-wrap flex-box">
+      <input class="subscription-form-input" type="email" name="contact[email]" placeholder="Jouw e-mailadres" required>
+      <button class="submit-btn btn medium" type="submit" form="contact_form" value="Submit">
+        Inschrijven
+        </button>
+      </div>
+      <input type="checkbox" class="no-disp" id="tnc" name="tnc" value="Terms">
+      <div class="checkbox-wrap flex-box align-center">
+        <span class="checkbox rel"><span class="checked"></span></span>
+        <span class="checkbox-label">Ik ga akkoord met de <a class="label-link" href="#">voorwaarden</a> en heb de <a class="label-link" href="#">privacy policy</a> gelezen.</span>
+      </div>
+        {% endform %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Newsletter Subscription",
+    "settings": [
+		{
+        "id": "nl_sub_heading",
+        "type": "text",
+        "label": "Section Heading"
+        }
+	],
+	"presets": [
+    {
+      "name": "Newsletter Subscription",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
