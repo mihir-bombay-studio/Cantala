@@ -12,12 +12,12 @@
     letter-spacing: 0;
 }
 
-.img-background{
-	width: 48%;
+.img-background {
+    width: 46%;
     display: block!important;
     height: 100%;
     position: absolute;
-    right: -25px;
+    left: 54%;
     top: 60px;
     background-color: var(--background-slight-dark);
     z-index: -1;
