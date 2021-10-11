@@ -27,3 +27,10 @@
 .blog-page-article-wrap{
 	width: 30%;
 }
+
+.blog-page-article-wrap img{
+	width: 100%;
+  height: 307px;
+  object-fit: cover;
+  display: block;
+}
