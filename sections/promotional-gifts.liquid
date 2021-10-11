@@ -1,13 +1,13 @@
 {{ 'promotional-gifts.css' | asset_url | stylesheet_tag }}
 
 <div class="promotional-gifts-wrapper">
-  <div class="container">
+  <div class="container rel">
     <div class="promotional-gifts-content flex-box justify-between">
       <div class="promotional-gifts-left">
         <h2 class="promotional-gifts-heading heading-2">{{ section.settings.heading }}</h2>
         <div class="promotional-gifts-desc">{{ section.settings.desc }}</div>
       </div>
-      <div class="promotional-gifts-right rel">
+      <div class="promotional-gifts-right">
         <div class="img-background"></div>
         <div class="promotional-gifts-img">
         	<img class="pg-img" src="{{ section.settings.image | img_url: '1280x' }}" alt = "pg-img">
