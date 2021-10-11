@@ -3,7 +3,19 @@
 <div class="img-with-txt-wrapper">
   <div class="container">
     <div class="img-with-text-content flex-box align-center justify-between">
-      <div class="img-with-txt-left"></div>
+      <div class="img-with-txt-left">
+        <h2 class="img-with-text-heading heading-2">{{ section.settings.heading }}</h2>
+        <div class="img-with-text-desc">{{ section.settings.desc }}</div>
+        <div class="img-with-text-btn">
+      	{% for block in section.blocks %}
+        {% if block.type == "button" %}
+        <a href="{{ block.settings.button_link }}" class="btn {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+        	{{ block.settings.button_text | escape }}
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+      </div>
       <div class="img-with-txt-right"></div>
     </div>
   </div>
@@ -33,7 +45,7 @@
 			{
                 "type": "button",
                 "name": "Hero Button",
-				"limit": 2,
+				"limit": 1,
                 "settings": [
 
                 {
