@@ -8,3 +8,8 @@
     object-fit: cover;
     display: block;
 }
+
+.img-with-text-desc {
+    width: 65%;
+  margin-bottom: 26px;
+}
