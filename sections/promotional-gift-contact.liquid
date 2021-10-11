@@ -1,3 +1,19 @@
+{{ 'promotional-gift-contact.css' | asset_url | stylesheet_tag }}
+
+<div class="promotional-gift-contact-wrapper rel">
+  <div class="abs-background"></div>
+  <div class="container">
+    <div class="promotional-gift-contact-content flex-box justify-between">
+      <div class="pgc-left">
+        <h2 class="pgc-heading heading-2">{{ section.settings.heading }}</h2>
+      </div>
+      <div class="pgc-right">
+      	<img class="pgc-img" src="{{ section.settings.image | img_url: '500x' }}" alt = "pgc-img">
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "Promotional Gift Contact",
