@@ -24,8 +24,13 @@
       background-color: var(--main-font-color);
 }
 
+.blog-page-article {
+    margin: 0 -1%;
+}
+
 .blog-page-article-wrap{
-	width: 30%;
+	width: 32%;
+    margin: 0 1% 18px;
 }
 
 .blog-page-article-wrap img{
