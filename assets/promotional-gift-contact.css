@@ -93,3 +93,9 @@ textarea {
 .pgc-left .checkbox-wrap {
     margin-bottom: 43px;
 }
+
+.pgc-left .btn {
+    line-height: 44px;
+    letter-spacing: 0.8px;
+    padding: 7px 27px;
+}
