@@ -37,3 +37,7 @@
     border-bottom: 1px solid #342d2599;
   width: 100%;
 }
+
+.pgc-form-input .half-input {
+	width: 48%;
+}
