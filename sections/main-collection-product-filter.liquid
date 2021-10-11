@@ -372,10 +372,23 @@
     } else {
       $('.card-product').addClass('tp');
     }
-    $('.card-product.fp.sp.tp').removeClass('no-disp');
+    
+    if($("#search-box").val() == "") {
+      $('.card-product').each(function() {
+        if($(this).find(".card-product-title").text().indexOf($("#search-box").val()) > -1) {
+          $(this).addClass('fop');
+        }
+      });
+        $('.card-product.'+favourites[i]).addClass('tp');
+      }
+    } else {
+      $('.card-product').addClass('tp');
+    }
+    $('.card-product.fp.sp.tp.fop').removeClass('no-disp');
     $('.fp').removeClass('fp');
     $('.sp').removeClass('sp');
     $('.tp').removeClass('tp');
+    $('.fop').removeClass('fop');
   }
   runFilter();
 </script>
