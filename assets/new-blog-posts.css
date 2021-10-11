@@ -16,5 +16,5 @@
 
 .article-filter.selected {
 	color: var(--background-main);
-      background-color: (--main-font-color);
+      background-color: var(--main-font-color);
 }
