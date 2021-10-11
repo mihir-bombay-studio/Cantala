@@ -99,3 +99,9 @@ textarea {
     letter-spacing: 0.8px;
     padding: 7px 27px;
 }
+
+.pgc-right {
+    position: absolute;
+    right: 25px;
+    top: -135px;
+}
