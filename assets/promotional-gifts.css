@@ -11,3 +11,7 @@
     line-height: 27px;
     letter-spacing: 0;
 }
+
+.img-background{
+	background-color: var(--background-slight-dark);
+}
