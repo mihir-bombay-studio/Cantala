@@ -38,10 +38,10 @@
   margin-bottom: 32px;
 }
 
-.pgc-form-input .half-input {
+.pgc-form-input.half-input {
 	width: 48%;
 }
 
-.pgc-form-input .full-input{
+.pgc-form-input.full-input{
   width: 100%;
 }
