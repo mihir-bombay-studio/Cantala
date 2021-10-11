@@ -7,6 +7,12 @@
       <div class="article-filter">Thee<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
       <div class="article-filter">Geschenken<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
     </div>
+    
+    {% for blog in blogs %}
+  {% for article in blog.articles %}
+    {{ article.title }}
+  {% endfor %} 
+{% endfor %}
   </div>
 </div>
 
