@@ -1,3 +1,14 @@
+{{ 'img-with-txt.css' | asset_url | stylesheet_tag }}
+
+<div class="img-with-txt-wrapper">
+  <div class="container">
+    <div class="img-with-text-content flex-box align-center justify-between">
+      <div class="img-with-txt-left"></div>
+      <div class="img-with-txt-right"></div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "Image with Text Button",
