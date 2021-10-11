@@ -353,11 +353,12 @@
       favourites.push($(this).data('value'));
     });
     var i;
+    $('.filter-row').html('');
     $('.card-product').addClass('no-disp');
     if(colors.length > 0) {
       for (i = 0; i < colors.length; i++) {
         $('.card-product.'+colors[i]).addClass('fp');
-        $('.filter-row').append(`<span class="filter-added"><span class="filter-content">Gebruik: `+colors[i]+`</span><span class="pop-close">{% include "icon-x" %}</span></span>`)
+        $('.filter-row').append(`<span class="filter-added"><span class="filter-content">Gebruik: `+colors[i]+`</span><span class="pop-close">{% include "icon-x" %}</span></span>`);
       }
     } else {
       $('.card-product').addClass('fp');
@@ -365,6 +366,7 @@
     if(undertones.length > 0) {
       for (i = 0; i < undertones.length; i++) {
         $('.card-product.'+undertones[i]).addClass('sp');
+        $('.filter-row').append(`<span class="filter-added"><span class="filter-content">Gebruik: `+undertones[i]+`</span><span class="pop-close">{% include "icon-x" %}</span></span>`);
       }
     } else {
       $('.card-product').addClass('sp');
@@ -372,6 +374,7 @@
     if(favourites.length > 0) {
       for (i = 0; i < favourites.length; i++) {
         $('.card-product.'+favourites[i]).addClass('tp');
+        $('.filter-row').append(`<span class="filter-added"><span class="filter-content">Gebruik: `+favourites[i]+`</span><span class="pop-close">{% include "icon-x" %}</span></span>`);
       }
     } else {
       $('.card-product').addClass('tp');
