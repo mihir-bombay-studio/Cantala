@@ -5,4 +5,14 @@
     border: 1px solid;
   margin-right: 11px;
   cursor: pointer;
+  transition: .4s ease;
+}
+
+.article-filter svg{
+	fill: var(--background-main);
+}
+
+.article-filter.selected {
+	color: var(--background-main);
+      background-color: (--main-font-color);
 }
