@@ -23,3 +23,7 @@
 	color: var(--background-main);
       background-color: var(--main-font-color);
 }
+
+.blog-page-article-wrap{
+	width: 30%;
+}
