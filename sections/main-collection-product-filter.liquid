@@ -6,6 +6,7 @@
 
 .active, .accordion:hover {
 }
+  
 
 .panel {
   max-height: 0;
@@ -58,6 +59,10 @@
     position: absolute;
     right: 0;
     top: calc( 50% - 2.5px );
+    transition: .2 ease;
+  }
+  .active-filter svg.icon.icon-caret {
+    transform: rotate(180deg);
   }
 
   .sticky-nav a {
