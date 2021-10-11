@@ -35,7 +35,7 @@
 }
 
 .article-image {
-    margin-bottom: 44px;
+/*     margin-bottom: 44px; */
 }
 
 .blog-page-article-wrap img{
@@ -43,6 +43,10 @@
   height: 307px;
   object-fit: cover;
   display: block;
+}
+
+.article-text{
+	padding: 44px 28px 28px;
 }
 
 .article-title {
