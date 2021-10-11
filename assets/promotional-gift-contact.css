@@ -17,3 +17,11 @@
     z-index: -1;
     left: 2%;
 }
+
+.pgc-heading {
+    font-family: Athelas,sans-serif;
+    font-size: 55px;
+    line-height: 61px;
+    position: absolute;
+    top: -29px;
+}
