@@ -235,6 +235,19 @@
     },
     "163395068167d59b32": {
       "type": "img-with-text-btn",
+      "blocks": {
+        "c2f1192f-cd8c-4eb9-8ca9-4a4639807338": {
+          "type": "button",
+          "settings": {
+            "button_text": "",
+            "button_link": "",
+            "button-color": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "c2f1192f-cd8c-4eb9-8ca9-4a4639807338"
+      ],
       "settings": {
         "heading": "Lorem ipsum",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc.",
