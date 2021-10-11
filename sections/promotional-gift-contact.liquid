@@ -1,7 +1,24 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Promotional Gift Contact",
+    "settings": [
+		{
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+        },
+		{
+        "id": "image",
+        "type": "image_picker",
+        "label": "Section Image"
+        }
+	],
+	"presets": [
+    {
+      "name": "Promotional Gift Contact",
+		"category":"section"
+    }
+  ]
   }
 {% endschema %}
 
