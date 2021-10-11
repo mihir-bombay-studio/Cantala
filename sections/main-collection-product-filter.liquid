@@ -336,7 +336,7 @@
     runFilter();
   });
   $('.category-content .pop-close').click(function() {
-    var filter = $(this).parent().data('val');
+    var filter = $(this).parent().data('val');console.log('here')
     $('.nav-colors .only-border').each(function() {
       if($(this).data('value') == filter) {
       	$(this).click();
