@@ -334,6 +334,9 @@
     $(this).toggleClass('filtered');
     runFilter();
   });
+  $("#search-box").on("input", function(){
+    runFilter();
+  });
 
   function runFilter() {
     var colors = [];
