@@ -177,7 +177,7 @@
               <span href="#" class="vanaf">Vanaf</span>
               
               <p class="card-product-price text-center">
-                {{ cart.currency.iso_code }}  {{ product.price | money_without_currency  }}
+                {{ cart.currency.iso_code }}  <span class="only-money">{{ product.price | money_without_currency  }}</span>
               </p>
             </div>
           </div>
