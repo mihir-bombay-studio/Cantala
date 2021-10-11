@@ -17,7 +17,7 @@
     display: block!important;
     height: 100%;
     position: absolute;
-    left: 54%;
+    right: 0;
     top: 60px;
     background-color: var(--background-slight-dark);
     z-index: -1;
