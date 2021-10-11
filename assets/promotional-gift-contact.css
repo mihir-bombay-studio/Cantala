@@ -29,3 +29,11 @@
 .pgc-form-wrapper {
     margin-top: 66px;
 }
+
+.pgc-form-input {
+    border: none;
+    background-color: transparent;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #342d2599;
+  width: 100%;
+}
