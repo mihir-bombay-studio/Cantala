@@ -376,7 +376,7 @@
       $('.card-product').addClass('tp');
     }
     
-    if($("#search-box").val() == "") {
+    if($("#search-box").val() != "") {
       $('.card-product').each(function() {
         if($(this).find(".card-product-title").text().indexOf($("#search-box").val()) > -1) {
           $(this).addClass('fop');
