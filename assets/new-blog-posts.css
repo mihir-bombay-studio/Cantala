@@ -27,6 +27,7 @@
 .blog-page-articles {
     margin: 0 -0.667%;
   flex-wrap: wrap;
+  margin-bottom: 91px;
 }
 
 .blog-page-article-wrap{
