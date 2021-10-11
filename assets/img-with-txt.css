@@ -17,3 +17,8 @@
 .img-with-text-heading {
     margin-bottom: 26px;
 }
+
+.img-with-txt-wrapper .btn {
+    padding-left: 27px;
+    padding-right: 27px;
+}
