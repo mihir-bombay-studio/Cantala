@@ -1,3 +1,9 @@
 .pgc-left, .pgc-right {
     width: 48%;
 }
+
+.pgc-right img {
+	width: 100%;
+  object-fit: cover;
+  display: block;
+}
