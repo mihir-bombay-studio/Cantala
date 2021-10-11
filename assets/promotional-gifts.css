@@ -13,5 +13,12 @@
 }
 
 .img-background{
-	background-color: var(--background-slight-dark);
+	width: calc(100% + 25px);
+    display: block!important;
+    height: 100%;
+    position: absolute;
+    left: 25px;
+    top: 0;
+    background-color: var(--background-slight-dark);
+    z-index: -1;
 }
