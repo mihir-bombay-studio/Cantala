@@ -335,6 +335,14 @@
   $("#search-box").on("input", function(){
     runFilter();
   });
+  $('.category-content .pop-close').click(function() {
+    var filter = $(this).parent().data('val');
+    $('.nav-colors .only-border').each(function() {
+      if($(this).data('value') == filter) {
+      	$(this).click();
+      }
+    });  	
+  });
 
   function runFilter() {
     var colors = [];
