@@ -1,0 +1,156 @@
+<div class="hero category-hero hero-homepage only-d-shift normaltop" style="background-image: url({{ "DSC_5012_1.jpg" | asset_url }})">
+  <div class="container flex-box">
+    <div class="flex-center mflex-homepage-hero width-100 mt-top">
+      <h1 class="text-center category-hero-heading">Entdecke hier alle BRAUZZ. Produkte</h1>
+      <p class="text-center category-hero-p">und leiste deinen Beitrag für eine saubere Welt!</p>
+    </div>
+  </div>
+</div>
+
+<div class="parallax">
+  <div class="category category-padd container padd-bottom padd-top {% comment %}marg-top{% endcomment %}">
+    <h1 class="no-disp">Unsere Produkte</h1>
+    <div class="category-wrapper row-nav marg-top">
+      <div class="sticky-nav sub-marg-bottom">
+        <p class="accordion-filter no-d">Filter {% include "icon-chevron" %}</p>
+        <div class="nav-colors panel-filter">
+          <p><strong>Nach Typ filtern</strong></p>
+          <a href="#" class="undertones only-border" onClick="return false;" data-value="paketten"><span class="chk-box">{% include "icon-checkbox2" %}</span>Pakete</a>
+          <a href="#" class="undertones only-border" onClick="return false;" data-value="navullingen"><span class="chk-box">{% include "icon-checkbox2" %}</span>Refills</a>
+          {% comment %}
+          <a href="#" class="undertones only-border" onClick="return false;" data-value="startersset"><span class="chk-box">{% include "icon-checkbox2" %}</span>Das Starter-Set</a>
+          <a href="#" class="undertones only-border" onClick="return false;" data-value="attribuut"><span class="chk-box">{% include "icon-checkbox2" %}</span>Zubehör</a>
+          {% endcomment %}
+          <p><strong>Nach Kategorie filtern</strong></p>
+          <a href="#" class="favourites only-border" onClick="return false;" data-value="reinigers"><span class="chk-box">{% include "icon-checkbox2" %}</span>Putzen</a>
+          <a href="#" class="favourites only-border" onClick="return false;" data-value="accessoires"><span class="chk-box">{% include "icon-checkbox2" %}</span>Zubehör</a>
+          <a href="#" class="favourites only-border" onClick="return false;" data-value="wasmiddel"><span class="chk-box">{% include "icon-checkbox2" %}</span>Waschen</a>
+          {% comment %}
+          <a href="#" class="favourites only-border" onClick="return false;" data-value="afwassen"><span class="chk-box">{% include "icon-checkbox2" %}</span>Afwassen</a>
+          {% endcomment %}
+        </div>
+        <span class="close-filter negative no-d"></span>
+      </div>
+      <div class="category-content">
+        {% for product in collections.categoryPage.products %}
+        {% assign is_preorder = "false" %}
+        {% for tag in product.tags %}
+          {% if tag contains "preorder" %}
+          	{% assign is_preorder = "true" %}
+          {% endif %}
+        {% endfor %}
+        <a href="{{ product.url }}" title="{{ product.title | escape  }}" class="card-product {% for tag in product.tags %}{% unless tag contains "tagline:" %}{{ tag }} {% endunless %}{% endfor %}">            
+          <div class="card-product-image">
+            <img src="{{ product.featured_image.src | product_img_url: '590x' }}" alt="{{ product.title | escape  }}" />
+          </div>
+          <div class="card-product-details">
+            <div class="row">
+              <p class="card-product-title text-center">
+                {{ product.title | escape  }}
+              </p>
+              <p class="card-product-price text-center">
+                <span class="product-compare-price" style='color: #EFA693;'><span style='color: #3C3C3B;'>{{ product.compare_at_price | money }}</span></span> {{ product.price | money  }}
+              </p>
+              <span href="#" class="btn btn-smol btn-cta no-t-m">{% if is_preorder == "true" %}Vorbestellen{% else %}Produkt ansehen{% endif %}</span>
+              <span href="#" class="btn btn-bg btn-cta no-d">{% if is_preorder == "true" %}Vorbestellen{% else %}Produkt ansehen{% endif %}</span>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  $('.filter').click(function(){
+    $('.sticky-nav').addClass('open');
+    window.scrollTo(0, 0);
+  });
+  $('.close-filter').click(function(){
+    $('.sticky-nav').removeClass('open');
+  });
+  $('.nav-colors .colors-wrapper').click(function(){
+    $(this).toggleClass('filtered');
+    runFilter();
+  });
+  $('.nav-colors .only-border').click(function(){
+    $(this).toggleClass('filtered');
+    runFilter();
+  });
+
+  function runFilter() {
+    var colors = [];
+    var undertones = [];
+    var favourites = [];
+    var classString = "";
+    $( ".colors-wrapper.filtered" ).each(function( index ) {
+      colors.push($(this).data('value'));
+    });
+    $( ".undertones.filtered" ).each(function( index ) {
+      undertones.push($(this).data('value'));
+    });
+    $( ".favourites.filtered" ).each(function( index ) {
+      favourites.push($(this).data('value'));
+    });
+    var i;
+    $('.card-product').addClass('no-disp');
+    if(colors.length > 0) {
+      for (i = 0; i < colors.length; i++) {
+        $('.card-product.'+colors[i]).addClass('fp');
+      }
+    } else {
+      $('.card-product').addClass('fp');
+    }
+    if(undertones.length > 0) {
+      for (i = 0; i < undertones.length; i++) {
+        $('.card-product.'+undertones[i]).addClass('sp');
+      }
+    } else {
+      $('.card-product').addClass('sp');
+    }
+    if(favourites.length > 0) {
+      for (i = 0; i < favourites.length; i++) {
+        $('.card-product.'+favourites[i]).addClass('tp');
+      }
+    } else {
+      $('.card-product').addClass('tp');
+    }
+    $('.card-product.fp.sp.tp').removeClass('no-disp');
+    $('.fp').removeClass('fp');
+    $('.sp').removeClass('sp');
+    $('.tp').removeClass('tp');
+  }
+  runFilter();
+</script>
+
+<script>
+var acc = document.getElementsByClassName("accordion-filter");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active-filter");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
