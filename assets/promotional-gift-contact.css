@@ -7,3 +7,13 @@
   object-fit: cover;
   display: block;
 }
+
+.abs-background {
+    display: block !important;
+    width: 98%;
+    background-color: var(--background-slight-dark);
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 2%;
+}
