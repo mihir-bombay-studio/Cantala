@@ -232,6 +232,15 @@
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
         "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png"
       }
+    },
+    "163395068167d59b32": {
+      "type": "img-with-text-btn",
+      "settings": {
+        "heading": "Lorem ipsum",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc.",
+        "image": "shopify:\/\/shop_images\/hero_img.png",
+        "img_position": "img_first"
+      }
     }
   },
   "order": [
@@ -244,6 +253,7 @@
     "16336855830773a088",
     "1633697619cc244f04",
     "1633678277ec1a08eb",
-    "16339451072b2820df"
+    "16339451072b2820df",
+    "163395068167d59b32"
   ]
 }
