@@ -1,7 +1,21 @@
+{{ 'new-blog-posts.css' | asset_url | stylesheet_tag }}
+
+<div class="new-blog-posts-wrapper">
+  <div class="container">
+    <div class="article-filter-wrapper flex-box">
+      <div class="article-filter">Koffie<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
+      <div class="article-filter">Thee<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
+      <div class="article-filter">Geschenken<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "New Blog Posts",
-    "settings": [],
+    "settings": [
+		
+	],
 	"presets": [
     {
       "name": "New Blog Posts",

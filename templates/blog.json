@@ -1,1 +1,24 @@
-{"sections":{"main":{"type":"main-blog","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "disabled": true,
+      "settings": {
+        "layout": "collage",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false
+      }
+    },
+    "1633932497f976dd4f": {
+      "type": "new-blog-posts",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1633932497f976dd4f"
+  ]
+}
