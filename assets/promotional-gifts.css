@@ -22,3 +22,14 @@
     background-color: var(--background-slight-dark);
     z-index: -1;
 }
+
+.promotional-gifts-img {
+    max-width: 641px;
+}
+
+.promotional-gifts-img img {
+	width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
