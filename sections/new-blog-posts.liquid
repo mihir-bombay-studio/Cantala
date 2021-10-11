@@ -11,7 +11,7 @@
     <div class="blog-page-article flex-box">
     {% for article in blog.articles %}
     <div class="blog-page-article-wrap">
-      <div class="article-image">{{ article.image | img_url: '2048x' | img_tag }}</div>
+      <div class="article-image">{{ article.image | img_url: '500x' | img_tag }}</div>
       <a href="{{ article.url }}" class="article-title">{{ article.title }}</a>
       <div class="article-desc">{{ article.content }}</div>
     </div>
