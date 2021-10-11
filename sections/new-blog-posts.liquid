@@ -8,7 +8,7 @@
       <div class="article-filter">Geschenken<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
     </div>
     
-    <div class="blog-page-article flex-box">
+    <div class="blog-page-articles flex-box">
     {% for article in blog.articles %}
     <div class="blog-page-article-wrap">
       <div class="article-image">{{ article.image | img_url: '500x' | img_tag }}</div>

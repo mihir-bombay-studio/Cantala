@@ -24,8 +24,9 @@
       background-color: var(--main-font-color);
 }
 
-.blog-page-article {
+.blog-page-articles {
     margin: 0 -1%;
+  flex-wrap: wrap;
 }
 
 .blog-page-article-wrap{
