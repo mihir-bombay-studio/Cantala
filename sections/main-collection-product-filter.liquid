@@ -1,14 +1,5 @@
-<div class="hero category-hero hero-homepage only-d-shift normaltop" style="background-image: url({{ "DSC_5012_1.jpg" | asset_url }})">
-  <div class="container flex-box">
-    <div class="flex-center mflex-homepage-hero width-100 mt-top">
-      <h1 class="text-center category-hero-heading">Entdecke hier alle BRAUZZ. Produkte</h1>
-      <p class="text-center category-hero-p">und leiste deinen Beitrag für eine saubere Welt!</p>
-    </div>
-  </div>
-</div>
 
-<div class="parallax">
-  <div class="category category-padd container padd-bottom padd-top {% comment %}marg-top{% endcomment %}">
+  <div class="category category-padd container padd-bottom padd-top">
     <h1 class="no-disp">Unsere Produkte</h1>
     <div class="category-wrapper row-nav marg-top">
       <div class="sticky-nav sub-marg-bottom">
@@ -17,22 +8,15 @@
           <p><strong>Nach Typ filtern</strong></p>
           <a href="#" class="undertones only-border" onClick="return false;" data-value="paketten"><span class="chk-box">{% include "icon-checkbox2" %}</span>Pakete</a>
           <a href="#" class="undertones only-border" onClick="return false;" data-value="navullingen"><span class="chk-box">{% include "icon-checkbox2" %}</span>Refills</a>
-          {% comment %}
-          <a href="#" class="undertones only-border" onClick="return false;" data-value="startersset"><span class="chk-box">{% include "icon-checkbox2" %}</span>Das Starter-Set</a>
-          <a href="#" class="undertones only-border" onClick="return false;" data-value="attribuut"><span class="chk-box">{% include "icon-checkbox2" %}</span>Zubehör</a>
-          {% endcomment %}
           <p><strong>Nach Kategorie filtern</strong></p>
           <a href="#" class="favourites only-border" onClick="return false;" data-value="reinigers"><span class="chk-box">{% include "icon-checkbox2" %}</span>Putzen</a>
           <a href="#" class="favourites only-border" onClick="return false;" data-value="accessoires"><span class="chk-box">{% include "icon-checkbox2" %}</span>Zubehör</a>
           <a href="#" class="favourites only-border" onClick="return false;" data-value="wasmiddel"><span class="chk-box">{% include "icon-checkbox2" %}</span>Waschen</a>
-          {% comment %}
-          <a href="#" class="favourites only-border" onClick="return false;" data-value="afwassen"><span class="chk-box">{% include "icon-checkbox2" %}</span>Afwassen</a>
-          {% endcomment %}
         </div>
         <span class="close-filter negative no-d"></span>
       </div>
       <div class="category-content">
-        {% for product in collections.categoryPage.products %}
+        {% for product in collection.products %}
         {% assign is_preorder = "false" %}
         {% for tag in product.tags %}
           {% if tag contains "preorder" %}
@@ -60,8 +44,6 @@
       </div>
     </div>
   </div>
-
-</div>
 
 <script>
   $('.filter').click(function(){
