@@ -127,12 +127,12 @@
       <div class="sticky-nav sub-marg-bottom">
         <p class="accordion-filter">FILTER</p>
         <div class="nav-colors panel-filter">
-          <p class="accordion"><strong>Smaak</strong> {% render 'icon-caret' %}</p>
+          <p class="accordion-filter"><strong>Smaak</strong> {% render 'icon-caret' %}</p>
           <div class="panel">
             <a href="#" class="undertones only-border" onClick="return false;" data-value="paketten">Pakete</a>
             <a href="#" class="undertones only-border" onClick="return false;" data-value="navullingen">Refills</a>
           </div>
-          <p class="accordion"><strong>Organic</strong> {% render 'icon-caret' %}</p>
+          <p class="accordion-filter"><strong>Organic</strong> {% render 'icon-caret' %}</p>
           <div class="panel">
             <a href="#" class="favourites only-border" onClick="return false;" data-value="reinigers">Putzen</a>
             <a href="#" class="favourites only-border" onClick="return false;" data-value="accessoires">Zubehör</a>
@@ -239,7 +239,7 @@ var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
+    this.classList.toggle("active-filter");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
