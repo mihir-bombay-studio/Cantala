@@ -5,3 +5,9 @@
 .promotional-gifts-heading {
     margin-bottom: 26px;
 }
+
+.promotional-gifts-desc {
+    width: 60%;
+    line-height: 27px;
+    letter-spacing: 0;
+}
