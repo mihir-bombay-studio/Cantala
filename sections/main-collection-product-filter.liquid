@@ -378,7 +378,7 @@
     
     if($("#search-box").val() != "") {
       $('.card-product').each(function() {
-        if($(this).find(".card-product-title").text().indexOf($("#search-box").val()) > -1) {
+        if($(this).find(".card-product-title").text().toLowerCase().indexOf($("#search-box").val().toLowerCase()) > -1) {
           $(this).addClass('fop');
         }
       });
