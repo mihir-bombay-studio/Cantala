@@ -10,6 +10,13 @@
   </div>
 </div>
 
+<script>
+  $('.article-filter').click(function() {
+  	$(this).toggleClass('selected');
+    $(this).find('.close-btn').toggleClass('no-disp');
+  });
+</script>
+
 {% schema %}
   {
     "name": "New Blog Posts",
