@@ -162,11 +162,13 @@
               <p class="card-product-title">
                 {{ product.title | escape  }}
               </p>
+            </div>
+            <div class="row">
+              <span href="#" class="btn btn-smol btn-cta no-t-m">{% if is_preorder == "true" %}Vorbestellen{% else %}Produkt ansehen{% endif %}</span>
+              
               <p class="card-product-price text-center">
                 <span class="product-compare-price" style='color: #EFA693;'><span style='color: #3C3C3B;'>{{ product.compare_at_price | money }}</span></span> {{ product.price | money  }}
               </p>
-              <span href="#" class="btn btn-smol btn-cta no-t-m">{% if is_preorder == "true" %}Vorbestellen{% else %}Produkt ansehen{% endif %}</span>
-              <span href="#" class="btn btn-bg btn-cta no-d">{% if is_preorder == "true" %}Vorbestellen{% else %}Produkt ansehen{% endif %}</span>
             </div>
           </div>
         </a>
