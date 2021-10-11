@@ -6,7 +6,7 @@
     <div class="promotional-gift-contact-content flex-box justify-between">
       <div class="pgc-left">
         <h2 class="pgc-heading">{{ section.settings.heading }}</h2>
-        <div class="pgc-form-wrapper flex-box">
+        <div class="pgc-form-wrapper flex-box justify-between">
         {% form 'contact' %}
         {%- if form.errors -%}
         {{ form.errors | default_errors  }}
