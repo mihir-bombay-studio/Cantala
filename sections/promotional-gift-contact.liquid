@@ -6,7 +6,7 @@
     <div class="promotional-gift-contact-content flex-box justify-between">
       <div class="pgc-left">
         <h2 class="pgc-heading">{{ section.settings.heading }}</h2>
-        <div class="pgc-form-wrapper flex-box justify-between">
+        <div class="pgc-form-wrapper flex-box">
         {% form 'contact' %}
         {%- if form.errors -%}
         {{ form.errors | default_errors  }}
@@ -14,8 +14,10 @@
         {%- if form.posted_successfully? -%}
 
         {%- endif -%}
-        <input class="pgc-form-input half-input" type="text" name="contact[name]" placeholder="Naam*" required>
-        <input class="pgc-form-input half-input" type="email" name="contact[email]" placeholder="E-mailadres*" required>
+        <div class="half-inputs flex-box justify-between">
+          <input class="pgc-form-input half-input" type="text" name="contact[name]" placeholder="Naam*" required>
+          <input class="pgc-form-input half-input" type="email" name="contact[email]" placeholder="E-mailadres*" required>
+        </div>
         <input class="pgc-form-input full-input" type="text" name="contact[compnay_name]" placeholder="Jouw bedrijf*" required>
         <textarea name="contact[message]" class="pgc-form-input full-input" rows="4" cols="50" placeholder="Jouw boodschap"></textarea>
         <input type="checkbox" class="no-disp" id="tnc" name="tnc" value="Terms">
