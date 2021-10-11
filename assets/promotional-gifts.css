@@ -13,11 +13,11 @@
 }
 
 .img-background{
-	width: calc(100% + 25px);
+	width: 48%;
     display: block!important;
     height: 100%;
     position: absolute;
-    left: 25px;
+    right: -25px;
     top: 0;
     background-color: var(--background-slight-dark);
     z-index: -1;
