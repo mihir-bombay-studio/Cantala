@@ -189,7 +189,7 @@
             padding: 16px 24px;
             height: 54px;
             border: 0;
-            width: 69%;
+            width: 82%;
             color: #342D25;
             font-size: 16px;
             font-family: var(--font-body-family);
@@ -198,7 +198,7 @@
               }
           .popup-block .btn {
             margin-top: 0;
-            width: 31%;
+            width: 18%;
             padding: 14px;
             font-family: var(--font-body-family);
               font-weight: 500;
@@ -245,8 +245,6 @@
         </style>
         <div class="popup-block">    
           <div class="rel">
-            <h2 class="default-h2">{{ section.settings.header_text }}</h2><span class="pop-close">{% include "icon-x" %}</span>
-            <p class="default-text">{{ section.settings.sub_header_text }}</p>
             {% form 'customer', class: 'newsletter-form' %}
             <input type="hidden" name="contact[tags]" value="newsletter">
             <div class="newsletter-form__field-wrapper">
@@ -275,13 +273,7 @@
                   Zoeken
                 </button>
               </div>
-              {%- if form.errors -%}
-              <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{{ form.errors.messages['email'] }}</small>
-              {%- endif -%}
             </div>
-            {%- if form.posted_successfully? -%}
-            <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{{ 'newsletter.success' | t }}</h3>
-            {%- endif -%}
             {% endform %}
           </div>
         </div>
