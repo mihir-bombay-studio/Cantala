@@ -20,7 +20,7 @@
         {% assign article = block.settings.featured_article %}
         	<div class="featured-article">
               <div class="article-img">
-                {{ article.image | img_url: '2048x' | img_tag }}
+                {{ article.image | img_url: '500x' | img_tag }}
               </div>
               <a href="{{ article.url }}" class="article-title">{{ article.title }}</a>
         	</div>
