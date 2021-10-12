@@ -60,6 +60,15 @@
     color: #342D25;
     font-family: 'Athelas',serif;
   }
+  .product-price {
+    margin-top: 15px;
+    color: #342D25;
+    font-weight: 500;
+    font-size: 22px;
+    opacity: .7;
+    margin-bottom: 44px;
+    display: block;
+  }
 </style>
 
 <div class="container">
@@ -192,15 +201,13 @@
         </div>
       </div>
 
-      <div class="product-description no-d no-t">{{ desc[0] }}</div>
-
       <div class="accordion">
         <hr class="product-seperator">    
-        <p class="rel">Extra info<span class="symbol symbol-plus">{% include "icon-plus" %}</span></p>
+        <p class="rel">Beschrijving <span class="symbol symbol-plus">{% include "icon-plus" %}</span></p>
         <hr class="product-seperator">
       </div>
       <div class="panel extra-panel">
-        {{ desc[1] }}
+        {{ product.description }}
       </div>
 
     </div>
