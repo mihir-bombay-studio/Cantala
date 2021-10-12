@@ -276,10 +276,23 @@
             "email": "info@lorum.be",
             "phone": "03 452 78 55"
           }
+        },
+        "959ffff6-cc34-4558-aae9-740ea5e19756": {
+          "type": "address",
+          "settings": {
+            "store_name": "Name name",
+            "add_ln_1": "Lorum ipsum 50",
+            "add_ln_2": "2520 Lorum Ipsum",
+            "add_ln_3": "B",
+            "website": "asdf",
+            "email": "adsf",
+            "phone": "456486"
+          }
         }
       },
       "block_order": [
-        "a50142d8-014a-40df-908e-054e8b1d9051"
+        "a50142d8-014a-40df-908e-054e8b1d9051",
+        "959ffff6-cc34-4558-aae9-740ea5e19756"
       ],
       "settings": {
       }
