@@ -22,3 +22,10 @@
 .store-address-wrap {
     margin-bottom: 18px;
 }
+
+.addr-hr {
+    margin: 0;
+    width: 43px;
+    background-color: var(--main-font-color);
+    margin-bottom: 21px;
+}
