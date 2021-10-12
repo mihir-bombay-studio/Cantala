@@ -217,6 +217,31 @@
     font-weight: 400;
     line-height: 8px;
   }
+  .checkbox-wrap{
+	margin-top: 11px;
+}
+
+  .checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+    margin-right: 13px;
+    cursor: pointer;
+  }
+
+  .checkbox.selected .checked {
+    width: 10px;
+    height: 10px;
+    margin-top: 2px;
+    margin-left: 2px;
+    background-color: var(--main-font-color);
+      position: absolute;
+      }
+
+  .checkbox-label {
+    line-height: 27px;
+    font-size: 12px;
+  }
 </style>
 
 <div class="container">
@@ -339,6 +364,10 @@
 
           <div class="m-row grouped">
             <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">Voeg toe aan winkelwagen</span> 
+          </div>
+          <div class="checkbox-wrap flex-box align-center">
+            <span class="checkbox rel"><span class="checked"></span></span>
+            <span class="checkbox-label">Ik ga akkoord met de <a class="label-link" href="#">voorwaarden</a> en heb de <a class="label-link" href="#">privacy policy</a> gelezen.</span>
           </div>
         </div>
       </div>
