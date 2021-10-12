@@ -175,16 +175,13 @@
       display: inline;
       cursor: pointer;
     }
-    .category.category-padd {
-      overflow: hidden;
-    }
   }
 </style>
   <div class="category category-padd container padd-bottom padd-top rel">
     <span class="mobile-filter">{% include "icon-filter-2" %}</span>
     <div class="category-wrapper row-nav marg-top">
       <div class="sticky-nav sub-marg-bottom">
-        <p class="accordion-filter">FILTER</p>
+        <p class="accordion-filter"><span class="close-filter">{% include "icon-arrow-right" %}</span>FILTER</p>
         <div class="nav-colors panel-filter">
           <p class="accordion-filter"><strong>Smaak</strong> {% render 'icon-caret' %}</p>
           <div class="panel">
