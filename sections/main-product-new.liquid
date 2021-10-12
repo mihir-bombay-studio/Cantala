@@ -137,6 +137,10 @@
   .qty-wrapper {
     display: flex;
     align-items: center;
+    border: 1.5px solid #342D25;
+    padding: 16px;
+    width: 45%;
+    justify-content: space-between;
 }
   .qty-btn.symbol-minus {
     opacity: .5;
@@ -281,9 +285,11 @@
         <div class="m-row">
           <div class="qty-wrapper" data-quantity="1">
             <span class="qty-name">Aantal:</span>
-            <span class="qty-btn symbol-minus">{% include "icon-minus" %}</span>
-            <span class="qty-number">1</span>
-            <span class="qty-btn symbol-plus">{% include "icon-plus" %}</span>
+            <span class="qty-container">
+              <span class="qty-btn symbol-minus">{% include "icon-minus" %}</span>
+              <span class="qty-number">1</span>
+              <span class="qty-btn symbol-plus">{% include "icon-plus" %}</span>
+            </span>
           </div>
         </div>
 
