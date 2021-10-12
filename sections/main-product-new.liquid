@@ -54,7 +54,12 @@
 }
   .slider-nav img {
     margin-bottom: 8px;
-}
+  }
+  h1.product-title {
+    font-size: 46px;
+    color: #342D25;
+    font-family: 'Athelas',serif;
+  }
 </style>
 
 <div class="container">
@@ -98,9 +103,8 @@
         <div class="product-row sub-marg-bottom-xs">
           <div class="product-col">
             <h1 class="product-title">{{ product.title | escape  }}</h1>
-            <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{product.id}}" data-product-title="{{product.title}}" data-product-type="{{product.type}}" style="display: block;"></span>
           </div>
-          <div class="product-col text-right">
+          <div class="product-col">
             <span class="product-price">{{ product.price | money  }}</span>
           </div>
         </div>
