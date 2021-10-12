@@ -32,6 +32,19 @@
     font-size: 30px;
     font-family: Athelas,sans-serif;
     color: #342D25;
+    position: relative;
+  }
+  .mobile-filter {
+    display: none;
+  }
+  @media(max-width: 992px) {
+    .mobile-filter {
+      position: absolute;
+      top: -30px;
+      right: 30px;
+      display: inline;
+      cursor: pointer;
+    }
   }
 </style>
 
@@ -40,9 +53,8 @@
     <a href="/" class="breadcrum">Home</a>
     <a class="breadcrum active">{{ collection.title | escape }}</a>
   </div>
-  <span class="page-type">{% if template contains "legal" %}Legal{% endif %}</span>
   <h1 class="main-page-title page-title h0">
-    {{ collection.title | escape }}
+    {{ collection.title | escape }} <span class="mobile-filter">{% include "icon-filter-2" %}</span>
   </h1>
 </div>
 
