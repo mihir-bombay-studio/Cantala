@@ -24,7 +24,7 @@
     position: fixed;
     z-index: 10;
     bottom: 21px;
-    right: 23px;
+    left: 23px;
     background-color: #EBDCC2;
     padding: 37px 39px;
     width: 528px;
@@ -71,7 +71,7 @@
 </style>
 <div class="cookie-popup-block" style="display: none;">    
   <div class="rel">
-    <h2 class="default-h2">{{ section.settings.header_text }}</h2><span class="pop-close">{% include "icon-x" %}</span>
+    <h2 class="default-h2">{% include "icon-cookie" %}{{ section.settings.header_text }}</h2><span class="pop-close">{% include "icon-x" %}</span>
     <p class="default-text">{{ section.settings.sub_header_text }}</p>
 
     <button type="submit" class="btn" name="commit" id="Subscribe" aria-label="Inschrijven">
