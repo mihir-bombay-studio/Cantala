@@ -108,6 +108,31 @@
   hr.product-seperator {
     margin: 24px 0 44px;
   }
+  ul.checklist {
+    margin: 0;
+    list-style: none;
+    list-style-position: inside;
+    font-size: 1em;
+    padding-bottom: 25px;
+}
+  ul.checklist {
+    padding: 20px 0 0 0;
+}
+  ul.checklist li {
+    padding: 0 0 10px 40px;
+    position: relative;
+}
+  ul.checklist li:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ' ';
+    width: 25px;
+    height: 25px;
+    background-image: url({{ "tick.svg" | asset_url }});
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 </style>
 
 <div class="container">
@@ -145,6 +170,19 @@
         {% endcase %} 
         {% endfor %}
       </div>
+      
+      <ul class="checklist">
+        <li><strong>100</strong> snacks</li>
+        <li><strong>Strenge selectie</strong> gezonde snacks</li>
+        <li><strong>Unieke mix</strong> van hartige en zoete snacks</li>
+        <li><strong>+/- 20</strong> verschillende soorten snacks</li>
+        <li>1 <strong>gratis display</strong></li>
+        <li>Met elke snack draag je bij aan <strong>een goed doel</strong></li>
+        <li><strong>Geen verplichtingen</strong></li>
+        <li>1 proefpakket per klant</li>
+
+      </ul>
+      
     </div>
     <div class="product-row-2">
       <div class="product-top">
