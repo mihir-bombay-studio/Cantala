@@ -240,6 +240,40 @@
             <span class="product-price">{{ product.price | money  }}</span>
           </div>
         </div>
+        
+        
+        
+        
+        
+        
+        
+        {%- unless product.has_only_default_variant -%}
+        <div class="variant-options-wrapper">
+          <variant-radios class="no-js-hidden">
+            <div class="fieldset-wrapper style-scrollbar">
+              {%- for option in product.options_with_values -%}
+              	{%- for value in option.values -%}
+              		<div class="box-selector">{{option.name}}{{ value | escape }}</div>
+              	{%- endfor -%}
+              {%- endfor -%}
+            </div>
+            <script id="product-json" type="application/json">
+              {{ product.variants | json }}
+            </script>
+          </variant-radios>
+        </div>
+        {%- endunless -%}
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         {% if product.compare_at_price %}
         <div class="product-row sub-marg-bottom-xs">
           <div class="product-col">
@@ -251,7 +285,6 @@
         </div>
         {% endif %}
       </div>
-      <div class="product-description no-m">{{ desc[0] }}</div>
 
       <div class="product-details">
         {% unless product.has_only_default_variant %}
