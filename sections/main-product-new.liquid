@@ -720,34 +720,14 @@ then close all select boxes:*/
   }
   .cart-popup-block .btn {
     margin-top: 0;
-    width: 31%;
-    padding: 14px;
+    width: auto;
+    padding: 17px 34px;
     font-family: var(--font-body-family);
-    font-weight: 500;
+    font-weight: 400;
     border: 0;
     letter-spacing: .8px;
     font-size: 16px;
 }
-  input::placeholder, textarea::placeholder {
-    color: #342D25; /* Firefox */
-    font-size: 16px;
-    font-family: var(--font-body-family);
-      opacity: .8;
-  }
-
-  input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #342D25; /* Firefox */
-    font-size: 16px;
-    font-family: var(--font-body-family);
-      opacity: .8;
-  }
-
-  input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edge */
-    color: #342D25; /* Firefox */
-    font-size: 16px;
-    font-family: var(--font-body-family);
-      opacity: .8;
-  }
   
   @media(max-width: 992px) {
     .cart-popup-block {
@@ -771,9 +751,11 @@ then close all select boxes:*/
       <h2 class="default-h2">{{ product.title }}</h2>
       <p class="default-text">Zichtbaar bij 30% scroll</p>
     </div>
+    <div>
     <button type="submit" class="btn" name="commit" id="Subscribe" aria-label="Inschrijven">
       Inschrijven
     </button>
+    </div>
   </div>
 </div>
 
