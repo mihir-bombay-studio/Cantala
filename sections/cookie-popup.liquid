@@ -43,17 +43,6 @@
     right: 0;
     cursor: pointer;
   }
-  .default-input {
-    padding: 16px 24px;
-    height: 54px;
-    border: 0;
-    width: 69%;
-    color: #342D25;
-    font-size: 16px;
-    font-family: var(--font-body-family);
-        outline-offset: 0;
-    box-shadow: none;
-  }
   .cookie-popup-block .btn {
     margin-top: 0;
     width: 31%;
@@ -64,27 +53,6 @@
     letter-spacing: .8px;
     font-size: 16px;
 }
-  input::placeholder, textarea::placeholder {
-    color: #342D25; /* Firefox */
-    font-size: 16px;
-    font-family: var(--font-body-family);
-      opacity: .8;
-  }
-
-  input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #342D25; /* Firefox */
-    font-size: 16px;
-    font-family: var(--font-body-family);
-      opacity: .8;
-  }
-
-  input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edge */
-    color: #342D25; /* Firefox */
-    font-size: 16px;
-    font-family: var(--font-body-family);
-      opacity: .8;
-  }
-  
   @media(max-width: 992px) {
     .cookie-popup-block {
       bottom: 0;
@@ -105,42 +73,10 @@
   <div class="rel">
     <h2 class="default-h2">{{ section.settings.header_text }}</h2><span class="pop-close">{% include "icon-x" %}</span>
     <p class="default-text">{{ section.settings.sub_header_text }}</p>
-    {% form 'customer', class: 'newsletter-form' %}
-              <input type="hidden" name="contact[tags]" value="newsletter">
-              <div class="newsletter-form__field-wrapper">
-                <div class="field">
-                  <input
-                    id="NewsletterForm--{{ section.id }}"
-                    type="email"
-                    name="contact[email]"
-                    class="default-input"
-                    value="{{ form.email }}"
-                    aria-required="true"
-                    autocorrect="off"
-                    autocapitalize="off"
-                    autocomplete="email"
-                    {% if form.errors %}
-                      autofocus
-                      aria-invalid="true"
-                      aria-describedby="Newsletter-error--{{ section.id }}"
-                    {% elsif form.posted_successfully? %}
-                      aria-describedby="Newsletter-success--{{ section.id }}"
-                    {% endif %}
-                    placeholder="Jouw e-mailadres"
-                    required
-                  >
-                  <button type="submit" class="btn" name="commit" id="Subscribe" aria-label="Inschrijven">
-                    Inschrijven
-                  </button>
-                </div>
-                {%- if form.errors -%}
-                  <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{{ form.errors.messages['email'] }}</small>
-                {%- endif -%}
-              </div>
-              {%- if form.posted_successfully? -%}
-                <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{{ 'newsletter.success' | t }}</h3>
-              {%- endif -%}
-            {% endform %}
+
+    <button type="submit" class="btn" name="commit" id="Subscribe" aria-label="Inschrijven">
+      Inschrijven
+    </button>
   </div>
 </div>
 
