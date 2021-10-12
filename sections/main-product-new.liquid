@@ -69,6 +69,33 @@
     margin-bottom: 44px;
     display: block;
   }
+  
+  .accordion-description {
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .accordion-description svg {
+    width: 8px;
+    height: auto;
+    position: absolute;
+    right: -14px;
+    top: calc( 50% - 2.5px );
+    transition: .2s ease;
+  }
+  
+  .accordion-description.accordion-active svg {
+    transform: rotate(180deg);
+  }
 </style>
 
 <div class="container">
@@ -201,7 +228,7 @@
         </div>
       </div>
 
-      <div class="accordion">
+      <div class="accordion-description">
         <hr class="product-seperator">    
         <p class="rel">Beschrijving <span class="symbol symbol-plus">{% include "icon-plus" %}</span></p>
         <hr class="product-seperator">
@@ -214,6 +241,24 @@
   </div>
   
 </div>
+
+<script>
+  //faq script
+  var acc = document.getElementsByClassName("accordion-description");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("accordion-active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+</script>
 
 {% schema %}
   {
