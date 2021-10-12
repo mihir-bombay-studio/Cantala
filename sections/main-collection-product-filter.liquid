@@ -147,16 +147,16 @@
       position: absolute;
       height: 100vh;
       z-index: 99;
-      left: 0;
-      right: 0;
+      left: auto;
+      right: -100vw;
       top: -999px;
       bottom: 0;
       transition: top .8s ease;
       padding: 0 40px;
       overflow-x: hidden;
     }
-    .category-wrapper .sticky-nav.open {
-      top: 101px;
+    .category-wrapper .sticky-nav.open {      
+      right: 0;
     }
     .category-content {
       max-width: none;
@@ -173,6 +173,9 @@
       right: 30px;
       display: inline;
       cursor: pointer;
+    }
+    .category.category-padd {
+      overflow: hidden;
     }
   }
 </style>
