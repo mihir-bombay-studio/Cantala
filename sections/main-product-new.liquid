@@ -182,6 +182,9 @@
     color: #F4EDE2;
     text-align: center;
 }
+  .option-wrapper {
+    margin-bottom: 60px;
+  }
 </style>
 
 <div class="container">
@@ -252,6 +255,7 @@
           <variant-radios class="no-js-hidden">
             <div class="fieldset-wrapper style-scrollbar">
               {%- for option in product.options_with_values -%}
+              <div class="option-wrapper">
               <div class="option-name">{{option.name}}</div>
               	{%- for value in option.values -%}
                   {% if option.name == "Gewicht" %}
@@ -268,6 +272,7 @@
               		{% endif %}
                   {% endif %}
               	{%- endfor -%}
+              </div>
               {%- endfor -%}
             </div>
             <script id="product-json" type="application/json">
