@@ -177,15 +177,20 @@
       margin-bottom: 40px;
       display: inline-block;
     }
-    .underlay.open {
+    .underlay {
       display: block !important;
       position: absolute;
       background-color: #342d2578;
-      height: 100%;
-      width: 100vw;
-      top: 0;
+      height: 100vh;
+      width: 100%;
+      top: -999px;
       left: 0;
       z-index: 10;
+      overflow-x: hidden;
+      transition: top .8s ease;
+    }
+    .underlay.open {
+      top: 0;
     }
   }  
 </style>
