@@ -300,12 +300,25 @@
             "email": "dvcb",
             "phone": "46356"
           }
+        },
+        "99d89ba4-af2c-4bd8-ac75-428b296c1b59": {
+          "type": "address",
+          "settings": {
+            "store_name": "sfdngh",
+            "add_ln_1": "sdfgsfgn",
+            "add_ln_2": "vbxhnm",
+            "add_ln_3": "sfndgh",
+            "website": "sfbghcm",
+            "email": "fdfhdgyj",
+            "phone": "15646"
+          }
         }
       },
       "block_order": [
         "a50142d8-014a-40df-908e-054e8b1d9051",
         "959ffff6-cc34-4558-aae9-740ea5e19756",
-        "f48a4924-f832-494a-aa2e-bd705f9208a4"
+        "f48a4924-f832-494a-aa2e-bd705f9208a4",
+        "99d89ba4-af2c-4bd8-ac75-428b296c1b59"
       ],
       "settings": {
       }
