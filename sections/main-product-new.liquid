@@ -264,83 +264,10 @@
         </div>
         {%- endunless -%}
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        {% if product.compare_at_price %}
-        <div class="product-row sub-marg-bottom-xs">
-          <div class="product-col">
-            <span class="product-info">&nbsp;</span>
-          </div>
-          <div class="product-col text-right">
-            <span class="product-compare">{{ product.first_available_variant.compare_at_price | money }}</span>
-          </div>
-        </div>
-        {% endif %}
+                
       </div>
 
       <div class="product-details">
-        {% unless product.has_only_default_variant %}
-        {% for option in product.options %}
-        <span class="option-title">{{ option }}</span>
-        {% endfor %}
-        {% endunless %}
-        {% assign first_product_name = product.first_available_variant.title %}
-        {% if product.has_only_default_variant %}
-        {% assign first_product_name = product.title %}
-        {% endif %}
-
-        {% assign lang_selector_price = product.first_available_variant.price %}
-        {% assign lang_selector_compare = product.first_available_variant.compare_at_price %}
-        {% assign lang_selector_id = product.first_available_variant.id %}
-        {% if cart.attributes.lang == "fr" %}
-        {% for variant in product.variants %}
-        {% assign vsku = variant.title | downcase %}
-        {% if variant.available and vsku == "français" %}
-        {% assign lang_selector_price = variant.price %}
-        {% assign lang_selector_compare = variant.compare_at_price %}
-        {% assign lang_selector_id = variant.id %}
-        {% assign first_product_name = variant.title %}
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-
-        <div class="variant-box selected main-var-box" data-price="{{ lang_selector_price }}"  data-compare="{{ lang_selector_compare }}" {% if product.has_only_default_variant %}style="display: none;"{% endif %}>
-          <span class="radio-emulate" id="pvar1sub" data-value="{{ lang_selector_id }}" style="display: none"></span>
-          <div for="pvar1" class="dropdown-emulate secondary">
-            <span class="main-dd"><span class="dd-text">{{ first_product_name }}</span>
-              <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                <g>
-                  <path d="m 21.365632,3.8463214 27.760611,-0.1607933 0.08747,-27.6872871 8.12143,-0.09916 -0.107135,35.888216 -35.940265,0.107799 z" transform="matrix(0.70421428,0.7099875,-0.70421428,0.7099875,0,0)"></path>
-                </g>
-              </svg>
-            </span>
-            <span class="options-dd">
-              {% for variant in product.variants %}
-              {% if variant.available %}
-              {% for media in product.media %}
-              {% if media == variant.image %}
-              {% assign var_img = forloop.index0 %}
-              {% endif %}
-              {% endfor %}
-              <span data-id="{{ variant.id }}" data-price="{{ variant.price }}" data-compare="{{ variant.compare_at_price }}" data-img="{{ var_img }}">{{ variant.title }}</span>
-              {% endif %}
-              {% endfor %}
-              {% for variant in product.variants %}
-              {% unless variant.available %}
-              <span class="disabled-variant" data-id="{{ variant.id }}" data-price="{{ variant.price }}" data-compare="{{ variant.compare_at_price }}" data-img="0">{{ variant.title }} - uitverkocht</span>
-              {% endunless %}
-              {% endfor %}
-            </span>
-          </div>
-        </div>
         <div class="flex-box">
           <div class="m-row grouped">
             <div class="qty-wrapper" data-quantity="1">
@@ -354,7 +281,7 @@
           </div>
 
           <div class="m-row grouped">
-            <span class="addcart btn" id="AddToCart">Voeg toe aan winkelwagen</span> 
+            <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">Voeg toe aan winkelwagen</span> 
           </div>
         </div>
       </div>
