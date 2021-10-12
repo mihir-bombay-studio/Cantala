@@ -30,6 +30,146 @@
     <a href="/" class="breadcrum">Home</a>
     <a class="breadcrum active">{{ product.title | escape }}</a>
   </div>
+  
+  
+  <div class="container product padd-top-m flex-box justify-between top-puzzle-left">
+    <div class="product-row-1">
+      <div class="slider-for">
+        {% for media in product.media %}
+        {% case media.media_type %}
+        {% when 'image' %}
+        <img src="{{ media | img_url: 'x600' }}" alt="{{ media.alt | escape }}" {% unless forloop.first %}loading="lazy"{% endunless %}>
+        {% when 'video' %}
+        <video playsinline="playsinline" preload="auto" autoplay="autoplay" muted="muted" loop="loop">
+          {% for video in media.sources %}{% if video.format == "mp4" %}<source src="{{ video.url }}" type="video/mp4">{% endif %}{% endfor %}
+        </video>
+        {% else %}
+        <img src="{{ media | img_url: 'x600' }}" alt="{{ media.alt | escape }}" {% unless forloop.first %}loading="lazy"{% endunless %}>
+        {% endcase %}          
+        {% endfor %}
+      </div>
+      <div class="slider-nav{% for media in product.media %}{% if forloop.length < 8 %} no-transform{% endif %}{% endfor %}">
+        {% for media in product.media %}          
+        {% case media.media_type %}
+        {% when 'image' %}
+        <img src="{{ media.preview_image | img_url: '200x' }}" alt="{{ media.alt | escape }}"> 
+        {% when 'video' %}
+        <div class="video-btn"><img src="{{ media.preview_image | img_url: '200x' }}" alt="{{ media.alt | escape }}"> </div>
+        {% else %}
+        <img src="{{ media.preview_image | img_url: '200x' }}" alt="{{ media.alt | escape }}"> 
+        {% endcase %} 
+        {% endfor %}
+      </div>
+    </div>
+    <div class="product-row-2">
+      <div class="product-top">
+        <div class="product-row sub-marg-bottom-xs">
+          <div class="product-col">
+            <h1 class="product-title">{{ product.title | escape  }}</h1>
+            <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{product.id}}" data-product-title="{{product.title}}" data-product-type="{{product.type}}" style="display: block;"></span>
+          </div>
+          <div class="product-col text-right">
+            <span class="product-price">{{ product.price | money  }}</span>
+          </div>
+        </div>
+        {% if product.compare_at_price %}
+        <div class="product-row sub-marg-bottom-xs">
+          <div class="product-col">
+            <span class="product-info">&nbsp;</span>
+          </div>
+          <div class="product-col text-right">
+            <span class="product-compare">{{ product.first_available_variant.compare_at_price | money }}</span>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      <div class="product-description no-m">{{ desc[0] }}</div>
+
+      <div class="product-details">
+        {% unless product.has_only_default_variant %}
+        {% for option in product.options %}
+        <span class="option-title">{{ option }}</span>
+        {% endfor %}
+        {% endunless %}
+        {% assign first_product_name = product.first_available_variant.title %}
+        {% if product.has_only_default_variant %}
+        {% assign first_product_name = product.title %}
+        {% endif %}
+
+        {% assign lang_selector_price = product.first_available_variant.price %}
+        {% assign lang_selector_compare = product.first_available_variant.compare_at_price %}
+        {% assign lang_selector_id = product.first_available_variant.id %}
+        {% if cart.attributes.lang == "fr" %}
+        {% for variant in product.variants %}
+        {% assign vsku = variant.title | downcase %}
+        {% if variant.available and vsku == "français" %}
+        {% assign lang_selector_price = variant.price %}
+        {% assign lang_selector_compare = variant.compare_at_price %}
+        {% assign lang_selector_id = variant.id %}
+        {% assign first_product_name = variant.title %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        <div class="variant-box selected main-var-box" data-price="{{ lang_selector_price }}"  data-compare="{{ lang_selector_compare }}" {% if product.has_only_default_variant %}style="display: none;"{% endif %}>
+          <span class="radio-emulate" id="pvar1sub" data-value="{{ lang_selector_id }}" style="display: none"></span>
+          <div for="pvar1" class="dropdown-emulate secondary">
+            <span class="main-dd"><span class="dd-text">{{ first_product_name }}</span>
+              <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                <g>
+                  <path d="m 21.365632,3.8463214 27.760611,-0.1607933 0.08747,-27.6872871 8.12143,-0.09916 -0.107135,35.888216 -35.940265,0.107799 z" transform="matrix(0.70421428,0.7099875,-0.70421428,0.7099875,0,0)"></path>
+                </g>
+              </svg>
+            </span>
+            <span class="options-dd">
+              {% for variant in product.variants %}
+              {% if variant.available %}
+              {% for media in product.media %}
+              {% if media == variant.image %}
+              {% assign var_img = forloop.index0 %}
+              {% endif %}
+              {% endfor %}
+              <span data-id="{{ variant.id }}" data-price="{{ variant.price }}" data-compare="{{ variant.compare_at_price }}" data-img="{{ var_img }}">{{ variant.title }}</span>
+              {% endif %}
+              {% endfor %}
+              {% for variant in product.variants %}
+              {% unless variant.available %}
+              <span class="disabled-variant" data-id="{{ variant.id }}" data-price="{{ variant.price }}" data-compare="{{ variant.compare_at_price }}" data-img="0">{{ variant.title }} - uitverkocht</span>
+              {% endunless %}
+              {% endfor %}
+            </span>
+          </div>
+        </div>
+        <div class="m-row">
+          <h2 class="quantity-text">
+            Kies hoeveel puzzels je wil bestellen?
+          </h2>
+          <div class="qty-wrapper" data-quantity="1">
+            <span class="qty-btn symbol-minus">{% include "icon-prod-minus" %}</span>
+            <span class="qty-number">01</span>
+            <span class="qty-btn symbol-plus">{% include "icon-prod-plus" %}</span>
+          </div>
+        </div>
+
+        <div class="m-row">
+          <span class="addcart" id="AddToCart">{% if is_preorder %}Pre-order{% else %}Koop nu{% endif %}</span> 
+        </div>
+      </div>
+
+      <div class="product-description no-d no-t">{{ desc[0] }}</div>
+
+      <div class="accordion">
+        <hr class="product-seperator">    
+        <p class="rel">Extra info<span class="symbol symbol-plus">{% include "icon-plus" %}</span></p>
+        <hr class="product-seperator">
+      </div>
+      <div class="panel extra-panel">
+        {{ desc[1] }}
+      </div>
+
+    </div>
+  </div>
+  
 </div>
 
 {% schema %}
