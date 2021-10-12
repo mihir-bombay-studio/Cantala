@@ -29,12 +29,6 @@ $(document).ready(function(){
       }
     ]
   });
-  $('.slider-nav').slick({
-    slidesToShow: window.productimages,
-    slidesToScroll: 7,
-    asNavFor: '.slider-for',
-    focusOnSelect: true
-  });
   
   $('.coll-products').slick({
     infinite: false,
