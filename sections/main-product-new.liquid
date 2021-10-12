@@ -316,7 +316,35 @@
   
 </div>
 
+
 <script>
+  
+  
+  $(".qty-wrapper .symbol-plus").click(function(){
+      var adder = 1;
+      $(this).parent().parent().data("quantity",parseInt($(this).parent().data("quantity"))+1);
+      $(this).parent().find('.qty-number').text($(this).parent().data("quantity"));   
+      if($(this).parent().parent().data("quantity") < 2) {
+        $(this).parent().find('.symbol-minus').css('opacity','0.5');
+      } else {
+        $(this).parent().find('.symbol-minus').css('opacity','1');
+      }
+      //$(".product-price").text("€"+cartBtnPrice());       
+    }); 
+    $(".qty-wrapper .symbol-minus").click(function(){
+      if($(this).parent().parent().data("quantity") > 1) {
+      	var adder = 1;
+        $(this).parent().parent().data("quantity",parseInt($(this).parent().data("quantity"))-1);
+        $(this).parent().find('.qty-number').text($(this).parent().data("quantity")); 
+        if($(this).parent().parent().data("quantity") < 2) {
+        	$(this).css('opacity','0.5');
+        } else {
+        	$(this).css('opacity','1');
+        }
+      //$(".product-price").text("€"+cartBtnPrice());
+      }
+    });   
+  
   //faq script
   var acc = document.getElementsByClassName("accordion-description");
   var i;
