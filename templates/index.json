@@ -288,11 +288,24 @@
             "email": "adsf",
             "phone": "456486"
           }
+        },
+        "f48a4924-f832-494a-aa2e-bd705f9208a4": {
+          "type": "address",
+          "settings": {
+            "store_name": "asdf",
+            "add_ln_1": "asdf",
+            "add_ln_2": "xcvsdf",
+            "add_ln_3": "zxcgsdfg",
+            "website": "zcxvadf",
+            "email": "dvcb",
+            "phone": "46356"
+          }
         }
       },
       "block_order": [
         "a50142d8-014a-40df-908e-054e8b1d9051",
-        "959ffff6-cc34-4558-aae9-740ea5e19756"
+        "959ffff6-cc34-4558-aae9-740ea5e19756",
+        "f48a4924-f832-494a-aa2e-bd705f9208a4"
       ],
       "settings": {
       }
