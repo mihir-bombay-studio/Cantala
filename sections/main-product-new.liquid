@@ -780,14 +780,10 @@ then close all select boxes:*/
     var c=$('html').outerHeight(); 
     var p=(t/c*100).toFixed(0); 
     if (p>30) { 
-      $(".cart-popup-block:not(.active)").fadeIn();
-      $(".cart-popup-block").addClass("active");
-    } 
-  }); 
-  
-  $(".cart-popup-block .pop-close").click(function() {
-  	$(".cart-popup-block").fadeOut();console.log("sdf");
-  });
-  
+      $(".cart-popup-block").fadeIn();
+    } else {
+      $(".cart-popup-block").fadeOut();
+    }
+  });   
 </script>
 
