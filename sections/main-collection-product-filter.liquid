@@ -147,16 +147,17 @@
       position: absolute;
       height: 100vh;
       z-index: 99;
-      left: auto;
-      right: -100vw;
-      top: 0;
+      left: 0;
+      right: 0;
+      top: -999px;
       bottom: 0;
       transition: top .8s ease;
       padding: 0 40px;
       overflow-x: hidden;
+      background-color: #F4EDE2;
     }
-    .category-wrapper .sticky-nav.open {      
-      right: 0;
+    .category-wrapper .sticky-nav.open {
+      top: 0;
     }
     .category-content {
       max-width: none;
@@ -174,7 +175,7 @@
       display: inline;
       cursor: pointer;
     }
-    .category.category-padd .sticky-nav {
+    .category.category-padd {
       overflow: hidden;
     }
   }
