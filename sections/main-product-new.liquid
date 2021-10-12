@@ -499,12 +499,12 @@ then close all select boxes:*/
     background-image: url({{ "caret.svg" | asset_url }});
     background-size: cover;
     background-repeat: no-repeat;
+    transition: .5s ease;
   }
 
 /*point the arrow upwards when the select box is open (active):*/
 .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
+  transform: rotate(180deg);
 }
 
 /*style the items (options), including the selected item:*/
