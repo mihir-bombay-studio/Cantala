@@ -14,3 +14,7 @@
     line-height: 28px;
     letter-spacing: 0;
 }
+
+.store-name.medium {
+    margin-bottom: 10px;
+}
