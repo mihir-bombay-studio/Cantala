@@ -253,7 +253,7 @@
             <div class="fieldset-wrapper style-scrollbar">
               {%- for option in product.options_with_values -%}
               	{%- for value in option.values -%}
-              		<div class="box-selector">{{option.name}}{{ value | escape }}</div>
+              		<div class="box-selector {% if option.selected_value == value %}selected{% endif %}">{{option.name}}{{ value | escape }}</div>
               	{%- endfor -%}
               {%- endfor -%}
             </div>
