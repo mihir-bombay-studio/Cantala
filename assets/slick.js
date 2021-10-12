@@ -14,6 +14,28 @@ $(document).ready(function(){
 //     ]
 //   });
   
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav',
+    responsive: [
+      {
+        breakpoint: 560,
+        settings: {
+          fade: false
+        }
+      }
+    ]
+  });
+  $('.slider-nav').slick({
+    slidesToShow: window.productimages,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    focusOnSelect: true
+  });
+  
   $('.coll-products').slick({
     infinite: false,
     slidesToShow: 4,
