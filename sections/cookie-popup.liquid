@@ -72,7 +72,8 @@
 </style>
 <div class="cookie-popup-block" style="display: none;">    
   <div class="rel">
-    <h2 class="default-h2"><span class="cookie-image">{% include "icon-cookie" %}</span>{{ section.settings.header_text }}</h2>
+    <span class="cookie-image">{% include "icon-cookie" %}</span>
+    <h2 class="default-h2">{{ section.settings.header_text }}</h2>
     <p class="default-text">{{ section.settings.sub_header_text }}</p>
 
     <button type="submit" class="btn" name="commit" id="Subscribe" aria-label="Inschrijven">
