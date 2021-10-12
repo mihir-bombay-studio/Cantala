@@ -372,6 +372,18 @@
             "email": "yjdzg",
             "phone": "78612318"
           }
+        },
+        "25622426-8529-42c6-848f-f1b0e4d7b8d5": {
+          "type": "address",
+          "settings": {
+            "store_name": "guxfg",
+            "add_ln_1": "fbdg",
+            "add_ln_2": "fgndyhs",
+            "add_ln_3": "sftsrtag",
+            "website": "sdrsgbdfn",
+            "email": "resgdfgnd",
+            "phone": "4863123"
+          }
         }
       },
       "block_order": [
@@ -383,7 +395,8 @@
         "bc7b4f90-dc21-41b6-8415-104fc08c4045",
         "b61cde10-df90-495f-b2a2-f12008bafabe",
         "524158dc-9bb4-4725-8268-62988127e74a",
-        "6a42c1cb-522d-433c-a480-1b8b26e6d3b2"
+        "6a42c1cb-522d-433c-a480-1b8b26e6d3b2",
+        "25622426-8529-42c6-848f-f1b0e4d7b8d5"
       ],
       "settings": {
       }
