@@ -360,6 +360,18 @@
             "email": "bvmguio",
             "phone": "12322648"
           }
+        },
+        "6a42c1cb-522d-433c-a480-1b8b26e6d3b2": {
+          "type": "address",
+          "settings": {
+            "store_name": "egsf",
+            "add_ln_1": "adbdgh",
+            "add_ln_2": "ityerg",
+            "add_ln_3": "yjthsrg",
+            "website": "bndgs",
+            "email": "yjdzg",
+            "phone": "78612318"
+          }
         }
       },
       "block_order": [
@@ -370,7 +382,8 @@
         "62a57632-e713-4236-948a-45772b978f9c",
         "bc7b4f90-dc21-41b6-8415-104fc08c4045",
         "b61cde10-df90-495f-b2a2-f12008bafabe",
-        "524158dc-9bb4-4725-8268-62988127e74a"
+        "524158dc-9bb4-4725-8268-62988127e74a",
+        "6a42c1cb-522d-433c-a480-1b8b26e6d3b2"
       ],
       "settings": {
       }
