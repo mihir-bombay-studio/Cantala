@@ -177,10 +177,21 @@
       margin-bottom: 40px;
       display: inline-block;
     }
+    .underlay.open {
+      display: block !important;
+      position: absolute;
+      background-color: #342d2578;
+      height: 100%;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
   }  
 </style>
   <div class="category category-padd container padd-bottom padd-top">    
     <div class="category-wrapper row-nav marg-top">
+      <div class="underlay"></div>
       <div class="sticky-nav sub-marg-bottom">
         <p class="accordion-filter"><span class="close-filter">{% include "icon-arrow-right" %}</span>FILTER</p>
         <div class="nav-colors panel-filter">
