@@ -252,8 +252,15 @@
           <variant-radios class="no-js-hidden">
             <div class="fieldset-wrapper style-scrollbar">
               {%- for option in product.options_with_values -%}
+              	{{option.name}}
               	{%- for value in option.values -%}
-              		<div class="box-selector {% if option.selected_value == value %}selected{% endif %}">{{option.name}}{{ value | escape }}</div>
+                  {% if option.name == "Gewicht" %}
+              		<div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}">{{ value | escape }}</div>
+                  {% else %}
+                    <select class="selector drop-selector" name="{{option.name}}" id="selector-{{ forloop.index }}">
+                      <option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value | escape }}</option>
+                    </select>
+                  {% endif %}
               	{%- endfor -%}
               {%- endfor -%}
             </div>
