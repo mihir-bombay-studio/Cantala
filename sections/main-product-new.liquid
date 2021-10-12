@@ -259,7 +259,14 @@
               <div class="option-name">{{option.name}}</div>
               	{%- for value in option.values -%}
                   {% if option.name == "Gewicht" %}
-                <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}">{% include "icon-weight" %}{{ value | escape | times: 1000 }} GRAM<span class="discount">5% discount on kilo price</span></div>
+                	{% if forloop.first %}
+              			<div class="box-selector-wrapper">
+                    {% endif %}
+                	<div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}">{% include "icon-weight" %}{{ value | escape | times: 1000 }} GRAM<span class="discount">5% discount on kilo price</span></div>
+                          
+                	{% if forloop.last %}
+                	</div>
+                    {% endif %}
                   {% else %}
                     {% if forloop.first %}
               		<div class="custom-select">
