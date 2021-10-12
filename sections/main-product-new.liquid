@@ -610,3 +610,184 @@ then close all select boxes:*/
   background-color: rgba(0, 0, 0, 0.1);
 }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  
+  .default-h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #342D25;
+    font-family: Athelas,sans-serif;
+    text-align: center;
+  }
+
+  .default-text {
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #342D25;
+    color: #F4EDE2;
+    display: table;
+    margin: 0 auto;
+    padding: 14px 44px;
+    margin-top: 30px;
+  }
+  .cart-popup-block {
+    position: fixed;
+    z-index: 10;
+    bottom: 21px;
+    right: 23px;
+    background-color: #EBDCC2;
+    padding: 37px 39px;
+    width: 528px;
+  }
+  .cart-popup-block .default-h2 {
+    text-align: left;
+    max-width: 345px;
+  }
+  .cart-popup-block .default-text {
+    text-align: left;
+    max-width: 345px;
+  }
+  .pop-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  .default-input {
+    padding: 16px 24px;
+    height: 54px;
+    border: 0;
+    width: 69%;
+    color: #342D25;
+    font-size: 16px;
+    font-family: var(--font-body-family);
+        outline-offset: 0;
+    box-shadow: none;
+  }
+  .cart-popup-block .btn {
+    margin-top: 0;
+    width: 31%;
+    padding: 14px;
+    font-family: var(--font-body-family);
+    font-weight: 500;
+    border: 0;
+    letter-spacing: .8px;
+    font-size: 16px;
+}
+  input::placeholder, textarea::placeholder {
+    color: #342D25; /* Firefox */
+    font-size: 16px;
+    font-family: var(--font-body-family);
+      opacity: .8;
+  }
+
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #342D25; /* Firefox */
+    font-size: 16px;
+    font-family: var(--font-body-family);
+      opacity: .8;
+  }
+
+  input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edge */
+    color: #342D25; /* Firefox */
+    font-size: 16px;
+    font-family: var(--font-body-family);
+      opacity: .8;
+  }
+  
+  @media(max-width: 992px) {
+    .cart-popup-block {
+      bottom: 0;
+      right: 0;
+      padding: 28px 20px;
+      width: 100%;
+    }
+    .cart-popup-block .default-h2 {
+      max-width: 90%;
+    }
+    .cart-popup-block .default-text {
+      max-width: 90%;
+    }
+  }
+  
+</style>
+<div class="cart-popup-block" style="display: none;">    
+  <div class="rel">
+    <h2 class="default-h2">{{ product.title }}</h2>
+    <p class="default-text">Zichtbaar bij 30% scroll</p>
+    <button type="submit" class="btn" name="commit" id="Subscribe" aria-label="Inschrijven">
+      Inschrijven
+    </button>
+  </div>
+</div>
+
+<script>
+  $(window).scroll(function() { 
+    var t=$(window).scrollTop()+1; 
+    var c=$('html').outerHeight(); 
+    var p=(t/c*100).toFixed(0); 
+    if (p>30) { 
+      $(".cart-popup-block:not(.active)").fadeIn();
+      $(".cart-popup-block").addClass("active");
+    } 
+  }); 
+  
+  $(".cart-popup-block .pop-close").click(function() {
+  	$(".cart-popup-block").fadeOut();console.log("sdf");
+  });
+  
+</script>
+
