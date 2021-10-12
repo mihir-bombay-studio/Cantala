@@ -459,10 +459,12 @@
   
   $('.mobile-filter').click(function(){
     $('.sticky-nav').addClass('open');
+    $('.underlay').addClass('open');
     $('body').addClass('no-scroll');
   });
   $('.close-filter').click(function(){
     $('.sticky-nav').removeClass('open');
+    $('.underlay').removeClass('open');
     $('body').removeClass('no-scroll');
   });
   
