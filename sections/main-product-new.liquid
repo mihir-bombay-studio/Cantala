@@ -190,7 +190,8 @@
     padding: 8px 10px;
     width: 33.333%;
     min-height: 51px;
-    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
   }  
   .selector.box-selector:first-child {
   	border-right: 0;
@@ -282,7 +283,7 @@
                 	{% if forloop.first %}
               			<div class="box-selector-wrapper">
                     {% endif %}
-                	<div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}">{% include "icon-weight" %}{{ value | escape | times: 1000 }} GRAM<span class="discount">5% discount on kilo price</span></div>
+                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}">{% include "icon-weight" %}<span class="box-title">{{ value | escape | times: 1000 }} GRAM</span><span class="discount">5% discount on kilo price</span></div>
                           
                 	{% if forloop.last %}
                 	</div>
