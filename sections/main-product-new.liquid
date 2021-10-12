@@ -701,23 +701,6 @@ then close all select boxes:*/
     text-align: left;
     max-width: 345px;
   }
-  .pop-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-  }
-  .default-input {
-    padding: 16px 24px;
-    height: 54px;
-    border: 0;
-    width: 69%;
-    color: #342D25;
-    font-size: 16px;
-    font-family: var(--font-body-family);
-        outline-offset: 0;
-    box-shadow: none;
-  }
   .cart-popup-block .btn {
     margin-top: 0;
     width: auto;
@@ -746,7 +729,7 @@ then close all select boxes:*/
   
 </style>
 <div class="cart-popup-block" style="display: none;">    
-  <div class="container flex-box">
+  <div class="container flex-box justify-between">
     <div>
       <h2 class="default-h2">{{ product.title }}</h2>
       <p class="default-text">Zichtbaar bij 30% scroll</p>
