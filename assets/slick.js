@@ -32,8 +32,7 @@ $(document).ready(function(){
   $('.slider-nav').slick({
     slidesToShow: 7,
     slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    focusOnSelect: true
+    asNavFor: '.slider-for'
   });
   
   $('.coll-products').slick({
