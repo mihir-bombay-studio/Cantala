@@ -261,6 +261,28 @@
         "heading": "Contacteer ons",
         "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png"
       }
+    },
+    "16340375883eb7d54e": {
+      "type": "stores",
+      "blocks": {
+        "a50142d8-014a-40df-908e-054e8b1d9051": {
+          "type": "address",
+          "settings": {
+            "store_name": "Name name",
+            "add_ln_1": "Lorum ipsum 50",
+            "add_ln_2": "2520 Lorum Ipsum",
+            "add_ln_3": "Belgium",
+            "website": "www.lorum.com",
+            "email": "info@lorum.be",
+            "phone": "03 452 78 55"
+          }
+        }
+      },
+      "block_order": [
+        "a50142d8-014a-40df-908e-054e8b1d9051"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -275,6 +297,7 @@
     "1633678277ec1a08eb",
     "16339451072b2820df",
     "163395068167d59b32",
-    "16339544764961238f"
+    "16339544764961238f",
+    "16340375883eb7d54e"
   ]
 }
