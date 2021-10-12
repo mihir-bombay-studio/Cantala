@@ -74,7 +74,6 @@
     cursor: pointer;
     transition: 0.4s;
     position: relative;
-    display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -85,16 +84,19 @@
     transition: max-height 0.2s ease-out;
   }
   .accordion-description svg {
-    width: 8px;
+    width: 18px;
     height: auto;
     position: absolute;
-    right: -14px;
-    top: calc( 50% - 2.5px );
+    right: 0;
+    top: calc( 50% - 9.5px );
     transition: .2s ease;
   }
   
-  .accordion-description.accordion-active svg {
-    transform: rotate(180deg);
+  .accordion-description.accordion-active svg.symbol.symbol-plus {
+    opacity: 0;
+  }
+  hr.product-seperator {
+    margin: 24px 0 44px;
   }
 </style>
 
