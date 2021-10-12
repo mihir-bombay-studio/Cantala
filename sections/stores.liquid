@@ -7,6 +7,18 @@
         {% if block.type == "address" %}
       		<div class="store-address">
               <div class="store-name medium">{{ block.settings.store_name }}</div>
+              <div class="store-address-wrap">
+              	<div class="store-address">{{ block.settings.add_ln_1 }}</div>
+                <div class="store-address">{{ block.settings.add_ln_2 }}</div>
+                <div class="store-address">{{ block.settings.add_ln_3 }}</div>
+              </div>
+              <div class="store-website">{{ block.settings.website }}</div>
+              <div class="store-email">{{ block.settings.email }}</div>
+              <div class="store-phone">{{ block.settings.phone }}</div>
+              <div class="store-hours flex-box justify-between">
+                <div class="store-hours-text">Openingstijden</div>
+                <div class="down-chevron">{% include 'icon-down-chevron-brown' %}</div>
+              </div>
       		</div>
         {% endif %}
         {% endfor %}
@@ -33,17 +45,17 @@
                 {
                 "id": "add_ln_1",
                 "type": "text",
-                "label": "Address Line One"
+                "label": "Address Line 1"
                 },
 				{
                 "id": "add_ln_2",
                 "type": "text",
-                "label": "Address Line Two"
+                "label": "Address Line 2"
                 },
 				{
                 "id": "add_ln_3",
                 "type": "text",
-                "label": "Address Line Three"
+                "label": "Address Line 3"
                 },
 				{
                 "id": "website",
