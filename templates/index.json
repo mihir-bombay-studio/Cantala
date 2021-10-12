@@ -348,6 +348,18 @@
             "email": "dfy",
             "phone": "456653"
           }
+        },
+        "524158dc-9bb4-4725-8268-62988127e74a": {
+          "type": "address",
+          "settings": {
+            "store_name": "sdfvj",
+            "add_ln_1": "fghftuhkc",
+            "add_ln_2": "dxfxhch nm",
+            "add_ln_3": "fxhfukh",
+            "website": "strtiul",
+            "email": "bvmguio",
+            "phone": "12322648"
+          }
         }
       },
       "block_order": [
@@ -357,7 +369,8 @@
         "99d89ba4-af2c-4bd8-ac75-428b296c1b59",
         "62a57632-e713-4236-948a-45772b978f9c",
         "bc7b4f90-dc21-41b6-8415-104fc08c4045",
-        "b61cde10-df90-495f-b2a2-f12008bafabe"
+        "b61cde10-df90-495f-b2a2-f12008bafabe",
+        "524158dc-9bb4-4725-8268-62988127e74a"
       ],
       "settings": {
       }
