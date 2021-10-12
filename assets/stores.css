@@ -29,3 +29,7 @@
     background-color: var(--main-font-color);
     margin-bottom: 21px;
 }
+
+.store-hours {
+    margin-top: 8px;
+}
