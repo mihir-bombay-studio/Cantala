@@ -69,9 +69,15 @@
     display: inline-block;
     margin-right: 12px;
   }
+  .customize {
+    max-width: 434px;
+}
   .accordion-dropdown {
-    cursor: pointer;
+        cursor: pointer;
     transition: 0.4s;
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
   }
 
   .panel {
@@ -79,7 +85,14 @@
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   }
-  
+  .customize svg.icon.icon-caret {
+    width: 8px;
+    height: auto;
+    position: absolute;
+    right: -14px;
+    top: calc( 50% - 2.5px );
+    transition: .2s ease;
+  }
   .active-dropdown svg.icon.icon-caret {
     transform: rotate(180deg);
   }
