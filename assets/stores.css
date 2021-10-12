@@ -7,4 +7,10 @@
 .store-info-wrap {
     width: 23%;
     margin: 0 1%;
+    background-color: var(--background-slight-dark);
+    margin-bottom: 14px;
+    padding: 29px 25px 24px 29px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
 }
