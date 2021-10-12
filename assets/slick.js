@@ -31,7 +31,7 @@ $(document).ready(function(){
   });
   $('.slider-nav').slick({
     slidesToShow: window.productimages,
-    slidesToScroll: 1,
+    slidesToScroll: 7,
     asNavFor: '.slider-for',
     focusOnSelect: true
   });
