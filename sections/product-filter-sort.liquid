@@ -1,7 +1,25 @@
+{{ 'product-filter-sort.css' | asset_url | stylesheet_tag }}
+
+<div class="product-filter-sort-wrapper">
+  <div class="container">
+    <div class="product-filter-sort-content flex-box">
+    </div>
+  </div>
+</div>
+
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Product Filter Sort",
+    "settings": [],
+	
+	"presets": [
+    {
+      "name": "Product Filter Sort",
+		"category":"section"
+    }
+  ]
   }
 {% endschema %}
 
