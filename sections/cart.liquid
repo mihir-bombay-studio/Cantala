@@ -463,16 +463,15 @@
             $('.cart-sub-head').addClass('no-vis');
             $('.total-text').last().text('Ber. volgende stap');
           }
-          //removeProductBtn();
-          //plusProductBtn();
-          //minusProductBtn();
+          removeProductBtn();
+          plusProductBtn();
+          minusProductBtn();
         })
         .fail(function(error) {
           console.log( error );
         });
       }
 
-/*
       //remove from cart
       function removeProductBtn() {
         $(".cart-product-remove:not(.added)").click(function(){        
@@ -489,41 +488,32 @@
             data: variant,
             async: false
           })
-          .done(function( data ) {  
-            var looping = data.items;
-            var only_sample = true;
-            $(looping).each(function(index){
-              if(this.product_type == "supplies" && this.handle != "colour-sample-chart") {
-                only_sample = false;
-              }     
-              if(this.product_type == "paint" || this.product_type == "trim-paint") {
-                if(this.variant_title.indexOf("liter") != -1 || this.variant_title.indexOf("litre") != -1) {
-                  only_sample = false;
-                }
-              }
-            });
-            $(clicked).closest( ".cart-products-block" ).append('<span class="varnish"><svg y="0px" x="0px" stroke-miterlimit="2" clip-rule="evenodd" fill-rule="evenodd" viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h120v120H0z"/><path d="M3011.83 318.926c0-.309-.3-.56-.68-.56h-1.37c-.38 0-.69.251-.69.56v5.421c0 .309.31.56.69.56h1.37c.38 0 .68-.251.68-.56v-5.421z" fill="none" stroke="#000" stroke-width="1.07" transform="matrix(.83975 0 0 1.02817 -2435.78 -306.152)"/><path d="M3011.83 318.926c0-.309-.3-.56-.68-.56h-1.37c-.38 0-.69.251-.69.56v5.421c0 .309.31.56.69.56h1.37c.38 0 .68-.251.68-.56v-5.421z" fill="none" stroke="#000" stroke-width="1.07" transform="matrix(.83975 0 0 1.02817 -2506.03 -306.152)"/><path d="M23.149 32.605C27.755 27.0698 32.361 21.5356 36.9672 16M35.819 32.605C40.425 27.0698 45.031 21.5356 49.6372 16M48.479 32.605C53.085 27.0698 57.691 21.5356 62.2972 16M61.149 32.605C65.755 27.0698 70.361 21.5356 74.9672 16M73.819 32.605C78.425 27.0698 83.031 21.5356 87.6372 16" fill="none" stroke="#000" stroke-width="1.0018"/><path d="M2970 218.413c0-.53-.57-.96-1.28-.96h-13.44c-.71 0-1.28.43-1.28.96v46.08c0 .53.57.96 1.28.96h13.44c.71 0 1.28-.43 1.28-.96v-46.08z" fill="none" stroke="#000" stroke-width="2.95" transform="matrix(.57577 0 0 .7677 -1640.81 -99.785)"/><circle cx="2974" cy="203.453" r="4" fill="none" stroke="#000" stroke-width="3.47" transform="translate(-791.557 39.672) scale(.28788)"/><path d="M64.6063 67.151V51.0296l32.5423-9.2122v-17.273h-3.754" fill="none" stroke="#000" stroke-width="2.0037"/><path d="M2970 218.419c0-.533-.57-.966-1.28-.966h-13.44c-.71 0-1.28.433-1.28.966v46.068c0 .533.57.966 1.28.966h13.44c.71 0 1.28-.433 1.28-.966v-46.068z" fill="none" stroke="#000" stroke-width="1.6" transform="matrix(0 1.06805 -1.41542 0 398.88 -3139)"/></svg></span>');
-                                                                setTimeout(function(){ $(clicked).closest( ".cart-products-block" ).remove(); }, 3000);
+          .done(function( data ) { 
+            $(clicked).closest( ".cart-products-block" ).remove();
             window.data = data;
             $(".total-price").text('€'+(data.total_price/100));
             if(data.item_count > 0) {
-              $(".cart-no-wrapper").removeClass('hide-cart-no');
-              if(data.item_count < 10) {
-                $("#cart-text").text('0'+data.item_count);     
-              } else {          
-                $("#cart-text").text(data.item_count); 
+              $(".cart-products-parent").removeClass('no-disp');
+              $(".cart-empty").addClass('no-disp');
+              if(data.total_price/100 > 99.99) {
+                $('.cart-sub-head').removeClass('no-vis');
+                $('.total-text').last().text('Free');
+              } else {
+                $('.cart-sub-head').addClass('no-vis');
+                $('.total-text').last().text('Ber. volgende stap');
               }
             } else {
-              $(".cart-no-wrapper").addClass('hide-cart-no');
               $(".cart-products-parent").addClass('no-disp');
               $(".cart-empty").removeClass('no-disp');
+              $('.cart-sub-head').addClass('no-vis');
+              $('.total-text').last().text('Ber. volgende stap');
             }
             if(data.total_price/100 > 99.99) {
               $('.cart-sub-head').removeClass('no-vis');
-            $('.total-text').last().text('Free');
+              $('.total-text').last().text('Free');
             } else {
               $('.cart-sub-head').addClass('no-vis');
-            $('.total-text').last().text('Calculated at next step');
+              $('.total-text').last().text('Ber. volgende stap');
             }
           })
           .fail(function(error) {
@@ -553,25 +543,11 @@
           })
           .done(function( data ) {
             window.data = data;
-            var looping = data.items;            
-            var only_sample = true;
+            var looping = data.items;  
             $(looping).each(function(index){
-              if(this.product_type == "supplies" && this.handle != "colour-sample-chart") {
-                only_sample = false;
-              }     
-              if(this.product_type == "paint" || this.product_type == "trim-paint") {
-                if(this.variant_title.indexOf("liter") != -1 || this.variant_title.indexOf("litre") != -1) {
-                  only_sample = false;
-                }
-              }
               if(this.variant_id == holder){
-                var oldTxt = (qty-1) * parseFloat($(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").data("adder")).toFixed(1);
-                var newTxt = this.quantity * parseFloat($(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").data("adder")).toFixed(1);
-                $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").text($(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").text().replace(oldTxt.toString().replace(/\.0+$/,''), newTxt.toString().replace(/\.0+$/,'')));
+                $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").text(this.quantity);
                 $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").data("value",this.quantity);
-                if((this.product_type == "paint" || this.product_type == "trim-paint") && (this.variant_title.indexOf("liter") != -1 || this.variant_title.indexOf("litre") != -1) ) {          	
-                  $(clicked).closest( ".cart-product-row" ).find(".cart-product-info").html("Covers " + parseInt(newTxt*10) + " m<sup>2</sup>")
-                }
                 $(clicked).closest( ".cart-product-content" ).find(".cart-product-price").text('€'+(this.final_line_price/100));
                 if(this.quantity > 1) {
                   $(clicked).closest(".cart-product-row").find(".symbol-minus").css('opacity','1');
@@ -580,23 +556,27 @@
             });
             $(".total-price").text('€'+(data.total_price/100));
             if(data.item_count > 0) {
-              $(".cart-no-wrapper").removeClass('hide-cart-no');
-              if(data.item_count < 10) {
-                $("#cart-text").text('0'+data.item_count);     
-              } else {          
-                $("#cart-text").text(data.item_count); 
+              $(".cart-products-parent").removeClass('no-disp');
+              $(".cart-empty").addClass('no-disp');
+              if(data.total_price/100 > 99.99) {
+                $('.cart-sub-head').removeClass('no-vis');
+                $('.total-text').last().text('Free');
+              } else {
+                $('.cart-sub-head').addClass('no-vis');
+                $('.total-text').last().text('Ber. volgende stap');
               }
             } else {
-              $(".cart-no-wrapper").addClass('hide-cart-no');
               $(".cart-products-parent").addClass('no-disp');
               $(".cart-empty").removeClass('no-disp');
+              $('.cart-sub-head').addClass('no-vis');
+              $('.total-text').last().text('Ber. volgende stap');
             }
             if(data.total_price/100 > 99.99) {
               $('.cart-sub-head').removeClass('no-vis');
-            $('.total-text').last().text('Free');
+              $('.total-text').last().text('Free');
             } else {
               $('.cart-sub-head').addClass('no-vis');
-            $('.total-text').last().text('Calculated at next step');
+              $('.total-text').last().text('Ber. volgende stap');
             }
           })
           .fail(function(error) {
@@ -627,25 +607,11 @@
             })
             .done(function( data ) {
               window.data = data;
-              var looping = data.items;           
-              var only_sample = true;
+              var looping = data.items;  
               $(looping).each(function(index){
-                if(this.product_type == "supplies" && this.handle != "colour-sample-chart") {
-                  only_sample = false;
-                }     
-                if(this.product_type == "paint" || this.product_type == "trim-paint") {
-                  if(this.variant_title.indexOf("liter") != -1 || this.variant_title.indexOf("litre") != -1) {
-                    only_sample = false;
-                  }
-                }
-                if(this.variant_id == holder){
-                  var oldTxt = (qty+1) * parseFloat($(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").data("adder")).toFixed(1);
-                  var newTxt = this.quantity * parseFloat($(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").data("adder")).toFixed(1);
-                  $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").text($(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").text().replace(oldTxt.toString().replace(/\.0+$/,''), newTxt.toString().replace(/\.0+$/,'')));
+                if(this.variant_id == holder){                 
+                  $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").text(this.quantity);
                   $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").data("value",this.quantity);
-                  if((this.product_type == "paint" || this.product_type == "trim-paint") && (this.variant_title.indexOf("liter") != -1 || this.variant_title.indexOf("litre") != -1) ) {          	
-                    $(clicked).closest( ".cart-product-row" ).find(".cart-product-info").html("Covers " + parseInt(newTxt*10) + " m<sup>2</sup>")
-                  }
                   $(clicked).closest( ".cart-product-content" ).find(".cart-product-price").text('€'+(this.final_line_price/100));
                   if(this.quantity == 1) {
                     $(clicked).closest(".cart-product-row").find(".symbol-minus").css('opacity','0.5');
@@ -654,23 +620,27 @@
               });
               $(".total-price").text('€'+(data.total_price/100));
               if(data.item_count > 0) {
-                $(".cart-no-wrapper").removeClass('hide-cart-no');
-                if(data.item_count < 10) {
-                  $("#cart-text").text('0'+data.item_count);     
-                } else {          
-                  $("#cart-text").text(data.item_count); 
+                $(".cart-products-parent").removeClass('no-disp');
+                $(".cart-empty").addClass('no-disp');
+                if(data.total_price/100 > 99.99) {
+                  $('.cart-sub-head').removeClass('no-vis');
+                  $('.total-text').last().text('Free');
+                } else {
+                  $('.cart-sub-head').addClass('no-vis');
+                  $('.total-text').last().text('Ber. volgende stap');
                 }
               } else {
-                $(".cart-no-wrapper").addClass('hide-cart-no');
                 $(".cart-products-parent").addClass('no-disp');
                 $(".cart-empty").removeClass('no-disp');
+                $('.cart-sub-head').addClass('no-vis');
+                $('.total-text').last().text('Ber. volgende stap');
               }
               if(data.total_price/100 > 99.99) {
                 $('.cart-sub-head').removeClass('no-vis');
-            $('.total-text').last().text('Free');
+                $('.total-text').last().text('Free');
               } else {
                 $('.cart-sub-head').addClass('no-vis');
-            $('.total-text').last().text('Calculated at next step');
+                $('.total-text').last().text('Ber. volgende stap');
               }
             })
             .fail(function(error) {
@@ -682,20 +652,6 @@
       } 
       minusProductBtn()
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    */
     
     
     
