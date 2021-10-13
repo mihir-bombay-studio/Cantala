@@ -83,3 +83,7 @@
     width: fit-content;
     cursor: pointer;
 }
+
+.store-locator-wrapper {
+    margin-bottom: 105px;
+}
