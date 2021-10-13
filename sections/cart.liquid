@@ -188,37 +188,13 @@
 
                 <div class="cart-product-row">
                   <div class="cart-product-col">
-                    <span class="cart-product-amount no-translate" data-value="{{ item.quantity }}" data-adder="{{ multiplier }}">{{ item.quantity | times: multiplier | remove: '.0' }} {% unless item.variant.title contains "Default Title" %}{% if item.product.handle == "blisspaint-t-shirt" %}{% if cart.attributes.lang contains "nl" %}Maat:{% elsif cart.attributes.lang contains "fr" %}Taille:{% else %}Size:{% endif %} {{ item.variant.title }}{% else %}{{ item.variant.title }}{{ is_s }}{% endif %}{% else %}Product{{ is_s }}{% endunless %}</span>
-                    {% unless item.variant.title contains "Default Title" or item.product.handle == "blisspaint-t-shirt" %}<span class="dot no-translate">&centerdot;</span>{% endunless %}
-                    {% unless item.variant.title contains "Default Title" or item.product.handle == "blisspaint-t-shirt" %}<span class="cart-product-info">Covers {{ variant_title | remove: '.0' }} m<sup>2</sup></span>{% endunless %}
+                    <p class="cart-product-price">{{ item.original_line_price | money }}</p>   
                   </div>
                   <div class="cart-product-col rel">
-                    <span class="symbol symbol-minus" {% if item.quantity == 1 %}style="opacity: 0.5"{% endif %}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentcolor" stroke-width="2" style="display: inline-block; vertical-align: middle; overflow: visible;"><path d="M0 8 L16 8"></path></svg></span>
-                    {% include "plus" %}
-                  </div>
-                  
-                  
-                  
-                  
-                  
-                  <div class="cart-product-col" ecl="true">
-                    <span class="cart-product-variant" ecl="true">Sample pakket Wasstrips (3 wasbeurten)</span>                  
-                    <span class="symbol symbol-minus added" style="opacity: 0.5" ecl="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" ecl="true"><defs ecl="true"><style ecl="true">.svg-prod-plus-a{fill:#3c3c3b;}.svg-prod-plus-b{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}</style></defs><g transform="translate(-0.377 0.832)" ecl="true"><circle class="svg-prod-plus-a" cx="6" cy="6" r="6" transform="translate(0.377 -0.832)" ecl="true"></circle><line class="svg-prod-plus-b" x2="4.8" transform="translate(3.977 5.168)" ecl="true"></line></g></svg>
-</span>
-                    <span class="cart-product-amount" data-value="1" ecl="true">1</span>
-                    <span class="symbol symbol-plus added" ecl="true"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" ecl="true"><defs ecl="true"><style ecl="true">.svg-prod-plus-a{fill:#3c3c3b;}.svg-prod-plus-b{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}</style></defs><g transform="translate(-0.377 0.832)" ecl="true"><circle class="svg-prod-plus-a" cx="6" cy="6" r="6" transform="translate(0.377 -0.832)" ecl="true"></circle><line class="svg-prod-plus-b" y2="4.8" transform="translate(6.377 2.768)" ecl="true"></line><line class="svg-prod-plus-b" x2="4.8" transform="translate(3.977 5.168)" ecl="true"></line></g></svg>
-</span>
-                    <p class="cart-product-price" ecl="true">€<span class="booster-cart-item-line-price" data-key="39422370250826:c09c9e3dd7c4b17f75a9ddac6dd13d4e" ecl="true">0,0</span></p> 
-                    
-                  </div>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+                    <span class="symbol symbol-minus" {% if item.quantity == 1 %}style="opacity: 0.5"{% endif %}>{% include "icon-minus" %}</span>
+                    <span class="cart-product-amount" data-value="{{item.quantity}}">{{item.quantity}}</span>
+                    <span class="symbol symbol-plus">{% include "icon-plus" %}</span>
+                  </div>     
                 </div>
 
               </div>
