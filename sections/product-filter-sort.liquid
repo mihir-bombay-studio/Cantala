@@ -11,8 +11,11 @@
             <div class="sort">Price, high to low<span class="close-icon no-disp">{% include 'icon-close-brown' %}</span></div>
           </div>
           <div class="filters">
-            <div class="filter">Bestsellers<span class="close-icon no-disp">{% include 'icon-close-brown' %}</span></div>
-            <div class="filter">Featured?<span class="close-icon no-disp">{% include 'icon-close-brown' %}</span></div>
+            {% for product in collections['all'].products %}
+            	{% for tag in product.tags %}
+                <div class="filter" data-tag="{{ tag }}">{{ tag }}<span class="close-icon no-disp">{% include 'icon-close-brown' %}</span></div>
+                {% endfor %}
+            {% endfor %}
           </div>
         </div>
       </div>
