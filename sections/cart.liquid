@@ -1,6 +1,100 @@
+<div class="drawer-cart">
+  <div class="drawer-cart-wrapper rel">
+    <div class="cart-head rel">
+      <span class="close-drawer">{% include "icon-chevron" %}</span>
+      <h2>Your cart</h2>
+    </div>
+    <div class="cart-sub-head {% if cart.item_count > 0 and cart.total_price < 10000 %}no-vis{% endif %}">
+      Great news! You’ve earned free shipping!
+    </div>
+
+    <div class="cart-body">   
+
+      
+      <div class="cart-products-parent {% if cart.item_count == 0 %}no-disp{% endif %}">
+        <div class="cart-products-wrapper">
+          {% for item in cart.items %}
+          
+          {% assign featured_image = item.variant.image.src | default: item.product.featured_image %}
+
+          <div class="cart-products-block">
+            <div class="cart-product">
+              <div class="cart-product-thumb">
+                <a href="{{ item.url }}" class="">
+                  <img src="{{ featured_image | product_img_url: '590x' }}" class="">
+                </a>
+              </div>
+              <div class="cart-product-content">
+                <div class="cart-product-row">
+                  <div class="cart-product-col">
+                    <h5>
+                      <a href="{{ item.url }}" class="">{{ item.product.title }}  {{ type }}</a>
+                    </h5>
+                    <p class="cart-product-price">€{{ item.original_line_price | divided_by: 100 }}</p>                  
+                  </div>                
+                  <div class="cart-product-col">
+                    <button class="cart-product-remove" data-variant="{{ item.variant.id }}">
+                      <svg class="bin" width="11px" height="12px" viewBox="0 0 11 12" version="1.1"><path d="M8.015625,2.59765625 L10.015625,2.59765625 C10.2917674,2.59765625 10.515625,2.82151388 10.515625,3.09765625 C10.515625,3.37379862 10.2917674,3.59765625 10.015625,3.59765625 L9.515625,3.59765625 L9.515625,10.0976562 C9.515625,10.9260834 8.84405212,11.5976562 8.015625,11.5976562 L3.015625,11.5976562 C2.18719788,11.5976562 1.515625,10.9260834 1.515625,10.0976562 L1.515625,3.59765625 L1.015625,3.59765625 C0.739482625,3.59765625 0.515625,3.37379862 0.515625,3.09765625 C0.515625,2.82151388 0.739482625,2.59765625 1.015625,2.59765625 L3.015625,2.59765625 L3.015625,2.09765625 C3.015625,1.26922913 3.68719788,0.59765625 4.515625,0.59765625 L6.515625,0.59765625 C7.34405212,0.59765625 8.015625,1.26922913 8.015625,2.09765625 L8.015625,2.59765625 Z M7.015625,2.59765625 L7.015625,2.09765625 C7.015625,1.82151388 6.79176737,1.59765625 6.515625,1.59765625 L4.515625,1.59765625 C4.23948263,1.59765625 4.015625,1.82151388 4.015625,2.09765625 L4.015625,2.59765625 L7.015625,2.59765625 Z M8.515625,3.59765625 L2.515625,3.59765625 L2.515625,10.0976562 C2.515625,10.3737986 2.73948263,10.5976562 3.015625,10.5976562 L8.015625,10.5976562 C8.29176737,10.5976562 8.515625,10.3737986 8.515625,10.0976562 L8.515625,3.59765625 Z M4.015625,5.59765625 C4.015625,5.32151388 4.23948263,5.09765625 4.515625,5.09765625 C4.79176737,5.09765625 5.015625,5.32151388 5.015625,5.59765625 L5.015625,8.59765625 C5.015625,8.87379862 4.79176737,9.09765625 4.515625,9.09765625 C4.23948263,9.09765625 4.015625,8.87379862 4.015625,8.59765625 L4.015625,5.59765625 Z M6.015625,5.59765625 C6.015625,5.32151388 6.23948263,5.09765625 6.515625,5.09765625 C6.79176737,5.09765625 7.015625,5.32151388 7.015625,5.59765625 L7.015625,8.59765625 C7.015625,8.87379862 6.79176737,9.09765625 6.515625,9.09765625 C6.23948263,9.09765625 6.015625,8.87379862 6.015625,8.59765625 L6.015625,5.59765625 Z" id="Combined-Shape" fill="currentColor" fill-rule="nonzero"></path></svg>
+                    </button>
+                  </div>                
+                </div>
+
+                <div class="cart-product-row">
+                  <div class="cart-product-col">
+                    <span class="cart-product-amount no-translate" data-value="{{ item.quantity }}" data-adder="{{ multiplier }}">{{ item.quantity | times: multiplier | remove: '.0' }} {% unless item.variant.title contains "Default Title" %}{% if item.product.handle == "blisspaint-t-shirt" %}{% if cart.attributes.lang contains "nl" %}Maat:{% elsif cart.attributes.lang contains "fr" %}Taille:{% else %}Size:{% endif %} {{ item.variant.title }}{% else %}{{ item.variant.title }}{{ is_s }}{% endif %}{% else %}Product{{ is_s }}{% endunless %}</span>
+                    {% unless item.variant.title contains "Default Title" or item.product.handle == "blisspaint-t-shirt" %}<span class="dot no-translate">&centerdot;</span>{% endunless %}
+                    {% unless item.variant.title contains "Default Title" or item.product.handle == "blisspaint-t-shirt" %}<span class="cart-product-info">Covers {{ variant_title | remove: '.0' }} m<sup>2</sup></span>{% endunless %}
+                  </div>
+                  <div class="cart-product-col rel">
+                    <span class="symbol symbol-minus" {% if item.quantity == 1 %}style="opacity: 0.5"{% endif %}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentcolor" stroke-width="2" style="display: inline-block; vertical-align: middle; overflow: visible;"><path d="M0 8 L16 8"></path></svg></span>
+                    {% include "plus" %}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>      
+          {% endfor %}
+        </div>
+      </div>
+      
+      <div class="cart-empty {% if cart.item_count > 0 %}no-disp{% endif %}">
+        <span class="brushpaint">{% include "icon-paintbrush2" %}</span>
+        <span class="cart-empty-text">Start <a href="/pages/paint">colouring</a> your cart!</span>
+      </div>
+      
+    </div>
+    
+    <div class="cart-foot">
+      
+        <div class="cart-total-block">
+          <div class="cart-product-row marg-bottom-xs">
+            <div class="cart-product-col">
+              <span class="total-text">Subtotal</span>
+            </div>
+            <div class="cart-product-col">
+              <span class="total-price">{{ cart.total_price | money_without_trailing_zeros }}</span>
+            </div>
+          </div>
+          <div class="cart-product-row sub-marg-bottom">
+            <div class="cart-product-col">
+              <span class="total-text">Shipping</span>
+            </div>
+            <div class="cart-product-col">
+              <span class="total-text">{% if cart.total_price > 9999 or only_sample %}Free{% else %}€10{% endif %}</span>
+            </div>
+          </div>
+          <a class="btn btn-center btn-default" href="/checkout">Checkout</a>
+        </div>
+      
+    </div>
+  </div>
+</div>
+<div class="background-drawer-cart"></div>
+
 {% schema %}
   {
-    "name": "Section name",
+    "name": "Ajax Cart",
     "settings": []
   }
 {% endschema %}
