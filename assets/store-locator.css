@@ -1,11 +1,8 @@
-.locator-pin-code::-webkit-inner-spin-button, 
-.locator-pin-code::-webkit-outer-spin-button { 
+.locator-pin-code::-webkit-inner-spin-button, .locator-pin-code::-webkit-outer-spin-button { 
     -webkit-appearance: none;    
     appearance: none;
     margin: 0;  
 }
-.locator-pin-code, 
-.locator-pin-code:hover,
-.locator-pin-code:focus {
+.locator-pin-code, .locator-pin-code:hover, .locator-pin-code:focus {
   -moz-appearance: textfield;
 }
