@@ -4,8 +4,7 @@
     position: fixed;
     height: 100%;
     background-color: #342D2540;
-    /* right: -100vw; */
-    right: 0;
+    right: -100vw;
     top: 0;
     z-index: 8;
     display: block !important;
@@ -23,8 +22,7 @@
     max-width: 491px;
     background-color: #F4EDE2;
     top: 0;
-    /*right: -491px;*/
-    right: 0;
+    right: -491px;
     padding: 0;
     transition: .4s ease;
   }
@@ -313,6 +311,45 @@
     }
   });
   
+  
+  $(".card-add-cart, #add-to-cart").click(function(){
+    if($('#product-json').length > 0) {
+      var string = "";
+      $(".product-form__input").each(function(index){
+        if(index == 0) {
+          string += $(this).find("input:checked").val();
+        } else {
+          string += " / " + $(this).find("input:checked").val();
+        }
+      });
+      console.log(string);
+      var x = JSON.parse($('#product-json').html());
+      var w = x.find(item => {
+        return item.public_title === string;
+      });
+      $(this).data('value',w.id);
+    }
+    
+    var formData = {
+      'items': [{
+        'id': parseInt($(this).data('value')),
+        'quantity': parseInt($(".product-qty .qty").data("qty"))
+      }]
+    };
+    $.ajax({
+      url: "/cart/add.js",
+      method: "POST",
+      dataType: "json",
+      data: formData,
+    })
+    .done(function( data ) {
+      //getCart();
+      toggleCart();
+    })
+    .fail(function(error) {
+      console.log( error );
+    });
+  });
   
   
 </script>
