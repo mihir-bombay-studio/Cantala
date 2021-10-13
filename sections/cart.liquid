@@ -40,20 +40,20 @@
     position: relative;
     display: block;
     cursor: pointer;
-}
+  }
   .cart-sub-head {
     background-color: #E6AF7B;
     color: #222222;
     text-align: center;
     font-size: 12px;
     padding: 8px 16px;
-        display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
   span.truck {
     margin-right: 12px;
-}
+  }
   .cart-body {
     max-width: none;
     display: block;
@@ -61,17 +61,17 @@
     padding: 0;
     height: calc(100vh - 275px);
     overflow-y: scroll;
-}
-  
-.cart-body::-webkit-scrollbar {
-  display: none; }
+  }
 
-.cart-body {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */ }
-  
+  .cart-body::-webkit-scrollbar {
+    display: none; }
+
+  .cart-body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */ }
+
   .cart-products-block {
     padding: 26px 0;
     border-bottom: .5px solid #0003;
@@ -80,31 +80,31 @@
     max-width: 396px;
     margin: 0 auto;
     position: relative;
-}
+  }
   .cart-product {
     display: flex;
-}
+  }
   .cart-product-thumb {
     width: 100%;
     max-width: 92px;
-}
+  }
   .cart-product-thumb img {
     width: 100%;
-}
+  }
   .cart-product-content {
-    padding: 0 16px 0 8px;
+    padding-left: 36px;
     width: 100%;
-}
+  }
   .cart-product-row {
     display: flex;
-}
+  }
   .cart-product-row .cart-product-col:first-child {
     width: 75%;
-}
+  }
   .cart-product-row .cart-product-col:last-child {
     width: 25%;
     text-align: right;
-}
+  }
   .accordion .symbol, .calculator-product-col .symbol, .cart-product-content .symbol {
     height: 20px;
     width: 20px;
@@ -118,13 +118,19 @@
     transition-timing-function: ease-in-out;
     position: absolute;
     right: 0;
-}
+  }
   .cart-product-content .symbol {
     cursor: pointer;
-}
- .cart-product-content .symbol-minus {
+  }
+  .cart-product-content .symbol-minus {
     right: 28px;
-}
+  }
+  .cart-product-content h5 {
+    font-size: 20px;
+    font-family: 'Athelas';
+    font-weight: 700;
+    color: #342C24;
+  }
 </style>
 
 <div class="drawer-cart">
