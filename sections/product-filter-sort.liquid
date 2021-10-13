@@ -3,6 +3,17 @@
 <div class="product-filter-sort-wrapper">
   <div class="container">
     <div class="product-filter-sort-content flex-box">
+      <div class="pfs-left">
+        <div class="pfs-heading">{{ section.settings.heading }}</div>
+        <div class="filter-and-sorting">
+          <div class="sorting">
+            <div class="sort">Price, low to high</div>
+            <div class="sort">Price, high to low</div>
+          </div>
+          <div class="filters"></div>
+        </div>
+      </div>
+      <div class="pfs-right"></div>
     </div>
   </div>
 </div>
@@ -12,7 +23,13 @@
 {% schema %}
   {
     "name": "Product Filter Sort",
-    "settings": [],
+    "settings": [
+		{
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+        }
+	],
 	
 	"presets": [
     {
