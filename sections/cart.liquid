@@ -180,7 +180,7 @@
                 </div>
 
                 <div class="cart-product-row">
-                  <div class="cart-product-col rel">
+                  <div class="cart-product-col rel cart-qty-wrap">
                     <span class="symbol symbol-minus" {% if item.quantity == 1 %}style="opacity: 0.5"{% endif %}>{% include "icon-minus" %}</span>
                     <span class="cart-product-amount" data-value="{{item.quantity}}">{{item.quantity}}</span>
                     <span class="symbol symbol-plus">{% include "icon-plus" %}</span>
