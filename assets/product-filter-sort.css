@@ -1,3 +1,11 @@
+.pfs-left{
+	width: 20%;
+}
+
+.pfs-right{
+	width: 75%;
+}
+
 .filter-and-sorting {
     font-size: 13px;
 }
