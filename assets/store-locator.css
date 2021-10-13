@@ -49,6 +49,10 @@
     margin-bottom: 27px;
 }
 
+.distances {
+    flex-wrap: wrap;
+}
+
 .distance {
     font-size: 13px;
     line-height: 22px;
