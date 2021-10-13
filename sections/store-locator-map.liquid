@@ -1,7 +1,39 @@
+{{ 'store-locator.css' | asset_url | stylesheet_tag }}
+
+<div class="store-locator-wrapper">
+  <div class="container">
+    <div class="store-locator-content flex-box">
+      <div class="store-locator-left">
+        <h2 class="store-locator-heading heading-2">{{ section.settings.heading }}</h2>
+        <div class="pin-code">
+        	<input type="number" class="locator-pin-code">
+        </div>
+      </div>
+      <div class="store-locator-right">
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Store Locator",
+    "settings": [
+		{
+			"id": "heading",
+			"type": "text",
+			"label": "Section Heading"
+		}
+	],
+	"presets": [
+    {
+      "name": "Store Locator",
+		"category":"section"
+    }
+  ]
   }
 {% endschema %}
 
