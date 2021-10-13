@@ -6,3 +6,15 @@
 .locator-pin-code, .locator-pin-code:hover, .locator-pin-code:focus {
   -moz-appearance: textfield;
 }
+
+.locator-pin-code::-webkit-input-placeholder {
+  font-family: var(--font-body-family);
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.locator-pin-code {
+    padding: 9px 14px;
+    border: none;
+    width: 100%;
+}
