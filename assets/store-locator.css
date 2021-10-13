@@ -42,3 +42,9 @@
     border: none;
     width: 100%;
 }
+
+.search-nearby-title {
+    font-size: 18px;
+    line-height: 34px;
+    margin-bottom: 27px;
+}
