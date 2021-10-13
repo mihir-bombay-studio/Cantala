@@ -394,7 +394,10 @@
 
 <script>
   
-  
+  $(".selector.box-selector").click({ function() {
+    $(this).parent().find(".box-selector").removeClass("selected");
+    $(this).addClass("selected");
+  });
   $(".qty-wrapper .symbol-plus").click(function(){
       var adder = 1;
       $(this).parent().parent().data("quantity",parseInt($(this).parent().parent().data("quantity"))+1);
