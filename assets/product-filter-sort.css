@@ -26,6 +26,6 @@
   width: fit-content;
 }
 
-.sort.selected{
+.sort.selected, .filter.selected{
 	opacity: 1;
 }
