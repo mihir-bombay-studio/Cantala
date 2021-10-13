@@ -59,3 +59,12 @@
     margin-bottom: 21px;
   width: 50%;
 }
+
+.radio {
+    width: 14px;
+    height: 14px;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 15px;
+}
