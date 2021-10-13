@@ -31,11 +31,6 @@
   .drawer-cart.drawn {
     right: 0;
   }
-  .cart-head {
-    padding: 10px 0;
-    background-color: #000;
-    display: block;
-}
   .close-drawer {
     position: absolute;
     width: 48px;
@@ -129,10 +124,6 @@
 
 <div class="drawer-cart">
   <div class="drawer-cart-wrapper rel">
-    <div class="cart-head rel">
-      <span class="close-drawer">{% include "icon-chevron" %}</span>
-      <h2>Your cart</h2>
-    </div>
     <div class="cart-sub-head {% if cart.item_count > 0 and cart.total_price < 10000 %}no-vis{% endif %}">
       Great news! You’ve earned free shipping!
     </div>
