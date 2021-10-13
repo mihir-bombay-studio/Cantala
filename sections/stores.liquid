@@ -24,17 +24,18 @@
         {% endif %}
         {% endfor %}
     </div>
+    <div class="load-more">Load more</div>
   </div>
 </div>
 
 <script>
   
-  $(".blog-page-article-wrap").hide();
- $(".blog-page-article-wrap:lt(8)").show();
+  $(".store-info-wrap").hide();
+ $(".store-info-wrap:lt(8)").show();
   
   $('.load-more').click(function() {
     $(this).addClass('no-disp');
-  	$(".blog-page-article-wrap").show();
+  	$(".store-info-wrap").show();
   });
 </script>
 
