@@ -78,3 +78,8 @@
     margin-top: 2px;
     margin-left: 2px;
 }
+
+.radio-wrap {
+    width: fit-content;
+    cursor: pointer;
+}
