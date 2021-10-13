@@ -40,3 +40,17 @@
   object-fit: cover;
   display: block;
 }
+
+.product-tag {
+    font-size: 13px;
+    line-height: 14px;
+    color: var(--main-heading-color);
+    margin-bottom: 4px;
+    font-family: Athelas;
+}
+
+.product-title {
+    font-size: 20px;
+    line-height: 44px;
+    margin-bottom: 28px;
+}
