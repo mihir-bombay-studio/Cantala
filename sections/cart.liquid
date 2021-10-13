@@ -315,7 +315,7 @@
         var string = "";
         $(".selector").each(function(index){
           if(index == 0) {
-            if($(this).hasClass("box-selector")) {
+            if($(this).hasClass("box-selector").hasClass("selected")) {
               string += $(this).data("val");
             } else {
               string += $(this).val();
