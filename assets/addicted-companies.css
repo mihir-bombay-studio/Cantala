@@ -5,3 +5,7 @@
 .ac-right {
     width: 70%;
 }
+
+.company-logo svg {
+	width: 100%;
+}
