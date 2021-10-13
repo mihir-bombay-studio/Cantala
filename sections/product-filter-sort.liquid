@@ -18,8 +18,7 @@
       </div>
       <div class="pfs-right">
         
-      	{% for product in collections['all'].products %}
-        a
+      	{% for product in collections['all'].products limit:3 %}
         <div>
         	 <div class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
