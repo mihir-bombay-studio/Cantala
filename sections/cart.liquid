@@ -63,10 +63,16 @@
     height: calc(100vh - 275px);
     overflow-y: scroll;
 }
-  .calculator-body, .cart-body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
+  
+.cart-body::-webkit-scrollbar {
+  display: none; }
+
+.cart-body {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+  
   .cart-products-block {
     padding: 26px 0;
     border-bottom: .5px solid #0003;
