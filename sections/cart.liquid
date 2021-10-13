@@ -313,7 +313,7 @@
     $(".card-add-cart, #AddToCart, #popupaddtocart").click(function(){
       if($('#product-json').length > 0) {
         var string = "";
-        $(".selector").each(function(index){
+        $(".selector.selected").each(function(index){
           if(string == "") {
             if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
               string += $(this).data("val");

@@ -332,7 +332,7 @@
                   {% else %}
                     {% if forloop.first %}
               		<div class="custom-select">
-                    <select class="selector drop-selector" name="{{option.name}}" id="selector-{{ forloop.index }}">
+                    <select class="selector drop-selector selected" name="{{option.name}}" id="selector-{{ forloop.index }}">
                       {% endif %}
                       <option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value | escape }}</option>
                       {% if forloop.last %}
