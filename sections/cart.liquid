@@ -309,53 +309,54 @@
     }
   });
   
-  
-  $("#AddToCart").click(function(){
-    if($('#product-json').length > 0) {
-      var string = "";
-      $(".selector").each(function(index){
-        if(index == 0) {
-          if($(this).hasClass("box-selector")) {
-          	string += $(this).data("val");
+  $(document).ready(function(){
+    $(".card-add-cart, #AddToCart").click(function(){
+      if($('#product-json').length > 0) {
+        var string = "";
+        $(".selector").each(function(index){
+          if(index == 0) {
+            if($(this).hasClass("box-selector")) {
+              string += $(this).data("val");
+            } else {
+              string += $(this).val();
+            }          
           } else {
-            string += $(this).val();
-          }          
-        } else {
-          
-          if($(this).hasClass("box-selector")) {
-            string += " / " + $(this).data("val");
-          } else {
-            string += " / " + $(this).val();
-          }           
-        }
+
+            if($(this).hasClass("box-selector")) {
+              string += " / " + $(this).data("val");
+            } else {
+              string += " / " + $(this).val();
+            }           
+          }
+        });
+        console.log(string);
+        var x = JSON.parse($('#product-json').html());
+        var w = x.find(item => {
+          return item.public_title === string;
+        });
+        $(this).data('value',w.id);
+      }
+
+      var formData = {
+        'items': [{
+          'id': parseInt($(this).data('value')),
+          'quantity': parseInt($(".qty-container .qty-number").text())
+        }]
+      };
+      $.ajax({
+        url: "/cart/add.js",
+        method: "POST",
+        dataType: "json",
+        data: formData,
+      })
+      .done(function( data ) {
+        //getCart();
+        $(".drawer-cart").addClass("drawn");
+        $(".background-drawer-cart").addClass("drawn");
+      })
+      .fail(function(error) {
+        console.log( error );
       });
-      console.log(string);
-      var x = JSON.parse($('#product-json').html());
-      var w = x.find(item => {
-        return item.public_title === string;
-      });
-      $(this).data('value',w.id);
-    }
-    
-    var formData = {
-      'items': [{
-        'id': parseInt($(this).data('value')),
-        'quantity': parseInt($(".qty-container .qty-number").text())
-      }]
-    };
-    $.ajax({
-      url: "/cart/add.js",
-      method: "POST",
-      dataType: "json",
-      data: formData,
-    })
-    .done(function( data ) {
-      //getCart();
-      $(".drawer-cart").addClass("drawn");
-      $(".background-drawer-cart").addClass("drawn");
-    })
-    .fail(function(error) {
-      console.log( error );
     });
   });
   
