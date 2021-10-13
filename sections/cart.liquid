@@ -172,7 +172,7 @@
                 <div class="cart-product-row">
                   <div class="cart-product-col">
                     <h5>
-                      <a href="{{ item.url }}" class="">{{ item.product.title }}  {{ type }}</a>
+                      <a href="{{ item.url }}" class="">{{ item.product.title }}</a>
                     </h5>
                     <p class="cart-product-price">€{{ item.original_line_price | divided_by: 100 }}</p>                  
                   </div>                
@@ -181,6 +181,10 @@
                       {% include "icon-x" %}
                     </button>
                   </div>                
+                </div>
+                
+                <div class="cart-product-row">
+                  {% unless item.variant.title contains "Default Title" %}{{ item.variant.title }}{% endunless %}
                 </div>
 
                 <div class="cart-product-row">
