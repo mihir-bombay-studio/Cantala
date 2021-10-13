@@ -1,10 +1,10 @@
 .filter-and-sorting {
     font-size: 13px;
-    
 }
 
 .sort, .filter {
 	opacity: 0.5;
+  cursor: pointer;
 }
 
 .sort.selected{
