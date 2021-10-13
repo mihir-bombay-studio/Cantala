@@ -33,3 +33,13 @@
 .store-hours {
     margin-top: 8px;
 }
+
+.load-more {
+    width: fit-content;
+  	margin: 0 auto;
+    line-height: 22px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    margin-bottom: 136px !important;
+}
