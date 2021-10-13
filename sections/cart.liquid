@@ -395,8 +395,8 @@
             if(this.quantity > 1) {
               minus_opacity = '';
             }
-            if(this.variant_title == null) {
-              variant_title = this.variant_title;
+            if(this.variant_title != null || this.variant_title != "Default Title") {
+              variant_title = this.title;
             }
             $(".cart-products-wrapper").append(`
 				<div class="cart-products-block">
