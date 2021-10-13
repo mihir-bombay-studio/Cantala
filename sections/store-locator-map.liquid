@@ -46,7 +46,11 @@
   </div>
 </div>
 
-
+<script>
+  $('.radio-wrap').click(function() {
+  	$(this).parent().addClass('selected');
+  });
+</script>
 
 {% schema %}
   {
