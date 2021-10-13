@@ -314,7 +314,7 @@
       if($('#product-json').length > 0) {
         var string = "";
         $(".selector").each(function(index){
-          if(if string == "") {
+          if(string == "") {
             if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
               string += $(this).data("val");
             } else {
@@ -322,7 +322,7 @@
             }          
           } else {
 
-            if($(this).hasClass("box-selector")) {
+            if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
               string += " / " + $(this).data("val");
             } else {
               string += " / " + $(this).val();
