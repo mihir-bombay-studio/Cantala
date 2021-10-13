@@ -406,6 +406,12 @@
       "settings": {
         "heading": "Winkelpunten"
       }
+    },
+    "1634119612adf2ad5c": {
+      "type": "product-filter-sort",
+      "settings": {
+        "heading": "Filter op"
+      }
     }
   },
   "order": [
@@ -422,6 +428,7 @@
     "163395068167d59b32",
     "16339544764961238f",
     "16340375883eb7d54e",
-    "163410338821e0284f"
+    "163410338821e0284f",
+    "1634119612adf2ad5c"
   ]
 }
