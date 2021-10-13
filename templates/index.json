@@ -412,6 +412,12 @@
       "settings": {
         "heading": "Filter op"
       }
+    },
+    "1634124860995a6222": {
+      "type": "addicted-companies",
+      "settings": {
+        "heading": "Companies that are addicted to our coffee and tea"
+      }
     }
   },
   "order": [
@@ -429,6 +435,7 @@
     "16339544764961238f",
     "16340375883eb7d54e",
     "163410338821e0284f",
-    "1634119612adf2ad5c"
+    "1634119612adf2ad5c",
+    "1634124860995a6222"
   ]
 }
