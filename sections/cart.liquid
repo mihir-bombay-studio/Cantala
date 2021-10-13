@@ -300,12 +300,10 @@
 
   //drawer cart script
   $( ".cart-toggler, .background-drawer-cart, .close-drawer" ).click(function() {
-    if($('.cart-toggler').hasClass("show") || $('.background-drawer-cart').hasClass("drawn")) {
-      $('.cart-toggler').removeClass("show");
+    if($('.background-drawer-cart').hasClass("drawn")) {
       $(".drawer-cart").removeClass("drawn");
       $(".background-drawer-cart").removeClass("drawn");
     } else {        
-      $('.cart-toggler').addClass("show");
       $(".drawer-cart").addClass("drawn");
       $(".background-drawer-cart").addClass("drawn");
     }
