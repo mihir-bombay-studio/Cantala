@@ -1,3 +1,130 @@
+<style>
+  .background-drawer-cart {
+    width: 100vw;
+    position: fixed;
+    height: 100%;
+    background-color: #00000040;
+    right: -100vw;
+    top: 0;
+    z-index: 1;
+    display: block;
+    transition: .4s ease;
+  }
+  .background-drawer-cart.drawn {
+    right: 0;
+  }
+  .drawer-cart {
+    display: block;
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    max-width: 473px;
+    background-color: #fff;
+    top: 0;
+    right: -473px;
+    padding: 0;
+    transition: .4s ease;
+  }
+  .drawer-cart.drawn {
+    right: 0;
+  }
+  .cart-head {
+    padding: 10px 0;
+    background-color: #000;
+    display: block;
+}
+  .close-drawer {
+    position: absolute;
+    width: 48px;
+    height: 100%;
+    padding: 15px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    display: block;
+    left: 16px;
+    top: 0;
+}
+ .cart-head h2 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+ }
+  .cart-sub-head {
+    background-color: #698995;
+    text-align: center;
+    font-size: 12px;
+    padding: 8px 16px;
+}
+  .cart-body {
+    max-width: none;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    height: calc(100vh - 275px);
+    overflow-y: scroll;
+}
+  .calculator-body, .cart-body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+  .cart-products-block {
+    padding: 32px 0;
+    border-bottom: 1px solid #000;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 420px;
+    margin: 0 auto;
+    position: relative;
+}
+  .cart-product {
+    display: flex;
+}
+  .cart-product-thumb {
+    width: 100%;
+    max-width: 86px;
+}
+  .cart-product-thumb img {
+    width: 100%;
+}
+  .cart-product-content {
+    padding: 0 16px 0 8px;
+    width: 100%;
+}
+  .cart-product-row {
+    display: flex;
+}
+  .cart-product-row .cart-product-col:first-child {
+    width: 75%;
+}
+  .cart-product-row .cart-product-col:last-child {
+    width: 25%;
+    text-align: right;
+}
+  .accordion .symbol, .calculator-product-col .symbol, .cart-product-content .symbol {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    -webkit-transition-property: background,-webkit-transform;
+    transition-property: transform,background,-webkit-transform;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    right: 0;
+}
+  .cart-product-content .symbol {
+    cursor: pointer;
+}
+ .cart-product-content .symbol-minus {
+    right: 28px;
+}
+</style>
+
 <div class="drawer-cart">
   <div class="drawer-cart-wrapper rel">
     <div class="cart-head rel">
@@ -104,3 +231,23 @@
 
 {% javascript %}
 {% endjavascript %}
+
+
+<script>
+
+  //drawer cart script
+  $( ".cart-toggler, .background-drawer-cart, .close-drawer" ).click(function() {
+    if($('.cart-toggler').hasClass("show") || $('.background-drawer-cart').hasClass("drawn")) {
+      $('.cart-toggler').removeClass("show");
+      $(".drawer-cart").removeClass("drawn");
+      $(".background-drawer-cart").removeClass("drawn");
+    } else {        
+      $('.cart-toggler').addClass("show");
+      $(".drawer-cart").addClass("drawn");
+      $(".background-drawer-cart").addClass("drawn");
+    }
+  });
+  
+  
+  
+</script>
