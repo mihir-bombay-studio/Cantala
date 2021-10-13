@@ -108,7 +108,8 @@
   .accordion .symbol, .calculator-product-col .symbol, .cart-product-content .symbol {
     height: 16px;
     width: 9.5px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
   }
   .cart-product-content .symbol {
     cursor: pointer;
@@ -137,6 +138,18 @@
     margin-bottom: 0;
     font-weight: 500;
   }
+  .cart-product-col.rel.cart-qty-wrap {
+    display: flex;
+    align-items: end;
+  }
+  .cart-product-amount {
+    height: 16px;
+    width: 32px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
 </style>
 
 <div class="drawer-cart">
