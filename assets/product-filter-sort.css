@@ -6,6 +6,10 @@
 	width: 75%;
 }
 
+.pfs-heading {
+    margin-bottom: 13px;
+}
+
 .filter-and-sorting {
     font-size: 13px;
 }
