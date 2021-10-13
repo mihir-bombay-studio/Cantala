@@ -353,7 +353,8 @@
     })
     .done(function( data ) {
       //getCart();
-      toggleCart();
+      $(".drawer-cart").addClass("drawn");
+      $(".background-drawer-cart").addClass("drawn");
     })
     .fail(function(error) {
       console.log( error );
