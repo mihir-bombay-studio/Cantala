@@ -27,6 +27,17 @@
   </div>
 </div>
 
+<script>
+  
+  $(".blog-page-article-wrap").hide();
+ $(".blog-page-article-wrap:lt(8)").show();
+  
+  $('.load-more').click(function() {
+    $(this).addClass('no-disp');
+  	$(".blog-page-article-wrap").show();
+  });
+</script>
+
 {% schema %}
   {
     "name": "Stores Addresses",
