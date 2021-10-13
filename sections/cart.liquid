@@ -412,7 +412,26 @@
                           <h5>
                             <a href="`+this.url+`" class="">`+this.product_title+`</a>
                           </h5>               
-                        </div>     
+                        </div>                   
+                      </div>
+
+                      <div class="cart-product-row">                  
+                        <span class="cart-product-variant"> `variant_title`</span>
+                      </div>
+
+                      <div class="cart-product-row">
+                        <div class="cart-product-col rel cart-qty-wrap">
+                          <span class="symbol symbol-minus" `+minus_opacity+`>{% include "icon-minus" %}</span>
+                          <span class="cart-product-amount" data-value="`+this.quantity+`">`+this.quantity+`</span>
+                          <span class="symbol symbol-plus">{% include "icon-plus" %}</span>
+                        </div>    
+                        <div class="cart-product-col">
+                          <p class="cart-product-price">€`+(this.final_line_price / 100)+`</p>   
+                        </div> 
+                      </div>
+
+                    </div>
+                  </div>
                 </div>`);
           });
           $(".total-price").text('€'+(data.total_price/100));
