@@ -136,7 +136,7 @@
 
     <div class="cart-body">   
 
-      
+      <span class="close-drawer">{% include "icon-arrow-right" %}</span>
       <div class="cart-products-parent {% if cart.item_count == 0 %}no-disp{% endif %}">
         <div class="cart-products-wrapper">
           {% for item in cart.items %}
