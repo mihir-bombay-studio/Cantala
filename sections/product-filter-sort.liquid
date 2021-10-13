@@ -17,8 +17,9 @@
         </div>
       </div>
       <div class="pfs-right">
-        a
+        
       	{% for product in collections.products %}
+        a
         <div>
         	 <div class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
