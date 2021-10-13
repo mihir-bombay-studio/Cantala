@@ -21,6 +21,15 @@
   </div>
 </div>
 
+<script>
+  $('.sort').click(function() {
+  	$('.sort').removeClass('selected');
+    $('.sort').find('.close-icon').addClass('no-disp');
+    $(this).addClass('selected');
+    $(this).find('.close-icon').removeClass('no-disp');
+  });
+</script>
+
 
 
 {% schema %}
