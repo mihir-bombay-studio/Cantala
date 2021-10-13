@@ -11,8 +11,9 @@
             <div class="sort">Price, high to low<span class="close-icon no-disp">{% include 'icon-close-brown' %}</span></div>
           </div>
           <div class="filters">
-          	{% for prod in collection.products %}
-            {% for tag in prod.tags %}
+          	{% for product in collection.products %}
+            a
+            {% for tag in product.tags %}
 				{{ tag }}
            	{% endfor %}
 			{% endfor %}
