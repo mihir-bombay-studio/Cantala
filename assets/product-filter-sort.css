@@ -14,6 +14,11 @@
     font-size: 13px;
 }
 
+.filter-and-sorting .close-icon {
+    position: absolute;
+    right: 0;
+}
+
 .sort, .filter {
 	opacity: 0.5;
   cursor: pointer;
