@@ -238,18 +238,18 @@
         <div class="cart-total-block">
           <div class="cart-product-row marg-bottom-xs">
             <div class="cart-product-col">
-              <span class="total-text">Subtotal</span>
+              <span class="total-text">Verzending</span>
             </div>
             <div class="cart-product-col">
-              <span class="total-price">{{ cart.total_price | money_without_trailing_zeros }}</span>
+              <span class="total-text">{% if cart.total_price > 9999 %}Free{% else %}Ber. volgende stap{% endif %}</span>
             </div>
           </div>
           <div class="cart-product-row sub-marg-bottom">
             <div class="cart-product-col">
-              <span class="total-text">Shipping</span>
+              <span class="total-text">Subtotal</span>
             </div>
             <div class="cart-product-col">
-              <span class="total-text">{% if cart.total_price > 9999 or only_sample %}Free{% else %}€10{% endif %}</span>
+              <span class="total-price">{{ cart.total_price | money_without_trailing_zeros }}</span>
             </div>
           </div>
           <a class="btn btn-center btn-default" href="/checkout">Checkout</a>
