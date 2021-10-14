@@ -1,8 +1,14 @@
 <div class="article-wrapper">
-  <div class="container">
+  <div class="container rel">
+    <div class="darker-background"></div>
     <div class="article-img-content rel">
       <div class="article-img">
       	{{ article.image | img_url: '500x' | img_tag }}
+      </div>
+      <div class="article-content-wrap">
+        <h2 class="article-title heading-2">{{ article.title }}</h2>
+        <div class="article-date">{{ article.created_at | date: "%a, %b %d, %y" }}</div>
+        <div class="article-content">{{ article.content }}</div>
       </div>
     </div>
   </div>
