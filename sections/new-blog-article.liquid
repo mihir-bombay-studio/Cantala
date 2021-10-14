@@ -8,10 +8,12 @@
       	{{ article.image | img_url: '500x' | img_tag }}
       </div>
       <div class="article-content-wrap">
+        <div class="abs">
         {% for tag in article.tags limit:1 %}
         <div class="article-tag">{{ tag }}</div>
         {% endfor %}
         <h2 class="article-title heading-2">{{ article.title }}</h2>
+        </div>
         <div class="article-date">{{ article.created_at | date: "%d %b %Y" }}</div>
         <div class="article-content">{{ article.content }}</div>
       </div>
