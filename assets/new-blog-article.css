@@ -49,3 +49,8 @@
     opacity: 0.8;
     margin-bottom: 31px;
 }
+
+.article-content {
+    line-height: 26px;
+    letter-spacing: 0;
+}
