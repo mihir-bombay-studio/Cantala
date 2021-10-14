@@ -7,7 +7,7 @@
       </div>
       <div class="article-content-wrap">
         <h2 class="article-title heading-2">{{ article.title }}</h2>
-        <div class="article-date">{{ article.created_at | date: "%a, %b %d, %y" }}</div>
+        <div class="article-date">{{ article.created_at | date: "%d %b %YYYY" }}</div>
         <div class="article-content">{{ article.content }}</div>
       </div>
     </div>
