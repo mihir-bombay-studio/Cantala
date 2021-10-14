@@ -1,0 +1,8 @@
+.darker-background {
+    background-color: var(--background-slight-dark);
+    display: block !important;
+    height: 300px;
+    position: absolute;
+    right: 0;
+    width: 80%;
+}
