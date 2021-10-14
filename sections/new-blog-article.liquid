@@ -2,7 +2,7 @@
   <div class="container">
     <div class="article-img-content rel">
       <div class="article-img">
-      	{{ article.image }}
+      	{{ article.image | img_url: '500x' | img_tag }}
       </div>
     </div>
   </div>
