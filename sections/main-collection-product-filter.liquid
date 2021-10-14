@@ -1,0 +1,510 @@
+<style>
+  .accordion-filter {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+}
+  
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+  
+  .category-wrapper {
+    justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+  .sticky-nav {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
+    width: 25%;
+    max-width: 180px; }
+
+  .category-wrapper .sticky-nav {
+    width: 100%;
+    max-width: 150px; }
+
+  .category-content {
+    display: flex;
+    width: 100%;
+    max-width: calc( 100% - 240px );
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-right: -30px;
+    justify-content: normal; }
+
+  .sticky-nav p {
+    margin-top: 21px;
+    margin-bottom: 13px;
+    position: relative;
+  }
+
+  .sticky-nav p strong {
+    font-size: 16px;
+    font-weight: 500;
+    color: #342D25;}
+  svg.icon.icon-caret {
+    width: 8px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: calc( 50% - 2.5px );
+    transition: .2s ease;
+  }
+  .active-filter svg.icon.icon-caret {
+    transform: rotate(180deg);
+  }
+
+  .sticky-nav a {
+    font-size: 13px;
+    font-weight: 400;
+    display: block;
+    color: #342D25;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: 0.4s ease;
+  	opacity: .5;
+  }
+
+  .sticky-nav a.filtered {
+    opacity: 1; }
+
+  .category-content .card-product {
+    width: 33.3%;
+    margin: 0 0 40px;
+    padding: 0 30px;
+    background-color: transparent !important; }
+
+  .card-product {
+    text-decoration: none; }
+
+  .card-product-image img {
+    width: 100%;
+    display: block; }
+
+  .card-product-title {
+    margin-bottom: 0;
+    font-size: 20px;
+    margin-top: 5px;
+    min-height: 54px;}
+
+  .card-product-price {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #3C3C3B; }
+
+  .card-product .btn-cta {
+    margin-top: 20px; }
+
+  .image-box img {
+    width: 100%;
+    display: block; }
+  .category-padd {
+    padding-top: 55px;
+  }
+  .tagged {
+    color: #E6AF7B;
+    font-family: 'Athelas';
+    font-size: 13px;
+    margin-top: 20px;
+    display: block;
+    line-height: 14px;
+  }
+  .row.flex-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 29px;
+  }
+  .card-product-price, .vanaf {
+    font-size: 14px;
+    color: #000000;
+  }
+  .only-money {
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 5px;
+  }
+  
+  .close-filter {
+  	display: none;
+  }
+  @media (max-width: 992px) {
+    .category-wrapper .sticky-nav {
+      width: 100%;
+      max-width: 309px;
+      display: block;
+      position: absolute;
+      height: 100vh;
+      z-index: 99;
+      left: auto;
+      right: 0;
+      top: -999px;
+      bottom: 0;
+      transition: top .8s ease;
+      padding: 0 40px;
+      overflow-x: hidden;
+      background-color: #F4EDE2;
+    }
+    .category-wrapper .sticky-nav.open {
+      top: 0;
+    }
+    .category-content {
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .category-content .card-product {
+      width: 100%;
+      padding: 0;
+    }
+    .sticky-nav p {
+      font-weight: 500;
+    }
+    .close-filter {
+      margin-right: 16px;
+      margin-bottom: 40px;
+      display: inline-block;
+    }
+    .underlay {
+      display: block !important;
+      position: absolute;
+      background-color: #342d2578;
+      height: 100vh;
+      width: 100%;
+      top: -999px;
+      left: 0;
+      z-index: 10;
+      overflow-x: hidden;
+      transition: top .8s ease;
+    }
+    .underlay.open {
+      top: 0;
+    }
+    .card-product-title {
+      min-height: auto;
+    }
+  }  
+</style>
+  <div class="category category-padd container padd-bottom padd-top">    
+    <div class="category-wrapper row-nav marg-top">
+      <div class="underlay"></div>
+      <div class="sticky-nav sub-marg-bottom">
+        <p class="accordion-filter"><span class="close-filter">{% include "icon-arrow-right" %}</span>FILTER</p>
+        <div class="nav-colors panel-filter">
+          <p class="accordion-filter"><strong>Smaak</strong> {% render 'icon-caret' %}</p>
+          <div class="panel">
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="paketten">Pakete</a>
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="navullingen">Refills</a>
+          </div>
+          <p class="accordion-filter"><strong>Organic</strong> {% render 'icon-caret' %}</p>
+          <div class="panel">
+            <a href="#" class="favourites only-border" onClick="return false;" data-value="reinigers">Putzen</a>
+            <a href="#" class="favourites only-border" onClick="return false;" data-value="accessoires">Zubehör</a>
+            <a href="#" class="favourites only-border" onClick="return false;" data-value="wasmiddel">Waschen</a>
+          </div>
+        </div>
+        <span class="close-filter negative no-d"></span>
+      </div>
+      <div class="category-content">
+        <style>
+
+          .default-h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #342D25;
+            font-family: Athelas,sans-serif;
+            text-align: center;
+          }
+
+          .default-text {
+            text-align: center;
+          }
+
+          .btn {
+            background-color: #342D25;
+            color: #F4EDE2;
+            display: table;
+            margin: 0 auto;
+            padding: 14px 44px;
+            margin-top: 30px;
+          }
+          .category-content .popup-block {
+            padding: 0 30px;
+            width: 100%;
+            margin-bottom: 27px;
+          }
+          .default-input {
+            padding: 16px 24px;
+            height: 54px;
+            border: 0;
+            width: 82%;
+            color: #342D25;
+            font-size: 16px;
+            font-family: var(--font-body-family);
+              outline-offset: 0;
+              box-shadow: none;
+              }
+          .popup-block .btn {
+            margin-top: 0;
+            width: 18%;
+            padding: 14px;
+            font-family: var(--font-body-family);
+              font-weight: 500;
+              border: 0;
+              letter-spacing: .8px;
+              font-size: 16px;
+              }
+          input::placeholder, textarea::placeholder {
+            color: #342D25; /* Firefox */
+            font-size: 16px;
+            font-family: var(--font-body-family);
+              opacity: .8;
+              }
+
+          input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #342D25; /* Firefox */
+            font-size: 16px;
+            font-family: var(--font-body-family);
+              opacity: .8;
+              }
+
+          input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edge */
+            color: #342D25; /* Firefox */
+            font-size: 16px;
+            font-family: var(--font-body-family);
+              opacity: .8;
+              }
+          .filter-row {
+            margin: 27px 0 61px;
+          }
+          span.filter-added {
+            background-color: #EBDCC2;
+            padding: 8px 29px 8px 13px;
+            margin-right: 14px;
+            position: relative;
+          }
+          .category-content .pop-close svg {
+            width: 7px;
+          }
+          .category-content .pop-close {
+            position: absolute;
+            top: 3px;
+            right: 8px;
+            cursor: pointer;
+          }
+
+          @media(max-width: 992px) {
+            .category-content .popup-block {
+              padding: 0;
+              width: 100%;
+            }
+            .category-content .field {
+              flex-wrap: wrap;
+            }
+            .category-content .default-input,.category-content .popup-block .btn {
+              width: 100%;
+              margin-top: 10px;
+            }
+          }
+
+        </style>
+        <div class="popup-block">    
+          <div class="rel">
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <div class="newsletter-form__field-wrapper">
+              <div class="field">
+                <input
+                       id="search-box"
+                       type="text"
+                       name="search"
+                       class="default-input"
+                       value="{{ form.email }}"
+                       autocapitalize="off"
+                       placeholder="Waar ben je naar op zoek?"
+                       >
+                <button type="submit" class="btn" name="commit" id="Search" aria-label="Inschrijven">
+                  Zoeken
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="filter-row">
+          </div>
+        </div>
+        
+        
+        
+        {% for product in collection.products %}
+        <a href="{{ product.url }}" title="{{ product.title | escape  }}" class="card-product paketten">            
+          <div class="card-product-image">
+            <img src="{{ product.featured_image.src | product_img_url: '590x' }}" alt="{{ product.title | escape  }}" />
+          </div>
+          <div class="card-product-details">
+            <div class="row">
+              <span class="tagged">Bestseller</span>
+            </div>
+            <div class="row">
+              <p class="card-product-title">
+                {{ product.title | escape  }}
+              </p>
+            </div>
+            <div class="row flex-box">
+              <span href="#" class="vanaf">Vanaf</span>
+              
+              <p class="card-product-price text-center">
+                {{ cart.currency.iso_code }}  <span class="only-money">{{ product.price | money_without_currency  }}</span>
+              </p>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+<script>
+  $('.filter').click(function(){
+    $('.sticky-nav').addClass('open');
+    window.scrollTo(0, 0);
+  });
+  $('.close-filter').click(function(){
+    $('.sticky-nav').removeClass('open');
+  });
+  $('.nav-colors .colors-wrapper').click(function(){
+    $(this).toggleClass('filtered');
+    runFilter();
+  });
+  $('.nav-colors .only-border').click(function(){
+    $(this).toggleClass('filtered');
+    runFilter();
+  });
+  $("#search-box").on("input", function(){
+    runFilter();
+  });
+
+  function runFilter() {
+    var colors = [];
+    var undertones = [];
+    var favourites = [];
+    var classString = "";
+    $( ".colors-wrapper.filtered" ).each(function( index ) {
+      colors.push($(this).data('value'));
+    });
+    $( ".undertones.filtered" ).each(function( index ) {
+      undertones.push($(this).data('value'));
+    });
+    $( ".favourites.filtered" ).each(function( index ) {
+      favourites.push($(this).data('value'));
+    });
+    var i;
+    $('.filter-row').html('');
+    $('.card-product').addClass('no-disp');
+    if(colors.length > 0) {
+      for (i = 0; i < colors.length; i++) {
+        $('.card-product.'+colors[i]).addClass('fp');
+        $('.filter-row').append(`<span class="filter-added" data-val="` +colors[i]+ `"><span class="filter-content">Gebruik: `+colors[i]+`</span><span class="pop-close">{% include "icon-x" %}</span></span>`);
+      }
+    } else {
+      $('.card-product').addClass('fp');
+    }
+    if(undertones.length > 0) {
+      for (i = 0; i < undertones.length; i++) {
+        $('.card-product.'+undertones[i]).addClass('sp');
+        $('.filter-row').append(`<span class="filter-added" data-val="` +undertones[i]+ `"><span class="filter-content">Gebruik: `+undertones[i]+`</span><span class="pop-close">{% include "icon-x" %}</span></span>`);
+      }
+    } else {
+      $('.card-product').addClass('sp');
+    }
+    if(favourites.length > 0) {
+      for (i = 0; i < favourites.length; i++) {
+        $('.card-product.'+favourites[i]).addClass('tp');
+        $('.filter-row').append(`<span class="filter-added" data-val="` +favourites[i]+ `"><span class="filter-content">Gebruik: `+favourites[i]+`</span><span class="pop-close">{% include "icon-x" %}</span></span>`);
+      }
+    } else {
+      $('.card-product').addClass('tp');
+    }
+    
+    if($("#search-box").val() != "") {
+      $('.card-product').each(function() {
+        if($(this).find(".card-product-title").text().toLowerCase().indexOf($("#search-box").val().toLowerCase()) > -1) {
+          $(this).addClass('fop');
+        }
+      });
+    } else {
+      $('.card-product').addClass('fop');
+    }
+    $('.card-product.fp.sp.tp.fop').removeClass('no-disp');
+    $('.fp').removeClass('fp');
+    $('.sp').removeClass('sp');
+    $('.tp').removeClass('tp');
+    $('.fop').removeClass('fop');
+    
+    
+    $('.category-content .pop-close:not(.added)').click(function() {
+      var filter = $(this).parent().data('val');
+      $('.nav-colors .only-border').each(function() {
+        if($(this).data('value') == filter) {
+          $(this).click();
+        }
+      });  	
+      $('.category-content .pop-close').addClass('added');
+    });
+  }
+  runFilter();
+  
+  $('.mobile-filter').click(function(){
+    $('.sticky-nav').addClass('open');
+    $('.underlay').addClass('open');
+    $('body').addClass('no-scroll');
+  });
+  $('.close-filter, .underlay').click(function(){
+    $('.sticky-nav').removeClass('open');
+    $('.underlay').removeClass('open');
+    $('body').removeClass('no-scroll');
+  });
+  
+  
+</script>
+
+<script>
+var acc = document.getElementsByClassName("accordion-filter");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active-filter");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

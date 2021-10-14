@@ -1,0 +1,213 @@
+<style>
+  
+  .default-h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #342D25;
+    font-family: Athelas,sans-serif;
+    text-align: center;
+  }
+
+  .default-text {
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #342D25;
+    color: #F4EDE2;
+    display: table;
+    margin: 0 auto;
+    padding: 14px 44px;
+    margin-top: 30px;
+  }
+  .cookie-popup-block {
+    position: fixed;
+    z-index: 10;
+    bottom: 21px;
+    left: 23px;
+    background-color: #EBDCC2;
+    padding: 26px 50px 40px 39px;
+    width: 528px;
+  }
+  .cookie-popup-block .default-h2 {
+    text-align: left;
+    display: inline-block;
+    width: 64%;
+    font-size: 30px;
+    margin-left: -20px;
+    line-height: 33px;
+  }
+
+  .cookie-image {
+    display: inline-block;
+    margin-top: -90px;
+    width: 32%;
+  }
+  .cookie-image svg {
+    position: absolute;
+    top: -70px;
+    left: -20px;
+  }
+  .cookie-popup-block .default-text {
+    text-align: left;
+    max-width: 434px;
+  }
+  .cookie-popup-block .btn {
+    margin-top: 0;
+    width: auto;
+    padding: 12px 18px;
+    font-family: var(--font-body-family);
+    font-weight: 400;
+    border: 0;
+    letter-spacing: .8px;
+      font-size: 16px;
+      }
+  .btn.btn-orange {
+    background-color: #E6AF7B;
+  }
+  .btn-cluster .btn {
+    display: inline-block;
+    margin-right: 12px;
+  }
+  .customize {
+    max-width: 434px;
+    margin-bottom: 1em;
+}
+  .accordion-dropdown {
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .customize .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .customize svg.icon.icon-caret {
+    width: 8px;
+    height: auto;
+    position: absolute;
+    right: -14px;
+    top: calc( 50% - 2.5px );
+    transition: .2s ease;
+  }
+  
+  .active-dropdown svg.icon.icon-caret {
+    transform: rotate(180deg);
+  }
+  @media(max-width: 992px) {
+    .cookie-popup-block {
+      bottom: 0;
+      left: 0;
+      padding: 28px 20px;
+      width: 100%;
+    }
+    .cookie-popup-block .default-h2 {
+      max-width: 64%;
+      margin-left: 0;
+    }
+    .cookie-popup-block .default-text {
+      max-width: 90%;
+    }
+    .cookie-image svg {
+      left: 0;
+      width: 100%;
+      top: -110px;
+    }
+    .cookie-image {
+      margin-top: 0;
+      position: relative;
+    }
+  }
+  
+</style>
+<div class="cookie-popup-block" style="display: none;">    
+  <div class="rel">
+    <span class="cookie-image">{% include "icon-cookie" %}</span>
+    <h2 class="default-h2">{{ section.settings.header_text }}</h2>
+    <p class="default-text">{{ section.settings.sub_header_text }}</p>
+    
+    <div class="customize">
+      <p class="accordion-dropdown">Customize {% render 'icon-caret' %} </p>
+      <div class="panel">
+        sdfb gjkhbfdsglsdbfgshfb glksdfbg lksdjfbglk sdjfbg ksdjbhdfhg osjfdghb rtbhj ldkrtjbh kdrtbh prthb prithb rpitbh7 piretbhpirbhjtp riektjgbh[erijfgnhpriht bp5iyhb5rp thrphtb 
+      </div>
+    </div>
+    
+    <div class="btn-cluster">
+      <button class="btn btn-orange"id="decline">
+        Decline
+      </button>
+      <button class="btn"id="accept">
+        Accept all
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+      $(".cookie-popup-block:not(.active)").fadeIn();
+      $(".cookie-popup-block").addClass("active");
+  }); 
+  
+  $(".cookie-popup-block .btn").click(function() {
+  	$(".cookie-popup-block").fadeOut();
+  });
+  
+</script>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion-dropdown");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active-dropdown");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+
+{% schema %}
+  {
+    "name": "Cookie popup",
+    "settings": [
+		{
+          "id": "header_text",
+          "type": "text",
+          "label": "Header text"
+
+        },
+        {
+        "id": "sub_header_text",
+        "type": "html",
+        "label": "Sub header text"
+
+        }
+	],
+"presets": [
+    {
+      "name": "Cookie popup",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
