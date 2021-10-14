@@ -42,3 +42,10 @@
     color: var(--background-main);
     background-color: var(--main-font-color);
 }
+
+.article-date {
+    font-size: 14px;
+    line-height: 26px;
+    opacity: 0.8;
+    margin-bottom: 31px;
+}
