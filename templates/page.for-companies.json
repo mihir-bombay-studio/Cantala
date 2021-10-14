@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "sub_header_text": ""
+      }
+    },
+    "163394382335937664": {
+      "type": "promotional-gifts",
+      "settings": {
+        "heading": "Relatiegeschenken",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
+        "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "163394382335937664"
+  ]
+}

@@ -1,0 +1,61 @@
+{{ 'new-blog-posts.css' | asset_url | stylesheet_tag }}
+
+<div class="new-blog-posts-wrapper">
+  <div class="container">
+    <div class="article-filter-wrapper flex-box">
+      <div class="article-filter">Koffie<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
+      <div class="article-filter">Thee<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
+      <div class="article-filter">Geschenken<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
+    </div>
+    
+    <div class="blog-page-articles flex-box">
+    {% for article in blog.articles %}
+    <div class="blog-page-article-wrap">
+      <div class="article-image">{{ article.image | img_url: '500x' | img_tag }}</div>
+      <div class="article-text">
+      <h3 class="article-title">{{ article.title }}</h3>
+      <div class="article-desc">{{ article.content }}</div>
+      <a href="{{ article.url }}" class="article-url">Lees meer</a>
+      </div>
+    </div>
+	{% endfor %}
+    </div>
+    <div class="load-more">Load more</div>
+  </div>
+</div>
+
+<script>
+  $('.article-filter').click(function() {
+  	$(this).toggleClass('selected');
+    $(this).find('.close-btn').toggleClass('no-disp');
+  });
+  
+  $(".blog-page-article-wrap").hide();
+ $(".blog-page-article-wrap:lt(3)").show();
+  
+  $('.load-more').click(function() {
+    $(this).addClass('no-disp');
+  	$(".blog-page-article-wrap").show();
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "New Blog Posts",
+    "settings": [
+		
+	],
+	"presets": [
+    {
+      "name": "New Blog Posts",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

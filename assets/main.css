@@ -51,6 +51,10 @@ body{
 .flex-box{
 	display: flex;
 }
+
+.row-rev{
+	flex-direction: row-reverse;
+}
 .bold{
 	font-weight: 700;
 }
@@ -148,6 +152,7 @@ h1, h2, h3, h4, h5, h6{
     padding-bottom: 15px;
     text-align: center;
   	width: fit-content;
+  	background-color: transparent;
   	transition: .4s ease;
 }
 

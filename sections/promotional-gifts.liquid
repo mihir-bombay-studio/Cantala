@@ -1,0 +1,53 @@
+{{ 'promotional-gifts.css' | asset_url | stylesheet_tag }}
+
+<div class="promotional-gifts-wrapper rel">
+  <div class="container">
+    <div class="promotional-gifts-content flex-box justify-between align-center">
+      <div class="promotional-gifts-left">
+        <h2 class="promotional-gifts-heading heading-2">{{ section.settings.heading }}</h2>
+        <div class="promotional-gifts-desc">{{ section.settings.desc }}</div>
+      </div>
+      <div class="promotional-gifts-right">
+        <div class="img-background"></div>
+        <div class="promotional-gifts-img">
+        	<img class="pg-img" src="{{ section.settings.image | img_url: '1280x' }}" alt = "pg-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Promotional Gifts",
+    "settings": [
+		{
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+        },
+		{
+        "id": "desc",
+        "type": "text",
+        "label": "Section Description"
+        },
+		{
+        "id": "image",
+        "type": "image_picker",
+        "label": "Section Image"
+        }
+	],
+	"presets": [
+    {
+      "name": "Promotional Gifts",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

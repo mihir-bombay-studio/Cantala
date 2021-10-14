@@ -201,11 +201,11 @@
 }
 .slick-prev:before
 {
-  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/21/assets/icon-arrow-right.svg?v=5602691840912001925);
+  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/23/assets/icon-arrow-right.svg?v=5602691840912001925);
 }
 [dir='rtl'] .slick-prev:before
 {
-  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/21/assets/icon-arrow-right.svg?v=5602691840912001925);
+  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/23/assets/icon-arrow-right.svg?v=5602691840912001925);
 }
 
 .slick-next
@@ -219,11 +219,11 @@
 }
 .slick-next:before
 {
-  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/21/assets/icon-arrow-right.svg?v=5602691840912001925);
+  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/23/assets/icon-arrow-right.svg?v=5602691840912001925);
 }
 [dir='rtl'] .slick-next:before
 {
-  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/21/assets/icon-arrow-right.svg?v=5602691840912001925);
+  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/23/assets/icon-arrow-right.svg?v=5602691840912001925);
   -webkit-transform: rotateY(180deg) translate(0, -50%);
   -ms-transform: rotateY(180deg) translate(0, -50%);
   transform: rotateY(180deg) translate(0, -50%);
@@ -346,6 +346,17 @@
   opacity: .75;
   color: white;
   width: 100px !important;
+}
+
+.ac-right .slick-next{
+	right: 50px;
+    top: -30px;
+}
+
+.ac-right .slick-prev{
+	top: -30px;
+    left: unset;
+    right: 80px;
 }
 
 

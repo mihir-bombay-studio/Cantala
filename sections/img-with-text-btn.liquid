@@ -1,0 +1,112 @@
+{{ 'img-with-txt.css' | asset_url | stylesheet_tag }}
+
+<div class="img-with-txt-wrapper">
+  <div class="container">
+    <div class="img-with-text-content flex-box align-center justify-between{% if section.settings.img_position == 'img_last' %} row-rev{% endif %}">
+      <div class="img-with-txt-left">
+        <img class="img-with-txt-img" src="{{ section.settings.image | img_url: '500x' }}" alt = "img-with-txt-img">
+      </div>
+      <div class="img-with-txt-right">
+        <h2 class="img-with-text-heading heading-2">{{ section.settings.heading }}</h2>
+        <div class="img-with-text-desc">{{ section.settings.desc }}</div>
+        <div class="img-with-text-btn">
+      	{% for block in section.blocks %}
+        {% if block.type == "button" %}
+        <a href="{{ block.settings.button_link }}" class="btn {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+        	{{ block.settings.button_text | escape }}
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image with Text Button",
+    "settings": [
+		{
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+        },
+		{
+        "id": "desc",
+        "type": "text",
+        "label": "Section Description"
+        },
+		{
+        "id": "image",
+        "type": "image_picker",
+        "label": "Section Image"
+        },
+		{
+        "type": "select",
+        "id": "img_position",
+        "label": "Image Position",
+        "options": [
+        {
+        "value": "img_first",
+        "label": "Image First"
+        },
+        {
+        "value": "img_last",
+        "label": "Image Last"
+        }
+        ],
+        "default": "img_first"
+        }
+	],
+	"blocks": [
+			{
+                "type": "button",
+                "name": "Button",
+				"limit": 1,
+                "settings": [
+
+                {
+                "id": "button_text",
+                "type": "text",
+                "label": "Button Text"
+
+                },
+                {
+                "id": "button_link",
+                "type": "url",
+                "label": "Button Link"
+                },
+				{
+                  "type": "select",
+                  "id": "button-color",
+                  "options": [
+                    {
+                      "value": "light",
+                      "label": "Light"
+                    },
+                    {
+                      "value": "dark",
+                      "label": "Dark"
+                    }
+                  ],
+                  "default": "dark",
+                  "label": "Dark"
+                }
+              ]
+            }
+		],
+	"presets": [
+    {
+      "name": "Image with Text Button",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

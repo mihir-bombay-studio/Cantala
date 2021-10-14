@@ -12,7 +12,7 @@
     width: 20%;
 }
 
-.mainLoginInput::-webkit-input-placeholder {
+.subscription-form-input::-webkit-input-placeholder {
   font-family: var(--font-body-family);
     font-size: 16px;
     line-height: 27px;

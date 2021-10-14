@@ -1,0 +1,60 @@
+{{ 'addicted-companies.css' | asset_url | stylesheet_tag }}
+
+<div class="addicted-companies-wrapper">
+  <div class="container rel">
+    <div class="addicted-companies-content flex-box justify-between">
+      <div class="ac-left">
+        <h2 class="ac-heading heading-2">{{ section.settings.heading }}</h2>
+      </div>
+      <div class="ac-right">
+      	{% for block in section.blocks %}
+        {% if block.type == "logo" %}
+        	<div class="company-logo">
+              {{ block.settings.logo_svg }}
+        	</div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Addicted Companies",
+    "settings": [
+		{
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+        }
+	],
+	"blocks": [
+		{
+                "type": "logo",
+                "name": "Company Logo",
+                "settings": [
+
+                {
+                "id": "logo_svg",
+                "type": "text",
+                "label": "Company Logo SVG"
+
+                }
+              ]
+            }
+	],
+	"presets": [
+    {
+      "name": "Addicted Companies",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

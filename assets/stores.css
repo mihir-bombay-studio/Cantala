@@ -1,0 +1,45 @@
+.stores-content {
+    flex-wrap: wrap;
+  	margin: 0 -1%;
+    margin-bottom: 90px;
+}
+
+.store-info-wrap {
+    width: 23%;
+    margin: 0 1%;
+    background-color: var(--background-slight-dark);
+    margin-bottom: 14px;
+    padding: 29px 25px 24px 29px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+
+.store-name.medium {
+    margin-bottom: 10px;
+}
+
+.store-address-wrap {
+    margin-bottom: 18px;
+}
+
+.addr-hr {
+    margin: 0;
+    width: 43px;
+    background-color: var(--main-font-color);
+    margin-bottom: 21px;
+}
+
+.store-hours {
+    margin-top: 8px;
+}
+
+.load-more {
+    width: fit-content;
+  	margin: 0 auto;
+    line-height: 22px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    margin-bottom: 136px !important;
+}

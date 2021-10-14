@@ -1,0 +1,89 @@
+.store-locator-left {
+    width: 40%;
+    padding: 48px 43px;
+    background-color: var(--background-slight-dark);
+}
+
+.store-locator-right{
+	width: 60%;
+}
+
+.store-locator-heading {
+    margin-bottom: 77px;
+}
+
+.pin-code {
+    margin-bottom: 40px;
+}
+
+.locator-hr{
+	background-color: var(--main-font-color);
+    margin-bottom: 35px;
+}
+
+.locator-pin-code::-webkit-inner-spin-button, .locator-pin-code::-webkit-outer-spin-button { 
+    -webkit-appearance: none;    
+    appearance: none;
+    margin: 0;  
+}
+.locator-pin-code, .locator-pin-code:hover, .locator-pin-code:focus {
+  -moz-appearance: textfield;
+}
+
+.locator-pin-code::-webkit-input-placeholder {
+  font-family: var(--font-body-family);
+    font-size: 16px;
+    line-height: 32px;
+    color: #707070;
+}
+
+.locator-pin-code {
+    padding: 9px 14px;
+    border: none;
+    width: 100%;
+}
+
+.search-nearby-title {
+    font-size: 18px;
+    line-height: 34px;
+    margin-bottom: 27px;
+}
+
+.distances {
+    flex-wrap: wrap;
+}
+
+.distance {
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 21px;
+  width: 50%;
+}
+
+.radio {
+    width: 14px;
+    height: 14px;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.selected .radio-checked {
+    display: block;
+    background-color: var(--main-font-color);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.radio-wrap {
+    width: fit-content;
+    cursor: pointer;
+}
+
+.store-locator-wrapper {
+    margin-bottom: 105px;
+}

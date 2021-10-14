@@ -51,6 +51,21 @@ $(document).ready(function(){
     ]
   });
   
+  $('.ac-right').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrow: true,
+    responsive: [
+      {
+        breakpoint: 920,
+        settings: {
+          arrows: true
+        }
+      }
+    ]
+  });
+  
   
   
 });

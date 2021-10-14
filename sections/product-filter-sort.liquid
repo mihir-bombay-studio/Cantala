@@ -1,0 +1,78 @@
+{{ 'product-filter-sort.css' | asset_url | stylesheet_tag }}
+
+<div class="product-filter-sort-wrapper">
+  <div class="container">
+    <div class="product-filter-sort-content flex-box justify-between">
+      <div class="pfs-left rel">
+        <div class="pfs-heading medium">{{ section.settings.heading }}</div>
+        <div class="filter-and-sorting">
+          <div class="sorting">
+            <div class="sort">Price, low to high<span class="close-icon no-disp">{% include 'icon-close-brown' %}</span></div>
+            <div class="sort">Price, high to low<span class="close-icon no-disp">{% include 'icon-close-brown' %}</span></div>
+          </div>
+          <div class="filters">
+            {% for product in collections['all'].products limit:1 %}
+            	{% for tag in product.tags limit:2 %}
+                <div class="filter" data-tag="{{ tag }}">{{ tag }}<span class="close-icon no-disp">{% include 'icon-close-brown' %}</span></div>
+                {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="pfs-right flex-box justify-between">
+        
+      	{% for product in collections['all'].products limit:3 %}
+        <div class="pfs-product">
+        	 <div class="product-img-wrap">
+        	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
+        </div>
+          <div class="product-tag bold">{% for tag in product.tags limit:1 %}{{ tag }}{% endfor %}</div>
+          <div class="product-title"><a href="{{ product.url }}">{{ product.title | escape }}</a></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.sort').click(function() {
+  	$('.sort').removeClass('selected');
+    $('.sort').find('.close-icon').addClass('no-disp');
+    $(this).addClass('selected');
+    $(this).find('.close-icon').removeClass('no-disp');
+  });
+  
+  $('.filter').click(function() {
+  	$(this).addClass('selected');
+    $(this).find('.close-icon').removeClass('no-disp');
+  });
+</script>
+
+
+
+{% schema %}
+  {
+    "name": "Product Filter Sort",
+    "settings": [
+		{
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+        }
+	],
+	
+	"presets": [
+    {
+      "name": "Product Filter Sort",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
