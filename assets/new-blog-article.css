@@ -10,3 +10,13 @@
     right: 0;
     width: 80%;
 }
+
+.article-img {
+    position: absolute;
+    top: -60%;
+}
+
+.article-img img {
+	width: 100%;
+  object-fit: cover;
+}
