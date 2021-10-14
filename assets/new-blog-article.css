@@ -1,3 +1,7 @@
+.article-wrapper.rel {
+    margin-top: 312px;
+}
+
 .darker-background {
     background-color: var(--background-slight-dark);
     display: block !important;
