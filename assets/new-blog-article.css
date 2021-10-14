@@ -31,3 +31,9 @@
     position: absolute;
     top: -17%;
 }
+
+.article-tag{
+	font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
