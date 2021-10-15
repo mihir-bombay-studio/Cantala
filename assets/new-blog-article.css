@@ -112,4 +112,6 @@ img.product-img {
       padding-right: 35px;
 }
 
-.right{}
+.fl-right{
+	float: right;
+}
