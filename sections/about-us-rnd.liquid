@@ -1,21 +1,22 @@
-{{ 'about-us-composer.css' | asset_url | stylesheet_tag }}
+{{ 'about-us-rnd.css' | asset_url | stylesheet_tag }}
 
-<div class="about-us-composer-wrapper">
+<div class="about-us-rnd-wrapper">
   <div class="container">
-    <div class="auc-wrapper flex-box justify-between">
-      <div class="auc-left">
-        <div class="auc-sub-heading medium">{{ section.settings.sub_heading }}</div>
-        <h1 class="auc-title heading-1">{{ section.settings.heading }}</h1>
+    <div class="aur-wrapper flex-box justify-between">
+      <div class="aur-left">
+        <div class="aur-main-img">
+        	<img class="main-img" src="{{ section.settings.main_img | img_url: '700x' }}" alt = "sub-img">
+        </div>
+        <div class="aur-sub-heading medium">{{ section.settings.sub_heading }}</div>
+        <div class="sub-para">{{ section.settings.para_two }}</div>
+      </div>
+      <div class="aur-right">
+      	<h1 class="auc-title heading-2">{{ section.settings.heading }}</h1>
         <div class="main-para">{{ section.settings.para_one }}</div>
         <div class="auc-sub-img">
         	<img class="sub-img" src="{{ section.settings.sub_img | img_url: '500x' }}" alt = "sub-img">
         </div>
-      </div>
-      <div class="auc-right">
-      	<div class="auc-main-img">
-        	<img class="main-img" src="{{ section.settings.main_img | img_url: '700x' }}" alt = "sub-img">
-        </div>
-        <div class="sub-para">{{ section.settings.para_two }}</div>
+        <div class="main-para">{{ section.settings.para_three }}</div>
       </div>
     </div>
   </div>
