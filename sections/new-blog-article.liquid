@@ -33,6 +33,56 @@
         	"label": "Explore Products Heading"
 		}
 	],
+	"blocks": [
+			{
+                "type": "product",
+                "name": "Explore Products",
+				"limit": 3,
+                "settings": [
+
+                {
+                "type": "product",
+                "id": "featured_product",
+                "label": "Featured product"
+                }
+              ]
+            },
+			{
+                "type": "button",
+                "name": "Button",
+				"limit": 1,
+                "settings": [
+
+                {
+                "id": "button_text",
+                "type": "text",
+                "label": "Button Text"
+
+                },
+                {
+                "id": "button_link",
+                "type": "url",
+                "label": "Button Link"
+                },
+				{
+                  "type": "select",
+                  "id": "button-color",
+                  "options": [
+                    {
+                      "value": "light",
+                      "label": "Light"
+                    },
+                    {
+                      "value": "dark",
+                      "label": "Dark"
+                    }
+                  ],
+                  "default": "dark",
+                  "label": "Dark"
+                }
+              ]
+            }
+		],
 	"presets": [
     {
       "name": "New Blog Article",
