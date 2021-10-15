@@ -1,7 +1,59 @@
+{{ 'about-us-rnd.css' | asset_url | stylesheet_tag }}
+
+<div class="about-us-rnd-wrapper">
+  <div class="container">
+    <div class="aur-wrapper flex-box justify-between">
+      <div class="aur-left">
+        <div class="aur-main-img">
+        	<img class="main-img" src="{{ section.settings.main_img | img_url: '700x' }}" alt = "sub-img">
+        </div>
+        <div class="aur-sub-heading heading-2">{{ section.settings.sub_heading }}</div>
+        <div class="sub-para">{{ section.settings.para_two }}</div>
+      </div>
+      <div class="aur-right">
+      	<h1 class="auc-title heading-2">{{ section.settings.heading }}</h1>
+        <div class="main-para">{{ section.settings.para_one }}</div>
+        <div class="aur-sub-img">
+        	<img class="sub-img" src="{{ section.settings.sub_img | img_url: '500x' }}" alt = "sub-img">
+        </div>
+        <div class="third-para">{{ section.settings.para_three }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "About Us RND",
+    "settings": [
+		
+	],
+	"blocks": [
+		{
+			"type": "links_in_img",
+                "name": "Links in Images",
+				"limit": 2,
+                "settings": [
+
+                {
+                "type": "image_picker",
+                "id": "link_img",
+                "label": "Link Image"
+                },
+				{
+					"type": "text",
+					"id": "link_heading",
+					"label": "Link Heading"
+				}
+              ]
+		}
+	],
+	"presets": [
+    {
+      "name": "About Us RND",
+		"category":"section"
+    }
+  ]
   }
 {% endschema %}
 
