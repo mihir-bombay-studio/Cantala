@@ -484,6 +484,20 @@
     },
     "16342977417b5f30db": {
       "type": "about-jobs-shops",
+      "blocks": {
+        "db30e44e-79fa-488e-b67c-1206dab606c4": {
+          "type": "links_in_img",
+          "settings": {
+            "link_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png",
+            "link_heading": "We zoeken jou!",
+            "link_text": "Alle jobs",
+            "link_url": "shopify:\/\/pages\/jobs"
+          }
+        }
+      },
+      "block_order": [
+        "db30e44e-79fa-488e-b67c-1206dab606c4"
+      ],
       "settings": {
       }
     }
