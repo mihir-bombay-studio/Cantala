@@ -41,11 +41,11 @@
     {% if blog.next_article or blog.previous_article %}
     	<div class="article-nav flex-box justify-between">
           {% if blog.previous_article %}
-            <a href="{{ blog.previous_article }}">Previous post</a>
+            <a href="{{ blog.previous_article }}" class="left">Vorig artikel</a>
           {% endif %}
           {% if blog.next_article %}
             <span class="right">
-              <a href="{{ blog.next_article }}">Next post</a>
+              <a href="{{ blog.next_article }}" class="right">Volgend artikel</a>
             </span>
           {% endif %}
       {% endif %}
