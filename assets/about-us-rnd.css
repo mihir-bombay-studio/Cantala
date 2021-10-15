@@ -15,3 +15,9 @@
 .aur-sub-heading {
     margin-bottom: 26px;
 }
+
+.aur-right .main-para {
+    letter-spacing: 0;
+    margin-bottom: 86px;
+    width: 90%;
+}
