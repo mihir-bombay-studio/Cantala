@@ -1,7 +1,51 @@
+{{ 'about-us-composer.css' | asset_url | stylesheet_tag }}
+
+<div class="about-us-composer-wrapper">
+  <div class="container">
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "New Blog Article",
+    "settings": [
+		{
+			"id": "heading",
+        	"type": "text",
+        	"label": "Section Heading"
+		},
+		{
+			"id": "sub_heading",
+        	"type": "text",
+        	"label": "Section Sub Heading"
+		},
+		{
+			"id": "para_one",
+        	"type": "text",
+        	"label": "Main Paragraph"
+		},
+		{
+			"id": "main_img",
+			"type": "image_picker",
+			"label": "Main Image"
+		},
+		{
+			"id": "sub_img",
+			"type": "image_picker",
+			"label": "Sub Image"
+		},
+		{
+			"id": "para_two",
+        	"type": "text",
+        	"label": "Sub Paragraph"
+		}
+	],
+	"presets": [
+    {
+      "name": "New Blog Article",
+		"category":"section"
+    }
+  ]
   }
 {% endschema %}
 
