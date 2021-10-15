@@ -56,3 +56,9 @@
     line-height: 26px;
     letter-spacing: 0;
 }
+
+.article-content h3 {
+    font-size: 22px;
+    line-height: 28px;
+    font-family: 'Athelas', sans-serif;
+}
