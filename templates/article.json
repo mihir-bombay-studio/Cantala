@@ -52,11 +52,18 @@
           "settings": {
             "featured_product": "amour-de-cerise"
           }
+        },
+        "167fff63-50b8-42b9-bf51-00b1f52cc04a": {
+          "type": "product",
+          "settings": {
+            "featured_product": "amaretto-instant-coffee"
+          }
         }
       },
       "block_order": [
         "c10b9c38-2d93-4d18-b6d3-1d697fcc97a5",
-        "eb6b1c00-45ef-43a4-8b17-2a90b68ec617"
+        "eb6b1c00-45ef-43a4-8b17-2a90b68ec617",
+        "167fff63-50b8-42b9-bf51-00b1f52cc04a"
       ],
       "settings": {
         "heading": "Explore our flavours, compose your ritual"
