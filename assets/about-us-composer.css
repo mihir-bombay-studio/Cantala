@@ -5,3 +5,9 @@
 .auc-right{
 	width: 40%;
 }
+
+.auc-wrapper img {
+	width: 100%;
+  object-fit: cover;
+  display: block;
+}
