@@ -11,3 +11,8 @@
   object-fit: cover;
   display: block;
 }
+
+.auh-left .main-para {
+    margin-bottom: 0;
+    width: 100%;
+}
