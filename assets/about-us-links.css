@@ -27,3 +27,9 @@
 .about-us-links-wrapper {
     margin-bottom: 136px;
 }
+
+.au-link {
+    line-height: 22px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--background-main);
+}
