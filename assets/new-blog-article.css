@@ -86,3 +86,12 @@ img.product-img {
     display: block;
     object-fit: cover;
 }
+
+.ep-image {
+    margin-bottom: 21px;
+}
+
+.ep-title {
+    font-size: 20px;
+    line-height: 30px;
+}
