@@ -20,6 +20,24 @@
     </div>
     <div class="article-content">{{ article.content }}</div>
     <div class="explore-products-heading">{{ section.settings.heading }}</div>
+    <div class="explore-products-wrap flex-box justify-between">
+    	{% for block in section.blocks %}
+        {% if block.type == "product" %}
+      	{% assign product_handle = blocks.settings.featured_product %}
+      		<div class="explore-product">
+              <div class="ep-image"><img class="product-img" src="{{ product_handle.featured_image.src | img_url: 'x300' }}"></div>
+              <div class="ep-name">{{ product.name }}</div>
+      		</div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% for block in section.blocks %}
+        {% if block.type == "button" %}
+        <a href="{{ block.settings.button_link }}" class="btn medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+          {{ block.settings.button_text | escape }}
+        </a>
+        {% endif %}
+        {% endfor %}
   </div>
 </div>
 
