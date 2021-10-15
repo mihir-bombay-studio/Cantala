@@ -99,3 +99,10 @@ img.product-img {
 .explore-products-wrap {
     margin-bottom: 90px;
 }
+
+.article-wrapper .btn {
+	padding-left: 35px;
+    padding-right: 35px;
+    margin: 0 auto;
+  margin-bottom: 122px;
+}
