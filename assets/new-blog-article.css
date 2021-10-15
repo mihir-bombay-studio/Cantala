@@ -57,6 +57,11 @@
     letter-spacing: 0;
 }
 
+.article-content {
+    width: 53%;
+    margin: 0 auto;
+}
+
 .article-content h3 {
     font-size: 22px;
     line-height: 28px;
