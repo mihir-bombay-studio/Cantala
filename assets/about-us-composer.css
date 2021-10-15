@@ -1,9 +1,10 @@
-.auc-left{
-	width: 33%;
+.auc-left {
+    width: 40%;
+    margin-top: 100px;
 }
 
 .auc-right{
-	width: 40%;
+	width: 45%;
 }
 
 .auc-wrapper img {
