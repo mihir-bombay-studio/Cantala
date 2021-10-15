@@ -481,6 +481,11 @@
         "para_two": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
         "para_three": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare."
       }
+    },
+    "16342977417b5f30db": {
+      "type": "about-jobs-shops",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -502,6 +507,7 @@
     "1634124860995a6222",
     "16342908747a1ab997",
     "163429310107f8d2c2",
-    "163429485630472be7"
+    "163429485630472be7",
+    "16342977417b5f30db"
   ]
 }
