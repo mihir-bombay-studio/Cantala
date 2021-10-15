@@ -20,3 +20,7 @@
     text-transform: uppercase;
     color: var(--main-heading-color);
 }
+
+.auc-title {
+    margin-bottom: 34px;
+}
