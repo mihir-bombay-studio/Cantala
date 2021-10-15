@@ -15,3 +15,11 @@
     left: 64px;
     bottom: 62px;
 }
+
+.link-heading {
+    color: var(--background-main);
+    font-size: 30px;
+    line-height: 33px;
+    margin-bottom: 23px;
+    font-family: 'Athelas', sans-serif;
+}
