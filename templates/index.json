@@ -469,6 +469,16 @@
         "para_one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
         "main_img": "shopify:\/\/shop_images\/IMG_6515_2x_d8f451da-c6a4-469e-bcd5-df7f2af17a3a.png"
       }
+    },
+    "163429485630472be7": {
+      "type": "about-us-rnd",
+      "settings": {
+        "heading": "R&D",
+        "sub_heading": "Discovery en reizen",
+        "para_one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
+        "para_two": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
+        "para_three": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare."
+      }
     }
   },
   "order": [
@@ -489,6 +499,7 @@
     "1634119612adf2ad5c",
     "1634124860995a6222",
     "16342908747a1ab997",
-    "163429310107f8d2c2"
+    "163429310107f8d2c2",
+    "163429485630472be7"
   ]
 }
