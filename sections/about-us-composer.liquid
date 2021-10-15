@@ -4,7 +4,11 @@
   <div class="container">
     <div class="auc-wrapper flex-box justify-between">
       <div class="auc-left">
-        <div class="auc-sub-heading">{{}}</div>
+        <div class="auc-sub-heading">{{ section.settings.sub_heading }}</div>
+        <h1 class="auc-title heading-1">{{ section.settings.heading }}</h1>
+        <div class="auc-sub-img">
+        	<img class="sub-img" src="{{ section.settings.sub_img | img_url: '300x' }}" alt = "sub-img">
+        </div>
       </div>
       <div class="auc-right"></div>
     </div>
