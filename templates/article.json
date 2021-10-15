@@ -46,10 +46,17 @@
           "settings": {
             "featured_product": "amaretto-2"
           }
+        },
+        "eb6b1c00-45ef-43a4-8b17-2a90b68ec617": {
+          "type": "product",
+          "settings": {
+            "featured_product": "amour-de-cerise"
+          }
         }
       },
       "block_order": [
-        "c10b9c38-2d93-4d18-b6d3-1d697fcc97a5"
+        "c10b9c38-2d93-4d18-b6d3-1d697fcc97a5",
+        "eb6b1c00-45ef-43a4-8b17-2a90b68ec617"
       ],
       "settings": {
         "heading": "Explore our flavours, compose your ritual"
