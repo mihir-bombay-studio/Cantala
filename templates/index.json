@@ -461,6 +461,14 @@
         "sub_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.03.11_2x_68e87a64-c5bd-4215-8078-6df7cf8b8a7a.png",
         "para_two": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare."
       }
+    },
+    "163429310107f8d2c2": {
+      "type": "about-us-how",
+      "settings": {
+        "heading": "Knowhow",
+        "para_one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
+        "main_img": "shopify:\/\/shop_images\/IMG_6515_2x_d8f451da-c6a4-469e-bcd5-df7f2af17a3a.png"
+      }
     }
   },
   "order": [
@@ -480,6 +488,7 @@
     "163410338821e0284f",
     "1634119612adf2ad5c",
     "1634124860995a6222",
-    "16342908747a1ab997"
+    "16342908747a1ab997",
+    "163429310107f8d2c2"
   ]
 }
