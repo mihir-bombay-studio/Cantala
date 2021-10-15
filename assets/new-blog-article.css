@@ -107,6 +107,9 @@ img.product-img {
   margin-bottom: 122px;
 }
 
-.left{}
+.article-nav .btn{
+	padding-left: 35px;
+      padding-right: 35px;
+}
 
 .right{}
