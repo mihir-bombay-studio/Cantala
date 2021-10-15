@@ -1,7 +1,72 @@
+{{ 'about-us-composer.css' | asset_url | stylesheet_tag }}
+
+<div class="about-us-composer-wrapper">
+  <div class="container">
+    <div class="auc-wrapper flex-box justify-between">
+      <div class="auc-left">
+        <div class="auc-sub-heading medium">{{ section.settings.sub_heading }}</div>
+        <h1 class="auc-title heading-1">{{ section.settings.heading }}</h1>
+        <div class="main-para">{{ section.settings.para_one }}</div>
+        <div class="auc-sub-img">
+        	<img class="sub-img" src="{{ section.settings.sub_img | img_url: '500x' }}" alt = "sub-img">
+        </div>
+      </div>
+      <div class="auc-right">
+      	<div class="auc-main-img">
+        	<img class="main-img" src="{{ section.settings.main_img | img_url: '700x' }}" alt = "sub-img">
+        </div>
+        <div class="sub-para">{{ section.settings.para_two }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "About Us RND",
+    "settings": [
+		{
+			"id": "heading",
+        	"type": "text",
+        	"label": "Section Heading"
+		},
+		{
+			"id": "sub_heading",
+        	"type": "text",
+        	"label": "Section Sub Heading"
+		},
+		{
+			"id": "para_one",
+        	"type": "text",
+        	"label": "Main Paragraph"
+		},
+		{
+			"id": "main_img",
+			"type": "image_picker",
+			"label": "Main Image"
+		},
+		{
+			"id": "sub_img",
+			"type": "image_picker",
+			"label": "Sub Image"
+		},
+		{
+			"id": "para_two",
+        	"type": "text",
+        	"label": "Sub Paragraph"
+		},
+		{
+			"id": "para_three",
+        	"type": "text",
+        	"label": "Third Paragraph"
+		}
+	],
+	"presets": [
+    {
+      "name": "About Us RND",
+		"category":"section"
+    }
+  ]
   }
 {% endschema %}
 
