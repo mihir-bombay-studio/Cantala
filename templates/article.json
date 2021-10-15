@@ -40,6 +40,17 @@
     },
     "1634210560f62e8d1c": {
       "type": "new-blog-article",
+      "blocks": {
+        "c10b9c38-2d93-4d18-b6d3-1d697fcc97a5": {
+          "type": "product",
+          "settings": {
+            "featured_product": "amaretto-2"
+          }
+        }
+      },
+      "block_order": [
+        "c10b9c38-2d93-4d18-b6d3-1d697fcc97a5"
+      ],
       "settings": {
         "heading": "Explore our flavours, compose your ritual"
       }
