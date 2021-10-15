@@ -60,6 +60,7 @@
 .article-content {
     width: 53%;
     margin: 0 auto;
+  margin-bottom: 115px;
 }
 
 .article-content h3 {
