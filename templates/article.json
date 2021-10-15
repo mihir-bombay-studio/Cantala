@@ -58,12 +58,21 @@
           "settings": {
             "featured_product": "amaretto-instant-coffee"
           }
+        },
+        "c3d96132-be1a-4c77-82b3-7d01e730b94c": {
+          "type": "button",
+          "settings": {
+            "button_text": "Producten shoppen",
+            "button_link": "shopify:\/\/collections\/all",
+            "button-color": "dark"
+          }
         }
       },
       "block_order": [
         "c10b9c38-2d93-4d18-b6d3-1d697fcc97a5",
         "eb6b1c00-45ef-43a4-8b17-2a90b68ec617",
-        "167fff63-50b8-42b9-bf51-00b1f52cc04a"
+        "167fff63-50b8-42b9-bf51-00b1f52cc04a",
+        "c3d96132-be1a-4c77-82b3-7d01e730b94c"
       ],
       "settings": {
         "heading": "Explore our flavours, compose your ritual"
