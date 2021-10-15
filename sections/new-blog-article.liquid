@@ -41,13 +41,11 @@
     {% if blog.next_article or blog.previous_article %}
     	<div class="article-nav flex-box justify-between">
           {% if blog.previous_article %}
-            <span class="left">
-              &larr; {{ 'Vorig artikel' | t | link_to: blog.previous_article }}
-            </span>
+            <a href="{{ blog.previous_article }}">Previous post</a>
           {% endif %}
           {% if blog.next_article %}
             <span class="right">
-              {{ 'blogs.article.newer_post' | t | link_to: blog.next_article }} &rarr;
+              <a href="{{ blog.next_article }}">Next post</a>
             </span>
           {% endif %}
       {% endif %}
