@@ -8,3 +8,10 @@
   object-fit: cover;
   display: block;
 }
+
+.au-link-text {
+    position: absolute;
+    color: var(--background-main);
+    left: 64px;
+    bottom: 62px;
+}
