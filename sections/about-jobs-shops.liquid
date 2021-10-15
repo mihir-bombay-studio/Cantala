@@ -1,30 +1,15 @@
-{{ 'about-us-rnd.css' | asset_url | stylesheet_tag }}
+{{ 'about-us-links.css' | asset_url | stylesheet_tag }}
 
-<div class="about-us-rnd-wrapper">
+<div class="about-us-links-wrapper">
   <div class="container">
-    <div class="aur-wrapper flex-box justify-between">
-      <div class="aur-left">
-        <div class="aur-main-img">
-        	<img class="main-img" src="{{ section.settings.main_img | img_url: '700x' }}" alt = "sub-img">
-        </div>
-        <div class="aur-sub-heading heading-2">{{ section.settings.sub_heading }}</div>
-        <div class="sub-para">{{ section.settings.para_two }}</div>
-      </div>
-      <div class="aur-right">
-      	<h1 class="auc-title heading-2">{{ section.settings.heading }}</h1>
-        <div class="main-para">{{ section.settings.para_one }}</div>
-        <div class="aur-sub-img">
-        	<img class="sub-img" src="{{ section.settings.sub_img | img_url: '500x' }}" alt = "sub-img">
-        </div>
-        <div class="third-para">{{ section.settings.para_three }}</div>
-      </div>
+    <div class="aul-wrapper flex-box justify-between">
     </div>
   </div>
 </div>
 
 {% schema %}
   {
-    "name": "About Us RND",
+    "name": "About Us Links",
     "settings": [
 		
 	],
@@ -44,13 +29,23 @@
 					"type": "text",
 					"id": "link_heading",
 					"label": "Link Heading"
+				},
+				{
+					"type": "text",
+					"id": "link_text",
+					"label": "Link Text"
+				},
+				{
+					"type": "url",
+					"id": "link_url",
+					"label": "Link URL"
 				}
               ]
 		}
 	],
 	"presets": [
     {
-      "name": "About Us RND",
+      "name": "About Us Links",
 		"category":"section"
     }
   ]
