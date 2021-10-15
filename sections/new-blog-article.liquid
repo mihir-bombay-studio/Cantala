@@ -24,6 +24,7 @@
     	{% for block in section.blocks %}
         {% if block.type == "product" %}
       	{% assign product = blocks.settings.featured_product %}
+      	{{ product }}
       		<div class="explore-product">
               <div class="ep-image"><img class="product-img" src="{{ product.featured_image.src | img_url: 'x300' }}"></div>
               <div class="ep-title">{{ product.title }}</div>
