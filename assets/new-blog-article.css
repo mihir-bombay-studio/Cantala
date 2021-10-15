@@ -112,6 +112,6 @@ img.product-img {
       padding-right: 35px;
 }
 
-.fl-right{
-	float: right;
+.fl-end{
+	justify-content: flex-end !important;
 }
