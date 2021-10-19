@@ -1,0 +1,72 @@
+{{ 'about-us-links.css' | asset_url | stylesheet_tag }}
+
+<div class="about-us-links-wrapper">
+  <div class="container">
+    <div class="aul-wrapper flex-box justify-between">
+      {% for block in section.blocks %}
+        {% if block.type == "links_in_img" %}
+      	<div class="au-link-wrap rel">
+          <div class="link-img">
+          	<img src="{{ block.settings.link_img | img_url: '700x' }}" alt = "link-img">
+          </div>
+          <div class="au-link-text">
+            <h3 class="link-heading bold">{{ block.settings.link_heading }}</h3>
+            <a href="{{ block.settings.link_url }}" class="au-link">{{ block.settings.link_text }}</a>
+          </div>
+      	</div>
+      	{% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "About Us Links",
+    "settings": [
+		
+	],
+	"blocks": [
+		{
+			"type": "links_in_img",
+                "name": "Links in Images",
+				"limit": 2,
+                "settings": [
+
+                {
+                "type": "image_picker",
+                "id": "link_img",
+                "label": "Link Image"
+                },
+				{
+					"type": "text",
+					"id": "link_heading",
+					"label": "Link Heading"
+				},
+				{
+					"type": "text",
+					"id": "link_text",
+					"label": "Link Text"
+				},
+				{
+					"type": "url",
+					"id": "link_url",
+					"label": "Link URL"
+				}
+              ]
+		}
+	],
+	"presets": [
+    {
+      "name": "About Us Links",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

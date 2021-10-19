@@ -1,0 +1,52 @@
+{{ 'about-us-how.css' | asset_url | stylesheet_tag }}
+
+<div class="about-us-how-wrapper">
+  <div class="container">
+    <div class="auh-wrapper flex-box justify-between align-center">
+      <div class="auh-left">
+        <h1 class="auh-title heading-2">{{ section.settings.heading }}</h1>
+        <div class="main-para">{{ section.settings.para_one }}</div>
+      </div>
+      <div class="auh-right">
+      	<div class="auh-main-img">
+        	<img class="main-img" src="{{ section.settings.main_img | img_url: '700x' }}" alt = "sub-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "About Us How",
+    "settings": [
+		{
+			"id": "heading",
+        	"type": "text",
+        	"label": "Section Heading"
+		},
+		{
+			"id": "para_one",
+        	"type": "text",
+        	"label": "Main Paragraph"
+		},
+		{
+			"id": "main_img",
+			"type": "image_picker",
+			"label": "Main Image"
+		}
+	],
+	"presets": [
+    {
+      "name": "About Us How",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

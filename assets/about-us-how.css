@@ -1,0 +1,26 @@
+.auh-left{
+	width: 30%;
+}
+
+.auh-right{
+	width: 65%;
+}
+
+.auh-right img {
+	width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.auh-left .main-para {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.auh-title {
+    margin-bottom: 26px;
+}
+
+.about-us-how-wrapper {
+    margin-bottom: 115px;
+}

@@ -450,6 +450,66 @@
       "settings": {
         "heading": "Companies that are addicted to our coffee and tea"
       }
+    },
+    "16342908747a1ab997": {
+      "type": "about-us-composer",
+      "settings": {
+        "heading": "Composer of taste",
+        "sub_heading": "LOREM IPSUM",
+        "para_one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
+        "main_img": "shopify:\/\/shop_images\/cover.png",
+        "sub_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.03.11_2x_68e87a64-c5bd-4215-8078-6df7cf8b8a7a.png",
+        "para_two": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare."
+      }
+    },
+    "163429310107f8d2c2": {
+      "type": "about-us-how",
+      "settings": {
+        "heading": "Knowhow",
+        "para_one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
+        "main_img": "shopify:\/\/shop_images\/IMG_6515_2x_d8f451da-c6a4-469e-bcd5-df7f2af17a3a.png"
+      }
+    },
+    "163429485630472be7": {
+      "type": "about-us-rnd",
+      "settings": {
+        "heading": "R&D",
+        "sub_heading": "Discovery en reizen",
+        "para_one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
+        "main_img": "shopify:\/\/shop_images\/05-03-2021_2x_9abc3119-b28c-4851-a9c5-1ee9b057cc41.png",
+        "sub_img": "shopify:\/\/shop_images\/ravi-pinisetti-ySQXoZLAsmc-unsplash_2x_e4ce2adc-fa21-45bb-ab19-ecc685151765.png",
+        "para_two": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
+        "para_three": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare."
+      }
+    },
+    "16342977417b5f30db": {
+      "type": "about-jobs-shops",
+      "blocks": {
+        "db30e44e-79fa-488e-b67c-1206dab606c4": {
+          "type": "links_in_img",
+          "settings": {
+            "link_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png",
+            "link_heading": "We zoeken jou!",
+            "link_text": "Alle jobs",
+            "link_url": "shopify:\/\/pages\/jobs"
+          }
+        },
+        "36ff2aa0-3671-42ff-8233-2562bc61be1c": {
+          "type": "links_in_img",
+          "settings": {
+            "link_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png",
+            "link_heading": "Winkelpunten",
+            "link_text": "Zoek Cantata winkels",
+            "link_url": "shopify:\/\/pages\/jobs"
+          }
+        }
+      },
+      "block_order": [
+        "db30e44e-79fa-488e-b67c-1206dab606c4",
+        "36ff2aa0-3671-42ff-8233-2562bc61be1c"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -468,6 +528,10 @@
     "16340375883eb7d54e",
     "163410338821e0284f",
     "1634119612adf2ad5c",
-    "1634124860995a6222"
+    "1634124860995a6222",
+    "16342908747a1ab997",
+    "163429310107f8d2c2",
+    "163429485630472be7",
+    "16342977417b5f30db"
   ]
 }

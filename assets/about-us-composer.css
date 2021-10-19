@@ -1,0 +1,45 @@
+.auc-left {
+    width: 40%;
+    margin-top: 100px;
+}
+
+.auc-right{
+	width: 50%;
+}
+
+.auc-wrapper img {
+	width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.auc-sub-heading {
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--main-heading-color);
+}
+
+.auc-title {
+    margin-bottom: 34px;
+}
+
+.main-para {
+    letter-spacing: 0;
+  margin-bottom: 124px;
+  width: 70%;
+}
+
+.auc-main-img {
+    margin-bottom: 98px;
+}
+
+.sub-para {
+    width: 60%;
+    letter-spacing: 0;
+}
+
+.about-us-composer-wrapper {
+    margin-bottom: 90px;
+}

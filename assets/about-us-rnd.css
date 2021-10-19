@@ -1,0 +1,40 @@
+.aur-right {
+    margin-top: 100px;
+}
+
+.aur-left, .aur-right {
+	width: 45%;
+}
+
+.aur-left img, .aur-right img {
+	width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.aur-main-img{
+	margin-bottom: 133px;
+}
+
+.aur-sub-heading {
+    margin-bottom: 26px;
+}
+
+.aur-right .main-para {
+    letter-spacing: 0;
+    margin-bottom: 86px;
+    width: 90%;
+}
+
+.aur-sub-img {
+    margin-bottom: 86px;
+}
+
+.third-para {
+    letter-spacing: 0;
+    width: 80%;
+}
+
+.about-us-rnd-wrapper {
+    margin-bottom: 111px;
+}
