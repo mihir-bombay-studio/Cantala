@@ -807,9 +807,6 @@ button.btn.medium.btn-light:hover{
 
 @media (max-width: 992px){
 .customer:not(.account):not(.order) {
-    margin: 6rem auto 9rem;
-    max-width: 33.4rem;
-    padding: 0 1.5rem;
-    text-align: center;
+    max-width: unset;
 }
 }
