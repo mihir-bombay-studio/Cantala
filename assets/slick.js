@@ -45,7 +45,8 @@ $(document).ready(function(){
       {
         breakpoint: 920,
         settings: {
-          arrows: true
+          arrows: false,
+          slidesToShow: 1.5
         }
       }
     ]
