@@ -759,7 +759,7 @@ h1#login, h1#recover, h1#register-title {
     line-height: 61px;
 }
 
-input#CustomerEmail, input#CustomerPassword, input#RecoverEmail {
+input#CustomerEmail, input#CustomerPassword, input#RecoverEmail, input#RegisterForm-FirstName, input#RegisterForm-LastName, input#RegisterForm-email, input#RegisterForm-password {
     padding-bottom: 7px;
     border: none;
     border-bottom: 1px solid #342d2599;
