@@ -774,6 +774,6 @@ input#CustomerEmail, input#CustomerPassword {
     left: 0;
 }
 
-.login .recover-pwd-link{
-	margin: 0 auto;
+.login .recover-pwd-link {
+    margin: 0 auto !important;
 }
