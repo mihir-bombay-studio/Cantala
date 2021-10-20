@@ -802,5 +802,5 @@ button.btn.medium.btn-light:hover{
 }
 
 .customer.register {
-	max-width: 488px;
+	max-width: 488px !important;
 }
