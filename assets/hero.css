@@ -37,3 +37,13 @@
 	width: 45%;
   margin-right: 10px;
 }
+
+@media (max-width: 992px){
+  .hero{
+  	flex-direction: column-reverse;
+  }
+  
+  .hero-left, .hero-right {
+    width: 100%;
+  }
+}
