@@ -752,3 +752,18 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
 }
+
+
+input#CustomerEmail {
+    padding-bottom: 7px;
+    border: none;
+    border-bottom: 1px solid #342d2599;
+    box-shadow: none;
+    margin-bottom: 32px;
+}
+
+input#CustomerEmail::-webkit-input-placeholder {
+  font-family: var(--font-body-family);
+    font-size: 14px;
+    line-height: 26px;
+}
