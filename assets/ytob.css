@@ -57,4 +57,9 @@
   .prod-collections {
     flex-direction: column;
 }
+  
+  .prod-collection {
+    width: 100%;
+    margin-bottom: 14px;
+}
 }
