@@ -46,6 +46,7 @@
   .ytob-title {
     left: calc(50% - 167px);
     font-size: 30px;
+    top: -95px;
     line-height: 41px;
 }
   
