@@ -793,3 +793,8 @@ button.btn.medium.btn-light {
     margin-top: 36px;
     margin-bottom: 16px;
 }
+
+button.btn.medium.btn-light:hover{
+	background-color: var(--main-font-color);
+    color: var(--background-main);
+}
