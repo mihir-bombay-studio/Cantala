@@ -759,7 +759,7 @@ h1#login {
     line-height: 61px;
 }
 
-input#CustomerEmail, input#CustomerPassword {
+input#CustomerEmail, input#CustomerPassword, input#RecoverEmail {
     padding-bottom: 7px;
     border: none;
     border-bottom: 1px solid #342d2599;
