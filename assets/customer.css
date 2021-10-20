@@ -805,6 +805,10 @@ button.btn.medium.btn-light:hover{
 	max-width: 488px !important;
 }
 
+:is(.account,.order) {
+    max-width: unset;
+}
+
 @media (max-width: 992px){
 .customer:not(.account):not(.order) {
     max-width: unset;
