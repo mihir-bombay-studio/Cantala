@@ -753,7 +753,7 @@ li[data-address] > h2 {
   margin-top: 1.5rem;
 }
 
-h1#login, h1#recover, h1#register-title {
+h1#login, h1#recover, h1#register-title, h1.account-title {
     font-family: Athelas,sans-serif;
     font-size: 55px;
     line-height: 61px;
