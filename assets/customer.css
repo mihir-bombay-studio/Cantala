@@ -753,6 +753,11 @@ li[data-address] > h2 {
   margin-top: 1.5rem;
 }
 
+h1#login {
+    font-family: Athelas,sans-serif;
+    font-size: 55px;
+    line-height: 61px;
+}
 
 input#CustomerEmail, input#CustomerPassword {
     padding-bottom: 7px;
