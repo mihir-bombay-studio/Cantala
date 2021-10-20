@@ -204,6 +204,6 @@ h1, h2, h3, h4, h5, h6{
   /* ----------------------------------------------- Hero ------------------------------------------ */
   
   .hero {
-  	flex-direction: flex-reverse;
+  	flex-direction: column-reverse;
   }
 }
