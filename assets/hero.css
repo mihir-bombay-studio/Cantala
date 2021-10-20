@@ -50,4 +50,12 @@
   .hero-right{
   	margin-bottom: 42px;
   }
+  
+  .hero-heading {
+    margin-bottom: 30px;
+    position: unset;
+    width: unset;
+    font-size: 62px;
+    line-height: 67px;
+}
 }
