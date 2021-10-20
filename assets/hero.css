@@ -41,7 +41,5 @@
 
 
 @media (max-width: 992px) {	
-  .hero {
-  	flex-direction: flex-reverse;
-  }
+  
 }
