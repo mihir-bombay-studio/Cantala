@@ -797,4 +797,5 @@ button.btn.medium.btn-light {
 button.btn.medium.btn-light:hover{
 	background-color: var(--main-font-color);
     color: var(--background-main);
+      box-shadow: none;
 }
