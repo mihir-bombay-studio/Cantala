@@ -773,3 +773,7 @@ input#CustomerEmail, input#CustomerPassword {
     line-height: 26px;
     left: 0;
 }
+
+.recover-pwd-link{
+	margin: 0 auto;
+}
