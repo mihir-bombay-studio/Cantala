@@ -800,3 +800,7 @@ button.btn.medium.btn-light:hover{
     color: var(--background-main);
       box-shadow: none;
 }
+
+.customer.register {
+	max-width: 488px;
+}
