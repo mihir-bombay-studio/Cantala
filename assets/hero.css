@@ -37,3 +37,11 @@
 	width: 45%;
   margin-right: 10px;
 }
+
+
+
+@media (max-width: {{ settings.breakpoint_tablet }}px) {
+  .hero {
+  	flex-direction: column-reverse;
+  }
+}
