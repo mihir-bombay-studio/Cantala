@@ -1,3 +1,11 @@
+.header-container {
+	display: block;
+  width: 100%;
+  max-width: {{ settings.container_width | plus: 50 }};
+  padding: 0 43px;
+  margin: 0 auto;
+}
+
 .header-anouncement {
   background-color: var(--main-font-color);
   color: var(--background-main);
