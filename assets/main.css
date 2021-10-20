@@ -189,3 +189,15 @@ h1, h2, h3, h4, h5, h6{
   max-width: 1160px;
 }
 }
+
+@media (min-width: 993px) {	
+  .no-d {
+  	display: none !important;
+  }
+}
+
+@media (min-width: 992px) {	
+  .no-t-m {
+  	display: none !important;
+  }
+}
