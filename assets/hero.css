@@ -40,8 +40,8 @@
 
 
 
-@media (max-width: {{ settings.breakpoint_tablet }}px) {
+@media (max-width: {{ settings.breakpoint_tablet }}px) {	
   .hero {
-  	flex-direction: column-reverse;
+  	flex-direction: flex-reverse;
   }
 }
