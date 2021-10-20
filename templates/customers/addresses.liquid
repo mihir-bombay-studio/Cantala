@@ -103,7 +103,7 @@
 
     <ul role="list">
       {%- for address in customer.addresses -%}
-        <li data-address class="flex-box">
+        <li data-address>
           {%- if address == customer.default_address -%}
             <h2>{{ 'customer.addresses.default' | t }}</h2>
           {%- endif -%}
