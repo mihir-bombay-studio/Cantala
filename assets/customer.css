@@ -765,6 +765,7 @@ input#CustomerEmail, input#CustomerPassword, input#RecoverEmail {
     border-bottom: 1px solid #342d2599;
     box-shadow: none;
     margin-bottom: 32px;
+  	font-family: var(--font-body-family);
 }
 
 .customer .field label, .field__label {
