@@ -762,8 +762,9 @@ input#CustomerEmail {
     margin-bottom: 32px;
 }
 
-input#CustomerEmail::-webkit-input-placeholder {
-  font-family: var(--font-body-family);
+.customer .field label, .field__label {
+    font-family: var(--font-body-family);
     font-size: 14px;
     line-height: 26px;
+    left: 0;
 }
