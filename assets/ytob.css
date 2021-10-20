@@ -53,4 +53,8 @@
     padding: 73px 0 100px;
     margin-bottom: 100px;
 }
+  
+  .prod-collections {
+    flex-direction: column;
+}
 }
