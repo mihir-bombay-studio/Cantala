@@ -777,3 +777,19 @@ input#CustomerEmail, input#CustomerPassword {
 .login .recover-pwd-link {
     margin: 0 auto !important;
 }
+
+button.btn.medium.btn-light {
+    display: block;
+    cursor: pointer;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    text-align: center;
+    width: fit-content;
+    background-color: transparent;
+    transition: .4s ease;
+    color: var(--main-font-color);
+    font-weight: 500;
+    margin: 0 auto;
+    margin-top: 36px;
+    margin-bottom: 16px;
+}
