@@ -781,7 +781,7 @@ select#AddressCountryNew, input#AddressZipNew, input#AddressPhoneNew{
     margin: 0 auto !important;
 }
 
-button.btn.medium.btn-light {
+button.btn.medium.btn-light, button.btn.medium.btn-dark {
     display: block;
     cursor: pointer;
     padding-top: 17px;
@@ -795,6 +795,12 @@ button.btn.medium.btn-light {
     margin: 0 auto;
     margin-top: 36px;
     margin-bottom: 16px;
+}
+
+button.btn.medium.btn-dark {
+	background-color: var(--main-font-color);
+    color: var(--background-main);
+      box-shadow: none;
 }
 
 button.btn.medium.btn-light:hover{
