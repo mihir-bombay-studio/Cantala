@@ -103,7 +103,7 @@
 
     <ul role="list">
       {%- for address in customer.addresses -%}
-        <li data-address>
+        <li data-address class="flex-box">
           {%- if address == customer.default_address -%}
             <h2>{{ 'customer.addresses.default' | t }}</h2>
           {%- endif -%}
@@ -115,6 +115,7 @@
             aria-controls="EditAddress_{{ address.id }}"
             aria-expanded="false"
             data-address-id="{{ address.id }}"
+            class="submit-btn btn btn-dark medium"
           >
             {{ 'customer.addresses.edit' | t }}
           </button>
@@ -123,6 +124,7 @@
             aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
             data-target="{{ address.url }}"
             data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+            class="submit-btn btn btn-light medium"
           >
             {{ 'customer.addresses.delete' | t }}
           </button>
