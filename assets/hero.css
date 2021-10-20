@@ -65,4 +65,8 @@
     margin-bottom: 30px;
     margin-top: 0;
 }
+  
+  .hero-btns {
+    flex-direction: column;
+}
 }
