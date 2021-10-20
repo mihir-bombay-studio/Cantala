@@ -1,7 +1,7 @@
 .header-container {
 	display: block;
   width: 100%;
-  max-width: {{ settings.container_width | plus: 50 }};
+  max-width: 1500px;
   padding: 0 43px;
   margin: 0 auto;
 }
