@@ -58,4 +58,11 @@
     font-size: 62px;
     line-height: 67px;
 }
+  
+  .hero-desc {
+    font-size: 20px;
+    line-height: 31px;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
 }
