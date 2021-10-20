@@ -62,4 +62,8 @@
     width: 100%;
     margin-bottom: 14px;
 }
+  
+  .coll-title {
+    line-height: 38px;
+}
 }
