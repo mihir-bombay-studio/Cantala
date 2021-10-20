@@ -761,7 +761,8 @@ h1#login, h1#recover, h1#register-title, h1.account-title, h1.address-title {
 
 input#CustomerEmail, input#CustomerPassword, input#RecoverEmail, input#RegisterForm-FirstName, input#RegisterForm-LastName, input#RegisterForm-email, input#RegisterForm-password, 
 .customer .field .customer-input{
-    padding-bottom: 7px;
+  	padding: 0 !important;
+    padding-bottom: 7px !important;
     border: none;
     border-bottom: 1px solid #342d2599;
     box-shadow: none;
