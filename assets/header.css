@@ -211,4 +211,11 @@ header{
     line-height: 22px;
     opacity: 0.6;
 }
+  
+  .mobile-menu-search {
+  	border: none;
+    background-color: transparent;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #342d2599;
+  }
 }
