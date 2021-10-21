@@ -136,6 +136,11 @@ header{
 }
 
 @media (max-width: 992px){
+  
+  .header-mobile{
+    padding-top: 16px;
+}
+  
   .navbar-toggler {
     cursor: pointer;
     border: 0;
