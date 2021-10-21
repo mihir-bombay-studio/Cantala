@@ -35,5 +35,7 @@
 }
 
 @media (max-width: 992px){
-  
+  .aul-wrapper {
+    flex-direction: column;
+}
 }
