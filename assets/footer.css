@@ -109,4 +109,8 @@ footer {
   footer form#contact_form {
     width: 100%;
 }
+  
+  .fns-sub-form-input-wrap {
+    flex-direction: column;
+}
 }
