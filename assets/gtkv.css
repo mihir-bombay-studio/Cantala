@@ -72,4 +72,9 @@
   .video-gtk {
     height: 30vh;
 }
+  
+  .video-gtk svg#Play_button {
+    width: 47px;
+    height: 47px;
+}
 }
