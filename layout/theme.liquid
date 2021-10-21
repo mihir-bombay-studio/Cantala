@@ -225,6 +225,20 @@
           setCookie("header-anouncement", "close", 1);
         });
       
+      $( ".navbar-toggler, .background-drawer" ).click(function() {
+        if($('.navbar-toggler').hasClass("show") {
+          $('.navbar-toggler').removeClass("show");
+          $(".drawer-menu").removeClass("drawn");
+          $(".background-drawer").removeClass("drawn");
+          $("body").removeClass("no-scroll");
+        } else {
+          $('.navbar-toggler').addClass("show");
+          $(".drawer-menu").addClass("drawn");
+          $(".background-drawer").addClass("drawn");
+          $("body").addClass("no-scroll");
+        }  
+      });
+      
       
     	$('#play').on('click', function(e) {
           e.preventDefault();
