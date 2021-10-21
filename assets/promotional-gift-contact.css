@@ -121,4 +121,8 @@ textarea {
     width: 90%;
     left: 10%;
 }
+  
+  .promotional-gift-contact-content {
+    flex-direction: column;
+}
 }
