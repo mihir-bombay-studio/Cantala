@@ -134,3 +134,13 @@ header{
     width: 50%;
     margin-left: auto;
 }
+
+@media (max-width: 992px){
+  .navbar-toggler {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    transition: .4s ease;
+}
+}
