@@ -255,6 +255,6 @@ header{
   
   .bar3.rotate {
     transform: rotate(-45deg);
-    margin: 0;
+    margin: 4px 0;
 }
 }
