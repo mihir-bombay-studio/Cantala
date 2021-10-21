@@ -189,4 +189,8 @@ header{
     margin-left: 2px;
     height: 100%;
 }
+  
+  .drawer-content {
+    padding-top: 38px;
+}
 }
