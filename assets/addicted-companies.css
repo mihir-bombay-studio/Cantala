@@ -18,4 +18,8 @@
   .addicted-companies-content {
     flex-direction: column;
 }
+  
+  .ac-left {
+    width: 100%;
+}
 }
