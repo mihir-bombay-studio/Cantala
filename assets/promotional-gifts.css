@@ -42,4 +42,8 @@
   .promotional-gifts-content {
     flex-direction: column-reverse;
 }
+  
+  .img-background {
+    width: 70%;
+}
 }
