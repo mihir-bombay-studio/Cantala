@@ -39,4 +39,8 @@
   .img-with-text-desc {
     width: 100%;
 }
+  
+  .img-with-txt-right {
+    margin-bottom: 26px;
+}
 }
