@@ -86,4 +86,8 @@ footer {
   .footer-logo {
     margin-bottom: 60px;
 }
+  
+  .footer-menu-wrap {
+    width: 100%;
+}
 }
