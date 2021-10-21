@@ -126,4 +126,9 @@ footer {
   .footer-upper-section {
     margin-bottom: 57px;
 }
+  
+  .footer-lower-section {
+    flex-direction: column;
+    align-items: start;
+}
 }
