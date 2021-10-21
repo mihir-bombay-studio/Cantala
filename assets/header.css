@@ -242,4 +242,19 @@ header{
   .drawer-menu.drawn {
     left: 0;
 }
+  
+  .bar1.rotate {
+    transform: translateY(1px) rotate(45deg);
+    margin: -5px 0;
+}
+  
+  .bar2.disappear {
+    width: 0;
+    margin: 0;
+}
+  
+  .bar3.rotate {
+    transform: rotate(-45deg);
+    margin: 0;
+}
 }
