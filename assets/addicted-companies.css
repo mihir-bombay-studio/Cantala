@@ -19,7 +19,11 @@
     flex-direction: column;
 }
   
-  .ac-left {
+  .ac-left, .ac-right {
     width: 100%;
 }
+  
+  .ac-left{
+  	margin-bottom: 26px;
+  }
 }
