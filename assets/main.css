@@ -33,6 +33,9 @@ body{
 .rel {
   position: relative !important;
 }
+.no-scroll {
+    overflow: hidden;
+}
 .text-center {
   text-align: center !important;
 }
