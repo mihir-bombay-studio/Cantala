@@ -98,4 +98,10 @@
   .checkbox-wrap.flex-box.align-center {
     align-items: unset;
 }
+  
+  .checkbox {
+    width: 15px;
+    height: 14px;
+    margin-top: 5px;
+}
 }
