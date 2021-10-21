@@ -51,4 +51,9 @@
   .aur-right{
   	margin-top: 0;
   }
+  
+  .aur-right .main-para {
+    margin-bottom: 26px;
+    width: 100%;
+}
 }
