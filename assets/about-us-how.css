@@ -24,3 +24,9 @@
 .about-us-how-wrapper {
     margin-bottom: 115px;
 }
+
+@media (max-width: 992px){
+  .auh-wrapper.flex-box {
+    flex-direction: column;
+}
+}
