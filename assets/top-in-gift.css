@@ -97,4 +97,9 @@
     top: 81px;
     height: 50vh;
 }
+  
+  .top-in-gift-background {
+    width: calc( 100% - 20px );
+    left: 20px;
+}
 }
