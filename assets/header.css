@@ -164,4 +164,8 @@ header{
   .bar2 {
     margin: 5px 0;
 }
+  
+  ..header-lower-left {
+    width: 100%;
+}
 }
