@@ -159,6 +159,7 @@ header{
     background-color: var(--main-font-color);
     display: block;
     height: 1px;
+      transition: .4s ease;
 }
   
   .bar2 {
