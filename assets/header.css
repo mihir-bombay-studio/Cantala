@@ -143,4 +143,11 @@ header{
     padding: 0;
     transition: .4s ease;
 }
+  
+  .icon-bar {
+    width: 16px;
+    background-color: var(--main-font-color);
+    display: block;
+    height: 1px;
+}
 }
