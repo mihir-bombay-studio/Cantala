@@ -219,4 +219,9 @@ header{
     border-bottom: 1px solid #342d2599;
     width: 90%;
   }
+  
+  .search svg {
+  	width: 16px;
+    height: 16px;
+  }
 }
