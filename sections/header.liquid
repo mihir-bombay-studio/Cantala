@@ -1,13 +1,13 @@
 {{ 'header.css' | asset_url | stylesheet_tag }}
 
-<header class="no-t-m">
+<header>
   <div class="header-anouncement">
     <span class="header-container flex-box justify-center small-font align-center rel">
     	{{ section.settings.announcement_text }}
 			<span id="header-anouncement-close">{% include 'icon-close-white' %}</span>
     </span>
 		</div>
-  <div class="header-wrapper header-container">
+  <div class="header-wrapper header-container no-t-m">
     <div class="header-upper-section flex-box justify-between">
       <div class="header-upper-left flex-box justify-between">
         {% for block in section.blocks %}
@@ -70,14 +70,7 @@
       </div>
     </div>
   </div>
-</header>
-<div class="header-mobile container no-d">
-  	<div class="header-anouncement">
-    <span class="container flex-box justify-center small-font align-center rel">
-    	{{ section.settings.announcement_text }}
-			<span id="header-anouncement-close">{% include 'icon-close-white' %}</span>
-    </span>
-		</div>
+  <div class="header-mobile container no-d">
 	<nav class="header-hamburger-menu left-nav">
       <button type="button" class="navbar-toggler">
         <span class="icon-bar bar1"></span>
@@ -86,6 +79,8 @@
       </button>
     </nav>
 </div>
+</header>
+
 
 
 
