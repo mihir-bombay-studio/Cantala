@@ -105,4 +105,8 @@ footer {
   .social-icons-newslatter-mail {
     width: 100%;
 }
+  
+  footer form#contact_form {
+    width: 100%;
+}
 }
