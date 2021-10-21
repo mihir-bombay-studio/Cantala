@@ -150,4 +150,8 @@ header{
     display: block;
     height: 1px;
 }
+  
+  .bar2 {
+    margin: 5px 0;
+}
 }
