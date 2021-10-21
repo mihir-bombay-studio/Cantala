@@ -125,4 +125,8 @@ textarea {
   .promotional-gift-contact-content {
     flex-direction: column;
 }
+  
+  .pgc-left, .pgc-right {
+    width: 100%;
+}
 }
