@@ -77,7 +77,7 @@
   
   .tig-desc-button-wrapper {
     margin-left: 20px;
-    width: 100%;
+    width: calc( 100% - 20px );
 }
   
   .tig-big-img-wrap {
