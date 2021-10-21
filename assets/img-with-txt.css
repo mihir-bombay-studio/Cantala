@@ -35,4 +35,8 @@
   .img-with-txt-left, .img-with-txt-right {
     width: 100%;
 }
+  
+  .img-with-text-desc {
+    width: 100%;
+}
 }
