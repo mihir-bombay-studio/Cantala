@@ -97,4 +97,8 @@ footer {
     line-height: 27px;
     padding-bottom: 18px;
 }
+  
+  .social-icons.flex-box {
+    margin-bottom: 56px;
+}
 }
