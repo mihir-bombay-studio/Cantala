@@ -43,4 +43,9 @@
     width: 100%;
     margin-bottom: 10px;
 }
+  
+  .au-link-text {
+    left: 5%;
+    bottom: 10%;
+}
 }
