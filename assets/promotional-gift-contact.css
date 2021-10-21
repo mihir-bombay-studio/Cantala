@@ -134,4 +134,8 @@ textarea {
     position: unset;
     height: 50vh;
 }
+  
+  .pgc-left {
+    padding-bottom: 26px;
+}
 }
