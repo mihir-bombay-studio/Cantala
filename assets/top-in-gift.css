@@ -81,7 +81,13 @@
 }
   
   .tig-big-img-wrap {
-    position: unset;
-    margin-left: 20px;
+/*     margin-left: 20px; */
+}
+  
+  .top-in-gift-wrapper {
+    padding-top: 34px;
+    padding-bottom: 400px;
+    margin-bottom: 153px;
+    margin-top: 108px;
 }
 }
