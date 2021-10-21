@@ -82,4 +82,8 @@
   .ns-sub-form-input-wrap {
     flex-direction: column;
 }
+  
+  .ns-form-wrapper .subscription-form-input {
+    width: 100%;
+}
 }
