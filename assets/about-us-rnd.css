@@ -38,3 +38,17 @@
 .about-us-rnd-wrapper {
     margin-bottom: 111px;
 }
+
+@media (max-width: 992px){
+  .aur-wrapper.flex-box.justify-between {
+    flex-direction: column-reverse;
+}
+  
+  .aur-left, .aur-right {
+    width: 100%;
+}
+  
+  .aur-right{
+  	margin-top: 0;
+  }
+}
