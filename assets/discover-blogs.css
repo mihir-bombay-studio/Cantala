@@ -48,4 +48,8 @@
   .dis-blog-title {
     width: 65%;
 }
+  
+  .dis-blog-content-right {
+    width: 100%;
+}
 }
