@@ -48,4 +48,8 @@
   .get-to-know {
     flex-direction: column-reverse;
 }
+  
+  .text-gtk, .video-gtk {
+    width: 100%;
+}
 }
