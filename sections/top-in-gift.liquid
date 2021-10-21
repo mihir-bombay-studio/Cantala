@@ -21,7 +21,7 @@
       </div>
       {% endif %}
     </div>
-    <div class="tig-content-right rel" style="width: {{ section.settings.big_img_size }}%">
+    <div class="tig-content-right rel{% unless section.settings.tig_small_img %} small-mob-img{% endunless %}" style="width: {{ section.settings.big_img_size }}%">
       <div class="tig-img-wrap tig-big-img-wrap">
         <img class="tig-img tig-big-img" src="{{ section.settings.tig_big_img | img_url: '1280x' }}" alt = "tig-img">
       </div>
