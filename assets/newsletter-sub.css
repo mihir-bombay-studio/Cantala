@@ -86,4 +86,8 @@
   .ns-form-wrapper .subscription-form-input {
     width: 100%;
 }
+  
+  .ns-form-wrapper .submit-btn {
+    width: 100%;
+}
 }
