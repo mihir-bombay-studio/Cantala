@@ -177,4 +177,10 @@ header{
     width: 100%;
     max-width: unset;
 }
+  
+  .header-lower-left .down-chevron {
+    height: 11px;
+    display: inherit;
+    transition: .4s ease;
+}
 }
