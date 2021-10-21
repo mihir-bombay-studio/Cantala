@@ -193,4 +193,8 @@ header{
   .drawer-content {
     padding-top: 26px;
 }
+  
+  .lower-left-nav-list {
+    padding: 12px 0;
+}
 }
