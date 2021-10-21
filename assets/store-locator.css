@@ -101,4 +101,9 @@
   #googleMap{
   	height: 100% !important;
   }
+  
+  .store-locator-left {
+    width: 100%;
+    padding: 24px 20px;
+}
 }
