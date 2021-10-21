@@ -46,4 +46,8 @@
   .img-background {
     width: 70%;
 }
+  
+  .promotional-gifts-left, .promotional-gifts-right {
+    width: 100%;
+}
 }
