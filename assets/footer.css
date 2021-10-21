@@ -101,4 +101,8 @@ footer {
   .social-icons.flex-box {
     margin-bottom: 56px;
 }
+  
+  .social-icons-newslatter-mail {
+    width: 100%;
+}
 }
