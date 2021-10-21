@@ -196,6 +196,8 @@ header{
   
   .lower-left-nav-list, .lower-right-nav-list {
     padding: 12px 0;
+    font-size: 20px;
+    line-height: 27px;
 }
   
   .header-lower-right-inner {
