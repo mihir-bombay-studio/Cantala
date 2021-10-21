@@ -68,4 +68,8 @@
   .text-gtk {
     margin-bottom: 50px;
 }
+  
+  .video-gtk {
+    height: 30vh;
+}
 }
