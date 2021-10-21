@@ -38,4 +38,9 @@
   .aul-wrapper {
     flex-direction: column;
 }
+  
+  .au-link-wrap {
+    width: 100%;
+    margin-bottom: 10px;
+}
 }
