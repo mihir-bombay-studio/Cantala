@@ -90,4 +90,11 @@
     margin-bottom: 153px;
     margin-top: 108px;
 }
+  
+  .tig-big-img-wrap {
+    right: unset;
+    left: 20px;
+    top: 81px;
+    height: 50vh;
+}
 }
