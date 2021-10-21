@@ -32,5 +32,10 @@
   
   .auh-left {
     width: 100%;
+    margin-bottom: 26px;
+}
+  
+  .auh-right {
+    width: 100%;
 }
 }
