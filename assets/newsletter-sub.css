@@ -68,3 +68,9 @@
 .checkbox-label a{
 	text-decoration: underline;
 }
+
+@media (max-width: 992px){
+  .newsletter-sub-heading {
+    margin-bottom: 52px;
+}
+}
