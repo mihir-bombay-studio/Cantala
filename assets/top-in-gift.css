@@ -109,6 +109,7 @@
 }
   
   .small-mob-img{
-  	height: 40vh;
+  	height: 30vh;
+    top: 70px;
   }
 }
