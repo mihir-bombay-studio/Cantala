@@ -40,4 +40,8 @@
   .dis-blogs-content {
     flex-direction: column;
 }
+  
+  .dis-blog-content-left {
+    width: 100%;
+}
 }
