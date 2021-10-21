@@ -52,4 +52,8 @@
   .text-gtk, .video-gtk {
     width: 100%;
 }
+  
+  .gtk-desc {
+    margin-bottom: 18px;
+}
 }
