@@ -200,6 +200,11 @@ h1, h2, h3, h4, h5, h6{
   	display: none !important;
   }
   
+  .container, .header-container {
+    max-width: none;
+    padding: 0 20px;
+  }
+  
   .heading-2 {
     font-size: 30px;
     line-height: 41px;
