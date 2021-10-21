@@ -79,4 +79,9 @@
     margin-left: 20px;
     width: 100%;
 }
+  
+  .tig-big-img-wrap {
+    position: unset;
+    margin-left: 20px;
+}
 }
