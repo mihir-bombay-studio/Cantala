@@ -56,4 +56,8 @@
   .gtk-desc {
     margin-bottom: 18px;
 }
+  
+  .gtk-btns.flex-box {
+    flex-direction: column;
+}
 }
