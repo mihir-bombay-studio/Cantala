@@ -40,7 +40,7 @@ $(document).ready(function(){
     infinite: false,
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrow: true,
+    arrows: true,
     responsive: [
       {
         breakpoint: 920,
@@ -56,7 +56,7 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrow: true,
+    arrows: true,
     responsive: [
       {
         breakpoint: 920,
@@ -71,7 +71,7 @@ $(document).ready(function(){
     infinite: false,
     slidesToShow: 1.2,
     slidesToScroll: 1,
-    arrow: false,
+    arrows: false,
     dots: false
   });
   
