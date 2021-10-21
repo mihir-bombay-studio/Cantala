@@ -73,4 +73,13 @@
   .newsletter-sub-heading {
     margin-bottom: 52px;
 }
+  
+  .ns-form-wrapper {
+    width: 100%;
+    margin-left: 0;
+}
+  
+  .ns-sub-form-input-wrap {
+    flex-direction: column;
+}
 }
