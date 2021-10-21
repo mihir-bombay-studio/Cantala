@@ -82,4 +82,8 @@ footer {
   .footer-upper-section {
     flex-direction: column;
 }
+  
+  .footer-logo {
+    margin-bottom: 60px;
+}
 }
