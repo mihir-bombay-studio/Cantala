@@ -15,6 +15,7 @@
           {% else %}{{ section.settings.brand_logo_svg }}{% endif %}
         </a>
         </div>
+        <div class="footer-menu-wrap flex-box justify-between">
         <div class="footer-left-menu">
         	{% for block in section.blocks %}
           {% for link in linklists[block.settings.nav_list_footer_left].links %}
@@ -28,6 +29,7 @@
           <li class="footer-nav-list"><a href="{{link.url}}" class="footer-nav-item">{{link.title}}</a></li>
           {% endfor %}
           {% endfor %}
+        </div>
         </div>
         <div class="social-icons-newslatter-mail">
           <div class="social-title medium">Volg ons</div>
