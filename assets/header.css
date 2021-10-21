@@ -172,4 +172,8 @@ header{
   .header-lower-right-inner {
     width: 100%;
 }
+  
+  .header-upper-left {
+    width: 100%;
+}
 }
