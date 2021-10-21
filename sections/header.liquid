@@ -112,6 +112,13 @@
           {% endfor %}
           {% endfor %}
         </div>
+      <div class="header-upper-left">
+        {% for block in section.blocks %}
+        {% for link in linklists[block.settings.nav_list].links %}
+        <li class="upper-left-nav-list"><a href="{{link.url}}">{{link.title}}</a></li>
+        {% endfor %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
