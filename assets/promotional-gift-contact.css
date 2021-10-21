@@ -138,4 +138,13 @@ textarea {
   .pgc-left {
     padding-bottom: 26px;
 }
+  
+  .promotional-gift-contact-wrapper .checkbox {
+    width: 18px;
+    margin-top: 5px;
+    height: 16px;
+    border: 1px solid;
+    margin-right: 13px;
+    cursor: pointer;
+}
 }
