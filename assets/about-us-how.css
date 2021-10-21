@@ -29,4 +29,8 @@
   .auh-wrapper.flex-box {
     flex-direction: column;
 }
+  
+  .auh-left {
+    width: 100%;
+}
 }
