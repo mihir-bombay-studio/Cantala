@@ -90,4 +90,10 @@ footer {
   .footer-menu-wrap {
     width: 100%;
 }
+  
+  .footer-nav-list {
+    font-size: 14px;
+    line-height: 27px;
+    padding-bottom: 18px;
+}
 }
