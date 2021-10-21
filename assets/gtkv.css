@@ -60,4 +60,8 @@
   .gtk-btns.flex-box {
     flex-direction: column;
 }
+  
+  .get-to-know-wrapper .btn {
+    margin-bottom: 10px;
+}
 }
