@@ -90,4 +90,8 @@
   .ns-form-wrapper .submit-btn {
     width: 100%;
 }
+  
+  .checkbox-label {
+    line-height: 22px;
+}
 }
