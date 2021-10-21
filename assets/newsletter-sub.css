@@ -106,7 +106,7 @@
 }
   
   .newsletter-sub-wrapper {
-    margin-bottom: 109px;
+    margin-bottom: 109px !important;
 }
   
 /*   .newsletter-sub-wrapper .checkbox.selected .checked {
