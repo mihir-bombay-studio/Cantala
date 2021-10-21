@@ -235,7 +235,6 @@ header{
     top: 124px;
     background-color: var(--background-main);
     left: -100vw;
-    padding: 0 40px 0 80px;
     transition: .4s ease;
     overflow-y: scroll;
 }
