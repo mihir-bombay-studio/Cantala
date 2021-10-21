@@ -43,3 +43,14 @@
     cursor: pointer;
     margin-bottom: 136px !important;
 }
+
+@media (max-width: 992px){
+  .stores-content {
+    margin: 0;
+}
+  .store-info-wrap {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 14px;
+}
+}
