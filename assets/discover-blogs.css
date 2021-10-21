@@ -44,4 +44,8 @@
   .dis-blog-content-left {
     width: 100%;
 }
+  
+  .dis-blog-title {
+    width: 65%;
+}
 }
