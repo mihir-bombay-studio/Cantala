@@ -87,3 +87,9 @@
 .store-locator-wrapper {
     margin-bottom: 105px;
 }
+
+@media (max-width: 992px){
+  .store-locator-content {
+    flex-direction: column-reverse;
+}
+}
