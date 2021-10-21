@@ -14,7 +14,21 @@
         {% endif %}
         {% endfor %}
       </div>
-      <div class="dis-blog-content-right flex-box justify-between">
+      <div class="dis-blog-content-right no-t-m flex-box justify-between">
+      	{% for block in section.blocks %}
+        {% if block.type == "article_block" %}
+        {% assign article = block.settings.featured_article %}
+        	<div class="featured-article">
+              <div class="article-img">
+                {{ article.image | img_url: '2048x' | img_tag }}
+              </div>
+              <a href="{{ article.url }}" class="article-title">{{ article.title }}</a>
+        	</div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      
+      <div class="dis-blog-content-right no-d flex-box justify-between">
       	{% for block in section.blocks %}
         {% if block.type == "article_block" %}
         {% assign article = block.settings.featured_article %}
