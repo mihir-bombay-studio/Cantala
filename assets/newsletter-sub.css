@@ -94,4 +94,8 @@
   .checkbox-label {
     line-height: 22px;
 }
+  
+  .checkbox-wrap.flex-box.align-center {
+    align-items: unset;
+}
 }
