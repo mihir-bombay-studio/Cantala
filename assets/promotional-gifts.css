@@ -37,3 +37,9 @@
 .promotional-gifts-wrapper {
     margin-bottom: 95px;
 }
+
+@media (max-width: 992px){
+  .promotional-gifts-content {
+    flex-direction: column-reverse;
+}
+}
