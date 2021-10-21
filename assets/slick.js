@@ -43,7 +43,7 @@ $(document).ready(function(){
     arrows: true,
     responsive: [
       {
-        breakpoint: 920,
+        breakpoint: 992,
         settings: {
           arrows: false,
           slidesToShow: 1.5
@@ -59,9 +59,9 @@ $(document).ready(function(){
     arrows: true,
     responsive: [
       {
-        breakpoint: 920,
+        breakpoint: 992,
         settings: {
-          arrows: true
+          arrows: false
         }
       }
     ]
