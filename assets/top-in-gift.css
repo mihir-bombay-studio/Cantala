@@ -70,4 +70,8 @@
   .tig-content-wrapper {
     flex-direction: column;
 }
+  
+  .tig-content-left, .tig-content-right {
+    width: 100%;
+}
 }
