@@ -197,4 +197,12 @@ header{
   .lower-left-nav-list, .lower-right-nav-list {
     padding: 12px 0;
 }
+  
+  .header-lower-right-inner {
+    padding-bottom: 22px;
+}
+  
+  .upper-left-nav-list {
+    padding: 9px 0;
+}
 }
