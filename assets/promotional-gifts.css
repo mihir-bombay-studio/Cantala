@@ -44,7 +44,10 @@
 }
   
   .img-background {
-    width: 80%;
+    width: 85%;
+    height: 60%;
+    right: 0;
+    top: 330px;
 }
   
   .promotional-gifts-left, .promotional-gifts-right {
