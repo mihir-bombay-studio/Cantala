@@ -129,4 +129,9 @@ textarea {
   .pgc-left, .pgc-right {
     width: 100%;
 }
+  
+  .pgc-right {
+    position: unset;
+    height: 50vh;
+}
 }
