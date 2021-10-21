@@ -165,7 +165,11 @@ header{
     margin: 5px 0;
 }
   
-  ..header-lower-left {
+  .header-lower-left {
+    width: 100%;
+}
+  
+  .header-lower-right-inner {
     width: 100%;
 }
 }
