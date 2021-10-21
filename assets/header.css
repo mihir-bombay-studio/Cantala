@@ -178,7 +178,7 @@ header{
     max-width: unset;
 }
   
-  .header-lower-left .down-chevron {
+  .header-lower-left .down-chevron, .upper-left-nav-list .down-chevron {
     height: 11px;
     display: inherit;
     transition: .4s ease;
