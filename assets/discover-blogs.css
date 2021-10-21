@@ -53,4 +53,8 @@
   .dis-blog-content-right {
     width: 100%;
 }
+  
+  .article-img {
+    margin-right: 48px;
+}
 }
