@@ -183,4 +183,10 @@ header{
     display: inherit;
     transition: .4s ease;
 }
+  
+  .upper-left-nav-list .down-chevron svg {
+    width: 7.5px;
+    margin-left: 2px;
+    height: 100%;
+}
 }
