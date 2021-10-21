@@ -115,3 +115,10 @@ textarea {
 .promotional-gift-contact-wrapper{
 	margin-bottom: 247px;
 }
+
+@media (max-width: 992px){
+  .abs-background {
+    width: 90%;
+    left: 10%;
+}
+}
