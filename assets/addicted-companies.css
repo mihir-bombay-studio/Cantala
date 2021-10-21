@@ -13,3 +13,9 @@
 .addicted-companies-wrapper {
     margin-bottom: 148px;
 }
+
+@media (max-width: 992px){
+  .addicted-companies-content {
+    flex-direction: column;
+}
+}
