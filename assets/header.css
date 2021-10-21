@@ -175,5 +175,6 @@ header{
   
   .header-upper-left {
     width: 100%;
+    max-width: unset;
 }
 }
