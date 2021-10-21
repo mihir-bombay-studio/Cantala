@@ -74,4 +74,9 @@
   .tig-content-left, .tig-content-right {
     width: 100%;
 }
+  
+  .tig-desc-button-wrapper {
+    margin-left: 20px;
+    width: 100%;
+}
 }
