@@ -43,3 +43,9 @@
 .get-to-know-wrapper{
 	margin-bottom: 150px;
 }
+
+@media (max-width: 992px){
+  .get-to-know {
+    flex-direction: column-reverse;
+}
+}
