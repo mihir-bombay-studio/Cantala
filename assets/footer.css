@@ -136,4 +136,12 @@ footer {
     order: 1;
     margin-bottom: 25px;
 }
+  
+  .copyright-text {
+    order: 2;
+}
+  
+  .designed-by {
+    order: 3;
+}
 }
