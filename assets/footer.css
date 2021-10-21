@@ -131,4 +131,9 @@ footer {
     flex-direction: column;
     align-items: start;
 }
+  
+  .payment-cards {
+    order: 1;
+    margin-bottom: 25px;
+}
 }
