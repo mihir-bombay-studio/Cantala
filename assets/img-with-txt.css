@@ -31,4 +31,8 @@
   .img-with-text-content {
     flex-direction: column-reverse;
 }
+  
+  .img-with-txt-left, .img-with-txt-right {
+    width: 100%;
+}
 }
