@@ -67,6 +67,14 @@ $(document).ready(function(){
     ]
   });
   
+  $('.dis-blog-content-right.no-d').slick({
+    infinite: false,
+    slidesToShow: 1.2,
+    slidesToScroll: 1,
+    arrow: false,
+    dots: false
+  });
+  
   
   
 });
