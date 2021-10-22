@@ -6,7 +6,7 @@
 .darker-background {
     background-color: var(--background-slight-dark);
     display: block !important;
-    height: 400px;
+/*     height: 400px; */
     position: absolute;
     right: 0;
     width: 80%;
