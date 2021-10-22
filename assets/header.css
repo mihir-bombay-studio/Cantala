@@ -56,6 +56,10 @@ header{
   height: 16px;
 }
 
+.lang-icon.rel {
+    padding-bottom: 12px;
+}
+
 .header-nav-list-sub {
     padding: 10px 10px 10px 10px;
     display: block;
