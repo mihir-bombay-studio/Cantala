@@ -94,4 +94,9 @@
   .article-filter {
     margin-bottom: 10px;
 }
+  
+  .blog-page-articles {
+    margin: 0;
+    margin-bottom: 52px;
+}
 }
