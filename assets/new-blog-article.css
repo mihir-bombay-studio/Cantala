@@ -159,4 +159,9 @@ img.product-img {
   .article-wrapper .all-products-btn {
     margin-bottom: 52px;
 }
+  
+  .article-nav .btn {
+    padding-left: 5%;
+    padding-right: 5%;
+}
 }
