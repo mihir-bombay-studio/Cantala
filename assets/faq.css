@@ -16,6 +16,10 @@
     width: 70%;
 }
 
+.faq-question-wrap {
+    align-items: flex-end;
+}
+
 .accordion{
 	cursor: pointer;
 }
