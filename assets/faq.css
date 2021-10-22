@@ -24,6 +24,7 @@
     align-items: flex-end;
     padding-bottom: 10px;
     border-bottom: 1px solid #342d254d;
+  transition: .4s ease;
 }
 
 .faq-qa-wrap {
