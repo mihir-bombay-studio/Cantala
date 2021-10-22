@@ -16,8 +16,11 @@
     width: 70%;
 }
 
+.accordion{
+	cursor: pointer;
+}
+
 .panel {
-  
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
