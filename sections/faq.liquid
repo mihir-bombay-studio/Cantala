@@ -1,7 +1,38 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "FAQ",
+    "settings": [
+		{
+			"id": "heading",
+        	"type": "text",
+        	"label": "Section Heading"
+		}
+	],
+	"blocks": [
+		{
+                "type": "faq",
+                "name": "FAQs",
+                "settings": [
+
+                {
+                "type": "text",
+                "id": "question",
+                "label": "Question"
+                },
+				{
+                "type": "text",
+                "id": "answer",
+                "label": "Answer"
+                }
+              ]
+            }
+	],
+	"presets": [
+    {
+      "name": "FAQ",
+		"category":"section"
+    }
+	]
   }
 {% endschema %}
 
