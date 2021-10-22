@@ -115,3 +115,10 @@ img.product-img {
 .fl-end{
 	justify-content: flex-end !important;
 }
+
+@media (max-width: 992px){
+  .article-wrapper.rel {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+}
