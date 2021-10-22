@@ -141,4 +141,10 @@ img.product-img {
   .article-content {
     width: 90%;
 }
+  
+  .explore-products-heading {
+    font-size: 30px;
+    line-height: 41px;
+    margin-bottom: 52px;
+}
 }
