@@ -90,4 +90,8 @@
     flex-wrap: wrap;
     margin-bottom: 42px;
 }
+  
+  .article-filter {
+    margin-bottom: 10px;
+}
 }
