@@ -28,10 +28,10 @@ var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    $('.accordion').removeClass('active');
-    $('.panel').css({"maxHeight":"null"});
-    $('.accordion').find('.faq-icon').text('+');
-    $('.panel').removeClass('open-panel');
+//     $('.accordion').removeClass('active');
+//     $('.panel').css({"maxHeight":"null"});
+//     $('.accordion').find('.faq-icon').text('+');
+//     $('.panel').removeClass('open-panel');
     this.classList.toggle("active");
     if($(this).hasClass('active')){
       	$(this).find('.faq-icon').text('-');
