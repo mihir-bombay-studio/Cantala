@@ -27,7 +27,7 @@ header{
 }
 
 .header-upper-section {
-    padding-bottom: 12px;
+/*     padding-bottom: 12px; */
     border-bottom: 0.5px solid var(--main-font-color);
 }
 
@@ -64,7 +64,7 @@ header{
     z-index: 1;
     width: min-content;
     text-align: left;
-    top: 20px;
+    top: 31px;
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
     transition-delay: 0s;
