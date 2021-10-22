@@ -27,6 +27,10 @@
   transition: .4s ease;
 }
 
+.faq-icon{
+	transition: .4s ease;
+}
+
 .faq-qa-wrap {
     margin-bottom: 25px;
 }
