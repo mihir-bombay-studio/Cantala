@@ -23,7 +23,18 @@
     </div>
     <div class="article-content">{{ article.content }}</div>
     <div class="explore-products-heading">{{ section.settings.heading }}</div>
-    <div class="explore-products-wrap flex-box justify-between">
+    <div class="explore-products-wrap flex-box justify-between no-t-m">
+    	{% for block in section.blocks %}
+        {% if block.type == "product" %}
+      	{% assign product = block.settings.featured_product %}
+      		<div class="explore-product">
+              <div class="ep-image"><img class="product-img" src="{{ product.featured_image.src | img_url: 'x300' }}"></div>
+              <div class="ep-title"><a href="{{ product.url }}">{{ product.title | escape }}</a></div>
+      		</div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="explore-products-wrap no-d">
     	{% for block in section.blocks %}
         {% if block.type == "product" %}
       	{% assign product = block.settings.featured_product %}
