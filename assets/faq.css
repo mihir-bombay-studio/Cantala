@@ -20,6 +20,12 @@
     align-items: flex-end;
 }
 
+.faq-question-wrap {
+    align-items: flex-end;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #342d254d;
+}
+
 .accordion{
 	cursor: pointer;
 }
