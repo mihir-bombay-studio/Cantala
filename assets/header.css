@@ -57,9 +57,8 @@ header{
 }
 
 .header-nav-list-sub {
-    padding: 10px 5px 10px 5px;
+    padding: 10px 10px 10px 10px;
     display: block;
-    border: 0;
     position: absolute;
     right: 0;
     z-index: 1;
@@ -72,8 +71,8 @@ header{
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    background-color: var(--main-font-color);
-    color: var(--background-main);
+    background-color: var(--background-main);
+    border: 1px solid;
 }
 
 .down-chevron{
