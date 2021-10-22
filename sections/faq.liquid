@@ -8,11 +8,13 @@
       	<div class="faq-qa">
           {% for block in section.blocks %}
           {% if block.type == "faq" %}
+          <div class="faq-qa-wrap">
           <div class="accordion faq-question-wrap flex-box justify-between">
             <div class="faq-question medium">{{ block.settings.question }}</div>
             <div class="faq-icon">+</div>
           </div>
           <div class="panel faq-answer">{{ block.settings.answer }}</div>
+          </div>
           {% endif %}
           {% endfor %}
       	</div>
