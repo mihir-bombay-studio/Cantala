@@ -75,6 +75,14 @@ $(document).ready(function(){
     dots: false
   });
   
+  $('.explore-products-wrap.no-d').slick({
+    infinite: false,
+    slidesToShow: 1.2,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false
+  });
+  
   
   
 });
