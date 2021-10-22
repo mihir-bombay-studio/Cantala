@@ -131,4 +131,9 @@ img.product-img {
   .darker-background {
     width: 100%;
 }
+  
+  .article-img {
+    position: unset;
+  width: 100%;
+}
 }
