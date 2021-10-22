@@ -26,6 +26,10 @@
     border-bottom: 1px solid #342d254d;
 }
 
+.faq-qa-wrap {
+    margin-bottom: 25px;
+}
+
 .accordion{
 	cursor: pointer;
 }
