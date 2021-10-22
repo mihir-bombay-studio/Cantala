@@ -135,5 +135,6 @@ img.product-img {
   .article-img {
     position: unset;
   width: 100%;
+    margin-bottom: 16px;
 }
 }
