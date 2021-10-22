@@ -127,4 +127,8 @@ img.product-img {
     margin-left: 0;
     margin-bottom: 100px;
 }
+  
+  .darker-background {
+    width: 100%;
+}
 }
