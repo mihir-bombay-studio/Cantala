@@ -3,7 +3,17 @@
 <div class="faq-wrapper">
   <div class="container">
     <h1 class="heading-1 faq-heading">{{ section.settings.heading }}</h1>
-    <div class="faq-para">{{ section.settings.faq_para }}</div>
+    <div class="faq-content">
+    	<div class="faq-para">{{ section.settings.faq_para }}</div>
+      	<div class="faq-qa">
+          {% for block in section.blocks %}
+          {% if block.type == "faq" %}
+          <div class="accordion faq-question">{{ block.settings.question }}</div>
+          <div class="panel faq-answer">{{ block.settings.answer }}</div>
+          {% endif %}
+          {% endfor %}
+      	</div>
+    </div>
   </div>
 </div>
 
