@@ -121,4 +121,10 @@ img.product-img {
     margin-top: 20px;
     margin-bottom: 100px;
 }
+  
+  .article-content-wrap {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 100px;
+}
 }
