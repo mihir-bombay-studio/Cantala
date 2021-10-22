@@ -54,3 +54,11 @@
 	padding-bottom: 10px;
   border-bottom: 1px solid #342d254d;
 }
+
+@media (max-width: 992px){
+  .faq-heading {
+    margin-bottom: 52px;
+    font-size: 42px;
+    line-height: 45px;
+}
+}
