@@ -57,14 +57,13 @@ header{
 }
 
 .header-nav-list-sub {
-    padding: 10px 26px 10px 0;
+    padding: 10px 5px 10px 5px;
     display: block;
     border: 0;
     position: absolute;
-    left: 0;
+    right: 0;
     z-index: 1;
     width: min-content;
-    min-width: 78px;
     text-align: left;
     top: 34px;
     -webkit-transition: all .2s ease;
@@ -73,6 +72,8 @@ header{
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+    background-color: var(--main-font-color);
+    color: var(--background-main);
 }
 
 .down-chevron{
