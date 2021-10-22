@@ -61,4 +61,10 @@
     font-size: 42px;
     line-height: 45px;
 }
+  
+  .faq-content {
+    width: 100%;
+    min-width: unset;
+    margin-bottom: 100px;
+}
 }
