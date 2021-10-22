@@ -58,13 +58,13 @@
 </div>
 
 <script>
-	var excerpt_height = parseInt($('.article-content-wrap').height());
-  var date_height = parseInt($('.article-date').height());
-  var pad_marg = 114;
+	var article_content_height = parseInt($('.article-content-wrap').height());
+//   var date_height = parseInt($('.article-date').height());
+  var pad_marg = 50;
   console.log(date_height);
-  var backg_height = excerpt_height + date_height + pad_marg;
+  var backg_height = article_content_height + pad_marg;
   console.log(backg_height);
-  $('.darker-background').height(excerpt_height);
+  $('.darker-background').height(backg_height);
 </script>
 
 {% schema %}
