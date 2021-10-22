@@ -49,6 +49,7 @@ header{
 
 .header-upper-right-icon {
 	max-height: 16px;
+  margin-bottom: 12px;
 }
 
 .header-upper-right-icon svg{
