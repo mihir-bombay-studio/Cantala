@@ -29,8 +29,7 @@ var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     $('.accordion').removeClass('active');
-    var pan = $('.panel');
-    pan.style.maxHeight = null;
+    $('.panel').css({"maxHeight":"null"});
     $('.accordion').find('.faq-icon').text('+');
     $('.panel').removeClass('open-panel');
     this.classList.toggle("active");
