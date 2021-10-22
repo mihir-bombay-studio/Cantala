@@ -99,4 +99,9 @@
     margin: 0;
     margin-bottom: 52px;
 }
+  
+  .blog-page-article-wrap {
+    width: 100%;
+    margin: 0 0 10px;
+}
 }
