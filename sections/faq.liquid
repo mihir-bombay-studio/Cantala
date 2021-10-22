@@ -29,6 +29,12 @@ var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
+    if($(this).hasClass('active')){
+    	$(this).next().addClass('open-panel');
+    }
+    else{
+    	$(this).next().removeClass('open-panel');
+    }
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
@@ -38,7 +44,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
   
-  $('.active').next().addClass('open-panel');
+  
 </script>
 
 {% schema %}
