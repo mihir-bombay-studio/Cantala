@@ -46,7 +46,7 @@
               <div id="nav-sub-drop" class="dropdown-container container">
                 <div class="wrapper">
                   <div class="hover-content-wrapper">
-                    <div class="left-wrap content-sub-list">
+                    <div class="main-link-title">{{link.title}}</div>
                       <ul class="content-list">
                         {%- for child_link in link.links -%}
                         <li>
@@ -54,7 +54,6 @@
                         </li>
                         {% endfor %}
                       </ul>
-                    </div>
                   </div>
                 </div>
               </div>
