@@ -171,9 +171,10 @@
   	$(this).find('.mobile-sub-menu-wrapper').addClass('drawn');
   });
   
-  $('.back-to-main-menu').click(function() {
+  $('.back-to-main-menu').click(function(e) {
     console.log('back');
   	$(this).closest('.mobile-sub-menu-wrapper').removeClass('drawn');
+    e.stopPropagation();
   });
 </script>
 
