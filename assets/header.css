@@ -105,6 +105,10 @@ header{
   	height: 100vh;
 }
 
+.lower-left-nav-list {
+    line-height: 50px;
+}
+
 .down-chevron{
 	transition: .4s ease;
 }
