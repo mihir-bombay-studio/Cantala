@@ -67,4 +67,10 @@
   .pfs-left {
     width: 100%;
 }
+  
+  .sorting, .filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
 }
