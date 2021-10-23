@@ -314,5 +314,6 @@ header{
   
   .back-chevron {
     transform: rotate(180deg);
+    margin-right: 40px;
 }
 }
