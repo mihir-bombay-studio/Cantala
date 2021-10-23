@@ -311,4 +311,8 @@ header{
     transform: rotate(-45deg);
     margin: 4px 0;
 }
+  
+  .down-chevron {
+    transform: rotate(180deg);
+}
 }
