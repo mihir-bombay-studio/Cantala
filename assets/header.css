@@ -105,6 +105,10 @@ header{
   	height: 100vh;
 }
 
+.lower-left-nav-list:hover {
+	border-bottom: 1px solid;
+}
+
 .main-link-title {
     font-size: 14px;
     line-height: 19px;
