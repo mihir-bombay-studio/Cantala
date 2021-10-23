@@ -278,7 +278,7 @@ header{
     height: 16px;
   }
   
-  .drawer-menu {
+  .drawer-menu, .mobile-sub-menu-wrapper {
     display: block;
     position: fixed;
     z-index: 10;
