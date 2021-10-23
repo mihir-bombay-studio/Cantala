@@ -312,7 +312,7 @@ header{
     margin: 4px 0;
 }
   
-  .down-chevron {
+  .back-chevron {
     transform: rotate(180deg);
 }
 }
