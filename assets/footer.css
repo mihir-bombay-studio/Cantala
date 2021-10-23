@@ -151,5 +151,8 @@ footer {
   
   .fns-form-wrapper .checkbox{
   	background-color: var(--background-main);
+      width: 18px;
+    margin-top: 5px;
+    height: 16px;
   }
 }
