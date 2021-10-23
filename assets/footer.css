@@ -148,4 +148,8 @@ footer {
   .designed-by {
     order: 3;
 }
+  
+  .fns-form-wrapper .checkbox{
+  	background-color: var(--background-main);
+  }
 }
