@@ -330,4 +330,8 @@ header{
     line-height: 23px;
     margin-bottom: 26px;
 }
+  
+  .lower-left-nav-list:hover {
+	border-bottom: none;
+}
 }
