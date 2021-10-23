@@ -173,7 +173,7 @@
   
   $('.back-to-main-menu').click(function() {
     console.log('back');
-  	var a = $(this).closest('.mobile-sub-menu-wrapper');
+  	var a = $(this).closest('.mobile-sub-menu-wrapper').removeClass('drawn');
     console.log(a);
   });
 </script>
