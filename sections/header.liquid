@@ -50,8 +50,7 @@
                   <ul class="content-list">
                     {%- for child_link in link.links -%}
                     <li>
-                      <a href="{{ child_link.url }}">{{ child_link.title }}
-                        {% render "back-icon" %}</a>
+                      <a href="{{ child_link.url }}">{{ child_link.title }}</a>
                     </li>
                     {% endfor %}
                   </ul>
