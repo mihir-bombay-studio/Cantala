@@ -63,4 +63,8 @@
   .product-filter-sort-content {
     flex-direction: column;
 }
+  
+  .pfs-left {
+    width: 100%;
+}
 }
