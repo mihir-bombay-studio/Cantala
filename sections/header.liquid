@@ -173,8 +173,8 @@
   
   $('.back-chevron').click(function() {
     console.log('back');
-  	var a = $(this).closest('.mobile-sub-menu-wrapper').removeClass('drawn');
-    console.log(a);
+//   	$(this).closest('.mobile-sub-menu-wrapper').removeClass('drawn');
+    $(this).parent().parent().parent().parent().removeClass('drawn');
   });
 </script>
 
