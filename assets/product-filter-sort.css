@@ -83,4 +83,9 @@
     width: 100%;
     flex-wrap: wrap;
 }
+  
+  .pfs-product {
+    width: 100%;
+    margin-bottom: 10px;
+}
 }
