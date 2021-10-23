@@ -105,6 +105,13 @@ header{
   	height: 100vh;
 }
 
+.main-link-title {
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--main-heading-color);
+    margin-bottom: 22px;
+}
+
 .lower-left-nav-list {
     line-height: 56px;
 }
