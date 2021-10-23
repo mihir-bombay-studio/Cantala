@@ -58,3 +58,9 @@
 .product-filter-sort-wrapper {
     margin-bottom: 139px;
 }
+
+@media (max-width: 992px){
+  .product-filter-sort-content {
+    flex-direction: column;
+}
+}
