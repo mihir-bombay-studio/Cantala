@@ -119,7 +119,7 @@
         {% for link in linklists[block.settings.nav_list_lower_left].links %}
         <li class="lower-left-nav-list mobile-main-menu medium"><a href="{{link.url}}" class="lower-left-nav-item flex-box justify-between align-center"><span>{{link.title}}</span><span class="down-chevron">{% include 'icon-right-chevron' %}</span></a>
         	{% if link.links != blank %}                                    
-            <div class="mobile-sub-menu-wrapper">
+            <div class="mobile-sub-menu-wrapper no-disp">
               <div id="nav-sub-drop" class="dropdown-container">
                 <div class="wrapper">
                   <div class="hover-content-wrapper">
