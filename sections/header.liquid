@@ -40,27 +40,28 @@
       <div class="header-lower-left flex-box justify-between">
         {% for block in section.blocks %}
         {% for link in linklists[block.settings.nav_list_lower_left].links %}
-        <li class="lower-left-nav-list"><a href="{{link.url}}" class="lower-left-nav-item flex-box align-center">{{link.title}}{% if link.links != blank %}<span class="down-chevron">{% include 'icon-down-chevron-brown' %}</span>{% endif %}</a></li>
-        {% if link.links != blank %}                                    
-        <div class="hover-wrapper">
-          <div id="nav-sub-drop" class="dropdown-container container">
-            <div class="wrapper">
-              <div class="hover-content-wrapper">
-                <div class="left-wrap content-sub-list">
-                  <ul class="content-list">
-                    {%- for child_link in link.links -%}
-                    <li>
-                      <a href="{{ child_link.url }}">{{ child_link.title }}
-                        {% render "back-icon" %}</a>
-                    </li>
-                    {% endfor %}
-                  </ul>
+        <li class="lower-left-nav-list"><a href="{{link.url}}" class="lower-left-nav-item flex-box align-center">{{link.title}}{% if link.links != blank %}<span class="down-chevron">{% include 'icon-down-chevron-brown' %}</span>{% endif %}</a>
+        	{% if link.links != blank %}                                    
+            <div class="hover-wrapper">
+              <div id="nav-sub-drop" class="dropdown-container container">
+                <div class="wrapper">
+                  <div class="hover-content-wrapper">
+                    <div class="left-wrap content-sub-list">
+                      <ul class="content-list">
+                        {%- for child_link in link.links -%}
+                        <li>
+                          <a href="{{ child_link.url }}">{{ child_link.title }}
+                            {% render "back-icon" %}</a>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        {% endif %}
+        	{% endif %}
+        </li>
         {% endfor %}
         {% endfor %}
       </div>
