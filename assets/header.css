@@ -80,6 +80,30 @@ header{
     border: 1px solid;
 }
 
+.hover-wrapper {
+    padding: 108px 10px 10px 10px;
+    display: block;
+    position: absolute;
+    right: 0;
+  	left: 0;
+    z-index: 1;
+    width: 100vw;
+    text-align: left;
+    top: 31px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    transition-delay: 0s;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background-color: var(--background-main);
+}
+
+.lower-left-nav-list:hover .hover-wrapper {
+    max-height: 100vh;
+    opacity: 1;
+}
+
 .down-chevron{
 	transition: .4s ease;
 }
