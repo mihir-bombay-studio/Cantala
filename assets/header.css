@@ -316,4 +316,9 @@ header{
     transform: rotate(180deg);
     margin-right: 40px;
 }
+  
+  .main-link-title {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #342d254d;
+}
 }
