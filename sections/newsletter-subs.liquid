@@ -27,6 +27,14 @@
   </div>
 </div>
 
+<script>
+  $('.submit-btn').click(function(e) {
+    if(!$(this).closesct('.checkbox').hasClass('selected')){
+    	e.preventDefault();
+    }
+  });
+</script>
+
 {% schema %}
   {
     "name": "Newsletter Subscription",
