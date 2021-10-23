@@ -293,7 +293,7 @@ header{
     overflow-y: scroll;
 }
   
-  .drawer-menu.drawn {
+  .drawer-menu.drawn, .mobile-sub-menu-wrapper.drawn {
     left: 0;
 }
   
