@@ -42,7 +42,12 @@
 </div>
 
 <script>
-	
+	$('.gift-checkbox').click(function() {
+        var sub_wrap = $(this).parent().next();
+        var sub_btn = $(this).parent().next().find('.gift-submit-btn');
+        sub_wrap.toggleClass('wrap-disabled');
+        sub_btn.toggleClass('disabled');
+      });
 </script>
 
 {% schema %}
