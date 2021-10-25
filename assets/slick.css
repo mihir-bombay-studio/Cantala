@@ -218,10 +218,13 @@
     left: -20px;
 }
 @media(max-width: 1500px){
-	.slick-prev, .slick-next
+	.slick-prev
 {
   left: -10px;
 }
+  .slick-next{
+  	right: -10px;
+  }
 }
 .slick-next:before
 {
