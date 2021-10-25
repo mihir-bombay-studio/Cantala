@@ -9,7 +9,7 @@
       border: none;
   color: var(--background-main);
     cursor: pointer;
-    width: 20%;
+    width: 100%;
 }
 
 .subscription-form-input::-webkit-input-placeholder {
