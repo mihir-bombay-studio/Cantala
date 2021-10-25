@@ -4,6 +4,10 @@
   width: 80%;
 }
 
+.newsletter-sub-wrapper .submit-btn-wrap{
+	width: 20%;
+}
+
 .ns-form-wrapper .submit-btn {
     background-color: var(--main-font-color);
       border: none;
