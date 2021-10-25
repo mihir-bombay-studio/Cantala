@@ -13,9 +13,11 @@
       {%- endif -%}
 		<div class="ns-sub-form-input-wrap flex-box">
       <input class="subscription-form-input" type="email" name="contact[email]" placeholder="Jouw e-mailadres" required>
-      <button class="submit-btn btn medium" type="submit" form="contact_form" value="Submit">
-        Inschrijven
-        </button>
+          <div class="submit-btn-wrap wrap-disabled">
+            <button class="submit-btn btn medium disabled" type="submit" form="contact_form" value="Submit">
+              Inschrijven
+            </button>
+          </div>
       </div>
       <input type="checkbox" class="no-disp" id="tnc" name="tnc" value="Terms">
       <div class="checkbox-wrap flex-box align-center">
