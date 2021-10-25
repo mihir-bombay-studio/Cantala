@@ -263,9 +263,10 @@
       $('.checkbox').click(function() {
       	$(this).toggleClass('selected');
         var sub_wrap = $(this).parent().prev().prev().find('.submit-btn-wrap');
-        console.log(sub_wrap);
+        var sub_btn = $(this).parent().prev().prev().find('.submit-btn-wrap').find('.submit-btn');
+        console.log(sub_btn);
         sub_wrap.toggleClass('wrap-disabled');
-        $sub_wrap.find('.submit-btn').toggleClass('disabled');
+        $sub_btn.toggleClass('disabled');
       });
     </script>
   </body>
