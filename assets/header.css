@@ -82,7 +82,7 @@ header{
 
 .hover-wrapper {
     padding: 108px 20px 10px 20px;
-    display: block;
+    display: none;
     position: absolute;
     right: 0;
   	left: 2.5vw;
@@ -96,7 +96,7 @@ header{
     transition-delay: 0s;
     max-height: 0;
     overflow: hidden;
-    opacity: 0;
+/*     opacity: 0; */
     background-color: var(--background-main);
 }
 
@@ -109,6 +109,7 @@ header{
     max-height: 100vh;
     opacity: 1;
   	height: 100vh;
+  display: block;
 }
 
 .lower-left-nav-list:hover {
