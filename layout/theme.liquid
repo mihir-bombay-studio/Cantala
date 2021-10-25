@@ -262,7 +262,7 @@
       
       $('.checkbox').click(function() {
       	$(this).toggleClass('selected');
-        var sub_wrap = $(this).parent().prev().prev();
+        var sub_wrap = $(this).parent().prev().prev().find('.submit-btn-wrap');
         console.log(sub_wrap);
         $(this).closest('.submit-btn-wrap').toggleClass('wrap-disabled');
         $(this).closest('.submit-btn').toggleClass('disabled');
