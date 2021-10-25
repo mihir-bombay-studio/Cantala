@@ -88,6 +88,7 @@ header{
   	left: 0;
     z-index: 1;
     width: 95vw;
+  	max-width: 1600px;
     text-align: left;
     top: 124px;
     -webkit-transition: all .4s ease;
