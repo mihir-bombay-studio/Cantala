@@ -25,9 +25,11 @@
           <span for="tncg" class="checkbox gift-checkbox rel"><span class="checked"></span></span>
           <span class="checkbox-label">Ik ga akkoord met de <a class="label-link" href="#">voorwaarden</a> en heb de <a class="label-link" href="#">privacy policy</a> gelezen.</span>
         </div>
-        <button class="submit-btn btn btn-light medium" type="submit" form="contact_form" value="Submit">
+          <div class="submit-btn-wrap gift-submit-btn-wrap wrap-disabled">
+        <button class="submit-btn btn gift-submit-btn btn-light disabled medium" type="submit" form="contact_form" value="Submit">
           Versturen
           </button>
+          </div>
         
         {% endform %}
     </div>
@@ -38,6 +40,10 @@
     </div>
   </div>
 </div>
+
+<script>
+	
+</script>
 
 {% schema %}
   {
