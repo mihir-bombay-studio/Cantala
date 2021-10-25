@@ -1,7 +1,8 @@
 {{ 'top-in-gift.css' | asset_url | stylesheet_tag }}
 
-<div class="top-in-gift-wrapper container rel">
+<div class="top-in-gift-wrapper rel">
     <div class="top-in-gift-background"></div>
+  <div class="container">
   <div class="tig-content-wrapper flex-box justify-between">
     <div class="tig-content-left rel">
       <h2 class="tig-title heading-2">{{ section.settings.tig_heading }}</h2>
@@ -26,6 +27,7 @@
         <img class="tig-img tig-big-img" src="{{ section.settings.tig_big_img | img_url: '1280x' }}" alt = "tig-img">
       </div>
     </div>
+  </div>
   </div>
   	
 </div>
