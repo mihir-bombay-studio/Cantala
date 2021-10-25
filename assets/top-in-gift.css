@@ -6,11 +6,11 @@
 }
 
 .top-in-gift-background{
-	width: 90%;
+	width: 95%;
     display: block !important;
     height: 100%;
     position: absolute;
-    left: 10%;
+    left: 5%;
     top: 0;
     background-color: var(--background-slight-dark);
       z-index: -1;
