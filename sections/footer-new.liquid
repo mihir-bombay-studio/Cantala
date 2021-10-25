@@ -67,6 +67,7 @@
                 {%- endif -%}
                 <div class="fns-sub-form-input-wrap flex-box">
                 <input class="subscription-form-input" type="email" name="contact[email]" placeholder="Jouw e-mailadres" required>
+                  <div class="submit-btn-wrap wrap-disabled">
                 <button class="submit-btn btn medium disabled" type="submit" form="contact_form" value="Submit">
                   {% for block in section.blocks %}
                   {% if block.type == "nl_sub" %}
@@ -74,6 +75,7 @@
                   {% endif %}
               	  {% endfor %}
               </button>
+                  </div>
               </div>
               <input type="checkbox" class="no-disp" id="tncf" name="tnc" value="Terms">
               <div class="checkbox-wrap flex-box align-center">
