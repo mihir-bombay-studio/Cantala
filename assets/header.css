@@ -102,6 +102,7 @@ header{
 
 .hover-wrapper li{
 	width: fit-content;
+  width: -moz-fit-content;
 }
 
 .lower-left-nav-list:hover .hover-wrapper {
