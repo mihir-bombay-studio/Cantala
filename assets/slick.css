@@ -156,13 +156,13 @@
 .black-box .slick-next:hover {  
   background-color: #fff;
 }
-.slick-prev:hover,
+/* .slick-prev:hover,
 .slick-next:hover
 {
     color: #000;
     outline: none;
     background: #698995;  
-}
+} */
 .slick-prev:hover:before,
 .slick-next:hover:before
 {
@@ -189,41 +189,41 @@
 
 .slick-prev
 {
-  left: -10px;  
+  left: -20px;  
   -webkit-transform: rotateY(180deg) translate(0, -50%);
   -ms-transform: rotateY(180deg) translate(0, -50%);
   transform: rotateY(180deg) translate(0, -50%);
 }
 [dir='rtl'] .slick-prev
 {
-    right: -10px;
+    right: -20px;
     left: auto;
 }
 .slick-prev:before
 {
-  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/23/assets/icon-arrow-right.svg?v=5602691840912001925);
+  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/21/assets/icon-arrow-right.svg?v=5602691840912001925);
 }
 [dir='rtl'] .slick-prev:before
 {
-  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/23/assets/icon-arrow-right.svg?v=5602691840912001925);
+  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/21/assets/icon-arrow-right.svg?v=5602691840912001925);
 }
 
 .slick-next
 {
-    right: -10px;
+    right: -20px;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -10px;
+    left: -20px;
 }
 .slick-next:before
 {
-  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/23/assets/icon-arrow-right.svg?v=5602691840912001925);
+  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/21/assets/icon-arrow-right.svg?v=5602691840912001925);
 }
 [dir='rtl'] .slick-next:before
 {
-  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/23/assets/icon-arrow-right.svg?v=5602691840912001925);
+  content: url(//cdn.shopify.com/s/files/1/1862/5785/t/21/assets/icon-arrow-right.svg?v=5602691840912001925);
   -webkit-transform: rotateY(180deg) translate(0, -50%);
   -ms-transform: rotateY(180deg) translate(0, -50%);
   transform: rotateY(180deg) translate(0, -50%);
