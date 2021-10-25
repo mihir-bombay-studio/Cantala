@@ -217,6 +217,12 @@
     right: auto;
     left: -20px;
 }
+@media(max-width: 1500px){
+	.slick-prev, .slick-next
+{
+  left: -10px;
+}
+}
 .slick-next:before
 {
   content: url({{ "icon-arrow-right.svg" | asset_url }});

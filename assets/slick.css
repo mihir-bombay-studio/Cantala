@@ -217,6 +217,12 @@
     right: auto;
     left: -20px;
 }
+@media(max-width: 1500px){
+	.slick-prev, .slick-next
+{
+  left: -10px;
+}
+}
 .slick-next:before
 {
   content: url(//cdn.shopify.com/s/files/1/1862/5785/t/21/assets/icon-arrow-right.svg?v=5602691840912001925);
