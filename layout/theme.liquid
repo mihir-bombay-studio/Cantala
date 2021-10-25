@@ -262,6 +262,8 @@
       
       $('.checkbox').click(function() {
       	$(this).toggleClass('selected');
+        $(this).closest('.submit-btn-wrap').toggleClass('wrap-disabled');
+        $(this).closest('.submit-btn').toggleClass('disabled');
       });
     </script>
   </body>
