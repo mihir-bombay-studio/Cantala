@@ -151,13 +151,18 @@
 
 <script>
   $(document).ready(function(){
+  var cookiepop = getCookie("cookie-popup");
+    if (cookiepop == "") { 
       $(".cookie-popup-block:not(.active)").fadeIn();
       $(".cookie-popup-block").addClass("active");
-  }); 
+    } 
   
   $(".cookie-popup-block .btn").click(function() {
   	$(".cookie-popup-block").fadeOut();
+    setCookie("newsletter-popup", $(this).attr("id"), 30);
   });
+  
+  }); 
   
 </script>
 
