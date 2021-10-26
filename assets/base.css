@@ -2315,6 +2315,12 @@ details-disclosure > details {
   animation-delay: .2s;
 }
 
+.come-out {
+  transform: translateY(-150px);
+  animation: come-in .4s ease forwards;
+  animation-delay: .2s;
+}
+
 .already-visible {
   transform: translateY(0);
   animation: none;
