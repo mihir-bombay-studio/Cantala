@@ -767,17 +767,20 @@ allMods.each(function(i, el) {
     el.addClass("already-visible"); 
   } 
 });
-
+allMods.each(function(i, el) {
+  var el = $(el);
+    if (el.scrollTop() > lastScrollTop){
+      el.addClass("come-in"); 
+    } else {
+      el.addClass("come-out"); 
+    }
+});
 win.scroll(function(event) {
   var st = $(this).scrollTop();
   allMods.each(function(i, el) {
     var el = $(el);
     if (el.visible(true)) {
-      if (st > lastScrollTop){
-        el.addClass("come-in"); 
-      } else {
-        el.addClass("come-out"); 
-      }
+      el.addClass("module-init"); 
     } 
   });
   
