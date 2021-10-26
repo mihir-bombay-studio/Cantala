@@ -769,10 +769,10 @@ allMods.each(function(i, el) {
 });
 allMods.each(function(i, el) {
   var el = $(el);
-    if (el.scrollTop() < lastScrollTop){
-      el.addClass("come-in"); 
-    } else {
+    if (el.scrollTop() > lastScrollTop){
       el.addClass("come-out"); 
+    } else {
+      el.addClass("come-in"); 
     }
 });
 win.scroll(function(event) {
