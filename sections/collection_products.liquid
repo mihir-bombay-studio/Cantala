@@ -10,7 +10,7 @@
         <div class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
         </div>
-        <div class="product-tag bold">{% for tag in product.tags limit:1 %}{{ tag }}{% endfor %}</div>
+        <div class="product-tag bold">{{ product.type }}</div>
         <div class="product-title"><a href="{{ product.url }}">{{ product.title | escape }}</a></div>
         <div class="product-price-wrap flex-box align-center justify-between">
           <div class="from-text">vanaf</div>
