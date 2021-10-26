@@ -759,6 +759,8 @@ var win = $(window);
 
 var allMods = $(".module");
 
+var lastScrollTop = $(window).scrollTop();
+
 allMods.each(function(i, el) {
   var el = $(el);
   if (el.visible(true)) {
@@ -767,11 +769,15 @@ allMods.each(function(i, el) {
 });
 
 win.scroll(function(event) {
-  
+  var st = $(this).scrollTop();
   allMods.each(function(i, el) {
     var el = $(el);
     if (el.visible(true)) {
-      el.addClass("come-in"); 
+      if (st > lastScrollTop){
+        el.addClass("come-in"); 
+      } else {
+        el.addClass("come-out"); 
+      }
     } 
   });
   
