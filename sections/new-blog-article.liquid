@@ -3,7 +3,7 @@
 <div class="article-wrapper rel">
   <div class="container">
     <div class="darker-background"></div>
-    <div class="article-img-content rel">
+    <div class="article-img-content rel module">
       <div class="article-img no-t-m">
       	{{ article.image | img_url: '500x' | img_tag }}
       </div>
@@ -21,9 +21,9 @@
         <div class="article-excerpt">{{ article.excerpt }}</div>
       </div>
     </div>
-    <div class="article-content">{{ article.content }}</div>
-    <div class="explore-products-heading">{{ section.settings.heading }}</div>
-    <div class="explore-products-wrap flex-box justify-between no-t-m">
+    <div class="article-content module">{{ article.content }}</div>
+    <div class="explore-products-heading module">{{ section.settings.heading }}</div>
+    <div class="explore-products-wrap flex-box justify-between no-t-m module">
     	{% for block in section.blocks %}
         {% if block.type == "product" %}
       	{% assign product = block.settings.featured_product %}
@@ -34,7 +34,7 @@
         {% endif %}
         {% endfor %}
     </div>
-    <div class="explore-products-wrap no-d">
+    <div class="explore-products-wrap no-d module">
     	{% for block in section.blocks %}
         {% if block.type == "product" %}
       	{% assign product = block.settings.featured_product %}
