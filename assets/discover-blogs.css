@@ -22,11 +22,13 @@
 .discover-blogs-wrapper .btn{
 	padding-left: 22px;
     padding-right: 22px;
+  line-height: 22px;
 }
 
 .dis-blog-content-right{
 	width: 65%;
 }
+line-height: 22px;
 
 .featured-article{
 	width: 30%;
