@@ -773,7 +773,7 @@ win.scroll(function(event) {
 
   if(firstscroll) {
     allMods.each(function(i, el) {
-      var el = $(el);console.log(el.scrollTop())
+      var el = $(el);console.log(el.scrollTop)
       if (el.scrollTop() > lastScrollTop){
         el.addClass("come-out"); 
       } else {
