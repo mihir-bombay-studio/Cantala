@@ -3,8 +3,8 @@
 
 <div class="collection-products-wrapper">
   <div class="container">
-    <h2 class="collection-products-title text-center heading-2">{{ section.settings.collection_products_title }}</h2>
-    <div class="coll-products">
+    <h2 class="collection-products-title text-center heading-2 module">{{ section.settings.collection_products_title }}</h2>
+    <div class="coll-products module">
     	{% for product in collections[product_handle].products %}
       <div class="coll-product">
         <div class="product-img-wrap">
@@ -22,7 +22,7 @@
     </div>
     {% for block in section.blocks %}
         {% if block.type == "button" %}
-        <a href="{{ product_handle.url }}" class="btn center-it medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+        <a href="{{ product_handle.url }}" class="btn center-it medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %} module">
         	{{ block.settings.button_text | escape }}
         </a>
         {% endif %}
