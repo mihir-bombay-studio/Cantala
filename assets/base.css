@@ -2305,29 +2305,30 @@ details-disclosure > details {
   }
 }
 
-.module {  
-  position: relative;  
-}
-
-.come-in {
-  transform: translateY(150px);
-  animation: come-in .4s ease forwards;
-  animation-delay: .2s;
-}
-
-.come-out {
-  transform: translateY(-150px);
-  animation: come-in .4s ease forwards;
-  animation-delay: .2s;
-}
-
-.already-visible {
-  transform: translateY(0);
-  animation: none;
-}
-
-@keyframes come-in {
-  to {
-    transform: translateY(0);
+  .module {  
+    position: relative;  
   }
-}
+
+  .come-in {
+    transform: translateY(150px);
+  }
+
+  .come-out {
+    transform: translateY(-150px);
+  }
+
+  .module-init {  	
+    animation: come-in .4s ease forwards;
+    animation-delay: .2s;
+  }
+
+  .already-visible {
+    transform: translateY(0);
+    animation: none;
+  }
+
+  @keyframes come-in {
+    to {
+      transform: translateY(0);
+    }
+  }
