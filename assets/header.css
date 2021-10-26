@@ -232,6 +232,7 @@ header{
   
   .header-lower-left {
     width: 100%;
+    min-width: unset;
 }
   
   .header-lower-right-inner {
