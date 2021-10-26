@@ -98,6 +98,7 @@
             {% endfor %}
         </div>
         <div class="payment-cards flex-box justify-between">
+          {% comment %}
           {% for block in section.blocks %}
           {% if block.type == "Payment_icons" %}
 
@@ -111,6 +112,12 @@
 
           {% endif %}
           {% endfor %}
+          {% endcomment %}
+          {% for type in shop.enabled_payment_types %}
+          <div class="payment-method"> 
+            {{ type | payment_type_svg_tag: class: 'section-footer__payment-icon' }}
+          </div>
+            {% endfor %}
     	</div>
         <div class="designed-by">
           {% for block in section.blocks %}
