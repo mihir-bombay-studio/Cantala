@@ -447,6 +447,7 @@ li.lower-right-nav-list:last-child {
     border-bottom: 1px solid #342d254d;
     font-size: 20px;
     line-height: 27px;
+    font-weight: 500;
 }
   
   .sub-link {
@@ -467,5 +468,6 @@ li.lower-right-nav-list:last-child {
 }
 .lower-left-nav-list,li.lower-right-nav-list {
     margin-left: 0;
+  font-weight: 500;
 }
 }
