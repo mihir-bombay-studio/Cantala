@@ -144,6 +144,27 @@
   </div>
 </div>
 
+<script>
+  $(document).ready(function(){
+  var newspop = getCookie("newsletter-popup");
+  $(window).scroll(function() { 
+    var t=$(window).scrollTop()+1; 
+    var c=$('html').outerHeight(); 
+    var p=(t/c*100).toFixed(0); 
+    if (p>50 && newspop == "") { 
+      $(".popup-block:not(.active)").fadeIn();
+      $(".popup-block").addClass("active");
+    } 
+  }); 
+  
+  $(".popup-block .pop-close").click(function() {
+  	$(".popup-block").fadeOut();
+    setCookie("newsletter-popup", "close", 2);
+  });
+  	
+  });
+</script>
+
 
 {% schema %}
   {
