@@ -176,6 +176,7 @@ h1, h2, h3, h4, h5, h6{
   	width: -moz-fit-content;
   	background-color: transparent;
   	transition: .4s ease;
+  font-weight: 500;
 }
 
 .btn-dark {
