@@ -25,6 +25,11 @@
       event.stopImmediatePropagation();
     }
   });
+
+    $('input[name="q"]').focusout(function(){
+      $('#searchBox').removeClass('active');
+      $('.search-results').hide();
+    });
 }, false);
 
 
@@ -104,10 +109,6 @@
     // Clicking outside makes the results disappear.
     $('body').bind('click', function(){
       $('.search-results').hide();
-    });
-
-    $('input[name="q"]').focusout(function(){
-      $('#searchBox').removeClass('active');
     });
   });
 </script>
