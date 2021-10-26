@@ -56,11 +56,14 @@
       console.log(tag);
       $('.pfs-product').each(function() {
         if($(this).data('tag')==tag){
-        	$(this).removeClass('not-in-filter');
           $(this).addClass('through-filter');
         }
         else{
-        	$(this).addClass('not-in-filter');
+          if($(this).hasClass('through-filter')){
+          	
+          }else {
+          	$(this).addClass('not-in-filter');
+          }
         }
       });
     }
