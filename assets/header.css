@@ -89,7 +89,7 @@ header{
     left: -26px;
     z-index: 1;
     width: calc(100vw - 18px);
-    max-width: none;
+    max-width: 1680px;
     text-align: left;
     top: 124px;
     -webkit-transition: all .4s ease;
