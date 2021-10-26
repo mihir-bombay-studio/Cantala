@@ -3,7 +3,7 @@
 <div class="hero-wrapper">
   <div class="container">
   <div class="hero flex-box justify-between align-center">
-    <div class="hero-left rel">
+    <div class="hero-left rel module">
       <h1 class="hero-heading main-title">{{ section.settings.hero_heading }}</h1>
       <div class="hero-desc">{{ section.settings.hero_desc }}</div>
       <div class="hero-btns flex-box">
@@ -16,7 +16,7 @@
         {% endfor %}
       </div>
     </div>
-    <div class="hero-right rel">
+    <div class="hero-right rel module">
     	<img class="hero-img" src="{{ section.settings.hero_img | img_url: '1280x' }}" alt = "hero-img">
     </div>
   </div>
