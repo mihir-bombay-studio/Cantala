@@ -180,6 +180,7 @@ header{
 
 .header-lower-left {
     width: 33%;
+  min-width: 434px;
 /*     max-width: 450px; */
 }
 
@@ -189,6 +190,7 @@ header{
 
 .header-lower-right{
 	width: 33%;
+  min-width: 354px;
 /*   max-width: 180px; */
 }
 
