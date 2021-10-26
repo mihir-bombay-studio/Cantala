@@ -64,7 +64,6 @@
 .newsletter__button {
   margin-top: 3rem;
   width: fit-content;
-  width: -moz-fit-content;
 }
 
 @media screen and (min-width: 750px) {
