@@ -86,9 +86,9 @@ header{
   visibility: hidden;
     position: absolute;
     right: 0;
-  	left: 0;
+  	left: 1vw;
     z-index: 1;
-    width: 100vw;
+    width: 98vw;
   	max-width: 1550px;
     text-align: left;
     top: 124px;
