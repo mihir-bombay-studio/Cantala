@@ -2311,7 +2311,8 @@ details-disclosure > details {
 
 .come-in {
   transform: translateY(150px);
-  animation: come-in 0.8s ease forwards;
+  animation: come-in .4s ease forwards;
+  animation-delay: .2s;
 }
 
 .already-visible {
