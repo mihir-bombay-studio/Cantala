@@ -7,7 +7,7 @@
       {% for block in section.blocks %}
 		{% if block.type == "collection_select" %}
       		{% assign collection_handle = block.settings.collection_sel %}
-      		<div class="prod-collection rel">
+      		<a class="prod-collection rel" href="{{ collection_handle.url }}">
               <div class="coll-img">
               	{% if collection_handle.image %}
 					{{ collection_handle.image | img_url: '2048x' | img_tag }}
@@ -17,9 +17,9 @@
               </div>
               <div class="coll-title-url">
                 <div class="coll-title heading-4">{{ collection_handle.title }}</div>
-                <div class="coll-url"><a href="{{ collection_handle.url }}">Shop hier</a></div>
+                <div class="coll-url"><span href="{{ collection_handle.url }}">Shop hier</span></div>
               </div>
-      		</div>
+      		</a>
       {% endif %}
 	{% endfor %}
     </div>
