@@ -445,6 +445,7 @@
           $(".total-price").text('€'+(data.total_price/100));
           if(data.item_count > 0) {
             $(".cart-products-parent").removeClass('no-disp');
+            $(".cart-total-block").removeClass('no-disp');
             $(".cart-empty").addClass('no-disp');
             if(data.total_price/100 > 99.99) {
               $('.cart-sub-head').removeClass('no-vis');
@@ -455,6 +456,7 @@
             }
           } else {
             $(".cart-products-parent").addClass('no-disp');
+            $(".cart-total-block").addClass('no-disp');
             $(".cart-empty").removeClass('no-disp');
             $('.cart-sub-head').addClass('no-vis');
             $('.total-text').last().text('Ber. volgende stap');
@@ -497,6 +499,7 @@
             $(".total-price").text('€'+(data.total_price/100));
             if(data.item_count > 0) {
               $(".cart-products-parent").removeClass('no-disp');
+            $(".cart-total-block").removeClass('no-disp');
               $(".cart-empty").addClass('no-disp');
               if(data.total_price/100 > 99.99) {
                 $('.cart-sub-head').removeClass('no-vis');
@@ -507,6 +510,7 @@
               }
             } else {
               $(".cart-products-parent").addClass('no-disp');
+            $(".cart-total-block").addClass('no-disp');
               $(".cart-empty").removeClass('no-disp');
               $('.cart-sub-head').addClass('no-vis');
               $('.total-text').last().text('Ber. volgende stap');
@@ -560,6 +564,7 @@
             $(".total-price").text('€'+(data.total_price/100));
             if(data.item_count > 0) {
               $(".cart-products-parent").removeClass('no-disp');
+            $(".cart-total-block").removeClass('no-disp');
               $(".cart-empty").addClass('no-disp');
               if(data.total_price/100 > 99.99) {
                 $('.cart-sub-head').removeClass('no-vis');
@@ -570,6 +575,7 @@
               }
             } else {
               $(".cart-products-parent").addClass('no-disp');
+            $(".cart-total-block").addClass('no-disp');
               $(".cart-empty").removeClass('no-disp');
               $('.cart-sub-head').addClass('no-vis');
               $('.total-text').last().text('Ber. volgende stap');
@@ -624,6 +630,7 @@
               $(".total-price").text('€'+(data.total_price/100));
               if(data.item_count > 0) {
                 $(".cart-products-parent").removeClass('no-disp');
+            $(".cart-total-block").removeClass('no-disp');
                 $(".cart-empty").addClass('no-disp');
                 if(data.total_price/100 > 99.99) {
                   $('.cart-sub-head').removeClass('no-vis');
@@ -634,6 +641,7 @@
                 }
               } else {
                 $(".cart-products-parent").addClass('no-disp');
+            $(".cart-total-block").addClass('no-disp');
                 $(".cart-empty").removeClass('no-disp');
                 $('.cart-sub-head').addClass('no-vis');
                 $('.total-text').last().text('Ber. volgende stap');
