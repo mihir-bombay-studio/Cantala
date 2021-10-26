@@ -3,10 +3,10 @@
 <div class="promotional-gift-contact-wrapper rel">
   <div class="abs-background"></div>
   <div class="container rel">
-    <div class="promotional-gift-contact-content flex-box justify-between module">
+    <div class="promotional-gift-contact-content flex-box justify-between">
       <div class="pgc-left">
-        <h2 class="pgc-heading">{{ section.settings.heading }}</h2>
-        <div class="pgc-form-wrapper flex-box">
+        <h2 class="pgc-heading module">{{ section.settings.heading }}</h2>
+        <div class="pgc-form-wrapper flex-box module">
         {% form 'contact' %}
         {%- if form.errors -%}
         {{ form.errors | default_errors  }}
