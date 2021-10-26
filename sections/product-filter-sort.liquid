@@ -42,6 +42,12 @@
     $(this).toggleClass('selected');
     if($(this).hasClass('selected')){
     $(this).find('.close-icon').removeClass('no-disp');
+      if($(this).hasClass('ltoh')){
+      	console.log('low to high');
+      }
+      else{
+      	console.log('high to low');
+      }
     }
     else {
     	$(this).find('.close-icon').addClass('no-disp');
