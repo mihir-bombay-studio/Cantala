@@ -2332,3 +2332,6 @@ details-disclosure > details {
       transform: translateY(0);
     }
   }
+  .underline {
+  	text-decoration: underline;
+  }
