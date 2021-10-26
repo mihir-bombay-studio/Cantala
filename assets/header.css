@@ -180,6 +180,7 @@ header{
 
 .header-lower-left {
     width: 40%;
+  justify-content: left;
 /*     max-width: 450px; */
 }
 
