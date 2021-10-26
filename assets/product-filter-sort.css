@@ -4,6 +4,7 @@
 
 .pfs-right{
 	width: 80%;
+  margin: 0 -1.65%;
 }
 
 .pfs-heading {
@@ -33,6 +34,7 @@
 
 .pfs-product{
 	width: 30%;
+  margin: 0 1.65%;
 }
 
 /* .pfs-product:before {
