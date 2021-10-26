@@ -22,7 +22,7 @@
       <div class="pfs-right flex-box justify-between">
         
       	{% for product in collections['all'].products limit:3 %}
-        <div class="pfs-product" data-tag="{% for tag in product.tags limit:1 %}{{ tag }}{% endfor %}">
+        <div class="pfs-product" data-tag="{% for tag in product.tags limit:1 %}{{ tag }}{% endfor %}" data-price="{{ product.price }}">
         	 <div class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
         </div>
