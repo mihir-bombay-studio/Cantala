@@ -78,6 +78,41 @@ footer {
     width: 30%;
 }
 
+
+.checkbox-wrap{
+	margin-top: 11px;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+  margin-right: 13px;
+  cursor: pointer;
+}
+
+.checkbox.selected .checked {
+	width: 10px;
+  height: 10px;
+  margin-top: 2px;
+  margin-left: 2px;
+  background-color: var(--main-font-color);
+    position: absolute;
+}
+
+.checkbox-label {
+    line-height: 27px;
+    font-size: 12px;
+}
+
+.newsletter-sub-wrapper {
+    margin-bottom: 131px;
+}
+
+.checkbox-label a{
+	text-decoration: underline;
+}
+
 @media (max-width: 992px){
   footer {
     padding: 100px 0 61px;
