@@ -50,6 +50,8 @@ footer {
   color: var(--background-main);
     cursor: pointer;
     width: 100%;
+    margin-top: 0;
+    padding: 14px 44px;
 }
 
 .fns-form-wrapper .checkbox{
