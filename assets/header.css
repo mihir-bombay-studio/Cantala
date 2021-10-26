@@ -465,4 +465,7 @@ li.lower-right-nav-list:last-child {
     justify-content: left !important;
     padding-right: 40px;
 }
+.lower-left-nav-list,li.lower-right-nav-list {
+    margin-left: 0;
+}
 }
