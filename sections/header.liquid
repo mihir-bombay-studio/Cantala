@@ -13,16 +13,7 @@
     var parent = this.parentElement; //searchBox element;
     var arr = parent.className.split(" ");
     if (arr.indexOf("active") != -1) {
-      var input = parent.getElementsByTagName("INPUT")[0];
-      input.value = "";
-      var classList = parent.className;
-      classList = classList.replace(/\bactive\b/g, "").trim();
-      
-      $('.search-results').hide();
-      parent.className = classList;
-      event.preventDefault();
-      event.stopPropagation();
-      event.stopImmediatePropagation();
+      $('#searchBox').submit();
     }
   });
 
