@@ -69,8 +69,18 @@
     }
     else {
     	$(this).find('.close-icon').addClass('no-disp');
+      var tag = $(this).data('tag');
       $('.pfs-product').each(function() {
-        	$(this).removeClass('not-in-filter');
+        	if($(this).data('tag')==tag){
+          $(this).removeClass('through-filter');
+        }
+        else{
+          if($(this).hasClass('through-filter')){
+          	
+          }else {
+          	$(this).removeClass('not-in-filter');
+          }
+        }
         });
     }
   });
