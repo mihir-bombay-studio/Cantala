@@ -58,16 +58,16 @@
               {% endfor %}
             </div>
             <div class="fns-form-wrapper flex-box">
-            	{% form 'contact' %}
+            	{% form 'customer', class: 'newsletter-form' %}
                 {%- if form.errors -%}
                 {{ form.errors | default_errors  }}
                 {%- endif -%}
                 {%- if form.posted_successfully? -%}
-
+				Subscribed to our newsletter!
                 {%- endif -%}
               <div class="fns-form-input-wrap">
                 <div class="fns-sub-form-input-wrap flex-box">
-                <input class="subscription-form-input" type="email" name="contact[email]" placeholder="Jouw e-mailadres" required>
+                <input class="subscription-form-input" type="text" name="contact[tags]" placeholder="Jouw e-mailadres" value="newsletter" required>
                   <div class="submit-btn-wrap wrap-disabled">
                 <button class="submit-btn btn medium disabled" type="submit" form="contact_form" value="Submit">
                   {% for block in section.blocks %}
