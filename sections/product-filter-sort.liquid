@@ -58,7 +58,7 @@
     return $($(selector).toArray().sort(function(a, b){
         var aVal = parseInt(a.getAttribute(attrName)),
             bVal = parseInt(b.getAttribute(attrName));
-      console.log aVal;
+      console.log(aVal);
         return aVal - bVal;
     }));
         getSorted('.pfs-product', 'data-price')
