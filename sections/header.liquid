@@ -3,7 +3,7 @@
   <div class="header-anouncement" style="display: none;">
     <span class="header-container flex-box justify-center small-font align-center rel">
     	{{ section.settings.announcement_text }}
-			<span id="header-anouncement-close">{% include 'icon-close-white' %}</span>
+			<span id="header-anouncement-close" data-hide="{{ section.settings.announcement_hide_days }}">{% include 'icon-close-white' %}</span>
     </span>
 		</div>
   <div class="header-wrapper header-container rel no-t-m">
@@ -300,6 +300,12 @@
           "type": "text",
           "label": "Announcement"
 
+        },
+		{
+          "id": "announcement_hide_days",
+          "type": "number",
+          "label": "Announcement Hide days",
+		  "default": 2
         },
         {
         "id": "brand_logo",
