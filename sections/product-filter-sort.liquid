@@ -55,11 +55,11 @@
       var tag = $(this).data('tag');
       console.log(tag);
       $('.pfs-product').each(function() {
-        if($(this).data('tag')!=tag){
-        	$(this).addClass('not-in-filter');
+        if($(this).data('tag')==tag){
+        	$(this).removeClass('not-in-filter');
         }
         else{
-        	$(this).removeClass('not-in-filter');
+        	$(this).addClass('not-in-filter');
         }
       });
     }
@@ -67,7 +67,7 @@
     	$(this).find('.close-icon').addClass('no-disp');
       $('.pfs-product').each(function() {
         	$(this).removeClass('not-in-filter');
-        }
+        });
     }
   });
 </script>
