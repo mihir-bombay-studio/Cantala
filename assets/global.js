@@ -769,7 +769,7 @@ allMods.each(function(i, el) {
 });
 allMods.each(function(i, el) {
   var el = $(el);
-    if (el.scrollTop() > lastScrollTop){
+    if (el.scrollTop() < lastScrollTop){
       el.addClass("come-in"); 
     } else {
       el.addClass("come-out"); 
