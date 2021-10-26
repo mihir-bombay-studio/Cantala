@@ -7,8 +7,8 @@
         <div class="pfs-heading medium">{{ section.settings.heading }}</div>
         <div class="filter-and-sorting">
           <div class="sorting">
-            <div class="sort">Price, low to high<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
-            <div class="sort">Price, high to low<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
+            <div class="sort" data-value="ltoh">Price, low to high<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
+            <div class="sort" data-value="htol">Price, high to low<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
           </div>
           <div class="filters">
             {% for product in collections['all'].products limit:1 %}
@@ -22,7 +22,7 @@
       <div class="pfs-right flex-box justify-between">
         
       	{% for product in collections['all'].products limit:3 %}
-        <div class="pfs-product">
+        <div class="pfs-product" data-tag="{% for tag in product.tags limit:1 %}{{ tag }}{% endfor %}">
         	 <div class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
         </div>
