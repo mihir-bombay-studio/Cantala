@@ -35,6 +35,10 @@
 	width: 30%;
 }
 
+.pfs-product:before {
+    content: attr(data-price);
+}
+
 .pfs-product img{
 	width: 100%;
   height: 100%;
