@@ -134,7 +134,7 @@
   <div class="container">
     <div class="margin-extend">
       <div class="grid-box module">        
-        {% for block in section.settings.blocks limit: 7 %}
+        {% for block in section.blocks limit: 7 %}
         {% assign modulo1 = forloop.index | minus: 1 | modulo: 10 %}
         {% assign modulo2 = forloop.index | minus: 7 | modulo: 10 %}
         <div class="{% if modulo1 == 0 or modulo2 == 0 %}grid-wide{% else %}grid-normal{% endif %} grid-child">
