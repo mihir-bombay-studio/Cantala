@@ -443,4 +443,8 @@ ul.search-results li a {
     ul.search-results {
       margin: 0 20px;
     }
+  .header-container.flex-box.justify-center.small-font.align-center.rel {
+    justify-content: left !important;
+    padding-right: 40px;
+}
 }
