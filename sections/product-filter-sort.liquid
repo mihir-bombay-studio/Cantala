@@ -100,7 +100,9 @@
       $('.pfs-product').each(function() {
         	if($(this).data('tag')==tag){
           $(this).removeClass('through-filter');
-              $(this).addClass('not-through-filter');
+              if($('.filter.selected').length === 0){
+          	$(this).removeClass('not-through-filter');
+          }
         }
         else{
           if($('.filter.selected').length === 0){
