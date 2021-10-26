@@ -41,7 +41,7 @@
       </div>
     </div>
     <div class="header-lower flex-box justify-between align-center">
-      <div class="header-lower-left flex-box justify-between">
+      <div class="header-lower-left flex-box">
         {% for block in section.blocks %}
         {% for link in linklists[block.settings.nav_list_lower_left].links %}
         <li class="lower-left-nav-list"><a href="{{link.url}}" class="lower-left-nav-item flex-box align-center">{{link.title}}{% if link.links != blank %}<span class="down-chevron">{% include 'icon-down-chevron-brown' %}</span>{% endif %}</a>
