@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="pfs-right flex-box justify-between">
+      <div class="pfs-right flex-box">
         
       	{% for product in collections['all'].products limit:3 %}
         <div class="pfs-product" data-tag="{% for tag in product.tags limit:1 %}{{ tag }}{% endfor %}" data-price="{{ product.price }}">
