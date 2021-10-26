@@ -1,7 +1,220 @@
+<style>
+  
+  .default-h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #342D25;
+    font-family: Athelas,sans-serif;
+    text-align: center;
+  }
+
+  .default-text {
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #342D25;
+    color: #F4EDE2;
+    display: table;
+    margin: 0 auto;
+    padding: 14px 44px;
+    margin-top: 30px;
+  }
+  .more-block {
+    padding: 145px 0;
+  }
+
+
+  
+  
+  
+  
+  
+  
+  
+  .margin-extend {
+  	margin: calc(-.5 * var(--base-spacing));
+  }
+.grid-box {
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+  .grid-child {
+    background-color: var(--background-main);
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      max-width: none;
+      margin: 0; 
+      height: 520px;
+      }
+
+  .grid-child:hover img {
+    transform: scale(1.03);
+  }
+
+.grid-wide {
+  width: 66.66666%;
+  padding: calc(.5 * var(--base-spacing));
+    }
+
+  .grid-normal {
+    width: 33.33333%;
+    padding: calc(.5 * var(--base-spacing));
+      }
+
+
+.grid-img-box {
+  width: 100%;
+  height: 100%;
+    overflow: hidden;}
+
+.grid-img-box img {
+  width: 100%;
+  height: auto;
+  min-height: 519px;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 50%;
+  filter: brightness(0.75);}
+
+  .grid-text-box {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 0 64px 58px 64px;
+  }
+
+  .grid-heading-text {
+    font-size: 30px;
+    font-weight: 700;
+    color: #F4EDE2;
+    font-family: Athelas,sans-serif;
+  }
+  .grid-para {
+    display: inline-block;
+    border-bottom: 1px solid;
+    width: fit-content;
+    color: #F4EDE2;
+  }
+  .grid-box img {
+    transition: transform 1s ease-out;
+  }  
+  .bg-block {
+    background-color: var(--background-main);
+  }
+  
+  @media(max-width: 992px) {
+    .grid-wide, .grid-normal {
+      width: 100%;
+    }
+    .grid-child {
+      height: 300px;
+    }
+    .grid-text-box {
+      padding: 0 56px 40px 56px;
+    }
+    .default-h2 {
+      font-size: 30px;
+    }
+
+  }
+  
+</style>
+<div class="bg-block">
+  <div class="container">
+    <div class="margin-extend">
+      <div class="grid-box module">        
+        {% for block in section.settings.blocks limit: 7 %}
+        {% assign modulo1 = forloop.index | minus: 1 | modulo: 10 %}
+        {% assign modulo2 = forloop.index | minus: 7 | modulo: 10 %}
+        <div class="{% if modulo1 == 0 or modulo2 == 0 %}grid-wide{% else %}grid-normal{% endif %} grid-child">
+          <a class="" href="{{collection[block].url}}">
+            <div class="grid-img-box">
+              {% if collection[block].image %}
+              {{ collection[block].image | img_url: '950x' | img_tag: collection[block].image.alt }}r
+              {% else %}
+              {% assign alt = collection[block].title | escape %}
+              {{ collection[block].products.first.featured_image | img_url: '950x' | img_tag: alt }}{{collection[block].products.first.featured_image}}
+              {% endif %}
+            </div>
+            <div class="grid-text-box">
+              <h2 class="grid-heading-text">{{collection[block].title}}</h2>
+              <p class="grid-para">Shop now</p>
+            </div>
+          </a>
+        </div>
+        
+        {% endfor %}        
+      </div>
+    </div>
+    
+    <div class="more-block module">
+      <h2 class="default-h2">{{ section.settings.header_text }}</h2>
+      <p class="default-text">{{ section.settings.sub_header_text }}</p>
+      <a href="{{ section.settings.button_url }}" class="btn">{{ section.settings.button_text }}</a>
+    </div>
+  </div>
+</div>
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Collection list new",
+    "settings": [
+		{
+          "id": "header_text",
+          "type": "text",
+          "label": "Header text"
+
+        },
+        {
+        "id": "sub_header_text",
+        "type": "html",
+        "label": "Sub header text"
+
+        },
+        {
+        "id": "button_text",
+        "type": "text",
+        "label": "Button text"
+        },
+        {
+        "id": "button_url",
+        "type": "url",
+        "label": "Button url"
+        }
+	],
+	"blocks": [
+		{
+                "type": "Collection",
+                "name": "Your collection",
+                "settings": [
+
+                {
+                "id": "collection_id",
+                "type": "collection",
+                "label": "Choose collection"
+
+                }
+              ]
+            }
+	],
+"presets": [
+    {
+      "name": "Collection specific",
+		"category":"section"
+    }
+  ]
   }
 {% endschema %}
 
