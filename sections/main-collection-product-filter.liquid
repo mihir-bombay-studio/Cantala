@@ -140,10 +140,13 @@
   .close-filter {
   	display: none;
   }
-  .card-product-image {
+  .card-product-image img {
+    overflow: hidden;
+  }
+  .card-product-image img {
     transition: transform 250ms ease-out 0s;
   }
-  .card-product:hover .card-product-image {
+  .card-product:hover .card-product-image img {
   	transform: scale(1.05);
   }
   @media (max-width: 992px) {
