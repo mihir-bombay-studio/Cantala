@@ -769,26 +769,28 @@ allMods.each(function(i, el) {
     el.addClass("already-visible"); 
   } 
 });
-win.scroll(function(event) {
+$(document).ready(function() {
+  win.scroll(function(event) {
 
-  if(firstscroll) {
+    if(firstscroll) {
+      allMods.each(function(i, el) {
+        var el = $(el);console.log(el.offset().top)
+        if (el.offset().top > lastScrollTop){
+          el.addClass("come-in"); 
+        } else {
+          el.addClass("come-out"); 
+        }
+      });
+      firstscroll = false;
+    }
+
+    var st = $(this).scrollTop();
     allMods.each(function(i, el) {
-      var el = $(el);console.log(el.offset().top)
-      if (el.offset().top > lastScrollTop){
-        el.addClass("come-in"); 
-      } else {
-        el.addClass("come-out"); 
-      }
+      var el = $(el);
+      if (el.visible(true)) {
+        el.addClass("module-init"); 
+      } 
     });
-    firstscroll = false;
-  }
-  
-  var st = $(this).scrollTop();
-  allMods.each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("module-init"); 
-    } 
+
   });
-  
 });
