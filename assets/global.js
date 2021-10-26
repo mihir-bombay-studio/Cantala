@@ -759,8 +759,6 @@ var win = $(window);
 
 var allMods = $(".module");
 
-var lastScrollTop = $(window).scrollTop();
-
 var firstscroll = true;
 
 allMods.each(function(i, el) {
@@ -770,6 +768,8 @@ allMods.each(function(i, el) {
   } 
 });
 $(document).ready(function() {
+
+var lastScrollTop = $(window).scrollTop();
   win.scroll(function(event) {
 
     if(firstscroll) {
