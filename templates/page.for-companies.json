@@ -14,10 +14,33 @@
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
         "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png"
       }
+    },
+    "163528025616017219": {
+      "type": "img-with-text-btn",
+      "blocks": {
+        "15199263-7c92-43cb-bcd5-d434456c93aa": {
+          "type": "button",
+          "settings": {
+            "button_text": "Contacteer ons",
+            "button_link": "shopify:\/\/pages\/contacteer-ons",
+            "button-color": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "15199263-7c92-43cb-bcd5-d434456c93aa"
+      ],
+      "settings": {
+        "heading": "Lorem ipsum",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc.",
+        "image": "shopify:\/\/shop_images\/hero_img.png",
+        "img_position": "img_first"
+      }
     }
   },
   "order": [
     "main",
-    "163394382335937664"
+    "163394382335937664",
+    "163528025616017219"
   ]
 }
