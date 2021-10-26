@@ -148,7 +148,7 @@
         "974b1a35-04aa-4f56-a166-590a3acf2e52"
       ],
       "settings": {
-        "yt-link": "https:\/\/www.youtube.com\/embed\/UqyT8IEBkvY",
+        "yt-link": "https:\/\/www.youtube.com\/embed\/nHzrZMjL60A",
         "yt-cover": "shopify:\/\/shop_images\/cover.png",
         "play-btn": "<svg id=\"Play_button\" data-name=\"Play button\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"90\" height=\"90\" viewbox=\"0 0 90 90\">   <g id=\"Ellipse_1099\" data-name=\"Ellipse 1099\" fill=\"none\" stroke=\"#f4ede2\" stroke-width=\"1.5\">     <circle cx=\"45\" cy=\"45\" r=\"45\" stroke=\"none\"><\/circle>     <circle cx=\"45\" cy=\"45\" r=\"44.25\" fill=\"none\"><\/circle>   <\/g>   <path id=\"Polygon_1\" data-name=\"Polygon 1\" d=\"M14,0,28,23H0Z\" transform=\"translate(60 31) rotate(90)\" fill=\"#f4ede2\"><\/path> <\/svg>",
         "gtk-title": "Maak kennis met Cantata",
@@ -227,6 +227,7 @@
     },
     "16339451072b2820df": {
       "type": "promotional-gifts",
+      "disabled": true,
       "settings": {
         "heading": "Relatiegeschenken",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
@@ -235,6 +236,7 @@
     },
     "163395068167d59b32": {
       "type": "img-with-text-btn",
+      "disabled": true,
       "blocks": {
         "c2f1192f-cd8c-4eb9-8ca9-4a4639807338": {
           "type": "button",
@@ -257,6 +259,7 @@
     },
     "16339544764961238f": {
       "type": "promotional-gift-contact",
+      "disabled": true,
       "settings": {
         "heading": "Contacteer ons",
         "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png"
@@ -264,6 +267,7 @@
     },
     "16340375883eb7d54e": {
       "type": "stores",
+      "disabled": true,
       "blocks": {
         "a50142d8-014a-40df-908e-054e8b1d9051": {
           "type": "address",
@@ -403,18 +407,21 @@
     },
     "163410338821e0284f": {
       "type": "store-locator-map",
+      "disabled": true,
       "settings": {
         "heading": "Winkelpunten"
       }
     },
     "1634119612adf2ad5c": {
       "type": "product-filter-sort",
+      "disabled": true,
       "settings": {
         "heading": "Filter op"
       }
     },
     "1634124860995a6222": {
       "type": "addicted-companies",
+      "disabled": true,
       "blocks": {
         "2a0c8d10-2c0a-4c95-a6ab-b5cfe1614463": {
           "type": "logo",
@@ -453,6 +460,7 @@
     },
     "16342908747a1ab997": {
       "type": "about-us-composer",
+      "disabled": true,
       "settings": {
         "heading": "Composer of taste",
         "sub_heading": "LOREM IPSUM",
@@ -464,6 +472,7 @@
     },
     "163429310107f8d2c2": {
       "type": "about-us-how",
+      "disabled": true,
       "settings": {
         "heading": "Knowhow",
         "para_one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
@@ -472,6 +481,7 @@
     },
     "163429485630472be7": {
       "type": "about-us-rnd",
+      "disabled": true,
       "settings": {
         "heading": "R&D",
         "sub_heading": "Discovery en reizen",
@@ -482,33 +492,39 @@
         "para_three": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare."
       }
     },
-    "16342977417b5f30db": {
-      "type": "about-jobs-shops",
+    "16348950151b380d71": {
+      "type": "faq",
       "blocks": {
-        "db30e44e-79fa-488e-b67c-1206dab606c4": {
-          "type": "links_in_img",
+        "1f36edfe-c2a9-4fad-9890-cc953350ea66": {
+          "type": "faq",
           "settings": {
-            "link_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png",
-            "link_heading": "We zoeken jou!",
-            "link_text": "Alle jobs",
-            "link_url": "shopify:\/\/pages\/jobs"
+            "question": "Wat houden jullie eco friendly cups voor Nespresso precies in?",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor nisl id lectus elementum, et cursus enim maximus. Etiam laoreet urna sollicitudin lobortis sodales. Nulla tellus sapien, convallis in iaculis at, volutpat ac est. Integer ut quam ac urna mollis sagittis sed at magna. Nunc et lorem a nisi pellentesque volutpat a in risus. Aenean et ante vel sem tristique euismod sit amet volutpat mauris. Morbi pellentesque odio scelerisque, ultricies metus eu, faucibus eros. Morbi volutpat scelerisque elit. Pellentesque ultricies non lacus a suscipit. Phasellus vel sapien id nulla convallis pharetra viverra sed justo."
           }
         },
-        "36ff2aa0-3671-42ff-8233-2562bc61be1c": {
-          "type": "links_in_img",
+        "692045bd-bc49-4a57-9af7-e4b9bd9b8eb3": {
+          "type": "faq",
           "settings": {
-            "link_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png",
-            "link_heading": "Winkelpunten",
-            "link_text": "Zoek Cantata winkels",
-            "link_url": "shopify:\/\/pages\/jobs"
+            "question": "Wat zijn de levertermijnen voor jullie webshop?",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor nisl id lectus elementum, et cursus enim maximus. Etiam laoreet urna sollicitudin lobortis sodales. Nulla tellus sapien, convallis in iaculis at, volutpat ac est. Integer ut quam ac urna mollis sagittis sed at magna. Nunc et lorem a nisi pellentesque volutpat a in risus. Aenean et ante vel sem tristique euismod sit amet volutpat mauris. Morbi pellentesque odio scelerisque, ultricies metus eu, faucibus eros. Morbi volutpat scelerisque elit. Pellentesque ultricies non lacus a suscipit. Phasellus vel sapien id nulla convallis pharetra viverra sed justo."
+          }
+        },
+        "759539d2-658e-4c54-b93b-8c488d0d9f18": {
+          "type": "faq",
+          "settings": {
+            "question": "Worden de aankopen van de webshop ook toegevoegd aan mijn klantenkaart in jullie fysieke winkel?",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor nisl id lectus elementum, et cursus enim maximus. Etiam laoreet urna sollicitudin lobortis sodales. Nulla tellus sapien, convallis in iaculis at, volutpat ac est. Integer ut quam ac urna mollis sagittis sed at magna. Nunc et lorem a nisi pellentesque volutpat a in risus. Aenean et ante vel sem tristique euismod sit amet volutpat mauris. Morbi pellentesque odio scelerisque, ultricies metus eu, faucibus eros. Morbi volutpat scelerisque elit. Pellentesque ultricies non lacus a suscipit. Phasellus vel sapien id nulla convallis pharetra viverra sed justo."
           }
         }
       },
       "block_order": [
-        "db30e44e-79fa-488e-b67c-1206dab606c4",
-        "36ff2aa0-3671-42ff-8233-2562bc61be1c"
+        "1f36edfe-c2a9-4fad-9890-cc953350ea66",
+        "692045bd-bc49-4a57-9af7-e4b9bd9b8eb3",
+        "759539d2-658e-4c54-b93b-8c488d0d9f18"
       ],
       "settings": {
+        "heading": "FAQ - Veelgestelde vragen",
+        "faq_para": "Heb je een vraag voor ons? Op deze pagina kan je al een antwoord vinden op de vragen die we het vaakst krijgen. Vind je het antwoord op jouw vraag hier niet tussen? Stuur ons gerust een mailtje (contact@cantata.be) of bel ons even op het nummer 03 353 65 60 en we helpen je met veel plezier verder."
       }
     }
   },
@@ -532,6 +548,6 @@
     "16342908747a1ab997",
     "163429310107f8d2c2",
     "163429485630472be7",
-    "16342977417b5f30db"
+    "16348950151b380d71"
   ]
 }
