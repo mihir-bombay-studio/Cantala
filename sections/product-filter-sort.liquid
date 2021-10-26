@@ -42,25 +42,25 @@
     $(this).toggleClass('selected');
     if($(this).hasClass('selected')){
     $(this).find('.close-icon').removeClass('no-disp');
-//       if($(this).data('sort')=='ltoh'){
-//         var ltoh = [];
-//         $('.pfs-product').each(function() {
-//         	var price = $(this).data('price');
-//           	ltoh.push(price);
-//           console.log(ltoh);
-//         });
-//       	console.log('low to high');
-//       }
-//       else{
-//       	console.log('high to low');
-//       }
+      if($(this).data('sort')=='ltoh'){
+        var ltoh = [];
+        $('.pfs-product').each(function() {
+        	var price = $(this).data('price');
+          	ltoh.push(price);
+          console.log(ltoh);
+        });
+      	console.log('low to high');
+      }
+      else{
+      	console.log('high to low');
+      }
       var $wrapper = $('.pfs-right');
 
 $wrapper.find('.pfs-product').sort(function (a, b) {
     return +a.dataset.price - +b.dataset.price;
 })
 .appendTo( $wrapper );
-}
+
     }
     else {
     	$(this).find('.close-icon').addClass('no-disp');
