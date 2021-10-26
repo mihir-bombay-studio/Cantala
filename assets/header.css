@@ -303,6 +303,12 @@ li.lower-right-nav-list {
 li.lower-right-nav-list:last-child {
 	margin-right: 0;
 }
+.lower-left-nav-list {
+    margin-left: 34px;
+}
+.lower-left-nav-list:first-child {
+	margin-left: 0;
+}
 @media (max-width: 992px){
   
   .small-font {
