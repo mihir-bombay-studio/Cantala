@@ -81,15 +81,15 @@ header{
 }
 
 .hover-wrapper {
-    padding: 108px 20px 10px 20px;
+    padding: 108px 0px 0px 46px;
     display: block;
-  visibility: hidden;
+    visibility: hidden;
     position: absolute;
     right: 0;
-  	left: 2vw;
+    left: -26px;
     z-index: 1;
-    width: 96vw;
-  	max-width: 1550px;
+    width: calc(100vw - 18px);
+    max-width: none;
     text-align: left;
     top: 124px;
     -webkit-transition: all .4s ease;
