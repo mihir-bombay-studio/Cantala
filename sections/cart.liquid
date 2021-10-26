@@ -191,6 +191,9 @@
   .no-vis {
     visibility: hidden!important;
   }
+  .cart-empty {
+    text-align: center;
+  }
 </style>
 
 <div class="drawer-cart">
@@ -253,14 +256,14 @@
       
       
       <div class="cart-empty {% if cart.item_count > 0 %}no-disp{% endif %}">
-        <span class="cart-empty-text">Start <a href="/collections">adding</a> your cart!</span>
+        <span class="cart-empty-text">Start <a href="/collections">adding items</a> your cart!</span>
       </div>
       
     </div>
     
     <div class="cart-foot">
       
-        <div class="cart-total-block">
+        <div class="cart-total-block {% if cart.item_count == 0 %}no-disp{% endif %}">
           <div class="cart-product-row marg-bottom-xs">
             <div class="cart-product-col">
               <span class="total-text">Verzending</span>
