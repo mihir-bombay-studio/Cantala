@@ -2333,5 +2333,5 @@ details-disclosure > details {
     }
   }
   .underline {
-  	text-decoration: underline;
+  	border-bottom: 1px solid;
   }
