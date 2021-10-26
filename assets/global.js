@@ -761,21 +761,28 @@ var allMods = $(".module");
 
 var lastScrollTop = $(window).scrollTop();
 
+var firstscroll = true;
+
 allMods.each(function(i, el) {
   var el = $(el);
   if (el.visible(true)) {
     el.addClass("already-visible"); 
   } 
 });
-allMods.each(function(i, el) {
-  var el = $(el);
-    if (el.scrollTop() > lastScrollTop){
-      el.addClass("come-out"); 
-    } else {
-      el.addClass("come-in"); 
-    }
-});
 win.scroll(function(event) {
+
+  if(firstscroll) {
+    allMods.each(function(i, el) {
+      var el = $(el);
+      if (el.scrollTop() > lastScrollTop){
+        el.addClass("come-out"); 
+      } else {
+        el.addClass("come-in"); 
+      }
+    });
+    firstscroll = false;
+  }
+  
   var st = $(this).scrollTop();
   allMods.each(function(i, el) {
     var el = $(el);
