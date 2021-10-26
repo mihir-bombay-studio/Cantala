@@ -7,8 +7,8 @@
         <div class="pfs-heading medium">{{ section.settings.heading }}</div>
         <div class="filter-and-sorting">
           <div class="sorting">
-            <div class="sort" data-value="ltoh">Price, low to high<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
-            <div class="sort" data-value="htol">Price, high to low<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
+            <div class="sort" data-sort="ltoh">Price, low to high<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
+            <div class="sort" data-sort="htol">Price, high to low<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
           </div>
           <div class="filters">
             {% for product in collections['all'].products limit:1 %}
@@ -42,7 +42,7 @@
     $(this).toggleClass('selected');
     if($(this).hasClass('selected')){
     $(this).find('.close-icon').removeClass('no-disp');
-      if($(this).hasClass('ltoh')){
+      if($(this).data('sort')=='ltoh'){
       	console.log('low to high');
       }
       else{
