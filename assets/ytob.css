@@ -52,6 +52,7 @@
   }
   .coll-img img {
     transition: transform 250ms ease-out 0s;
+    filter: brightness(0.75);
   }
   .prod-collection:hover .coll-img img {
   	transform: scale(1.05);
