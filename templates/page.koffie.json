@@ -5,15 +5,9 @@
       "settings": {
         "sub_header_text": "Leverings- en factuurvoorwaarden CANTATA BVBA<br> [Online verkopen B2B en B2C]"
       }
-    },
-    "16336890810a74a79c": {
-      "type": "legal",
-      "settings": {
-      }
     }
   },
   "order": [
-    "main",
-    "16336890810a74a79c"
+    "main"
   ]
 }
