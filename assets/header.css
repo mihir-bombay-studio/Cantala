@@ -182,7 +182,7 @@ header{
 .header-lower-left {
   min-width: 434px;
     width: 40%;
-  justify-content: left;
+  justify-content: flex-start;
 /*     max-width: 450px; */
 }
 
@@ -198,7 +198,7 @@ header{
 
 .header-lower-right-inner {
   margin-left: auto;
-  justify-content: right;
+  justify-content: flex-end;
 }
 .search-container {
     display: inline-block;
