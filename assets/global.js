@@ -774,7 +774,7 @@ var lastScrollTop = $(window).scrollTop();
 
     if(firstscroll) {
       allMods.each(function(i, el) {
-        var el = $(el);console.log(el.offset().top)
+        var el = $(el);
         if (el.offset().top > lastScrollTop){
           el.addClass("come-in"); 
         } else {
