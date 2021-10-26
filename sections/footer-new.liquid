@@ -67,7 +67,7 @@
                 {%- endif -%}
               <div class="fns-form-input-wrap">
                 <div class="fns-sub-form-input-wrap flex-box">
-                <input class="subscription-form-input" type="text" name="contact[tags]" placeholder="Jouw e-mailadres" value="newsletter" required>
+                <input class="subscription-form-input" type="email" name="contact[email]" placeholder="Jouw e-mailadres" required>
                   <div class="submit-btn-wrap wrap-disabled">
                 <button class="submit-btn btn medium disabled" type="submit" form="contact_form" value="Submit">
                   {% for block in section.blocks %}
@@ -79,7 +79,7 @@
                   </div>
               </div>
               </div>
-              <input type="checkbox" class="no-disp" id="tncf" name="contact[checkbox]" value="Terms">
+              <input type="checkbox" class="no-disp" id="tncf" name="contact[tags]" value="newsletter">
               <div class="checkbox-wrap flex-box align-center">
                 <span for="tncf" class="checkbox rel"><span class="checked"></span></span>
                 <span class="checkbox-label">Ik ga akkoord met de <a class="label-link" href="#">voorwaarden</a> en heb de <a class="label-link" href="#">privacy policy</a> gelezen.</span>
