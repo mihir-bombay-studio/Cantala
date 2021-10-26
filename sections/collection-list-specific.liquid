@@ -138,17 +138,17 @@
         {% assign modulo1 = forloop.index | minus: 1 | modulo: 10 %}
         {% assign modulo2 = forloop.index | minus: 7 | modulo: 10 %}
         <div class="{% if modulo1 == 0 or modulo2 == 0 %}grid-wide{% else %}grid-normal{% endif %} grid-child">
-          <a class="" href="{{collections[block].url}}">
+          <a class="" href="{{collections[block.settings.collection_id].url}}">
             <div class="grid-img-box">
-              {% if collections[block].image %}
-              {{ collections[block].image | img_url: '950x' | img_tag: collections[block].image.alt }}r
+              {% if collections[block.settings.collection_id].image %}
+              {{ collections[block.settings.collection_id].image | img_url: '950x' | img_tag: collections[block.settings.collection_id].image.alt }}r
               {% else %}
-              {% assign alt = collections[block].title | escape %}
-              {{ collections[block].products.first.featured_image | img_url: '950x' | img_tag: alt }}{{collections[block].products.first.featured_image}}
+              {% assign alt = collections[block.settings.collection_id].title | escape %}
+              {{ collections[block.settings.collection_id].products.first.featured_image | img_url: '950x' | img_tag: alt }}{{collections[block.settings.collection_id].products.first.featured_image}}
               {% endif %}
             </div>
             <div class="grid-text-box">
-              <h2 class="grid-heading-text">{{collections[block].title}}</h2>
+              <h2 class="grid-heading-text">{{collections[block.settings.collection_id].title}}</h2>
               <p class="grid-para">Shop now</p>
             </div>
           </a>
