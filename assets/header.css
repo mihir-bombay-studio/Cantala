@@ -299,6 +299,9 @@ ul.search-results li a {
 li.lower-right-nav-list {
     margin-right: 34px;
 }
+li.lower-right-nav-list:last-child {
+	margin-right: 0;
+}
 @media (max-width: 992px){
   
   .small-font {
