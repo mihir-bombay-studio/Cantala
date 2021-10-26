@@ -196,7 +196,104 @@ header{
     width: 50%;
     margin-left: auto;
 }
+.search-container {
+    display: inline-block;
+    position: relative;
+}
 
+.search-container .search {
+    transition: all 1s;
+    z-index: 4;
+    position: relative;
+    display: inline-block;
+    height: auto;
+    width: 16px;
+    vertical-align: middle;
+}
+  .search-container .search svg {
+    content: "";
+    position: absolute;
+    top: -9px;
+    right: 0;
+    bottom: 0;
+    left: 8px;
+    transition: all .5s;
+}
+
+.search-container .search:hover {
+  cursor: pointer;
+}
+.search-container .input-box {
+    position: absolute;
+    right: -20px;
+    left: auto;
+    top: -5px;
+    background-color: transparent;
+}
+
+.search-container input {
+      width: 50px;
+    height: 30px;
+    outline: none;
+    border-bottom: 1px solid #342d25;
+    color: #342d25;
+    padding: 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.search-container input:hover {
+  cursor: pointer;
+}
+
+.search-container.active input {
+  width: 300px;
+  opacity: 1;
+  cursor: text;
+  padding: 0 50px 0 10px;
+  font-family: var(--font-body-family)!important;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .4px;
+}
+  .search-container input::placeholder {
+    font-family: var(--font-body-family)!important;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: .4px;
+      opacity: .7;
+        }
+
+  .search-container input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: var(--font-body-family)!important;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: .4px;
+      opacity: .7;
+        }
+  ul.search-results {
+    background-color: #f4ede2;
+    border: 1px solid;
+    max-height: 275px;
+    overflow: auto;
+    width: 100%;
+}
+ul.search-results li a {
+    display: flex;
+    align-items: center;
+}
+  ul.search-results li a .title {
+    margin: 0;
+    margin-left: 5px;
+  }
 @media (max-width: 992px){
   
   .small-font {
@@ -343,4 +440,7 @@ header{
   .lower-left-nav-list:hover {
 	border-bottom: none;
 }
+    ul.search-results {
+      margin: 0 20px;
+    }
 }
