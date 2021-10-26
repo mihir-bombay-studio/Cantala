@@ -193,8 +193,8 @@ header{
 }
 
 .header-lower-right-inner {
-    width: 50%;
-    margin-left: auto;
+  margin-left: auto;
+  justify-content: right;
 }
 .search-container {
     display: inline-block;
@@ -294,6 +294,11 @@ ul.search-results li a {
     margin: 0;
     margin-left: 5px;
   }
+
+
+li.lower-right-nav-list {
+    margin-right: 34px;
+}
 @media (max-width: 992px){
   
   .small-font {
