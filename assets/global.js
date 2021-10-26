@@ -773,8 +773,8 @@ win.scroll(function(event) {
 
   if(firstscroll) {
     allMods.each(function(i, el) {
-      var el = $(el);console.log(el.scrollTop)
-      if (el.scrollTop() > lastScrollTop){
+      var el = $(el);console.log(el.offset().top)
+      if (el.offset().top > lastScrollTop){
         el.addClass("come-out"); 
       } else {
         el.addClass("come-in"); 
