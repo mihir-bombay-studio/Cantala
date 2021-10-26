@@ -76,8 +76,9 @@
           $(this).removeClass('through-filter');
         }
         else{
-          
+          if($('.filter.selected').length === 0){
           	$(this).removeClass('not-through-filter');
+          }
         }
         });
     }
