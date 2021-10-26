@@ -267,6 +267,11 @@
         sub_wrap.toggleClass('wrap-disabled');
         sub_btn.toggleClass('disabled');
       });
+      
+      $('fns-form-wrapper .submit-btn').click(function() {
+      	var email = $('.fns-form-wrapper .subscription-form-input').val();
+        $('.ns-sub-form-input-wrap .subscription-form-input').val(email);
+      });
     </script>
   </body>
 </html>
