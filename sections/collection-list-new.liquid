@@ -133,7 +133,7 @@
 <div class="bg-block">
   <div class="container">
     <div class="margin-extend">
-      <div class="grid-box">        
+      <div class="grid-box module">        
         {% for collection in collections limit: 7 %}
         {% assign modulo1 = forloop.index | minus: 1 | modulo: 10 %}
         {% assign modulo2 = forloop.index | minus: 7 | modulo: 10 %}
@@ -158,7 +158,7 @@
       </div>
     </div>
     
-    <div class="more-block">
+    <div class="more-block module">
       <h2 class="default-h2">{{ section.settings.header_text }}</h2>
       <p class="default-text">{{ section.settings.sub_header_text }}</p>
       <a href="{{ section.settings.button_url }}" class="btn">{{ section.settings.button_text }}</a>

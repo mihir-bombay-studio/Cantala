@@ -3,14 +3,14 @@
 <div class="get-to-know-wrapper">
   <div class="container">
     <div class="get-to-know flex-box align-center justify-between">
-      <div class="video-gtk rel">
+      <div class="video-gtk rel module">
         <img  id="video-cover" src="{{ section.settings.yt-cover | img_url: '1280x' }}" alt="Video title">
         <iframe id="player" width="100%" height="100%" src="{{ section.settings.yt-link }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <div id="play" class="play-btn">
           {{ section.settings.play-btn }}
         </div>
       </div>
-      <div class="text-gtk">
+      <div class="text-gtk module">
         <h2 class="gtk-title heading-2">{{ section.settings.gtk-title }}</h2>
         <div class="gtk-desc">{{ section.settings.gtk-desc }}</div>
         <div class="gtk-btns flex-box">

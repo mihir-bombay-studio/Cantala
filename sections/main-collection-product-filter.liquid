@@ -140,6 +140,15 @@
   .close-filter {
   	display: none;
   }
+  .card-product-image {
+    overflow: hidden;
+  }
+  .card-product-image img {
+    transition: transform 250ms ease-out 0s;
+  }
+  .card-product:hover .card-product-image img {
+  	transform: scale(1.05);
+  }
   @media (max-width: 992px) {
     .category-wrapper .sticky-nav {
       width: 100%;
@@ -197,7 +206,7 @@
     }
   }  
 </style>
-  <div class="category category-padd container padd-bottom padd-top">    
+  <div class="category category-padd container padd-bottom padd-top module">    
     <div class="category-wrapper row-nav marg-top">
       <div class="underlay"></div>
       <div class="sticky-nav sub-marg-bottom">

@@ -5,14 +5,14 @@
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 
 <div class="page-width page-width--narrow">
-  <h2 class="page-title">
+  <h2 class="page-title module">
     {%- if section.settings.page.title != blank -%}
       {{ section.settings.page.title | escape }}
     {%- else -%}
       Page title
     {%- endif -%}
   </h2>
-  <div class="rte">
+  <div class="rte module">
     {%- if section.settings.page.content != blank -%}
       {{ section.settings.page.content }}
     {%- else -%}

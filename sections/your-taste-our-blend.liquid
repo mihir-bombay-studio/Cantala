@@ -2,8 +2,8 @@
 
 <div class="ytob-wrapper">
   <div class="container rel">
-    <h2 class="ytob-title text-center heading-2">{{section.settings.ytob-heading}}</h2>
-    <div class="prod-collections flex-box justify-between">
+    <h2 class="ytob-title text-center heading-2  module">{{section.settings.ytob-heading}}</h2>
+    <div class="prod-collections flex-box justify-between  module">
       {% for block in section.blocks %}
 		{% if block.type == "collection_select" %}
       		{% assign collection_handle = block.settings.collection_sel %}
