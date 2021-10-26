@@ -25,6 +25,9 @@
       event.stopImmediatePropagation();
     }
   });
+    $('input[name="q"]').focusout(function(){
+      $('#searchbox').removeClass('active');
+    });
 }, false);
   
   
