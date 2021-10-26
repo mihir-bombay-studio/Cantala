@@ -65,6 +65,7 @@
                 {%- if form.posted_successfully? -%}
 
                 {%- endif -%}
+              <div class="fns-form-input-wrap">
                 <div class="fns-sub-form-input-wrap flex-box">
                 <input class="subscription-form-input" type="email" name="contact[email]" placeholder="Jouw e-mailadres" required>
                   <div class="submit-btn-wrap wrap-disabled">
@@ -76,6 +77,7 @@
               	  {% endfor %}
               </button>
                   </div>
+              </div>
               </div>
               <input type="checkbox" class="no-disp" id="tncf" name="contact[checkbox]" value="Terms">
               <div class="checkbox-wrap flex-box align-center">

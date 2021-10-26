@@ -283,7 +283,7 @@
       $('.fns-form-wrapper .submit-btn').click(function(){
         if(!regex.test(inputvalues)){
           if($('.fns-sub-form-input-wrap').find('p.para').length == 0){
-            $('.fns-sub-form-input-wrap').append( "<p class='para' style='margin: 10px 0 0 0'>Please insert valid Email.</p>" );
+            $('.fns-form-input-wrap').append( "<p class='para' style='margin: 10px 0 0 0'>Please insert valid Email.</p>" );
             return regex.test(inputvalues);
           }
         }
