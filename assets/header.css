@@ -86,9 +86,9 @@ header{
   visibility: hidden;
     position: absolute;
     right: 0;
-  	left: 0;
+  	left: 2vw;
     z-index: 1;
-    width: 100vw;
+    width: 96vw;
   	max-width: 1550px;
     text-align: left;
     top: 124px;
@@ -179,6 +179,7 @@ header{
 }
 
 .header-lower-left {
+  min-width: 434px;
     width: 40%;
   justify-content: left;
 /*     max-width: 450px; */
@@ -189,6 +190,7 @@ header{
 }
 
 .header-lower-right{
+  min-width: 354px;
 	width: 40%;
 /*   max-width: 180px; */
 }
@@ -342,6 +344,7 @@ li.lower-right-nav-list:last-child {
   
   .header-lower-left {
     width: 100%;
+    min-width: unset;
 }
   
   .header-lower-right-inner {

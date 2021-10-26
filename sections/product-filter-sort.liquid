@@ -7,8 +7,8 @@
         <div class="pfs-heading medium">{{ section.settings.heading }}</div>
         <div class="filter-and-sorting">
           <div class="sorting">
-            <div class="sort">Price, low to high<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
-            <div class="sort">Price, high to low<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
+            <div class="sort" data-sort="ltoh">Price, low to high<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
+            <div class="sort" data-sort="htol">Price, high to low<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
           </div>
           <div class="filters">
             {% for product in collections['all'].products limit:1 %}
@@ -19,10 +19,10 @@
           </div>
         </div>
       </div>
-      <div class="pfs-right flex-box justify-between">
+      <div class="pfs-right flex-box">
         
       	{% for product in collections['all'].products limit:3 %}
-        <div class="pfs-product">
+        <div class="pfs-product" data-tag="{% for tag in product.tags limit:1 %}{{ tag }}{% endfor %}" data-price="{{ product.price }}">
         	 <div class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
         </div>
@@ -42,9 +42,41 @@
     $(this).toggleClass('selected');
     if($(this).hasClass('selected')){
     $(this).find('.close-icon').removeClass('no-disp');
+      if($(this).data('sort')=='ltoh'){
+//         var ltoh = [];
+//         $('.pfs-product').each(function() {
+//         	var price = $(this).data('price');
+//           	ltoh.push(price);
+//           console.log(ltoh);
+//         });
+//       	console.log('low to high');
+        var $wrapper = $('.pfs-right');
+
+		$wrapper.find('.pfs-product').sort(function (a, b) {
+    		return +a.dataset.price - +b.dataset.price;
+		})
+		.appendTo( $wrapper );
+      }
+      else{
+      	console.log('high to low');
+        var $wrapper = $('.pfs-right');
+
+		$wrapper.find('.pfs-product').sort(function (a, b) {
+    		return +b.dataset.price - +a.dataset.price;
+		})
+		.appendTo( $wrapper );
+      }
+      
+
     }
     else {
     	$(this).find('.close-icon').addClass('no-disp');
+      var $wrapper = $('.pfs-right');
+
+		$wrapper.find('.pfs-product').sort(function (a, b) {
+    		return +a.dataset.price - +b.dataset.price;
+		})
+		.appendTo( $wrapper );
     }
   });
   
@@ -52,9 +84,38 @@
   	$(this).toggleClass('selected');
     if($(this).hasClass('selected')){
     $(this).find('.close-icon').removeClass('no-disp');
+      var tag = $(this).data('tag');
+      console.log(tag);
+      $('.pfs-product').each(function() {
+        if($(this).data('tag')==tag){
+          $(this).removeClass('not-through-filter')
+          $(this).addClass('through-filter');
+        }
+        else{
+          if($(this).hasClass('through-filter')){
+          	
+          }else {
+          	$(this).addClass('not-through-filter');
+          }
+        }
+      });
     }
     else {
     	$(this).find('.close-icon').addClass('no-disp');
+      var tag = $(this).data('tag');
+      $('.pfs-product').each(function() {
+        	if($(this).data('tag')==tag){
+          $(this).removeClass('through-filter');
+              if($('.filter.selected').length === 0){
+          	$(this).removeClass('not-through-filter');
+          }
+        }
+        else{
+          if($('.filter.selected').length === 0){
+          	$(this).removeClass('not-through-filter');
+          }
+        }
+        });
     }
   });
 </script>

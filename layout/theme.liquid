@@ -268,6 +268,37 @@
         sub_wrap.toggleClass('wrap-disabled');
         sub_btn.toggleClass('disabled');
       });
+      
+//       $('fns-form-wrapper .submit-btn').click(function() {
+//         console.log('click');
+//       	var email = $('.fns-form-wrapper .subscription-form-input').val();
+//         console.log(email);
+//         $('.ns-sub-form-input-wrap .subscription-form-input').val(email);
+//       });
+      
+      $(document).ready(function () {        
+
+    $(".fns-form-wrapper .subscription-form-input").change(function () {    
+      var inputvalues = $('.fns-form-wrapper .subscription-form-input').val();    
+      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;  
+      $('.fns-form-wrapper .submit-btn').click(function(){
+        if(!regex.test(inputvalues)){
+          if($('.fns-form-input-wrap').find('p.para').length == 0){
+            $('.fns-form-input-wrap').append( "<p class='para' style='margin: 10px 0 0 0'>Please insert valid Email.</p>" );
+            return regex.test(inputvalues);
+          }
+        }
+        else {
+          var text = $('.fns-form-wrapper .subscription-form-input').val();
+
+          $('.ns-sub-form-input-wrap .subscription-form-input').val(text);
+          console.log('sub');
+          $('.ns-sub-form-input-wrap .submit-btn').click();
+        }
+      });
+    });    
+
+  });
     </script>
   </body>
 </html>
