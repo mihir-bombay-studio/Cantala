@@ -75,10 +75,10 @@
           $(this).removeClass('through-filter');
         }
         else{
-          if($(this).hasClass('not-in-filter')){
+          if($(this).hasClass('not-in-filter') && $(this).hasClass('through-filter')){
           	$(this).removeClass('not-in-filter');
           }else {
-//           	$(this).removeClass('not-in-filter');
+          	$(this).addClass('not-in-filter');
           }
         }
         });
