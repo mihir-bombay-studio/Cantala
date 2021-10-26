@@ -63,12 +63,12 @@
   padding-right: 24px;
 }
 
-.product-img {
-  transition: transform 250ms ease-out 0s;
-}
-.card-product .card-product-image {
-  transform: scale(1.05);
-}
+  .product-img {
+    transition: transform 250ms ease-out 0s;
+  }
+  .coll-product:hover .product-img {
+  	transform: scale(1.05);
+  }
 @media (max-width: 992px){
   .collection-products-title {
     margin-bottom: 56px;
