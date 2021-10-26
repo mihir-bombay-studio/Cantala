@@ -54,6 +54,14 @@
     $(this).find('.close-icon').removeClass('no-disp');
       var tag = $(this).data('tag');
       console.log(tag);
+      $('.pfs-product').each(function() {
+        if($(this).data('tag')!=tag){
+        	$(this).addClass('not-in-filter');
+        }
+        else{
+        
+        }
+      });
     }
     else {
     	$(this).find('.close-icon').addClass('no-disp');
