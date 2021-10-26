@@ -123,6 +123,7 @@ header{
     line-height: 19px;
     color: var(--main-heading-color);
     margin-bottom: 22px;
+      font-weight: 500;
 }
 
 .sub-link {
