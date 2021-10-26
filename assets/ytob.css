@@ -42,6 +42,11 @@
   display: block;
 }
 
+.coll-img svg{
+	width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 992px){
   .ytob-title {
     left: calc(50% - 167px);
