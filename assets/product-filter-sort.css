@@ -35,9 +35,9 @@
 	width: 30%;
 }
 
-.pfs-product:before {
+/* .pfs-product:before {
     content: attr(data-price);
-}
+} */
 
 .pfs-product img{
 	width: 100%;
