@@ -110,7 +110,9 @@
     	$(this).find('.close-icon').addClass('no-disp');
       var tag = $(this).data('tag');
       $('.pfs-product').each(function() {
-        	if($(this).data('tag')==tag){
+        	var arr = $(this).data('tags').split(',');
+        
+        if(jQuery.inArray(tag, arr) !== -1){
           $(this).removeClass('through-filter');
               if($('.filter.selected').length === 0){
           	$(this).removeClass('not-through-filter');
