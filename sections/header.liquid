@@ -191,11 +191,13 @@
 <script>
   $('.mobile-main-menu').click(function() {
   	$(this).find('.mobile-sub-menu-wrapper').addClass('drawn');
+    $(this).addClass('full-opacity');
   });
   
   $('.back-to-main-menu').click(function(e) {
     console.log('back');
   	$(this).closest('.mobile-sub-menu-wrapper').removeClass('drawn');
+    $(".mobile-main-menu").removeClass('full-opacity');
     e.stopPropagation();
   });
    document.addEventListener('DOMContentLoaded', function() {
