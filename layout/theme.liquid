@@ -310,6 +310,33 @@
           });
   		}
         
+        if(window.location.href.indexOf("jobs") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Jobs") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("about-us") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Over ons") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("winkels") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Winkels") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
         if(window.location.href.indexOf("blogs") > -1) {
           $(".header-link").removeClass("page-selected");
           $(".header-link").each(function() {
