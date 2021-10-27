@@ -368,7 +368,7 @@
         {% endfor %}
         {% endfor %}
       </div>
-      <div class="slider-nav{% for media in product.media %}{% if forloop.length < 8 %} {% endif %}{% endfor %}">
+      <div class="slider-nav{% for media in product.media %}{% if forloop.length < 8 %}{% comment %}no-transform{% endcomment %} {% endif %}{% endfor %}">
         {% for i in (0..3) %}
         {% for media in product.media %}          
         {% case media.media_type %}
