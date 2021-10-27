@@ -315,7 +315,7 @@ li.lower-right-nav-list:last-child {
 	margin-left: 0;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1250px){
 .lower-left-nav-list {
     margin-left: 20px;
 }
