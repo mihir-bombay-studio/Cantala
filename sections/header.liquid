@@ -83,7 +83,7 @@
         <div class="header-lower-right-inner flex-box">
           {% for block in section.blocks %}
           {% for link in linklists[block.settings.nav_list_lower_right].links %}
-          <li class="lower-right-nav-list"><a href="{{link.url}}" class="lower-right-nav-item">{{link.title}}</a></li>
+          <li class="header-link lower-right-nav-list"><a href="{{link.url}}" class="lower-right-nav-item">{{link.title}}</a></li>
           {% endfor %}
           {% endfor %}
         </div>
