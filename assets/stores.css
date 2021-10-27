@@ -72,8 +72,17 @@
     margin-bottom: 14px;
 }
   
+  .contact-us-stores{
+  margin: 0;
+}
+  
   .contact-us-stores-heading{
   	width: 100%;
     margin-bottom: 24px;
   }
+  
+  .contact-us-stores .store-info-wrap {
+    width: 100%;
+    margin: 0;
+}
 }
