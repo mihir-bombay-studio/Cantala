@@ -44,6 +44,14 @@
     margin-bottom: 136px !important;
 }
 
+.contact-us-stores-heading{
+	width: 20%;
+}
+
+.contact-us-stores{
+	width: 75%;
+}
+
 @media (max-width: 992px){
   .stores-content {
     margin: 0;
