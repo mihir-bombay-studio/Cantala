@@ -36,6 +36,10 @@
 </div>
 
 <script>
+  
+  $(".pfs-product").hide();
+ $(".pfs-product:lt(3)").show();
+  
   $('.sort').click(function() {
     $('.sort').not(this).removeClass('selected');
     $('.sort').not(this).find('.close-icon').addClass('no-disp');
