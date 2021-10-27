@@ -373,9 +373,11 @@
   	opacity: 0;
     transition: all .4s ease;
   }
+  {% for media in product.media %}{% if forloop.length < 8 %}
   .slider-nav img:last-child:not(.slick-active){
   	display: none;
   }
+  {% endif %}{% endfor %}
   .slider-nav img.slick-slide.slick-current {
   	box-shadow: none !important;
     border: 1px solid #342D25;
