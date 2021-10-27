@@ -30,7 +30,7 @@ $(document).ready(function(){
     ]
   });
   $('.slider-nav').slick({
-    slidesToShow: 7,
+    slidesToShow: 6,
     slidesToScroll: 1,
     asNavFor: '.slider-for'
   });
