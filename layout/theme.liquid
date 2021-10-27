@@ -234,6 +234,8 @@
         if($('.navbar-toggler').hasClass("show")) {
           $('.navbar-toggler').removeClass("show");
           $(".drawer-menu").removeClass("drawn");
+          $('.mobile-sub-menu-wrapper').removeClass('drawn');
+          $(".mobile-main-menu").removeClass('full-opacity');
           $(".background-drawer").removeClass("drawn");
           $("body").removeClass("no-scroll");
         } else {
@@ -301,6 +303,96 @@
         }
       });
     });    
+        
+        if(window.location.href.indexOf("contacteer-ons") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Contact") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("jobs") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Jobs") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("about-us") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Over ons") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("winkels") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Winkels") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("blogs") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Blog") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("koffie") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Koffie" || $(this).data('name') == "Koffie") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("thee") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Thee" || $(this).data('name') == "Thee") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("geschenken") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Geschenken" || $(this).data('name') == "Geschenken") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("zoetwaren") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Zoetwaren & dranken" || $(this).data('name') == "Zoetwaren & dranken") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("for-companies") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Voor bedrijven" || $(this).data('name') == "Voor bedrijven") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
 
   });
     </script>

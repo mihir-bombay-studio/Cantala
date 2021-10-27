@@ -1,26 +1,33 @@
 {{ 'new-blog-article.css' | asset_url | stylesheet_tag }}
 
-<div class="article-wrapper rel">
-  <div class="container">
+<div class="article-wrapper">
+  <div class="article-excerpt-wrap module rel">
     <div class="darker-background"></div>
-    <div class="article-img-content rel module">
+  <div class="container">
+    
+    <div class="article-img-content rel">
       <div class="article-img no-t-m">
       	{{ article.image | img_url: '500x' | img_tag }}
       </div>
       <div class="article-content-wrap">
-        <div class="abs">
+        <div class="">
         {% for tag in article.tags limit:1 %}
         <div class="article-tag medium">{{ tag }}</div>
         {% endfor %}
         <h2 class="article-title heading-2">{{ article.title }}</h2>
         </div>
         <div class="article-img no-d">
-      	{{ article.image | img_url: '500x' | img_tag }}
-      </div>
+          {{ article.image | img_url: '500x' | img_tag }}
+        </div>
         <div class="article-date">{{ article.created_at | date: "%d %b %Y" }}</div>
-        <div class="article-excerpt">{{ article.excerpt }}</div>
+        <div class="article-excerpt"><span>{{ article.excerpt }}</span></div>
       </div>
     </div>
+    </div>
+    </div>
+  
+  	<div class="article-content-wrapper">
+      <div class="container">
     <div class="article-content module">{{ article.content }}</div>
     <div class="explore-products-heading module">{{ section.settings.heading }}</div>
     <div class="explore-products-wrap flex-box justify-between no-t-m module">
@@ -62,20 +69,19 @@
           {% endif %}
       {% endif %}
     	</div>
+  </div>
+  </div>
     
     	
     
-  </div>
 </div>
 
 <script>
-	var article_content_height = parseInt($('.article-content-wrap').height());
-//   var date_height = parseInt($('.article-date').height());
-  var pad_marg = 80;
-//   console.log(date_height);
-  var backg_height = article_content_height + pad_marg;
-  console.log(backg_height);
-  $('.darker-background').height(backg_height);
+// 	var article_content_height = parseInt($('.article-content-wrap').height());
+//   var pad_marg = 80;
+//   var backg_height = article_content_height + pad_marg;
+//   console.log(backg_height);
+//   $('.darker-background').height(backg_height);
 </script>
 
 {% schema %}

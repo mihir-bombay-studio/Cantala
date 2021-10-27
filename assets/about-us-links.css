@@ -1,5 +1,10 @@
 .au-link-wrap {
     width: 49%;
+  height: 385px;
+}
+
+.link-img {
+	height: 100%;
 }
 
 .link-img img {

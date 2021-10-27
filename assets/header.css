@@ -86,9 +86,10 @@ header{
     visibility: hidden;
     position: absolute;
     right: 0;
-    left: -26px;
+    left: -18px;
     z-index: 1;
-    width: calc(100vw - 18px);
+/*     width: calc(100vw - 18px); */
+  width: 100%;
     max-width: 1680px;
     text-align: left;
     top: 124px;
@@ -137,6 +138,8 @@ header{
 .lower-left-nav-list {
     line-height: 38px;
 }
+
+
 
 .down-chevron{
 	transition: .4s ease;
@@ -311,6 +314,24 @@ li.lower-right-nav-list:last-child {
 }
 .lower-left-nav-list:first-child {
 	margin-left: 0;
+}
+
+.full-opacity{
+	opacity: 1 !important;
+}
+
+.page-selected {
+    border-bottom: 1px solid;
+}
+
+a.page-selected {
+    padding-bottom: 5px;
+}
+
+@media (max-width: 1250px){
+.lower-left-nav-list {
+    margin-left: 20px;
+}
 }
 .cart-quantity {
     background-color: #E6AF7B;

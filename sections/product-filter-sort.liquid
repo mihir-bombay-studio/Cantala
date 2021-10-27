@@ -21,8 +21,8 @@
       </div>
       <div class="pfs-right flex-box">
         
-      	{% for product in collections['all'].products limit:3 %}
-        <div class="pfs-product" data-tag="{% for tag in product.tags limit:1 %}{{ tag }}{% endfor %}" data-price="{{ product.price }}">
+      	{% for product in collections['all'].products %}
+        <div class="pfs-product" data-tags="{% for tag in product.tags %}{% if forloop.last %}{{ tag }}{% else %}{{ tag }} {% endif %}{% endfor %}" data-price="{{ product.price }}">
         	 <div class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
         </div>
@@ -36,7 +36,17 @@
 </div>
 
 <script>
+  
+//   $(".pfs-product").hide();
+//  $(".pfs-product:lt(3)").show();
+  function visible_products(){
+  $(".pfs-product").addClass('not-visible');
+ $(".pfs-product:lt(3)").removeClass('not-visible');
+  }
+  visible_products();
+  
   $('.sort').click(function() {
+    $(".pfs-product").removeClass('not-visible');
     $('.sort').not(this).removeClass('selected');
     $('.sort').not(this).find('.close-icon').addClass('no-disp');
     $(this).toggleClass('selected');
@@ -66,7 +76,6 @@
 		})
 		.appendTo( $wrapper );
       }
-      
 
     }
     else {
@@ -78,17 +87,27 @@
 		})
 		.appendTo( $wrapper );
     }
+    if($('.filter').hasClass('selected')){
+    $(".pfs-product.through-filter").addClass('not-visible');
+ $(".pfs-product.through-filter:lt(3)").removeClass('not-visible');
+    }
+    else{
+    	visible_products();
+    }
   });
   
   $('.filter').click(function() {
+    $(".pfs-product").removeClass('not-visible');
   	$(this).toggleClass('selected');
     if($(this).hasClass('selected')){
     $(this).find('.close-icon').removeClass('no-disp');
       var tag = $(this).data('tag');
       console.log(tag);
       $('.pfs-product').each(function() {
-        if($(this).data('tag')==tag){
-          $(this).removeClass('not-through-filter')
+        var arr = $(this).data('tags');
+        
+        if(arr.indexOf(tag) != -1){
+          $(this).removeClass('not-through-filter');
           $(this).addClass('through-filter');
         }
         else{
@@ -99,12 +118,16 @@
           }
         }
       });
+      $(".pfs-product.through-filter").addClass('not-visible');
+ $(".pfs-product.through-filter:lt(3)").removeClass('not-visible');
     }
     else {
     	$(this).find('.close-icon').addClass('no-disp');
       var tag = $(this).data('tag');
       $('.pfs-product').each(function() {
-        	if($(this).data('tag')==tag){
+        	var arr = $(this).data('tags');
+        
+        if(arr.indexOf(tag) != -1){
           $(this).removeClass('through-filter');
               if($('.filter.selected').length === 0){
           	$(this).removeClass('not-through-filter');
@@ -116,7 +139,10 @@
           }
         }
         });
+      visible_products();
     }
+    
+//     visible_products();
   });
 </script>
 

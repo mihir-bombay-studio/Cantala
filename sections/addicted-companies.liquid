@@ -9,9 +9,13 @@
       <div class="ac-right module">
       	{% for block in section.blocks %}
         {% if block.type == "logo" %}
+        	
+          {% if block.settings.brand_logo != blank %}
         	<div class="company-logo">
-              {{ block.settings.logo_svg }}
-        	</div>
+          <img class="company-img" src="{{ block.settings.brand_logo | img_url: '200x' }}" alt = "brand-img"></div>
+          {% else %}<div class="company-logo">{{ block.settings.logo_svg }}</div>{% endif %}
+        
+        	
         {% endif %}
         {% endfor %}
       </div>
@@ -34,6 +38,12 @@
                 "type": "logo",
                 "name": "Company Logo",
                 "settings": [
+				{
+                "id": "brand_logo",
+                "type": "image_picker",
+                "label": "Select Brand Logo"
+
+                },
 
                 {
                 "id": "logo_svg",

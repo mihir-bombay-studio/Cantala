@@ -1,0 +1,116 @@
+{{ 'promotional-gift-contact.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .breadcrums {
+  	margin-bottom: 0;
+  }
+  .breadcrum {
+    font-size: 13px;
+    margin-right: 18px;
+    position: relative;
+    opacity: .5;
+  }  
+  .breadcrum:last-child {  	
+    margin-right: 0;    
+    opacity: 1;
+  }
+  
+  .breadcrum::after {
+  	content: "/";
+    position: absolute;
+    right: -12px;
+  }
+  
+  .breadcrum:last-child::after { 
+  	content: "";
+  }
+</style>
+
+<div class="container">
+  <div class="breadcrums">
+    <a href="/" class="breadcrum">Home</a>
+    <a class="breadcrum active">Contact</a>
+  </div>
+</div>
+
+<div class="promotional-gift-contact-wrapper contact-us-form-wrapper rel">
+  <div class="abs-background"></div>
+  <div class="container rel">
+    <div class="promotional-gift-contact-content flex-box justify-between">
+      <div class="pgc-left">
+        <h2 class="pgc-heading module">{{ section.settings.heading }}</h2>
+        <div class="pgc-form-wrapper flex-box module">
+        {% form 'contact' %}
+        {%- if form.errors -%}
+        {{ form.errors | default_errors  }}
+        {%- endif -%}
+        {%- if form.posted_successfully? -%}
+
+        {%- endif -%}
+        <div class="half-inputs flex-box justify-between">
+          <input class="pgc-form-input half-input" type="text" name="contact[name]" placeholder="Naam*" required>
+          <input class="pgc-form-input half-input" type="email" name="contact[email]" placeholder="E-mailadres*" required>
+        </div>
+          {% comment %}
+        <input class="pgc-form-input full-input" type="text" name="contact[compnay_name]" placeholder="Jouw bedrijf*" required>
+          {% endcomment %}
+        <textarea name="contact[message]" class="pgc-form-input full-input" rows="4" cols="50" placeholder="Jouw boodschap"></textarea>
+        <input type="checkbox" class="no-disp" id="tncg" name="contact[checkbox]" value="Terms">
+        <div class="checkbox-wrap flex-box align-center">
+          <span for="tncg" class="checkbox gift-checkbox rel"><span class="checked"></span></span>
+          <span class="checkbox-label">Ik ga akkoord met de <a class="label-link" href="#">voorwaarden</a> en heb de <a class="label-link" href="#">privacy policy</a> gelezen.</span>
+        </div>
+          <div class="submit-btn-wrap gift-submit-btn-wrap wrap-disabled">
+        <button class="submit-btn btn gift-submit-btn btn-light disabled medium" type="submit" form="contact_form" value="Submit">
+          Versturen
+          </button>
+          </div>
+        
+        {% endform %}
+    </div>
+      </div>
+      <div class="pgc-right no-t-m">
+      	<img class="pgc-img" src="{{ section.settings.image | img_url: '500x' }}" alt = "pgc-img">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+	$('.gift-checkbox').click(function() {
+        var sub_wrap = $(this).parent().next();
+        var sub_btn = $(this).parent().next().find('.gift-submit-btn');
+        sub_wrap.toggleClass('wrap-disabled');
+        sub_btn.toggleClass('disabled');
+      });
+</script>
+
+{% schema %}
+  {
+    "name": "Contact Us Contact",
+    "settings": [
+		{
+        "id": "heading",
+        "type": "text",
+        "label": "Section Heading"
+        },
+		{
+        "id": "image",
+        "type": "image_picker",
+        "label": "Section Image"
+        }
+	],
+	"presets": [
+    {
+      "name": "Contact Us Contact",
+		"category":"section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -69,7 +69,7 @@
                 <div class="fns-sub-form-input-wrap flex-box">
                 <input class="subscription-form-input" type="email" name="contact[email]" placeholder="Jouw e-mailadres" required>
                   <div class="submit-btn-wrap wrap-disabled">
-                <button class="submit-btn btn medium disabled" type="submit" form="contact_form" value="Submit">
+                <button class="submit-btn btn medium disabled" type="submit" name="commit" id="Subscribe" value="Submit">
                   {% for block in section.blocks %}
                   {% if block.type == "nl_sub" %}
                   {{block.settings.submit_btn_text}}

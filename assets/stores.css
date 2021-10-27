@@ -44,11 +44,55 @@
     margin-bottom: 136px !important;
 }
 
+.contact-us-stores-heading{
+	width: 20%;
+}
+
+.contact-us-stores{
+	width: 75%;
+  margin: 0 -1.65%;
+}
+
+.contact-us-stores hr{
+	margin-top: 21px;
+}
+
+.contact-us-stores .store-info-wrap {
+	width: 30%;
+  margin: 0 1.65%;
+  margin-bottom: 19px;
+}
+
+.contact-us-stores-wrap{
+	margin-bottom: 137px;
+}
+
 @media (max-width: 992px){
   .stores-content {
     margin: 0;
 }
   .store-info-wrap {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 14px;
+}
+  
+  .contact-us-stores-wrap{
+  	flex-direction: column;
+    margin-bottom: 100px;
+  }
+  
+  .contact-us-stores{
+    width: 100%;
+  margin: 0;
+}
+  
+  .contact-us-stores-heading{
+  	width: 100%;
+    margin-bottom: 24px;
+  }
+  
+  .contact-us-stores .store-info-wrap {
     width: 100%;
     margin: 0;
     margin-bottom: 14px;

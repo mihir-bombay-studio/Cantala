@@ -30,11 +30,41 @@
         "para_two": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare.",
         "para_three": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus velit in pharetra congue. Etiam vitae efficitur augue, quis consectetur tellus. Donec sagittis consectetur eros, non dignissim nunc scelerisque sit amet. Fusce facilisis a nunc et mollis. Curabitur gravida et ipsum sed ornare."
       }
+    },
+    "16353171566a1eda40": {
+      "type": "about-jobs-shops",
+      "blocks": {
+        "92465f36-898a-4ad4-aec6-908272efc86f": {
+          "type": "links_in_img",
+          "settings": {
+            "link_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png",
+            "link_heading": "We zoeken jou!",
+            "link_text": "Alle jobs",
+            "link_url": "shopify:\/\/pages\/jobs"
+          }
+        },
+        "0e7472fe-3c20-40de-bb15-d0172eab5e3e": {
+          "type": "links_in_img",
+          "settings": {
+            "link_img": "shopify:\/\/shop_images\/hero_img.png",
+            "link_heading": "Winkelpunten",
+            "link_text": "Zoek Cantata winkels",
+            "link_url": "shopify:\/\/pages\/jobs"
+          }
+        }
+      },
+      "block_order": [
+        "92465f36-898a-4ad4-aec6-908272efc86f",
+        "0e7472fe-3c20-40de-bb15-d0172eab5e3e"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "16342908747a1ab997",
     "163429310107f8d2c2",
-    "163429485630472be7"
+    "163429485630472be7",
+    "16353171566a1eda40"
   ]
 }
