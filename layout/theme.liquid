@@ -231,6 +231,8 @@
         if($('.navbar-toggler').hasClass("show")) {
           $('.navbar-toggler').removeClass("show");
           $(".drawer-menu").removeClass("drawn");
+          $('.mobile-sub-menu-wrapper').removeClass('drawn');
+          console.log('close');
           $(".background-drawer").removeClass("drawn");
           $("body").removeClass("no-scroll");
         } else {
