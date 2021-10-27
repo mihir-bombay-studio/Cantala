@@ -6,9 +6,35 @@
         "heading": "Contacteer ons",
         "image": "shopify:\/\/shop_images\/hero_img.png"
       }
+    },
+    "1635323390ba757103": {
+      "type": "contact-us-stores",
+      "blocks": {
+        "57dc3651-d134-46fd-bf89-3da8c28a8767": {
+          "type": "address",
+          "settings": {
+            "store_name": "Wijnegem Shop Eat Enjoy",
+            "add_ln_1": "Shop 302,",
+            "add_ln_2": "Ingang Dakparking 3,",
+            "add_ln_3": "Turnhoutsebaan 5, B-2110 Wijnegem",
+            "phone": "+32 (0)3 353 65 60.",
+            "days": "Maandag - zaterdag:",
+            "time": "10.00 tot 20.00",
+            "weekend": "uur Vrijdag:",
+            "weekend_time": "10.00 tot 21.00 uur"
+          }
+        }
+      },
+      "block_order": [
+        "57dc3651-d134-46fd-bf89-3da8c28a8767"
+      ],
+      "settings": {
+        "heading": "Contacteer ons of spring binnen in één van onze winkels"
+      }
     }
   },
   "order": [
-    "16353209228a243ced"
+    "16353209228a243ced",
+    "1635323390ba757103"
   ]
 }
