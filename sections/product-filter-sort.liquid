@@ -39,6 +39,8 @@
   
 //   $(".pfs-product").hide();
 //  $(".pfs-product:lt(3)").show();
+  $(".pfs-product").addClass('not-visible');
+ $(".pfs-product:lt(3)").removeClass('not-visible');
   
   $('.sort').click(function() {
     $('.sort').not(this).removeClass('selected');
