@@ -318,6 +318,15 @@
             }
           });
   		}
+        
+        if(window.location.href.indexOf("koffie") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Koffie") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
 
   });
     </script>
