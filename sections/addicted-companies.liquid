@@ -10,7 +10,7 @@
       	{% for block in section.blocks %}
         {% if block.type == "logo" %}
         	
-          {% if section.settings.brand_logo != blank %}
+          {% if block.settings.brand_logo != blank %}
         	<div class="company-logo">
           <img
                srcset="{% if section.settings.brand_logo.width >= 174 %}{{ section.settings.brand_logo | img_url: '200x' }} 174w{% endif %}"
