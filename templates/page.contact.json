@@ -6,9 +6,17 @@
         "heading": "Contacteer ons",
         "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png"
       }
+    },
+    "16353209228a243ced": {
+      "type": "contact-us-contact-form",
+      "settings": {
+        "heading": "Contacteer ons",
+        "image": "shopify:\/\/shop_images\/hero_img.png"
+      }
     }
   },
   "order": [
-    "16339544764961238f"
+    "16339544764961238f",
+    "16353209228a243ced"
   ]
 }
