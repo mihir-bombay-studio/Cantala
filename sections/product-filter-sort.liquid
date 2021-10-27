@@ -101,7 +101,7 @@
       $('.pfs-product').each(function() {
         var arr = $(this).data('tags');
         
-        if(arr.indexOf(tag)){
+        if(arr.indexOf(tag) != -1){
           $(this).removeClass('not-through-filter');
           $(this).addClass('through-filter');
         }
@@ -122,7 +122,7 @@
       $('.pfs-product').each(function() {
         	var arr = $(this).data('tags');
         
-        if(arr.indexOf(tag)){
+        if(arr.indexOf(tag) != -1){
           $(this).removeClass('through-filter');
               if($('.filter.selected').length === 0){
           	$(this).removeClass('not-through-filter');
