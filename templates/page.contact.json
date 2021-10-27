@@ -23,10 +23,25 @@
             "weekend": "Vrijdag:",
             "weekend_time": "10.00 tot 21.00 uur"
           }
+        },
+        "3550671f-9eec-4a49-a227-555826bec8b3": {
+          "type": "address",
+          "settings": {
+            "store_name": "Waasland Shopping",
+            "add_ln_1": "Shop 64,",
+            "add_ln_2": "Kapelstraat 100,",
+            "add_ln_3": "B-9100 Sint-Niklaas",
+            "phone": "+32 (0)3 422 59 76",
+            "days": "Maandag - zaterdag:",
+            "days_time": "10.00 tot 21.00 uur",
+            "weekend": "Vrijdag:",
+            "weekend_time": "10.00 tot 21.00 uur"
+          }
         }
       },
       "block_order": [
-        "57dc3651-d134-46fd-bf89-3da8c28a8767"
+        "57dc3651-d134-46fd-bf89-3da8c28a8767",
+        "3550671f-9eec-4a49-a227-555826bec8b3"
       ],
       "settings": {
         "heading": "Contacteer ons of spring binnen in één van onze winkels"
