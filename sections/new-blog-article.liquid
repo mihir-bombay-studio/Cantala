@@ -10,7 +10,7 @@
       	{{ article.image | img_url: '500x' | img_tag }}
       </div>
       <div class="article-content-wrap">
-        <div class="abs">
+        <div class="">
         {% for tag in article.tags limit:1 %}
         <div class="article-tag medium">{{ tag }}</div>
         {% endfor %}
