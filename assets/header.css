@@ -321,6 +321,9 @@ li.lower-right-nav-list:last-child {
 
 .page-selected {
     border-bottom: 1px solid;
+}
+
+a.page-selected {
     padding-bottom: 5px;
 }
 
