@@ -344,6 +344,7 @@
   <div class="product padd-top-m flex-box justify-between product-wrap">
     <div class="product-row-1 module">
       <div class="slider-for">
+        {% for i in (0..3) %}
         {% for media in product.media %}
         {% case media.media_type %}
         {% when 'image' %}
@@ -356,8 +357,10 @@
         <img src="{{ media | img_url: 'x600' }}" alt="{{ media.alt | escape }}" {% unless forloop.first %}loading="lazy"{% endunless %}>
         {% endcase %}          
         {% endfor %}
+        {% endfor %}
       </div>
       <div class="slider-nav{% for media in product.media %}{% if forloop.length < 8 %} no-transform{% endif %}{% endfor %}">
+        {% for i in (0..3) %}
         {% for media in product.media %}          
         {% case media.media_type %}
         {% when 'image' %}
@@ -367,6 +370,7 @@
         {% else %}
         <img src="{{ media.preview_image | img_url: '200x' }}" alt="{{ media.alt | escape }}"> 
         {% endcase %} 
+        {% endfor %}
         {% endfor %}
       </div>
       
