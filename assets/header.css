@@ -315,6 +315,10 @@ li.lower-right-nav-list:last-child {
 	margin-left: 0;
 }
 
+.full-opacity{
+	opacity: 1 !important;
+}
+
 @media (max-width: 1250px){
 .lower-left-nav-list {
     margin-left: 20px;
