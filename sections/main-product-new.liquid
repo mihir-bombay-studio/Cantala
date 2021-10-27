@@ -373,7 +373,7 @@
   	opacity: 0;
     transition: all .4s ease;
   }
-  {% for media in product.media %}{% if forloop.length < 8 %}
+  {% for media in product.media %}{% if forloop.length > 7 %}
   .slider-nav img:last-child:not(.slick-active){
   	display: none;
   }
