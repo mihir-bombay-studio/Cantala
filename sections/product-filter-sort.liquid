@@ -87,7 +87,8 @@
 		})
 		.appendTo( $wrapper );
     }
-    visible_products();
+    $(".pfs-product.through-filter").addClass('not-visible');
+ $(".pfs-product.through-filter:lt(3)").removeClass('not-visible');
   });
   
   $('.filter').click(function() {
