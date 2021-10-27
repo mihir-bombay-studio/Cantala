@@ -362,9 +362,6 @@
     margin-top: 1px;
     margin-right: 6px;
   }
-  .slider-nav {
-  	padding: 20px;
-  }
   .slider-nav .slick-slide{
     border: 1px solid transparent;
     transition: all .4s ease
@@ -376,6 +373,10 @@
   {% for media in product.media %}{% if forloop.length > 7 %}
   .slider-nav img:last-child:not(.slick-active){
   	display: none;
+  }
+  
+  .slider-nav {
+  	padding: 20px;
   }
   {% endif %}{% endfor %}
   .slider-nav img.slick-slide.slick-current {
