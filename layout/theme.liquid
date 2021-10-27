@@ -300,6 +300,15 @@
         }
       });
     });    
+        
+        if(window.location.href.indexOf("contacteer-ons") > -1) {
+    $(".header-link").removeClass("page-selected");
+    $(".header-link").each(function() {
+      if($(this).text() == "Contact") {
+      	$(this).addClass("page-selected");
+      }
+   });
+  }
 
   });
     </script>
