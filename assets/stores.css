@@ -50,6 +50,12 @@
 
 .contact-us-stores{
 	width: 75%;
+  margin: 0 -1.65%;
+}
+
+.contact-us-stores .store-info-wrap {
+	width: 30%;
+  margin: 0 1.65%;
 }
 
 @media (max-width: 992px){
