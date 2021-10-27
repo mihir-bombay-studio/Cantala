@@ -334,13 +334,18 @@
   }
   
   .slider-nav .slick-next, .slider-nav .slick-prev {
-    right: 0;
     top: calc(50% - 16px);
     height: 32px;
     width: 32px;
     z-index: 1;
     background-color: #fff;
 }
+  .slider-nav .slick-prev {
+  	left: 0;
+  }
+  .slider-nav .slick-next {
+  	right: 0;
+  }
 </style>
 
 <div class="container">
