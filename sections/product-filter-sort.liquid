@@ -91,6 +91,7 @@
   });
   
   $('.filter').click(function() {
+    $(".pfs-product").removeClass('not-visible');
   	$(this).toggleClass('selected');
     if($(this).hasClass('selected')){
     $(this).find('.close-icon').removeClass('no-disp');
@@ -111,7 +112,6 @@
           }
         }
       });
-      visible_products();
     }
     else {
     	$(this).find('.close-icon').addClass('no-disp');
@@ -131,8 +131,9 @@
           }
         }
         });
-      visible_products();
+      
     }
+    visible_products();
   });
 </script>
 
