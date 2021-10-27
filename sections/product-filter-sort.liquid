@@ -46,7 +46,7 @@
   visible_products();
   
   $('.sort').click(function() {
-//     $(".pfs-product").removeClass('not-visible');
+    $(".pfs-product").removeClass('not-visible');
     $('.sort').not(this).removeClass('selected');
     $('.sort').not(this).find('.close-icon').addClass('no-disp');
     $(this).toggleClass('selected');
@@ -87,8 +87,13 @@
 		})
 		.appendTo( $wrapper );
     }
+    if($('filter').hasClass('selected')){
     $(".pfs-product.through-filter").addClass('not-visible');
  $(".pfs-product.through-filter:lt(3)").removeClass('not-visible');
+    }
+    else{
+    	visible_products();
+    }
   });
   
   $('.filter').click(function() {
