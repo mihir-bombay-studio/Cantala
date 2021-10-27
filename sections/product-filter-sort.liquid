@@ -13,7 +13,7 @@
           <div class="filters">
             {% for product in collections['all'].products limit:1 %}
             	{% for tag in product.tags limit:2 %}
-                <div class="filter{% if forloop.first %} selected{% endif %}" data-tag="{{ tag }}">{{ tag }}<span class="close-icon no-t-m{% unless forloop.first %}no-disp{% endunless %}">{% include 'icon-close-brown' %}</span></div>
+                <div class="filter{% if forloop.first %} selected{% endif %}" data-tag="{{ tag }}">{{ tag }}<span class="close-icon no-t-m{% unless forloop.first %} no-disp{% endunless %}">{% include 'icon-close-brown' %}</span></div>
                 {% endfor %}
             {% endfor %}
           </div>
