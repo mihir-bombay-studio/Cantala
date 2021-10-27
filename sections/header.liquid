@@ -28,7 +28,7 @@
         	<a href="#">{% include 'icon-account-new' %}</a>
         </div>
         <div class="header-upper-right-icon cart-icon">
-          <a href="#" class="rel">{% include 'icon-cart-new' %}<span class="cart-quantity">{% if cart.item_count > 0 %}{{ cart.item_count }}{% endif %}</span></a>
+          <a href="#" class="rel">{% include 'icon-cart-new' %}<span class="cart-quantity {% if cart.item_count == 0 %}no-disp{% endif %}">{{ cart.item_count }}</span></a>
         </div>
         <div class="lang-icon rel">
           <a href="#" class="flex-box align-center"><span class="main-lang">{{ request.locale.iso_code | upcase }}</span> <span class="down-chevron">{% include 'icon-down-chevron-brown' %}</span></a>
