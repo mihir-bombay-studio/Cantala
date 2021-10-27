@@ -39,8 +39,11 @@
   
 //   $(".pfs-product").hide();
 //  $(".pfs-product:lt(3)").show();
+  function visible_products(){
   $(".pfs-product").addClass('not-visible');
  $(".pfs-product:lt(3)").removeClass('not-visible');
+  }
+  visible_products();
   
   $('.sort').click(function() {
     $('.sort').not(this).removeClass('selected');
@@ -62,8 +65,6 @@
     		return +a.dataset.price - +b.dataset.price;
 		})
 		.appendTo( $wrapper );
-        $(".pfs-product").addClass('not-visible');
- $(".pfs-product:lt(3)").removeClass('not-visible');
       }
       else{
       	console.log('high to low');
@@ -73,10 +74,8 @@
     		return +b.dataset.price - +a.dataset.price;
 		})
 		.appendTo( $wrapper );
-        $(".pfs-product").addClass('not-visible');
- $(".pfs-product:lt(3)").removeClass('not-visible');
       }
-      
+      visible_products();
 
     }
     else {
@@ -87,8 +86,7 @@
     		return +a.dataset.price - +b.dataset.price;
 		})
 		.appendTo( $wrapper );
-      $(".pfs-product").addClass('not-visible');
- $(".pfs-product:lt(3)").removeClass('not-visible');
+      visible_products();
     }
   });
   
@@ -104,8 +102,6 @@
         if(jQuery.inArray(tag, arr) !== -1){
           $(this).removeClass('not-through-filter')
           $(this).addClass('through-filter');
-          $(".pfs-product").addClass('not-visible');
- $(".pfs-product:lt(3)").removeClass('not-visible');
         }
         else{
           if($(this).hasClass('through-filter')){
@@ -113,10 +109,9 @@
           }else {
           	$(this).addClass('not-through-filter');
           }
-          $(".pfs-product").addClass('not-visible');
- $(".pfs-product:lt(3)").removeClass('not-visible');
         }
       });
+      visible_products();
     }
     else {
     	$(this).find('.close-icon').addClass('no-disp');
@@ -136,8 +131,7 @@
           }
         }
         });
-      $(".pfs-product").addClass('not-visible');
- $(".pfs-product:lt(3)").removeClass('not-visible');
+      visible_products();
     }
   });
 </script>
