@@ -14,6 +14,10 @@
     height: calc(100% - 113px);
 }
 
+.article-title {
+    margin-bottom: 20px;
+}
+
 .article-img {
     position: absolute;
     bottom: 40px;
