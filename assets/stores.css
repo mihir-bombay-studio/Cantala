@@ -72,6 +72,10 @@
     margin-bottom: 14px;
 }
   
+  .contact-us-stores-wrap{
+  	flex-direction: column;
+  }
+  
   .contact-us-stores{
   margin: 0;
 }
@@ -84,5 +88,6 @@
   .contact-us-stores .store-info-wrap {
     width: 100%;
     margin: 0;
+    margin-bottom: 14px;
 }
 }
