@@ -28,7 +28,7 @@
         	<a href="#">{% include 'icon-account-new' %}</a>
         </div>
         <div class="header-upper-right-icon cart-icon">
-        	<a href="#">{% include 'icon-cart-new' %}</a>
+          <a href="#" class="rel">{% include 'icon-cart-new' %}<span class="cart-quantity">{{ cart.items }}</span></a>
         </div>
         <div class="lang-icon rel">
           <a href="#" class="flex-box align-center"><span class="main-lang">{{ request.locale.iso_code | upcase }}</span> <span class="down-chevron">{% include 'icon-down-chevron-brown' %}</span></a>
