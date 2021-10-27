@@ -92,8 +92,8 @@
       console.log(tag);
       $('.pfs-product').each(function() {
         var arr = $(this).data('tags').split(',');
-        console.log(arr);
-        if($(this).data('tag')==tag){
+        
+        if(jQuery.inArray(tag, arr) !== -1){
           $(this).removeClass('not-through-filter')
           $(this).addClass('through-filter');
         }
