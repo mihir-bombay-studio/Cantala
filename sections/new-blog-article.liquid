@@ -1,10 +1,10 @@
 {{ 'new-blog-article.css' | asset_url | stylesheet_tag }}
 
 <div class="article-wrapper rel">
-  <div class="article-excerpt-wrap">
+  <div class="article-excerpt-wrap module">
   <div class="container">
     <div class="darker-background"></div>
-    <div class="article-img-content rel module">
+    <div class="article-img-content rel">
       <div class="article-img no-t-m">
       	{{ article.image | img_url: '500x' | img_tag }}
       </div>
