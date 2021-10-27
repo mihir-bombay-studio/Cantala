@@ -327,6 +327,15 @@
             }
           });
   		}
+        
+        if(window.location.href.indexOf("thee") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Thee" || $(this).data('name') == "Thee") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
 
   });
     </script>
