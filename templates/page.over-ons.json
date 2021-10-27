@@ -42,10 +42,20 @@
             "link_text": "Alle jobs",
             "link_url": "shopify:\/\/pages\/jobs"
           }
+        },
+        "0e7472fe-3c20-40de-bb15-d0172eab5e3e": {
+          "type": "links_in_img",
+          "settings": {
+            "link_img": "shopify:\/\/shop_images\/hero_img.png",
+            "link_heading": "Winkelpunten",
+            "link_text": "Zoek Cantata winkels",
+            "link_url": "shopify:\/\/pages\/jobs"
+          }
         }
       },
       "block_order": [
-        "92465f36-898a-4ad4-aec6-908272efc86f"
+        "92465f36-898a-4ad4-aec6-908272efc86f",
+        "0e7472fe-3c20-40de-bb15-d0172eab5e3e"
       ],
       "settings": {
       }
