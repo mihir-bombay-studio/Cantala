@@ -159,7 +159,25 @@
         {% endfor %}
         <li class="upper-left-nav-list"><a href="/account">Inloggen</a></li>
         <li class="upper-left-nav-list"><a href="/account">Account aanmaken</a></li>
-        <li class="upper-left-nav-list"><a href="/account" class="flex-box justify-between align-center"><span>Taal</span><span class="down-chevron">{% include 'icon-right-chevron' %}</span></a></li>
+        <li class="upper-left-nav-list"><a href="/account" class="flex-box justify-between align-center"><span>Taal</span><span class="down-chevron">{% include 'icon-right-chevron' %}</span></a>
+        	<div class="mobile-sub-menu-wrapper">
+              <div id="nav-sub-drop" class="dropdown-container">
+                <div class="wrapper">
+                  <div class="hover-content-wrapper">
+                    <div class="main-link-title back-to-main-menu medium align-center flex-box"><span class="down-chevron back-chevron">{% include 'icon-right-chevron' %}</span><span>{{link.title}}</span></div>
+                      <ul class="content-list">
+                        <li id="lang-nl selected">
+                			<a href="#">DL</a>
+              			</li>
+                          <li id="lang-nl">
+                  			<a href="#">FR</a>
+                		</li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </li>
       </div>
       <form action="/search" class="search flex-box justify-between">
       	<input class="mobile-menu-search" type="text" name="q" placeholder="Zoeken">
