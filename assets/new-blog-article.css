@@ -29,6 +29,10 @@
   object-fit: cover;
 }
 
+.article-content-wrapper {
+    margin-bottom: 100px;
+}
+
 .article-content-wrap {
     width: 45%;
     margin-left: 55%;
