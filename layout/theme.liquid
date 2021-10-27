@@ -336,6 +336,24 @@
             }
           });
   		}
+        
+        if(window.location.href.indexOf("geschenken") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Geschenken" || $(this).data('name') == "Geschenken") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
+        
+        if(window.location.href.indexOf("zoetwaren") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Zoetwaren & dranken" || $(this).data('name') == "Zoetwaren & dranken") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
 
   });
     </script>
