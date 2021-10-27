@@ -40,7 +40,7 @@ $(document).ready(function(){
         breakpoint: 992,
         settings: {
           centerMode: false,
-          slidesToShow: 5
+          slidesToShow: 7
         }
       }
     ]
