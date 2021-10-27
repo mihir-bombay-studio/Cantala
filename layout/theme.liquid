@@ -354,6 +354,15 @@
             }
           });
   		}
+        
+        if(window.location.href.indexOf("for-companies") > -1) {
+          $(".header-link").removeClass("page-selected");
+          $(".header-link").each(function() {
+            if($(this).text() == "Voor bedrijven" || $(this).data('name') == "Voor bedrijven") {
+              $(this).addClass("page-selected");
+            }
+          });
+  		}
 
   });
     </script>
