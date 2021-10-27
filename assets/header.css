@@ -319,6 +319,11 @@ li.lower-right-nav-list:last-child {
 	opacity: 1 !important;
 }
 
+.page-selected {
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+
 @media (max-width: 1250px){
 .lower-left-nav-list {
     margin-left: 20px;
