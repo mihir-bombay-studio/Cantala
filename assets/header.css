@@ -333,7 +333,20 @@ a.page-selected {
     margin-left: 20px;
 }
 }
-
+.cart-quantity {
+    background-color: #E6AF7B;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
 @media (max-width: 992px){
   
   .small-font {

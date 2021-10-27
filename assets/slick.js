@@ -33,7 +33,17 @@ $(document).ready(function(){
     slidesToShow: 7,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
-    focusOnSelect: true
+    focusOnSelect: true,
+    centerMode: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          centerMode: false,
+          slidesToShow: 7
+        }
+      }
+    ]
   });
   
   $('.coll-products').slick({
@@ -84,5 +94,5 @@ $(document).ready(function(){
   });
   
   
-  
+  $('.slider-nav')[0].slick.refresh();
 });

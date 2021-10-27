@@ -247,7 +247,11 @@
     float: right;
     font-weight: 700;
   }
-  
+  .trustbox-product-page {
+    background-color: #fff;
+    padding: 18px;
+    margin-top: 58px;
+}
   @media(max-width: 992px) {
     .no-t-m {
       display: none;
@@ -328,6 +332,62 @@
       min-height: 170px;
     }
   }
+  
+  .slider-nav .slick-next, .slider-nav .slick-prev {
+    top: calc(50% - 8px);
+    height: 32px;
+    width: 32px;
+    z-index: 1;
+    background-color: #fff;
+  }
+  .slider-nav .slick-prev {
+    left: 0;
+  }
+  .slider-nav .slick-next {
+    right: 0;
+  }
+  .slider-nav .slick-next:before {
+    content: url({{ "caret.svg" | asset_url }}) !important;
+    transform: rotate(270deg);
+    display: block;
+    line-height: 32px;
+    margin-top: 1px;
+    margin-right: 6px;
+  }
+  .slider-nav .slick-prev:before {
+    content: url({{ "caret.svg" | asset_url }}) !important;
+    transform: rotate(270deg);
+    display: block;
+    line-height: 32px;
+    margin-top: 1px;
+    margin-right: 6px;
+  }
+  .slider-nav .slick-slide{
+    border: 1px solid transparent;
+    transition: all .4s ease
+  }
+  .slider-nav img:not(.slick-slide) {
+  	opacity: 0;
+    transition: all .4s ease;
+  }
+  {% for media in product.media %}{% if forloop.length > 7 %}
+  .slider-nav img:last-child:not(.slick-active){
+  	display: none;
+  }
+  
+  .slider-nav {
+  	padding: 20px;
+  }
+  {% endif %}{% endfor %}
+  .slider-nav img.slick-slide.slick-current {
+  	box-shadow: none !important;
+    border: 1px solid #342D25;
+    padding: 0 !important;
+  }
+  @media(min-width: 992px) {
+    .slider-nav .slick-next, .slider-nav .slick-prev {
+      top: calc(50% - 4px);
+    }
 </style>
 
 <div class="container">
@@ -457,6 +517,14 @@
           <span class="checkbox rel"><span class="checked"></span></span>
           <span class="checkbox-label">Voeg een geschenkverpakking toe (€1,50)</span>
         </div>
+      </div>
+      
+      <div class="trustbox-product-page">
+        <!-- TrustBox widget - Micro Combo -->
+        <div class="trustpilot-widget" data-locale="nl-NL" data-template-id="5419b6ffb0d04a076446a9af" data-businessunit-id="606b0355f7709000018746fc" data-style-height="20px" data-style-width="100%" data-theme="light" data-text-color="#342D25">
+          <a href="https://nl.trustpilot.com/review/cantata.be" target="_blank" rel="noopener">Trustpilot</a>
+        </div>
+        <!-- End TrustBox widget -->
       </div>
 
       <div class="accordion-description">  

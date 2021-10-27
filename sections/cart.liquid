@@ -209,6 +209,105 @@
     background-color: transparent;
 }
 </style>
+<style>
+  /*steam cup*/
+
+#wrap {
+  margin-top: 100px;
+}
+
+.steam {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: -75px;
+  margin-left: 160px;
+  z-index: 0;
+  opacity: 0;
+}
+
+#steam-one {
+  -webkit-animation: steam-one 4s ease-out infinite;
+  animation: steam-one 4s ease-out infinite;
+}
+
+#steam-three {
+  -webkit-animation: steam-one 4s ease-out 1s infinite;
+  animation: steam-one 4s ease-out 1s infinite;
+}
+
+@-webkit-keyframes steam-one {
+  0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+  100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+}
+
+@keyframes steam-one {
+  0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+  100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+}
+
+#steam-two {
+  -webkit-animation: steam-two 4s ease-out 0.5s infinite;
+  animation: steam-two 4s ease-out 0.5s infinite;
+}
+
+#steam-four {
+  -webkit-animation: steam-two 4s ease-out 1.5s infinite;
+  animation: steam-two 4s ease-out 1.5s infinite;
+}
+
+@-webkit-keyframes steam-two {
+  0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+  100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+}
+
+@keyframes steam-two {
+  0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+  100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+}
+
+#cup {
+  z-index: 1;
+}
+
+#cup-body {
+  position: absolute;
+  height: 150px;
+  width: 240px;
+  border-radius: 0 0 150px 150px;
+  background-color: #fff;
+  margin: auto;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#cup-shade {
+  position: relative;
+  height: 300px;
+  width: 200px;
+  background-color: #F3F3F3;
+  display: inline-block;
+  margin-left: 42%;
+  margin-top: -3px;
+  transform: rotate(50deg);
+  z-index: 1;
+}
+
+#cup-handle {
+  position: relative;
+  height: 75px;
+  width: 80px;
+  border-radius: 0 150px 150px 0;
+  border: 15px solid #F3F3F3;
+  margin-bottom: 95px;
+  margin-left: 220px;
+  display: inline-block;
+  z-index: 0;
+}
+</style>
 
 <div class="drawer-cart">
   <div class="drawer-cart-wrapper rel">
@@ -272,6 +371,23 @@
       
       <div class="cart-empty {% if cart.item_count > 0 %}no-disp{% endif %}">
         <span class="cart-empty-text">Start <a class="underline" href="/collections">adding items</a> your cart!</span>
+        
+        <div id="wrap">
+          <div class="steam" id="steam-one"><span></span></div>
+          <div class="steam" id="steam-two"><span></span></div>
+          <div class="steam" id="steam-three"><span></span></div>
+          <div class="steam" id="steam-four"><span></span></div>
+
+          <div id="cup">
+            <div id="cup-body">
+              <div id="cup-shade"></div>
+            </div>
+            <div id="cup-handle"></div>
+          </div>
+        </div>
+      </div>
+        
+        
       </div>
       
     </div>
@@ -464,6 +580,8 @@
           });
           $(".total-price").text('€'+(data.total_price/100));
           if(data.item_count > 0) {
+            $(".cart-quantity").removeClass("no-disp");
+            $(".cart-quantity").text(data.item_count);
             $(".cart-products-parent").removeClass('no-disp');
             $(".cart-total-block").removeClass('no-disp');
             $(".cart-empty").addClass('no-disp');
@@ -475,6 +593,7 @@
               $('.total-text').last().text('Ber. volgende stap');
             }
           } else {
+            $(".cart-quantity").addClass("no-disp");
             $(".cart-products-parent").addClass('no-disp');
             $(".cart-total-block").addClass('no-disp');
             $(".cart-empty").removeClass('no-disp');
@@ -517,7 +636,9 @@
             $(clicked).closest( ".cart-products-block" ).remove();
             window.data = data;
             $(".total-price").text('€'+(data.total_price/100));
-            if(data.item_count > 0) {
+            if(data.item_count > 0) {              
+            $(".cart-quantity").removeClass("no-disp");
+            $(".cart-quantity").text(data.item_count);
               $(".cart-products-parent").removeClass('no-disp');
             $(".cart-total-block").removeClass('no-disp');
               $(".cart-empty").addClass('no-disp');
@@ -528,9 +649,10 @@
                 $('.cart-sub-head').addClass('no-vis');
                 $('.total-text').last().text('Ber. volgende stap');
               }
-            } else {
+            } else {              
+              $(".cart-quantity").addClass("no-disp");
               $(".cart-products-parent").addClass('no-disp');
-            $(".cart-total-block").addClass('no-disp');
+              $(".cart-total-block").addClass('no-disp');
               $(".cart-empty").removeClass('no-disp');
               $('.cart-sub-head').addClass('no-vis');
               $('.total-text').last().text('Ber. volgende stap');
@@ -583,8 +705,10 @@
             });
             $(".total-price").text('€'+(data.total_price/100));
             if(data.item_count > 0) {
+              $(".cart-quantity").removeClass("no-disp");
+              $(".cart-quantity").text(data.item_count);
               $(".cart-products-parent").removeClass('no-disp');
-            $(".cart-total-block").removeClass('no-disp');
+              $(".cart-total-block").removeClass('no-disp');
               $(".cart-empty").addClass('no-disp');
               if(data.total_price/100 > 99.99) {
                 $('.cart-sub-head').removeClass('no-vis');
@@ -594,6 +718,7 @@
                 $('.total-text').last().text('Ber. volgende stap');
               }
             } else {
+            $(".cart-quantity").addClass("no-disp");
               $(".cart-products-parent").addClass('no-disp');
             $(".cart-total-block").addClass('no-disp');
               $(".cart-empty").removeClass('no-disp');
@@ -649,6 +774,8 @@
               });
               $(".total-price").text('€'+(data.total_price/100));
               if(data.item_count > 0) {
+            $(".cart-quantity").removeClass("no-disp");
+            $(".cart-quantity").text(data.item_count);
                 $(".cart-products-parent").removeClass('no-disp');
             $(".cart-total-block").removeClass('no-disp');
                 $(".cart-empty").addClass('no-disp');
@@ -660,6 +787,7 @@
                   $('.total-text').last().text('Ber. volgende stap');
                 }
               } else {
+            $(".cart-quantity").addClass("no-disp");
                 $(".cart-products-parent").addClass('no-disp');
             $(".cart-total-block").addClass('no-disp');
                 $(".cart-empty").removeClass('no-disp');
