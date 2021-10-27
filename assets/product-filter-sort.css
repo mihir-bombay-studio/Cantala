@@ -70,6 +70,10 @@
 	display: none;
 }
 
+.not-visible{
+	display: none;
+}
+
 @media (max-width: 992px){
   .product-filter-sort-content {
     flex-direction: column;
