@@ -34,7 +34,16 @@ $(document).ready(function(){
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     focusOnSelect: true,
-    centerMode: true
+    centerMode: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          centerMode: false,
+          slidesToShow: 5
+        }
+      }
+    ]
   });
   
   $('.coll-products').slick({
