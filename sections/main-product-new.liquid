@@ -365,12 +365,21 @@
   .slider-nav {
   	padding: 20px;
   }
+  .slider-nav .slick-slide{
+    border: 1px solid transparent;
+    transition: all .4s ease
+  }
   .slider-nav img:not(.slick-slide) {
   	opacity: 0;
     transition: all .4s ease;
   }
   .slider-nav img:last-child:not(.slick-active){
   	display: none;
+  }
+  .slider-nav img.slick-slide.slick-current {
+  	box-shadow: none !important;
+    border: 1px solid #342D25;
+    padding: 0 !important;
   }
 </style>
 
