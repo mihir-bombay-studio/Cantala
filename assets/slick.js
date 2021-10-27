@@ -83,5 +83,5 @@ $(document).ready(function(){
   });
   
   
-  
+  $('.slick-nav')[0].slick.refresh();
 });
