@@ -62,6 +62,10 @@
   margin: 0 1.65%;
 }
 
+.contact-us-stores-wrap{
+	margin-bottom: 137px;
+}
+
 @media (max-width: 992px){
   .stores-content {
     margin: 0;
@@ -74,6 +78,7 @@
   
   .contact-us-stores-wrap{
   	flex-direction: column;
+    margin-bottom: 100px;
   }
   
   .contact-us-stores{
