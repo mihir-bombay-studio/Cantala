@@ -307,26 +307,6 @@
   display: inline-block;
   z-index: 0;
 }
-
-#saucer {
-  position: absolute;
-  height: 30px;
-  width: 300px;  
-  border-radius: 0 0 100px 100px;
-  background-color: #F9F9F9;
-  margin-top: -32px;
-  margin-left: 5px;
-  z-index: 2;
-}
-
-#shadow {
-  height: 10px;
-  width: 300px;
-  border-radius: 50%;
-  margin-top: -5px;
-  margin-left: 6px;
-  background-color: #DC696F;
-}
 </style>
 
 <div class="drawer-cart">
@@ -393,10 +373,10 @@
         <span class="cart-empty-text">Start <a class="underline" href="/collections">adding items</a> your cart!</span>
         
         <div id="wrap">
-          <div class="steam" id="steam-one"></div>
-          <div class="steam" id="steam-two"></div>
-          <div class="steam" id="steam-three"></div>
-          <div class="steam" id="steam-four"></div>
+          <div class="steam" id="steam-one"><span></span></div>
+          <div class="steam" id="steam-two"><span></span></div>
+          <div class="steam" id="steam-three"><span></span></div>
+          <div class="steam" id="steam-four"><span></span></div>
 
           <div id="cup">
             <div id="cup-body">
@@ -404,10 +384,6 @@
             </div>
             <div id="cup-handle"></div>
           </div>
-
-          <div id="saucer"></div>
-
-          <div id="shadow"></div>
         </div>
       </div>
         
