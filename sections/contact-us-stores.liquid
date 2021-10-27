@@ -1,7 +1,96 @@
+{{ 'stores.css' | asset_url | stylesheet_tag }}
+
+<div class="stores-wrapper">
+  <div class="container">
+    <div class="contact-us-stores-wrap flex-box jusitfy-between">
+      <h2 class="contact-us-stores-heading heding-2">{{ section.settings.heading }}</h2>
+    <div class="stores-content flex-box">
+    	{% for block in section.blocks %}
+        {% if block.type == "address" %}
+      		<div class="store-info-wrap">
+              <div class="store-name medium">{{ block.settings.store_name }}</div>
+              <div class="store-address-wrap">
+              	<div class="store-address">{{ block.settings.add_ln_1 }}</div>
+                <div class="store-address">{{ block.settings.add_ln_2 }}</div>
+                <div class="store-address">{{ block.settings.add_ln_3 }}</div>
+              </div>
+              <hr class="addr-hr">
+              <div class="store-website">{{ block.settings.website }}</div>
+              <div class="store-email">{{ block.settings.email }}</div>
+              <div class="store-phone">{{ block.settings.phone }}</div>
+              <div class="store-hours flex-box justify-between medium">
+                <div class="store-hours-text">Openingstijden</div>
+                <div class="down-chevron">{% include 'icon-down-chevron-brown' %}</div>
+              </div>
+      		</div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="load-more">Load more</div>
+  </div>
+    </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Contact Us Stores",
+    "settings": [
+		{
+			"id": "heading",
+			"type": "text",
+			"label": "Section Heading"
+		}
+	],
+	"blocks": [
+		{
+                "type": "address",
+                "name": "Store Address",
+                "settings": [
+
+                {
+                "id": "store_name",
+                "type": "text",
+                "label": "Store Name"
+                },
+                {
+                "id": "add_ln_1",
+                "type": "text",
+                "label": "Address Line 1"
+                },
+				{
+                "id": "add_ln_2",
+                "type": "text",
+                "label": "Address Line 2"
+                },
+				{
+                "id": "add_ln_3",
+                "type": "text",
+                "label": "Address Line 3"
+                },
+				{
+                "id": "website",
+                "type": "text",
+                "label": "Website"
+                },
+				{
+                "id": "email",
+                "type": "text",
+                "label": "Email"
+                },
+				{
+                "id": "phone",
+                "type": "text",
+                "label": "Phone Number"
+                }
+              ]
+            }
+	],
+	"presets": [
+    {
+      "name": "Contact Us Stores",
+		"category":"section"
+    }
+  ]
   }
 {% endschema %}
 
