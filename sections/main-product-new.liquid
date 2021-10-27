@@ -393,7 +393,7 @@
   <div class="product padd-top-m flex-box justify-between product-wrap">
     <div class="product-row-1 module">
       <div class="slider-for">
-        {% for i in (0..3) %}
+        {% for i in (0..4) %}
         {% for media in product.media %}
         {% case media.media_type %}
         {% when 'image' %}
@@ -409,7 +409,7 @@
         {% endfor %}
       </div>
       <div class="slider-nav{% for media in product.media %}{% if forloop.length < 8 %}{% comment %}no-transform{% endcomment %} {% endif %}{% endfor %}">
-        {% for i in (0..3) %}
+        {% for i in (0..4) %}
         {% for media in product.media %}          
         {% case media.media_type %}
         {% when 'image' %}
