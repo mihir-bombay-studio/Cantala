@@ -113,6 +113,8 @@
           }
         }
       });
+      $(".pfs-product.through-filter").addClass('not-visible');
+ $(".pfs-product.through-filter:lt(3)").removeClass('not-visible');
     }
     else {
     	$(this).find('.close-icon').addClass('no-disp');
@@ -132,10 +134,9 @@
           }
         }
         });
-      
+      visible_products();
     }
-    $(".pfs-product.through-filter").addClass('not-visible');
- $(".pfs-product.through-filter:lt(3)").removeClass('not-visible');
+    
 //     visible_products();
   });
 </script>
