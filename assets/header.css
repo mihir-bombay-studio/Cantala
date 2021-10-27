@@ -88,7 +88,8 @@ header{
     right: 0;
     left: -18px;
     z-index: 1;
-    width: calc(100vw - 18px);
+/*     width: calc(100vw - 18px); */
+  width: 100%;
     max-width: 1680px;
     text-align: left;
     top: 124px;
