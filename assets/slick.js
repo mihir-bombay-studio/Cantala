@@ -82,6 +82,4 @@ $(document).ready(function(){
     dots: false
   });
   
-  
-  $('.slider-nav')[0].slick.refresh();
 });
