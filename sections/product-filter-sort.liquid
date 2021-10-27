@@ -22,7 +22,7 @@
       <div class="pfs-right flex-box">
         
       	{% for product in collections['all'].products %}
-        <div class="pfs-product" data-tags="{% for tag in product.tags %}{% if forloop.last %}{{ tag }}{% else %}{{ tag }}, {% endif %}{% endfor %}" data-price="{{ product.price }}">
+        <div class="pfs-product" data-tags="{% for tag in product.tags %}{% if forloop.last %}{{ tag }}{% else %}{{ tag }} {% endif %}{% endfor %}" data-price="{{ product.price }}">
         	 <div class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
         </div>
@@ -99,9 +99,9 @@
       var tag = $(this).data('tag');
       console.log(tag);
       $('.pfs-product').each(function() {
-        var arr = $(this).data('tags').split(',');
+        var arr = $(this).data('tags');
         
-        if(jQuery.inArray(tag, arr) !== -1){
+        if(arr.indexOf(tag)){
           $(this).removeClass('not-through-filter');
           $(this).addClass('through-filter');
         }
@@ -120,9 +120,9 @@
     	$(this).find('.close-icon').addClass('no-disp');
       var tag = $(this).data('tag');
       $('.pfs-product').each(function() {
-        	var arr = $(this).data('tags').split(',');
+        	var arr = $(this).data('tags');
         
-        if(jQuery.inArray(tag, arr) !== -1){
+        if(arr.indexOf(tag)){
           $(this).removeClass('through-filter');
               if($('.filter.selected').length === 0){
           	$(this).removeClass('not-through-filter');
