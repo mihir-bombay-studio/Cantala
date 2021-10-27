@@ -138,6 +138,12 @@ header{
     line-height: 38px;
 }
 
+@media(max-width: 1200px){
+	.lower-left-nav-list {
+    margin-left: 20px;
+}
+}
+
 .down-chevron{
 	transition: .4s ease;
 }
