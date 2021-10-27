@@ -339,18 +339,28 @@
     width: 32px;
     z-index: 1;
     background-color: #fff;
-}
+  }
   .slider-nav .slick-prev {
-  	left: 0;
+    left: 0;
   }
   .slider-nav .slick-next {
-  	right: 0;
+    right: 0;
   }
-  .slick-next:before {
+  .slider-nav .slick-next:before {
     content: url({{ "caret.svg" | asset_url }});
+    transform: rotate(270deg);
+    display: block;
+    line-height: 32px;
+    margin-top: 1px;
+    margin-right: 6px;
   }
-  .slick-prev:before {
+  .slider-nav .slick-prev:before {
     content: url({{ "caret.svg" | asset_url }});
+    transform: rotate(270deg);
+    display: block;
+    line-height: 32px;
+    margin-top: 1px;
+    margin-right: 6px;
   }
 </style>
 
