@@ -86,7 +86,7 @@ header{
     visibility: hidden;
     position: absolute;
     right: 0;
-    left: -26px;
+    left: -18px;
     z-index: 1;
     width: calc(100vw - 18px);
     max-width: 1680px;
