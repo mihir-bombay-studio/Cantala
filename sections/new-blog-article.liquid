@@ -1,6 +1,7 @@
 {{ 'new-blog-article.css' | asset_url | stylesheet_tag }}
 
 <div class="article-wrapper rel">
+  <div class="article-excerpt-wrap">
   <div class="container">
     <div class="darker-background"></div>
     <div class="article-img-content rel module">
@@ -21,6 +22,11 @@
         <div class="article-excerpt">{{ article.excerpt }}</div>
       </div>
     </div>
+    </div>
+    </div>
+  
+  	<div class="article-content-wrapper">
+      <div class="container">
     <div class="article-content module">{{ article.content }}</div>
     <div class="explore-products-heading module">{{ section.settings.heading }}</div>
     <div class="explore-products-wrap flex-box justify-between no-t-m module">
@@ -62,10 +68,11 @@
           {% endif %}
       {% endif %}
     	</div>
+  </div>
+  </div>
     
     	
     
-  </div>
 </div>
 
 <script>
