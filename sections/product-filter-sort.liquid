@@ -101,7 +101,7 @@
         var arr = $(this).data('tags').split(',');
         
         if(jQuery.inArray(tag, arr) !== -1){
-          $(this).removeClass('not-through-filter')
+          $(this).removeClass('not-through-filter');
           $(this).addClass('through-filter');
         }
         else{
