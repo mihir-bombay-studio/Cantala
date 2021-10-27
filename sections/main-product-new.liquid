@@ -346,6 +346,12 @@
   .slider-nav .slick-next {
   	right: 0;
   }
+  .slick-next:before {
+    content: url({{ "caret.svg" | asset_url }});
+  }
+  .slick-prev:before {
+    content: url({{ "caret.svg" | asset_url }});
+  }
 </style>
 
 <div class="container">
