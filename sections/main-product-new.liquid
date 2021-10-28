@@ -626,19 +626,24 @@
       });
       
         var string2 = "";
+      var title_string = "";
         $(".selector.selected").each(function(index){
           if(string2 == "") {
             if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
               string2 += $(this).data("val");
+              title_string += parseFloat($(this).data("val")*1000) + "g";
             } else {
               string2 += $(this).val();
+              title_string += $(this).val();
             }          
           } else {
 
             if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
               string2 += " / " + $(this).data("val");
+              title_string += " / " + parseFloat($(this).data("val")*1000) + "g";
             } else {
               string2 += " / " + $(this).val();
+              title_string += " / " + $(this).val();
             }           
           }
         });
