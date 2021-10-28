@@ -618,7 +618,6 @@
             string += " / " + $(".option-wrapper").last().find(".selector").val();
           }     
         }
-        console.log(string);
         var x = JSON.parse($('#product-json').html());
         var w = x.find(item => {
           return item.public_title === string;
@@ -673,7 +672,7 @@
           }
         }
         h.click();
-        console.log($('.drop-selector').val())
+        refreshRates();
       });
       b.appendChild(c);
     }
