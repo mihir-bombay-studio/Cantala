@@ -127,6 +127,10 @@ textarea {
     left: 10%;
 }
   
+  form#contact_form{
+  	width: 100%;
+  }
+  
   .promotional-gift-contact-content {
     flex-direction: column;
 }
