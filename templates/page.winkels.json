@@ -1,16 +1,22 @@
 {
   "sections": {
+    "163410338821e0284f": {
+      "type": "store-locator-map",
+      "settings": {
+        "heading": "Winkelpunten"
+      }
+    },
     "16340375883eb7d54e": {
       "type": "stores",
       "blocks": {
         "a50142d8-014a-40df-908e-054e8b1d9051": {
           "type": "address",
           "settings": {
-            "store_name": "Name name",
-            "add_ln_1": "Lorum ipsum 50",
-            "add_ln_2": "2520 Lorum Ipsum",
+            "store_name": "Cantata Koffie, Thee & Gifts Wijnegem Shopping Center",
+            "add_ln_1": "Turnhoutsebaan 5\/302,",
+            "add_ln_2": "2110 Wijnegem",
             "add_ln_3": "Belgium",
-            "website": "www.lorum.com",
+            "website": "www.cantata.be",
             "email": "info@lorum.be",
             "phone": "03 452 78 55"
           }
@@ -137,12 +143,6 @@
         "25622426-8529-42c6-848f-f1b0e4d7b8d5"
       ],
       "settings": {
-      }
-    },
-    "163410338821e0284f": {
-      "type": "store-locator-map",
-      "settings": {
-        "heading": "Winkelpunten"
       }
     }
   },
