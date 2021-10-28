@@ -161,3 +161,9 @@ textarea {
     margin-bottom: 100px;
 }
 }
+
+@media (max-width: 400px){
+  .pgc-heading{
+  	font-size: 42px;
+  }
+}
