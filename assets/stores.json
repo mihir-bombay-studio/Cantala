@@ -245,7 +245,7 @@
       },
       "type": "Feature",
       "properties": {
-        "category": "patisserie",
+        "category": "cafe",
         "hours": "10am – 8pm",
         "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
         "name": "Cantata Coffee, Tea & Gifts",
@@ -263,7 +263,7 @@
       },
       "type": "Feature",
       "properties": {
-        "category": "patisserie",
+        "category": "cafe",
         "hours": "10am – 7pm",
         "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
         "name": "Cantata Koffie, Thee & Gifts Stockel Square",
@@ -281,7 +281,7 @@
       },
       "type": "Feature",
       "properties": {
-        "category": "patisserie",
+        "category": "cafe",
         "hours": "10am – 6pm",
         "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
         "name": "Cantata Koffie, Thee & Gifts Waasland",
@@ -299,7 +299,7 @@
       },
       "type": "Feature",
       "properties": {
-        "category": "patisserie",
+        "category": "cafe",
         "hours": "10am - 7pm",
         "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
         "name": "CANTATA Coffee, Tea & Gifts",
