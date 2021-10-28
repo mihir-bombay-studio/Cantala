@@ -96,7 +96,7 @@
                     var latitude = results[0].geometry.location.lat();
                     var longitude = results[0].geometry.location.lng();
                   	var myLatlng2 = new google.maps.LatLng(latitude,longitude);
-                    map.setZoom($(".selected .radio-wrap").data("dist"));
+                    map.setZoom($(".selected .radio-wrap").closest(".distance").data("dist"));
                   map.panTo(myLatlng2);
                 } else {
                     console.log('unrecognised address');
@@ -112,7 +112,7 @@
   $('.radio-wrap').click(function() {
     $('.radio-wrap').parent().removeClass('selected');
   	$(this).parent().addClass('selected');
-    map.setZoom($(this).data("dist"));console.log('sdfsdf');
+    map.setZoom($(this).closest(".distance").data("dist"));
   });
 }
 </script>
