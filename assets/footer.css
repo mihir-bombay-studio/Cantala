@@ -105,6 +105,7 @@ footer {
 .checkbox-label {
     line-height: 27px;
     font-size: 12px;
+  width: calc(100% - 29px);
 }
 
 .newsletter-sub-wrapper {
