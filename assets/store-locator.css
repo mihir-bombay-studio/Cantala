@@ -96,6 +96,11 @@ button.btn.btn-center {
     margin-top: 0;
     padding: 14px 44px;
 }
+.gm-style-iw.gm-style-iw-c {
+    max-width: 278px !important;
+    height: auto !important;
+    border-radius: 0;
+}
 @media (max-width: 992px){
   .store-locator-content {
     flex-direction: column-reverse;
