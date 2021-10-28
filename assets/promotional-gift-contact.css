@@ -75,6 +75,7 @@
 .checkbox-label {
     line-height: 27px;
     font-size: 12px;
+  width: calc(100% - 29px);
 }
 
 .newsletter-sub-wrapper {
@@ -144,9 +145,9 @@ textarea {
 }
   
   .promotional-gift-contact-wrapper .checkbox {
-    width: 18px;
+/*     width: 18px; */
     margin-top: 5px;
-    height: 16px;
+/*     height: 16px; */
     border: 1px solid;
     margin-right: 13px;
     cursor: pointer;
