@@ -66,6 +66,12 @@
   display: block;
 }
 
+@media (max-width: 1400px){
+	.tig-title {
+    top: -103px;
+}
+}
+
 @media (max-width: 992px){
   .tig-content-wrapper {
     flex-direction: column;
