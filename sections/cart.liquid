@@ -489,6 +489,9 @@
           'items': [{
             'id': 39340777767090,
             'quantity': parseInt($(".qty-container .qty-number").text())
+          },{
+            'id': parseInt($(this).data('value')),
+            'quantity': parseInt($(".qty-container .qty-number").text())
           }]
         };
       } else {
