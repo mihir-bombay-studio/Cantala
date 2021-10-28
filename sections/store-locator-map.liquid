@@ -52,10 +52,10 @@
   	$(this).parent().addClass('selected');
   });
   
-  /*function myMap() {
+  function myMap() {
 
   // Coordinates to center the map
-  var myLatlng = new google.maps.LatLng(51.222687, 4.4985199);
+  var myLatlng = new google.maps.LatLng(52.632469, -1.689423);
 
   // Other options for the map, pretty much selfexplanatory
   var mapOptions = {
@@ -67,22 +67,9 @@
 
   // Attach a map to the DOM Element, with the defined settings
   var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myLatlng,
-    map: map,
-    title: "Cantata koffie",
-  });
-}*/
-  function initMap() {
-  // Create the map.
-  const map = new google.maps.Map(document.getElementById('googleMap'), {
-    zoom: 7,
-    center: {lat: 52.632469, lng: -1.689423},
-  });
-
-  // Load the stores GeoJSON onto the map.
+    
     map.data.loadGeoJson('{{ "stores.json" | asset_url }}', {idPropertyName: 'storeid'});
+                         
 
   const apiKey = 'AIzaSyBFnC0N3_eWlSfNF95aNeBG4qQNR67y-N8';
   const infoWindow = new google.maps.InfoWindow();
@@ -104,6 +91,12 @@
     infoWindow.setPosition(position);
     infoWindow.setOptions({pixelOffset: new google.maps.Size(0, -30)});
     infoWindow.open(map);
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    title: "Cantata koffie",
   });
 }
 </script>
