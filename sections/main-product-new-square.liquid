@@ -1,0 +1,985 @@
+
+<style>
+  .breadcrums {
+  	margin-bottom: 66px;
+  }
+  .breadcrum {
+    font-size: 13px;
+    margin-right: 18px;
+    position: relative;
+    opacity: .5;
+  }  
+  .breadcrum:last-child {  	
+    margin-right: 0;    
+    opacity: 1;
+  }
+  
+  .breadcrum::after {
+  	content: "/";
+    position: absolute;
+    right: -12px;
+  }
+  
+  .breadcrum:last-child::after { 
+  	content: "";
+  }
+</style>
+
+<style>
+  .product-row-1, .product-row-2 {
+  width: calc( 50% - 54px );
+  }
+  .slider-for {
+    margin-bottom: 16px;
+}
+  .slider-for .slick-track {
+    display: flex;
+}
+  .slider-for img {
+    align-self: center;
+    border-radius: 4px;
+    height: 500px;
+    object-fit: contain;
+}
+  .no-transform .slick-track {
+    transform: none!important;
+  }
+  .slider-nav .slick-track {
+    margin-left: 0;
+}
+  .slider-nav img.slick-slide.slick-current {
+    box-shadow: inset 0 0 0 1pt #342D25!important;
+    padding: 1px;
+    border-radius: 0;
+}
+  .slider-nav img {
+    margin-bottom: 7px;
+    margin-right: 7px;
+  }
+  h1.product-title {
+    font-size: 46px;
+    color: #342D25;
+    font-family: 'Athelas',serif;
+  }
+  .product-price {
+    margin-top: 15px;
+    color: #342D25;
+    font-weight: 500;
+    font-size: 22px;
+    opacity: .7;
+    margin-bottom: 44px;
+    display: block;
+  }
+  
+  .accordion-description {
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    margin-top: 56px;
+    margin-bottom: 0;
+  }
+
+  .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .accordion-description svg {
+    width: 14px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: calc( 50% - 9.5px );
+    transition: .2s ease;
+  }
+  .accordion-description .symbol-minus svg {
+    top: calc( 50% - 15px );
+  }
+  
+  .accordion-description .symbol-minus svg {
+    opacity: 0;
+  }
+  .accordion-description.accordion-active .symbol-plus svg {
+    opacity: 0;
+  }
+  
+  .accordion-description.accordion-active .symbol-minus svg {
+    opacity: 1;
+  }
+  hr.product-seperator {
+    margin: 24px 0 44px;
+  }
+  ul.checklist {
+    margin: 0;
+    list-style: none;
+    list-style-position: inside;
+}
+  ul.checklist {
+    padding: 40px 0 0 0;
+}
+  ul.checklist li {
+    padding: 0 0 21px 52px;
+    position: relative;
+    color: #342D25;
+    font-weight: 500;
+}
+  ul.checklist li:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ' ';
+    width: 25px;
+    height: 25px;
+    background-image: url({{ "tick.svg" | asset_url }});
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+  
+  .qty-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #342D25;
+    padding: 14px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .qty-btn.symbol-minus {
+    opacity: .5;
+  }
+  .qty-number {}
+
+  .qty-btn {
+    height: 8px;
+    width: 8px;
+    cursor: pointer;
+  }
+  .qty-btn svg {
+    width: 100%;
+    height: 100%;
+  }
+  .qty-container {
+    display: flex;
+    width: 58px;
+    justify-content: space-between;
+  }
+  .m-row.grouped:first-child {
+    width: 46%;
+    padding-right:6px;
+  }
+  .m-row.grouped:last-child {
+    width: 54%;
+    padding-left:6px;
+  }
+  span#AddToCart {
+    margin-top: 0;
+    width: auto;
+    padding: 17.5px 18px;
+    font-family: var(--font-body-family);
+    font-weight: 400;
+    border: 0;
+    letter-spacing: .8px;
+    font-size: 16px;
+    background-color: #342D25;
+    color: #F4EDE2;
+    text-align: center;
+}
+  .option-wrapper {
+    margin-bottom: 60px;
+  }
+  .selector.box-selector {
+    border: 0.5px solid #342d2580;
+    padding: 8px 10px;
+    width: 33.333%;
+    min-height: 51px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+  }  
+  .selector.box-selector:first-child {
+  	border-right: 0;
+  }
+  .selector.box-selector:last-child {
+  	border-left: 0;
+  }
+  .box-selector-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .selector.box-selector.selected {
+    background-color: #E6AF7B;
+  }
+  span.box-title {
+    letter-spacing: 1.2px;
+    margin-left: 5px;
+  }
+  span.discount {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 8px;
+  }
+  .checkbox-wrap{
+	margin-top: 11px;
+}
+
+  .checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+    margin-right: 13px;
+    cursor: pointer;
+  }
+
+  .checkbox.selected .checked {
+    width: 10px;
+    height: 10px;
+    margin-top: 2px;
+    margin-left: 2px;
+    background-color: var(--main-font-color);
+      position: absolute;
+      }
+
+  .checkbox-label {
+    line-height: 27px;
+    font-size: 12px;
+  }
+  span.box-price {
+    float: right;
+    font-weight: 700;
+  }
+  .trustbox-product-page {
+    background-color: #fff;
+    padding: 18px;
+    margin-top: 58px;
+  }
+  .product.product-wrap {
+    margin-bottom: 170px;
+  }
+  @media(max-width: 992px) {
+    .no-t-m {
+      display: none;
+    }
+    .product-wrap {
+      flex-wrap: wrap;
+    }
+    .product-row-1, .product-row-2 {
+      width: 100%;
+    }
+    .slider-for img {
+      height: 334px;
+    }
+    .breadcrums {
+      margin-bottom: 16px;
+    }
+    .slider-nav img {
+      margin-bottom: 6px;
+      margin-right: 6px;
+      width: 44px !important;
+      height: 44px;
+      object-fit: cover;
+    }
+    h1.product-title {
+      font-size: 30px;
+      margin-top: 35px;
+      margin-bottom: 8px;
+    }
+    .product-price {
+      margin-top: 8px;
+      font-size: 16px;
+      margin-bottom: 21px;
+    }
+    .no-transform .slick-track {
+      width: 100% !important;
+    }
+    .selector.box-selector:first-child {
+      border-right: 0.5px solid #342d2580;
+    }
+    .selector.box-selector {
+      border-bottom: 0;
+      width: 100%;
+    }
+    .selector.box-selector:last-child {
+      border-left: 0.5px solid #342d2580;
+      border-bottom: 0.5px solid #342d2580;
+    }
+    .m-row.grouped:first-child {
+      width: 100%;
+      padding-right: 0;
+    }
+    .m-row.grouped:last-child {
+      width: 100%;
+      padding-left: 0;
+      margin-top: 9px;
+    }
+    .product-details .flex-box {
+      flex-wrap: wrap;
+    }
+    span#AddToCart {
+      width: 100%;
+    }
+    .cart-popup-block .default-h2 {
+      font-size: 30px;
+      margin-bottom: 0 !important;
+      line-height: 30px !important;
+    }
+    .cart-popup-block .default-text {
+      max-width: 100%;
+      margin-top: 0 !important;
+      margin-bottom: 8px;
+    }
+    .cart-popup-block .container.flex-box.justify-between.align-center {
+      flex-wrap: wrap;
+    }
+    .cart-popup-block {
+      height: auto;
+      min-height: 170px;
+    }
+  }
+  
+  .slider-nav .slick-next, .slider-nav .slick-prev {
+    top: calc(50% - 8px);
+    height: 32px;
+    width: 32px;
+    z-index: 1;
+    background-color: #fff;
+  }
+  .slider-nav .slick-prev {
+    left: 0;
+  }
+  .slider-nav .slick-next {
+    right: 0;
+  }
+  .slider-nav .slick-next:before {
+    content: url({{ "caret.svg" | asset_url }}) !important;
+    transform: rotate(270deg);
+    display: block;
+    line-height: 32px;
+    margin-top: 1px;
+    margin-right: 6px;
+  }
+  .slider-nav .slick-prev:before {
+    content: url({{ "caret.svg" | asset_url }}) !important;
+    transform: rotate(270deg);
+    display: block;
+    line-height: 32px;
+    margin-top: 1px;
+    margin-right: 6px;
+  }
+  .slider-nav .slick-slide{
+    border: 1px solid transparent;
+    transition: all .4s ease
+  }
+  .slider-nav img:not(.slick-slide) {
+  	opacity: 0;
+    transition: all .4s ease;
+  }
+  .slider-nav .slick-list {
+  	padding: 0 !important;
+  }
+  {% for media in product.media %}{% if forloop.length > 7 %}
+  .slider-nav img:last-child:not(.slick-active){
+  	display: none;
+  }
+  
+  .slider-nav {
+  	padding: 20px;
+  }
+  {% endif %}{% endfor %}
+  .slider-nav img.slick-slide.slick-current {
+  	box-shadow: none !important;
+    border: 1px solid #342D25;
+    padding: 0 !important;
+  }
+  @media(min-width: 992px) {
+    .slider-nav .slick-next, .slider-nav .slick-prev {
+      top: calc(50% - 4px);
+    }
+</style>
+
+<div class="container">
+  <div class="breadcrums">
+    <a href="/" class="breadcrum">Home</a>
+    <a class="breadcrum active">{{ product.title | escape }}</a>
+  </div>
+  
+  
+  <div class="product padd-top-m flex-box justify-between product-wrap">
+    <div class="product-row-1 module">
+      <div class="slider-for">
+        {% for media in product.media %}
+        {% case media.media_type %}
+        {% when 'image' %}
+        <img src="{{ media | img_url: 'x600' }}" alt="{{ media.alt | escape }}" {% unless forloop.first %}loading="lazy"{% endunless %}>
+        {% when 'video' %}
+        <video playsinline="playsinline" preload="auto" autoplay="autoplay" muted="muted" loop="loop">
+          {% for video in media.sources %}{% if video.format == "mp4" %}<source src="{{ video.url }}" type="video/mp4">{% endif %}{% endfor %}
+        </video>
+        {% else %}
+        <img src="{{ media | img_url: 'x600' }}" alt="{{ media.alt | escape }}" {% unless forloop.first %}loading="lazy"{% endunless %}>
+        {% endcase %}          
+        {% endfor %}
+      </div>
+      <div class="slider-nav{% for media in product.media %}{% if forloop.length < 8 %} no-transform{% endif %}{% endfor %}">
+        {% for media in product.media %}          
+        {% case media.media_type %}
+        {% when 'image' %}
+        <img src="{{ media.preview_image | img_url: '200x' }}" alt="{{ media.alt | escape }}"> 
+        {% when 'video' %}
+        <div class="video-btn"><img src="{{ media.preview_image | img_url: '200x' }}" alt="{{ media.alt | escape }}"> </div>
+        {% else %}
+        <img src="{{ media.preview_image | img_url: '200x' }}" alt="{{ media.alt | escape }}"> 
+        {% endcase %} 
+        {% endfor %}
+      </div>
+      
+      <ul class="checklist no-t-m">
+        <li>Voor 12u besteld - morgen geleverd*</li>
+        <li>Focus op duurzaamheid</li>
+        <li>Grootste assortiment in premium koffie & thee in Benelux</li>
+        <li>Gratis verzending vanaf €30 {% include "icon-belgium" %} & €45 {% include "icon-netherlands" %}</li>
+        <li>Beleef met cantata je eigen wow-effect</li>
+
+      </ul>
+      
+    </div>
+    <div class="product-row-2 module">
+      <div class="product-top">
+        <div class="product-row sub-marg-bottom-xs">
+          <div class="product-col">
+            <h1 class="product-title">{{ product.title | escape  }}</h1>
+          </div>
+          <div class="product-col">
+            <span class="product-price">{{ product.price | money  }}</span>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        {%- unless product.has_only_default_variant -%}
+        <div class="variant-options-wrapper">
+          <variant-radios class="no-js-hidden">
+            <div class="fieldset-wrapper style-scrollbar">
+              {%- for option in product.options_with_values -%}
+              <div class="option-wrapper">
+              <div class="option-name">{{option.name}}</div>
+              	{%- for value in option.values -%}
+                  {% if option.name == "Gewicht" %}
+                	{% if forloop.first %}
+              			<div class="box-selector-wrapper">
+                    {% endif %}
+                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape }}">{% include "icon-weight" %}<span class="box-title">{{ value | escape | times: 1000 | replace: ".0" }} GRAM</span><span class="box-price">{{ product.price | money }}</span><span class="discount">{% if forloop.index == 2 %}5% discount on kilo price{% elsif forloop.index == 3 %}10% discount on kilo price{% endif %}</span></div>
+                          
+                	{% if forloop.last %}
+                	</div>
+                    {% endif %}
+                  {% else %}
+                    {% if forloop.first %}
+              		<div class="custom-select">
+                    <select class="selector drop-selector selected" name="{{option.name}}" id="selector-{{ forloop.index }}">
+                      {% endif %}
+                      <option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value | escape }}</option>
+                      {% if forloop.last %}
+                    </select>
+              		</div>
+              		{% endif %}
+                  {% endif %}
+              	{%- endfor -%}
+              </div>
+              {%- endfor -%}
+            </div>
+            <script id="product-json" type="application/json">
+              {{ product.variants | json }}
+            </script>
+          </variant-radios>
+        </div>
+        {%- endunless -%}
+        
+                
+      </div>
+
+      <div class="product-details">
+        <div class="flex-box">
+          <div class="m-row grouped">
+            <div class="qty-wrapper" data-quantity="1">
+              <span class="qty-name">Aantal:</span>
+              <span class="qty-container">
+                <span class="qty-btn symbol-minus">{% include "icon-minus" %}</span>
+                <span class="qty-number">1</span>
+                <span class="qty-btn symbol-plus">{% include "icon-plus" %}</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="m-row grouped">
+            <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">Voeg toe aan winkelwagen</span> 
+          </div>
+        </div>
+
+        <div class="checkbox-wrap flex-box align-center">
+          <span class="checkbox rel"><span class="checked"></span></span>
+          <span class="checkbox-label">Voeg een geschenkverpakking toe (€1,50)</span>
+        </div>
+      </div>
+      
+      <div class="trustbox-product-page">
+        <!-- TrustBox widget - Micro Combo -->
+        <div class="trustpilot-widget" data-locale="nl-NL" data-template-id="5419b6ffb0d04a076446a9af" data-businessunit-id="606b0355f7709000018746fc" data-style-height="20px" data-style-width="100%" data-theme="light" data-text-color="#342D25">
+          <a href="https://nl.trustpilot.com/review/cantata.be" target="_blank" rel="noopener">Trustpilot</a>
+        </div>
+        <!-- End TrustBox widget -->
+      </div>
+
+      <div class="accordion-description">  
+        <p class="rel">Beschrijving <span class="symbol symbol-plus">{% include "icon-plus" %}</span></p><span class="symbol symbol-minus">{% include "icon-minus" %}</span></p>
+        <hr class="product-seperator">
+      </div>
+      <div class="panel extra-panel">
+        {{ product.description }}
+      </div>
+
+    </div>
+  </div>
+  
+</div>
+
+
+<script>
+  
+  $(".selector.box-selector").click(function() {
+    $(this).parent().find(".box-selector").removeClass("selected");
+    $(this).addClass("selected");
+    refreshRates();
+  });
+  $(".qty-wrapper .symbol-plus").click(function(){
+      var adder = 1;
+      $(this).parent().parent().data("quantity",parseInt($(this).parent().parent().data("quantity"))+1);
+      $(this).parent().find('.qty-number').text($(this).parent().parent().data("quantity"));   
+      if($(this).parent().parent().data("quantity") < 2) {
+        $(this).parent().find('.symbol-minus').css('opacity','0.5');
+      } else {
+        $(this).parent().find('.symbol-minus').css('opacity','1');
+      }
+      //$(".product-price").text("€"+cartBtnPrice());       
+    }); 
+    $(".qty-wrapper .symbol-minus").click(function(){
+      if($(this).parent().parent().data("quantity") > 1) {
+      	var adder = 1;
+        $(this).parent().parent().data("quantity",parseInt($(this).parent().parent().data("quantity"))-1);
+        $(this).parent().find('.qty-number').text($(this).parent().parent().data("quantity")); 
+        if($(this).parent().parent().data("quantity") < 2) {
+        	$(this).css('opacity','0.5');
+        } else {
+        	$(this).css('opacity','1');
+        }
+      //$(".product-price").text("€"+cartBtnPrice());
+      }
+    });   
+  
+  //faq script
+  var acc = document.getElementsByClassName("accordion-description");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("accordion-active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+  
+  
+  function refreshRates() {
+    if($('#product-json').length > 0) {
+      var string = "";
+      $(".option-wrapper .box-selector").each(function(index){
+        string = "";
+        if(string == "") {
+          if($(this).hasClass("box-selector")) {
+            string += $(this).data("val");
+          } else {
+            string += $(this).val();
+          }          
+        } else {
+          if($(this).hasClass("box-selector")) {
+            string += " / " + $(this).data("val");
+          } else {
+            string += " / " + $(this).val();
+          }           
+        }
+        if($(".option-wrapper").length > 1) {
+          if($(".option-wrapper").last().find(".selector").hasClass("box-selector")) {
+            string += " / " +$(".option-wrapper").last().find(".selector").data("val");
+          } else {
+            string += " / " + $(".option-wrapper").last().find(".selector").val();
+          }     
+        }
+        var x = JSON.parse($('#product-json').html());
+        var w = x.find(item => {
+          return item.public_title === string;
+        });
+        $(this).find('.box-price').text("€"+parseFloat((w.price/100).toFixed(2)));
+      });
+      
+        var string2 = "";
+      var title_string = "";
+        $(".selector.selected").each(function(index){
+          if(string2 == "") {
+            if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
+              string2 += $(this).data("val");
+              title_string += parseFloat($(this).data("val")*1000) + "g";
+            } else {
+              string2 += $(this).val();
+              title_string += $(this).val();
+            }          
+          } else {
+
+            if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
+              string2 += " / " + $(this).data("val");
+              title_string += " / " + parseFloat($(this).data("val")*1000) + "g";
+            } else {
+              string2 += " / " + $(this).val();
+              title_string += " / " + $(this).val();
+            }           
+          }
+        });
+        var x = JSON.parse($('#product-json').html());
+        var w = x.find(item => {
+          return item.public_title === string2;
+        });
+        $(".product-col .product-price").text("€"+parseFloat((w.price/100).toFixed(2)));
+      $(".variant-name").text(title_string);
+      $(".variant-price").text("€"+parseFloat((w.price/100).toFixed(2)));
+      
+    }
+  }
+  $( document ).ready(function() {
+  refreshRates();
+  });
+</script>
+
+
+<script>
+  var x, i, j, l, ll, selElmnt, a, b, c;
+  /*look for any elements with the class "custom-select":*/
+  x = document.getElementsByClassName("custom-select");
+  l = x.length;
+  for (i = 0; i < l; i++) {
+    selElmnt = x[i].getElementsByTagName("select")[0];
+    ll = selElmnt.length;
+    /*for each element, create a new DIV that will act as the selected item:*/
+    a = document.createElement("DIV");
+    a.setAttribute("class", "select-selected");
+    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    x[i].appendChild(a);
+    /*for each element, create a new DIV that will contain the option list:*/
+    b = document.createElement("DIV");
+    b.setAttribute("class", "select-items select-hide");
+    for (j = 1; j < ll; j++) {
+      /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+      c = document.createElement("DIV");
+      c.innerHTML = selElmnt.options[j].innerHTML;
+      c.addEventListener("click", function(e) {
+        /*when an item is clicked, update the original select box,
+        and the selected item:*/
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+        refreshRates();
+      });
+      b.appendChild(c);
+    }
+    x[i].appendChild(b);
+    a.addEventListener("click", function(e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+  }
+  function closeAllSelect(elmnt) {
+    /*a function that will close all select boxes in the document,
+  except the current select box:*/
+    var x, y, i, xl, yl, arrNo = [];
+    x = document.getElementsByClassName("select-items");
+    y = document.getElementsByClassName("select-selected");
+    xl = x.length;
+    yl = y.length;
+    for (i = 0; i < yl; i++) {
+      if (elmnt == y[i]) {
+        arrNo.push(i)
+      } else {
+        y[i].classList.remove("select-arrow-active");
+      }
+    }
+    for (i = 0; i < xl; i++) {
+      if (arrNo.indexOf(i)) {
+        x[i].classList.add("select-hide");
+      }
+    }
+  }
+  /*if the user clicks anywhere outside the select box,
+then close all select boxes:*/
+  document.addEventListener("click", closeAllSelect);
+</script>
+
+{% schema %}
+  {
+    "name": "Product section",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: 'Avenir Next';
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: transparent;
+  color: #342D25;
+}
+
+/*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 25px;
+    width: 10px;
+    height: 6px;
+    background-image: url({{ "caret.svg" | asset_url }});
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .5s ease;
+  }
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  transform: rotate(180deg);
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #342D25;
+  padding: 10px 0;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #f4ede2;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  
+  .default-h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #342D25;
+    font-family: Athelas,sans-serif;
+    text-align: center;
+  }
+
+  .default-text {
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #342D25;
+    color: #F4EDE2;
+    display: table;
+    margin: 0 auto;
+    padding: 14px 44px;
+    margin-top: 30px;
+  }
+  .cart-popup-block {
+    position: fixed;
+    z-index: 8;
+    bottom: 0;
+    right: 0;
+    background-color: #EBDCC2;
+    padding: 0;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+  }
+  .cart-popup-block .default-h2 {
+    text-align: left;
+    max-width: none;
+    margin-bottom: 7px;
+    line-height: 44px;
+  }
+  .cart-popup-block .default-text {
+    text-align: left;
+    max-width: none;
+    margin-top: 7px;
+  }
+  .cart-popup-block .btn {
+    margin-top: 0;
+    width: auto;
+    padding: 17px 34px;
+    font-family: var(--font-body-family);
+    font-weight: 400;
+    border: 0;
+    letter-spacing: .8px;
+    font-size: 16px;
+}
+  
+  @media(max-width: 992px) {
+    .cart-popup-block {
+      bottom: 0;
+      right: 0;
+      padding: 16px 20px;
+      width: 100%;
+    }
+  }
+  
+</style>
+<div class="cart-popup-block" style="display: none;">    
+  <div class="container flex-box justify-between align-center">
+    <div>
+      <h2 class="default-h2">{{ product.title }}</h2>
+      <p class="default-text"><span class="variant-name"></span> - <span class="variant-price"></span></p>
+    </div>
+    <div>
+    <button type="submit" class="btn" name="commit" id="popupaddtocart" data-value="{{ product.selected_or_first_available_variant.id }}" aria-label="Inschrijven">
+      Voeg toe aan winkelwagen
+    </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(window).scroll(function() { 
+    var t=$(window).scrollTop()+1; 
+    var c=$('html').outerHeight(); 
+    var p=(t/c*100).toFixed(0); 
+    if (p>30) { 
+      $(".cart-popup-block").fadeIn();
+    } else {
+      $(".cart-popup-block").fadeOut();
+    }
+  });   
+</script>
+
