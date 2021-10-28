@@ -20,7 +20,7 @@
                 <div class="store-hours-text">Openingstijden</div>
                 <div class="down-chevron">{% include 'icon-down-chevron-brown' %}</div>
               </div>
-              <div class="panel store-hours">
+              <div class="panel store-hour">
                 {{ block.settings.hours }}
               </div>
       		</div>
@@ -40,6 +40,21 @@
     $(this).addClass('no-disp');
   	$(".store-info-wrap").show();
   });
+  
+  var acc = document.getElementsByClassName("store-hours");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
 </script>
 
 {% schema %}
