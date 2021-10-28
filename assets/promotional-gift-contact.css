@@ -123,8 +123,8 @@ textarea {
 
 @media (max-width: 992px){
   .abs-background {
-    width: 90%;
-    left: 10%;
+    width: 100%;
+    left: 0;
 }
   
   form#contact_form{
