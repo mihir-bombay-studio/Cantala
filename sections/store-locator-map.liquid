@@ -52,7 +52,7 @@
   	$(this).parent().addClass('selected');
   });
   
-  if (document.getElementById('googleMap')) {
+  function myMap() {
 
   // Coordinates to center the map
   var myLatlng = new google.maps.LatLng(51.222687, 4.4985199);
@@ -74,8 +74,7 @@
     map: map,
     title: "Cantata koffie",
   });
-  }
-
+}
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFnC0N3_eWlSfNF95aNeBG4qQNR67y-N8&callback=myMap"></script>
