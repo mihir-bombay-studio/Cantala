@@ -59,14 +59,14 @@
 
   // Other options for the map, pretty much selfexplanatory
   var mapOptions = {
-    zoom: 16,
+    zoom: 12,
     center: myLatlng,
     query: 'Cantata koffie',
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
   // Attach a map to the DOM Element, with the defined settings
-  var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+  window.map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
     
     map.data.loadGeoJson('{{ "stores.json" | asset_url }}', {idPropertyName: 'storeid'});
                          
