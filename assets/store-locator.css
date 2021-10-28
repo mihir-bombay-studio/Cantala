@@ -105,6 +105,10 @@ button.btn.btn-center {
     font-weight: 500;
   margin-bottom: 10px;
 }
+.gm-style-iw.gm-style-iw-c p {
+    font-size: 14px;
+    font-family: 'Avenir Next';
+}
 @media (max-width: 992px){
   .store-locator-content {
     flex-direction: column-reverse;
