@@ -82,7 +82,7 @@
   });
 
   // Load the stores GeoJSON onto the map.
-  map.data.loadGeoJson('stores.json', {idPropertyName: 'storeid'});
+    map.data.loadGeoJson('{{ "stores.json" | asset_url }}', {idPropertyName: 'storeid'});
 
   const apiKey = 'AIzaSyBFnC0N3_eWlSfNF95aNeBG4qQNR67y-N8';
   const infoWindow = new google.maps.InfoWindow();
