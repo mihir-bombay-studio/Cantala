@@ -96,7 +96,7 @@
                     var latitude = results[0].geometry.location.lat();
                     var longitude = results[0].geometry.location.lng();
                   	var myLatlng2 = new google.maps.LatLng(latitude,longitude);
-                    map.setZoom(16);
+                    map.setZoom($(".selected .radio-wrap").data("dist"));
                   map.panTo(myLatlng2);
                 } else {
                     console.log('unrecognised address');
