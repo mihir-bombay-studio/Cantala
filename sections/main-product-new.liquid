@@ -468,7 +468,7 @@
                 	{% if forloop.first %}
               			<div class="box-selector-wrapper">
                     {% endif %}
-                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape }}">{% include "icon-weight" %}<span class="box-title">{{ value | escape | times: 1000 | replace: ".0" }} GRAM</span><span class="box-price">€3,40</span><span class="discount">5% discount on kilo price</span></div>
+                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape }}">{% include "icon-weight" %}<span class="box-title">{{ value | escape | times: 1000 | replace: ".0" }} GRAM</span><span class="box-price">{{ value.price | money }}</span><span class="discount">5% discount on kilo price</span></div>
                           
                 	{% if forloop.last %}
                 	</div>
