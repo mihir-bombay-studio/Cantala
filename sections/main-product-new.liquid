@@ -647,6 +647,8 @@
           return item.public_title === string2;
         });
         $(".product-col .product-price").text("€"+parseFloat((w.price/100).toFixed(2)));
+      $(".variant-name").text(string2);
+      $(".varaint-price").text("€"+parseFloat((w.price/100).toFixed(2)));
       
     }
   }
