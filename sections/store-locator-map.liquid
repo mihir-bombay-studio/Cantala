@@ -105,8 +105,15 @@
             });
         };
     
-    $('.locator-pin-code').bind('input', function() {
-     GetLocation()
+    $('.locator-pin-code').keypress(function(e){
+        if(e.which == 13){//Enter key pressed
+     GetLocation();
+        }
+    });
+    
+    
+    $('button.btn.btn-center').click(function() {
+    	GetLocation();
     });
   
   
