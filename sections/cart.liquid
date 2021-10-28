@@ -483,13 +483,22 @@
         });
         $(this).data('value',w.id);
       }
-
-      var formData = {
-        'items': [{
-          'id': parseInt($(this).data('value')),
-          'quantity': parseInt($(".qty-container .qty-number").text())
-        }]
-      };
+      var formData;
+      if($(".checkbox").hasClass("selected")) {
+        formData = {
+          'items': [{
+            'id': 39340777767090,
+            'quantity': parseInt($(".qty-container .qty-number").text())
+          }]
+        };
+      } else {
+        formData = {
+          'items': [{
+            'id': parseInt($(this).data('value')),
+            'quantity': parseInt($(".qty-container .qty-number").text())
+          }]
+        };
+      }
       $.ajax({
         url: "/cart/add.js",
         method: "POST",
