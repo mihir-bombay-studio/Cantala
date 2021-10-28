@@ -2,6 +2,7 @@
     padding: 16px 21px;
   border: none;
   width: 80%;
+  height: 52px;
 }
 
 .newsletter-sub-wrapper .submit-btn-wrap{
@@ -14,6 +15,7 @@
   color: var(--background-main);
     cursor: pointer;
     width: 100%;
+    height: 52px;
 }
 
 .subscription-form-input::-webkit-input-placeholder {
