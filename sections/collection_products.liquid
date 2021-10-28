@@ -1,11 +1,12 @@
 {{ 'collection-products.css' | asset_url | stylesheet_tag }}
 {% assign product_handle = section.settings.collection_select %}
-
+{% assign proSelect = product.handle %}
 <div class="collection-products-wrapper">
   <div class="container">
     <h2 class="collection-products-title text-center heading-2 module">{{ section.settings.collection_products_title }}</h2>
     <div class="coll-products module">
     	{% for product in collections[product_handle].products %}
+      {% unless proSelect == product.handle %}
       <div class="coll-product">
         <div class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
@@ -17,7 +18,7 @@
           <div class="product-price"><span class="currency">EUR{{ currency.iso_code }}</span><span class="price medium">{{ product.price | money_without_currency }}</span></div>
         </div>
       </div>
-      		
+      		{% endunless %}
       	{% endfor %}
     </div>
     {% for block in section.blocks %}
