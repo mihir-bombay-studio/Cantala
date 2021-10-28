@@ -47,11 +47,6 @@
 </div>
 
 <script>
-  $('.radio-wrap').click(function() {
-    $('.radio-wrap').parent().removeClass('selected');
-  	$(this).parent().addClass('selected');
-    map.setZoom($(this).data("dist"));console.log('asdasd');
-  });
   
   function myMap() {
 
@@ -112,6 +107,13 @@
     $('.locator-pin-code').bind('input', function() {
      GetLocation()
     });
+  
+  
+  $('.radio-wrap').click(function() {
+    $('.radio-wrap').parent().removeClass('selected');
+  	$(this).parent().addClass('selected');
+    map.setZoom($(this).data("dist"));
+  });
 }
 </script>
 
