@@ -103,6 +103,7 @@ button.btn.btn-center {
 }
 .gm-style-iw.gm-style-iw-c h2 {
     font-weight: 500;
+  margin-bottom: 10px;
 }
 @media (max-width: 992px){
   .store-locator-content {
