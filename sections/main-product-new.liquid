@@ -624,6 +624,30 @@
         });
         $(this).find('.box-price').text("€"+parseFloat((w.price/100).toFixed(2)));
       });
+      
+        var string2 = "";
+        $(".selector.selected").each(function(index){
+          if(string2 == "") {
+            if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
+              string2 += $(this).data("val");
+            } else {
+              string2 += $(this).val();
+            }          
+          } else {
+
+            if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
+              string2 += " / " + $(this).data("val");
+            } else {
+              string2 += " / " + $(this).val();
+            }           
+          }
+        });
+        var x = JSON.parse($('#product-json').html());
+        var w = x.find(item => {
+          return item.public_title === string2;
+        });
+        $(".product-col .product-price").text("€"+parseFloat((w.price/100).toFixed(2)));
+      
     }
   }
   refreshRates();
