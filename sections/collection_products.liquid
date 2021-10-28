@@ -8,9 +8,9 @@
     	{% for product in collections[product_handle].products %}
       {% unless proSelect == product.handle %}
       <div class="coll-product">
-        <div class="product-img-wrap">
+        <a href="{{ product.url }}" class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
-        </div>
+        </a>
         <div class="product-tag bold">{{ product.type }}</div>
         <div class="product-title"><a href="{{ product.url }}">{{ product.title | escape }}</a></div>
         <div class="product-price-wrap flex-box align-center justify-between">

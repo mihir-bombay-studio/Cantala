@@ -75,6 +75,7 @@
 .checkbox-label {
     line-height: 27px;
     font-size: 12px;
+  width: calc(100% - 29px);
 }
 
 .newsletter-sub-wrapper {
@@ -122,9 +123,13 @@ textarea {
 
 @media (max-width: 992px){
   .abs-background {
-    width: 90%;
-    left: 10%;
+    width: 100%;
+    left: 0;
 }
+  
+  form#contact_form{
+  	width: 100%;
+  }
   
   .promotional-gift-contact-content {
     flex-direction: column;
@@ -144,9 +149,9 @@ textarea {
 }
   
   .promotional-gift-contact-wrapper .checkbox {
-    width: 18px;
+/*     width: 18px; */
     margin-top: 5px;
-    height: 16px;
+/*     height: 16px; */
     border: 1px solid;
     margin-right: 13px;
     cursor: pointer;
@@ -155,4 +160,10 @@ textarea {
   .promotional-gift-contact-wrapper {
     margin-bottom: 100px;
 }
+}
+
+@media (max-width: 390px){
+  .pgc-heading{
+  	top: -67px;
+  }
 }

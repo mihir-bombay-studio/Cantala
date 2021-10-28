@@ -56,6 +56,37 @@
     }
   }
 </style>
+{{ 'faq.css' | asset_url | stylesheet_tag }}
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+//     $('.accordion').removeClass('active');
+//     $('.panel').css({"maxHeight":"null"});
+//     $('.accordion').find('.faq-icon').text('+');
+//     $('.panel').removeClass('open-panel');
+    this.classList.toggle("active");
+    if($(this).hasClass('active')){
+      	$(this).find('.faq-icon').text('-');
+    	$(this).next().addClass('open-panel');
+    }
+    else{
+    	$(this).next().removeClass('open-panel');
+      $(this).find('.faq-icon').text('+');
+    }
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+  
+  
+</script>
 {% schema %}
   {
     "name": "Legal styles",

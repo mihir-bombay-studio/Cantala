@@ -36,6 +36,7 @@
 
 .promotional-gifts-wrapper {
     margin-bottom: 95px;
+  margin-top: -55px;
 }
 
 @media (max-width: 992px){
@@ -60,5 +61,9 @@
   
   .promotional-gifts-left {
     margin-bottom: 26px;
+}
+  
+  .promotional-gifts-wrapper {
+    margin-top: 0;
 }
 }
