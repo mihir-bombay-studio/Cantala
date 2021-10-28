@@ -590,6 +590,42 @@
       }
     });
   }
+  
+  
+  function refreshRates() {
+    if($('#product-json').length > 0) {
+      var string = "";
+      $(".option-wrapper .box-selector").each(function(index){
+        string = "";
+        if(string == "") {
+          if($(this).hasClass("box-selector")) {
+            string += $(this).data("val");
+          } else {
+            string += $(this).val();
+          }          
+        } else {
+          if($(this).hasClass("box-selector")) {
+            string += " / " + $(this).data("val");
+          } else {
+            string += " / " + $(this).val();
+          }           
+        }
+        if($(".option-wrapper").length > 1) {
+          if($(".option-wrapper").last().find(".selector").hasClass("box-selector")) {
+            string += " / " +$(".option-wrapper").last().find(".selector").data("val");
+          } else {
+            string += " / " + $(".option-wrapper").last().find(".selector").val();
+          }     
+        }
+        console.log(string);
+        var x = JSON.parse($('#product-json').html());
+        var w = x.find(item => {
+          return item.public_title === string;
+        });
+        $(this).find('.box-price').text("€"+parseFloat((w.price/100).toFixed(2)));
+      });
+    }
+  }
 </script>
 
 
