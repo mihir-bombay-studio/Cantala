@@ -467,25 +467,14 @@
               <div class="option-wrapper">
               <div class="option-name">{{option.name}}</div>
               	{%- for value in option.values -%}
-                  {% if option.name == "Gewicht" %}
                 	{% if forloop.first %}
               			<div class="box-selector-wrapper">
                     {% endif %}
-                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape }}">{% include "icon-weight" %}<span class="box-title">{{ value | escape | times: 1000 | replace: ".0" }} GRAM</span><span class="box-price">{{ product.price | money }}</span><span class="discount">{% if forloop.index == 2 %}5% discount on kilo price{% elsif forloop.index == 3 %}10% discount on kilo price{% endif %}</span></div>
+                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape }}"><span class="box-title">{{ value | escape }}</span></div>
                           
                 	{% if forloop.last %}
                 	</div>
-                    {% endif %}
                   {% else %}
-                    {% if forloop.first %}
-              		<div class="custom-select">
-                    <select class="selector drop-selector selected" name="{{option.name}}" id="selector-{{ forloop.index }}">
-                      {% endif %}
-                      <option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value | escape }}</option>
-                      {% if forloop.last %}
-                    </select>
-              		</div>
-              		{% endif %}
                   {% endif %}
               	{%- endfor -%}
               </div>
@@ -629,12 +618,10 @@
       });
       
         var string2 = "";
-      var title_string = "";
         $(".selector.selected").each(function(index){
           if(string2 == "") {
             if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
               string2 += $(this).data("val");
-              title_string += parseFloat($(this).data("val")*1000) + "g";
             } else {
               string2 += $(this).val();
               title_string += $(this).val();
@@ -643,7 +630,6 @@
 
             if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
               string2 += " / " + $(this).data("val");
-              title_string += " / " + parseFloat($(this).data("val")*1000) + "g";
             } else {
               string2 += " / " + $(this).val();
               title_string += " / " + $(this).val();
@@ -655,7 +641,7 @@
           return item.public_title === string2;
         });
         $(".product-col .product-price").text("€"+parseFloat((w.price/100).toFixed(2)));
-      $(".variant-name").text(title_string);
+      $(".variant-name").text(string2);
       $(".variant-price").text("€"+parseFloat((w.price/100).toFixed(2)));
       
     }
