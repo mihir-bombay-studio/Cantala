@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-new",
+      "settings": {
+      }
+    },
+    "1634062859fd044c05": {
+      "type": "collection_products",
+      "settings": {
+        "collection_products_title": "Deze thee valt waarschijnlijk ook in de smaak...",
+        "collection_select": "all"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1634062859fd044c05"
+  ]
+}
