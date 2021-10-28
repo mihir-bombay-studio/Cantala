@@ -52,28 +52,30 @@
   	$(this).parent().addClass('selected');
   });
   
-  function myMap() {
-var mapProp= {
-  center:new google.maps.LatLng(51.222687,4.4985199),
-  zoom:5,
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-  var axios = require('axios');
+  if (document.getElementById('googleMap')) {
 
-  var config = {
-    method: 'get',
-    url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=51.222687%2C4.4985199&radius=1500&type=retail&keyword=cantata+koffie&key=AIzaSyBFnC0N3_eWlSfNF95aNeBG4qQNR67y-N8',
-    headers: { }
+  // Coordinates to center the map
+  var myLatlng = new google.maps.LatLng(51.222687, 4.4985199);
+
+  // Other options for the map, pretty much selfexplanatory
+  var mapOptions = {
+    zoom: 16,
+    center: myLatlng,
+    scrollwheel: false,
+    query: 'Cantata koffie',
+    mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
-  axios(config)
-  .then(function (response) {
-    console.log(JSON.stringify(response.data));
-  })
-  .catch(function (error) {
-    console.log(error);
+  // Attach a map to the DOM Element, with the defined settings
+  var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    title: "Cantata koffie",
   });
+  }
+
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFnC0N3_eWlSfNF95aNeBG4qQNR67y-N8&callback=myMap"></script>
