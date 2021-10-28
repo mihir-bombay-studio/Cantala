@@ -94,5 +94,4 @@ $(document).ready(function(){
   });
   
   
-  $('.slider-nav')[0].slick.refresh();
 });
