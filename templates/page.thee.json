@@ -12,37 +12,25 @@
         "f7b73be3-7e8e-48c8-8c53-b24a63764c47": {
           "type": "Collection",
           "settings": {
-            "collection_id": "boomvruchten"
+            "collection_id": "thee-bestsellers"
           }
         },
         "719a7840-807d-45fe-8705-93f469ab62c2": {
           "type": "Collection",
           "settings": {
-            "collection_id": "nespresso"
+            "collection_id": "exclusieve-thee"
           }
         },
         "0b3fe1be-7b5d-407e-b574-2f3682340a36": {
           "type": "Collection",
           "settings": {
-            "collection_id": "espresso-blend"
+            "collection_id": "thee-accessoires"
           }
         },
         "004615da-59a1-43e4-b384-3ad3dace01a6": {
           "type": "Collection",
           "settings": {
             "collection_id": "bestsellers"
-          }
-        },
-        "484455c2-9a07-469c-b191-563c3296a8b8": {
-          "type": "Collection",
-          "settings": {
-            "collection_id": "accessoires"
-          }
-        },
-        "55339f16-e49a-455b-819d-988691774b35": {
-          "type": "Collection",
-          "settings": {
-            "collection_id": "gember"
           }
         }
       },
@@ -51,9 +39,7 @@
         "f7b73be3-7e8e-48c8-8c53-b24a63764c47",
         "719a7840-807d-45fe-8705-93f469ab62c2",
         "0b3fe1be-7b5d-407e-b574-2f3682340a36",
-        "004615da-59a1-43e4-b384-3ad3dace01a6",
-        "484455c2-9a07-469c-b191-563c3296a8b8",
-        "55339f16-e49a-455b-819d-988691774b35"
+        "004615da-59a1-43e4-b384-3ad3dace01a6"
       ],
       "settings": {
         "header_text": "Kunnen we je nog meer inspireren?",
