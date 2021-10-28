@@ -67,6 +67,12 @@
 	margin-bottom: 137px;
 }
 
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
 @media (max-width: 992px){
   .stores-content {
     margin: 0;
