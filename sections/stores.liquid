@@ -27,7 +27,10 @@
         {% endif %}
         {% endfor %}
     </div>
+    {% assign blocksize = section.blocks | size %}
+    {% if blocksize > 8 %}
     <div class="load-more">Load more</div>
+    {% endif %}
   </div>
 </div>
 
