@@ -370,6 +370,9 @@
   	opacity: 0;
     transition: all .4s ease;
   }
+  .slider-nav .slick-list {
+  	padding: 0 !important;
+  }
   {% for media in product.media %}{% if forloop.length > 7 %}
   .slider-nav img:last-child:not(.slick-active){
   	display: none;
@@ -377,9 +380,6 @@
   
   .slider-nav {
   	padding: 20px;
-  }
-  .slider-nav .slick-list {
-  	padding: 0 !important;
   }
   {% endif %}{% endfor %}
   .slider-nav img.slick-slide.slick-current {
