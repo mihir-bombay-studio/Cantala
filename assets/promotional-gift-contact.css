@@ -162,7 +162,7 @@ textarea {
 }
 }
 
-@media (max-width: 390px){
+@media (max-width: 385px){
   .pgc-heading{
   	top: -67px;
   }
