@@ -30,7 +30,7 @@
       "type": "Feature",
       "properties": {
         "category": "patisserie",
-        "hours": "10am–7pm",
+        "hours": "10am – 7pm",
         "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
         "name": "Cantata Koffie, Thee & Gifts Stockel Square",
         "phone": "+32 2 725 39 84",
@@ -41,17 +41,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          51.04460827879331,
-          3.6669417090786727
+          51.153599,
+          4.1502145
         ]
       },
       "type": "Feature",
       "properties": {
         "category": "patisserie",
-        "hours": "10am - 6pm",
+        "hours": "10am – 6pm",
         "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
-        "name": "Josie's Patisserie Norwich",
-        "phone": "+44 1603 123456",
+        "name": "Cantata Koffie, Thee & Gifts Waasland",
+        "phone": "+32 3 422 59 76",
         "storeid": "03"
       }
     },
