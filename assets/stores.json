@@ -59,17 +59,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.9912838,
-          50.8000418
+          51.048374,
+          3.7276131
         ]
       },
       "type": "Feature",
       "properties": {
         "category": "patisserie",
-        "hours": "10am - 6pm",
+        "hours": "10am - 7pm",
         "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
-        "name": "Josie's Patisserie Wimborne",
-        "phone": "+44 1202 343434",
+        "name": "CANTATA Coffee, Tea & Gifts",
+        "phone": "+32 9 222 19 10",
         "storeid": "04"
       }
     }
