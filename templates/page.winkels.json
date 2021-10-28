@@ -60,97 +60,13 @@
             "phone": "+32 9 222 19 10",
             "hours": "10am–7pm"
           }
-        },
-        "62a57632-e713-4236-948a-45772b978f9c": {
-          "type": "address",
-          "settings": {
-            "store_name": "dgfdyj",
-            "add_ln_1": "vhjjl",
-            "add_ln_2": "fghdgcm",
-            "add_ln_3": "cgnmhd",
-            "website": "zsdghm",
-            "email": "fgjxf",
-            "phone": "5464864",
-            "hours": ""
-          }
-        },
-        "bc7b4f90-dc21-41b6-8415-104fc08c4045": {
-          "type": "address",
-          "settings": {
-            "store_name": "erhduf",
-            "add_ln_1": "sfhdj",
-            "add_ln_2": "dfgdyjjf",
-            "add_ln_3": "srtrgsd",
-            "website": "shdtyj",
-            "email": "gaerhd",
-            "phone": "48676",
-            "hours": ""
-          }
-        },
-        "b61cde10-df90-495f-b2a2-f12008bafabe": {
-          "type": "address",
-          "settings": {
-            "store_name": "dgfsh",
-            "add_ln_1": "sfgmhgv",
-            "add_ln_2": "xdfgnmvjc",
-            "add_ln_3": "xfgcv,",
-            "website": "dxffjm",
-            "email": "dfy",
-            "phone": "456653",
-            "hours": ""
-          }
-        },
-        "524158dc-9bb4-4725-8268-62988127e74a": {
-          "type": "address",
-          "settings": {
-            "store_name": "sdfvj",
-            "add_ln_1": "fghftuhkc",
-            "add_ln_2": "dxfxhch nm",
-            "add_ln_3": "fxhfukh",
-            "website": "strtiul",
-            "email": "bvmguio",
-            "phone": "12322648",
-            "hours": ""
-          }
-        },
-        "6a42c1cb-522d-433c-a480-1b8b26e6d3b2": {
-          "type": "address",
-          "settings": {
-            "store_name": "egsf",
-            "add_ln_1": "adbdgh",
-            "add_ln_2": "ityerg",
-            "add_ln_3": "yjthsrg",
-            "website": "bndgs",
-            "email": "yjdzg",
-            "phone": "78612318",
-            "hours": ""
-          }
-        },
-        "25622426-8529-42c6-848f-f1b0e4d7b8d5": {
-          "type": "address",
-          "settings": {
-            "store_name": "guxfg",
-            "add_ln_1": "fbdg",
-            "add_ln_2": "fgndyhs",
-            "add_ln_3": "sftsrtag",
-            "website": "sdrsgbdfn",
-            "email": "resgdfgnd",
-            "phone": "4863123",
-            "hours": ""
-          }
         }
       },
       "block_order": [
         "a50142d8-014a-40df-908e-054e8b1d9051",
         "959ffff6-cc34-4558-aae9-740ea5e19756",
         "f48a4924-f832-494a-aa2e-bd705f9208a4",
-        "99d89ba4-af2c-4bd8-ac75-428b296c1b59",
-        "62a57632-e713-4236-948a-45772b978f9c",
-        "bc7b4f90-dc21-41b6-8415-104fc08c4045",
-        "b61cde10-df90-495f-b2a2-f12008bafabe",
-        "524158dc-9bb4-4725-8268-62988127e74a",
-        "6a42c1cb-522d-433c-a480-1b8b26e6d3b2",
-        "25622426-8529-42c6-848f-f1b0e4d7b8d5"
+        "99d89ba4-af2c-4bd8-ac75-428b296c1b59"
       ],
       "settings": {
       }
