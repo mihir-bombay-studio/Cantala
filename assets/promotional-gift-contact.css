@@ -164,6 +164,6 @@ textarea {
 
 @media (max-width: 400px){
   .pgc-heading{
-  	font-size: 38px;
+  	top: -52px;
   }
 }
