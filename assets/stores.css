@@ -32,6 +32,7 @@
 
 .store-hours {
     margin-top: 8px;
+  cursor: pointer;
 }
 
 .load-more {
