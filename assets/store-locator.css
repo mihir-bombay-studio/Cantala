@@ -101,6 +101,9 @@ button.btn.btn-center {
     height: auto !important;
     border-radius: 0;
 }
+.gm-style-iw.gm-style-iw-c h2 {
+    font-weight: 500;
+}
 @media (max-width: 992px){
   .store-locator-content {
     flex-direction: column-reverse;
