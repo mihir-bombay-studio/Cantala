@@ -42,6 +42,7 @@ footer {
     padding: 16px 21px;
   border: none;
   width: 65%;
+  height: 52px;
 }
 
 .fns-form-wrapper .submit-btn {
@@ -52,6 +53,7 @@ footer {
     width: 100%;
     margin-top: 0;
     padding: 14px 44px;
+    height: 52px;
 }
 
 .fns-form-wrapper .checkbox{
