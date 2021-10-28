@@ -59,6 +59,21 @@ var mapProp= {
 };
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
+  var axios = require('axios');
+
+  var config = {
+    method: 'get',
+    url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=51.222687%2C4.4985199&radius=1500&type=retail&keyword=cantata+koffie&key=AIzaSyBFnC0N3_eWlSfNF95aNeBG4qQNR67y-N8',
+    headers: { }
+  };
+
+  axios(config)
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFnC0N3_eWlSfNF95aNeBG4qQNR67y-N8&callback=myMap"></script>
