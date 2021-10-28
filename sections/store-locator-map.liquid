@@ -50,6 +50,7 @@
   $('.radio-wrap').click(function() {
     $('.radio-wrap').parent().removeClass('selected');
   	$(this).parent().addClass('selected');
+    map.setZoom($(this).data("dist"));
   });
   
   function myMap() {
