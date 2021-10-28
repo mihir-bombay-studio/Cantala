@@ -92,6 +92,22 @@
     infoWindow.setOptions({pixelOffset: new google.maps.Size(0, -30)});
     infoWindow.open(map);
   });
+    
+    function GetLocation() {
+            var geocoder = new google.maps.Geocoder();
+            var address = $(".locator-pin-code").val() + ", belgium";
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var latitude = results[0].geometry.location.lat();
+                    var longitude = results[0].geometry.location.lng();
+                  	var myLatlng2 = new google.maps.LatLng(latitude,longitude);
+                    map.setZoom(16);
+                  map.panTo(myLatlng2);
+                } else {
+                    console.log('unrecognised address');
+                }
+            });
+        };
 }
 </script>
 
