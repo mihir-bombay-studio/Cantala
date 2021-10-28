@@ -67,9 +67,15 @@
   .product-img {
     transition: transform 250ms ease-out 0s;
   }
-  .coll-product:hover .product-img {
-  	transform: scale(1.05);
-  }
+.coll-product:hover .product-img {
+  transform: scale(1.05);
+}
+.slick-slide .product-price {
+  margin-top: 0;
+  color: var(--font-main-color);
+    opacity: 1;
+    margin-bottom: 0;
+    }
 @media (max-width: 992px){
   .collection-products-title {
     margin-bottom: 56px;
