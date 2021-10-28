@@ -30,10 +30,10 @@
       "type": "Feature",
       "properties": {
         "category": "patisserie",
-        "hours": "10am - 6pm",
-        "description": "Come and try our award-winning cakes and pastries. We're part of a larger chain of patisseries and cafes.",
-        "name": "Josie's Patisserie Bristol",
-        "phone": "+44 117 121 2121",
+        "hours": "10am–7pm",
+        "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
+        "name": "Cantata Koffie, Thee & Gifts Stockel Square",
+        "phone": "+32 2 725 39 84",
         "storeid": "02"
       }
     },
@@ -49,7 +49,7 @@
       "properties": {
         "category": "patisserie",
         "hours": "10am - 6pm",
-        "description": "Whatever the occasion, whether it's a birthday or a wedding, Josie's Patisserie has the perfect treat for you. We're part of a larger chain of patisseries and cafes.",
+        "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
         "name": "Josie's Patisserie Norwich",
         "phone": "+44 1603 123456",
         "storeid": "03"
@@ -67,7 +67,7 @@
       "properties": {
         "category": "patisserie",
         "hours": "10am - 6pm",
-        "description": "A gourmet patisserie that will delight your senses. We're part of a larger chain of patisseries and cafes.",
+        "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
         "name": "Josie's Patisserie Wimborne",
         "phone": "+44 1202 343434",
         "storeid": "04"
