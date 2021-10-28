@@ -1,59 +1,38 @@
 {
   "sections": {
-    "main": {
-      "type": "collection-list-specific",
+    "163542022095b793df": {
+      "type": "collection-list-specific-square",
       "blocks": {
-        "6b15cc37-1b4d-4795-b744-7803d8fa8889": {
+        "47b3d588-b41c-4d6b-9c74-f3a95b6e813f": {
           "type": "Collection",
           "settings": {
-            "collection_id": "all"
+            "collection_id": ""
           }
         },
-        "f7b73be3-7e8e-48c8-8c53-b24a63764c47": {
+        "b39ebf9a-3d79-4ec3-b985-a1f73a196b52": {
           "type": "Collection",
           "settings": {
-            "collection_id": "boomvruchten"
+            "collection_id": "gimber"
           }
         },
-        "719a7840-807d-45fe-8705-93f469ab62c2": {
+        "e140d9c6-c3f0-4656-9867-7654965fb614": {
           "type": "Collection",
           "settings": {
-            "collection_id": "nespresso"
+            "collection_id": ""
           }
         },
-        "0b3fe1be-7b5d-407e-b574-2f3682340a36": {
+        "7658d4d0-5692-4ffb-b624-35c103c58424": {
           "type": "Collection",
           "settings": {
-            "collection_id": "espresso-blend"
-          }
-        },
-        "004615da-59a1-43e4-b384-3ad3dace01a6": {
-          "type": "Collection",
-          "settings": {
-            "collection_id": "bestsellers"
-          }
-        },
-        "484455c2-9a07-469c-b191-563c3296a8b8": {
-          "type": "Collection",
-          "settings": {
-            "collection_id": "accessoires"
-          }
-        },
-        "55339f16-e49a-455b-819d-988691774b35": {
-          "type": "Collection",
-          "settings": {
-            "collection_id": "gember"
+            "collection_id": "chocolade"
           }
         }
       },
       "block_order": [
-        "6b15cc37-1b4d-4795-b744-7803d8fa8889",
-        "f7b73be3-7e8e-48c8-8c53-b24a63764c47",
-        "719a7840-807d-45fe-8705-93f469ab62c2",
-        "0b3fe1be-7b5d-407e-b574-2f3682340a36",
-        "004615da-59a1-43e4-b384-3ad3dace01a6",
-        "484455c2-9a07-469c-b191-563c3296a8b8",
-        "55339f16-e49a-455b-819d-988691774b35"
+        "47b3d588-b41c-4d6b-9c74-f3a95b6e813f",
+        "b39ebf9a-3d79-4ec3-b985-a1f73a196b52",
+        "e140d9c6-c3f0-4656-9867-7654965fb614",
+        "7658d4d0-5692-4ffb-b624-35c103c58424"
       ],
       "settings": {
         "header_text": "Kunnen we je nog meer inspireren?",
@@ -64,6 +43,6 @@
     }
   },
   "order": [
-    "main"
+    "163542022095b793df"
   ]
 }
