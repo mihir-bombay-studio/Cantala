@@ -1,7 +1,8 @@
+
+{% assign categoryp = "" %}
+{% assign tagsp = "" %}
 {% paginate collection.products by 500 %}
   {% for product in collection.products %}
-    {% assign categoryp = "" %}
-	{% assign tagsp = "" %}
     {% for tag in product.tags %}
       {% if tag contains "filter:" or tag contains "Filter:" %}
       	{% assign tagx = tag | split: "-" %}
@@ -13,7 +14,6 @@
 				{% assign categoryp = categoryp | append: "," | append: tag_first %}
 			{% endif %}
 		{% endunless %}
-{{ categoryp }}
 		{% assign tag_last = tagx[1] | strip | replace: " ","-" %}
 			{% if tagsp == "" %}
 				{% assign tagsp = tag_last %}
