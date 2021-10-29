@@ -6,7 +6,7 @@
   <div class="container">
     <h2 class="collection-products-title text-center heading-2 module">Deze {{ product.type }} valt waarschijnlijk ook in de smaak...</h2>
     <div class="coll-products module">
-      {% paginate collection.products by 500 %}
+      {% paginate collections[all].products by 500 %}
     	{% for product in collections[all].products %}
       {% unless proSelect == product.handle %}
       {% if proType == product.type and limit < 8 %}
