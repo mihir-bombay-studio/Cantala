@@ -22,14 +22,19 @@
 					{% if categories == tag_first %}{% assign index_no = forloop.index0 %}{% endif %}
 				{% endfor %}
 				{% assign tagsp_split = tagsp | split: "|" %}
-				
-				{% for tags in tagsp_split %}
-					{% if forloop.index0 == index_no %}
-						{% unless tags contains tag_last %}
-							{% assign tagsp_split[index_no] = tagsp_split[index_no] | append: "," %}
-						{% endunless %}
-					{% endif %}
-				{% endfor %}
+				{% assign tagsp_split_size = tagsp_split | size | minus: 1 %}
+				{% if index_no > tagsp_split_size %}
+					{% assign tagsp = tagsp | append: "|" | append: tag_last %}
+				{% else %}
+                  {% for tags in tagsp_split %}
+                      {% if forloop.index0 == index_no %}
+                          {% unless tags contains tag_last %}
+							{% assign tagsp_split[index_no] = tagsp_split[index_no] | append: "," | append: tag_last %}
+                          {% endunless %}
+                      {% endif %}
+                  {% endfor %}
+				{% assign tagsp = tagsp_split | join: "|" %}
+				{% endif %}
 			{% endif %}
       {% endif %}
     {% endfor %}
