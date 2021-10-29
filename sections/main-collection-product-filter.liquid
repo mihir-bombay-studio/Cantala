@@ -1,6 +1,6 @@
 {% paginate collection.products by 500 %}
   {% for product in collection.products %}
-    {% assign categoryp = "aa" %}
+    {% assign categoryp = "" %}
 	{% assign tagsp = "" %}
     {% for tag in product.tags %}
       {% if tag contains "filter:" or tag contains "Filter:" %}
