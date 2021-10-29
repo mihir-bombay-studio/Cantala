@@ -12,8 +12,8 @@
 			{% else %}
 				{% assign categoryp = categoryp | append: "," | append: tag_first %}
 			{% endif %}
-{{ categoryp }}
 		{% endunless %}
+{{ categoryp }}
 		{% assign tag_last = tagx[1] | strip | replace: " ","-" %}
 			{% if tagsp == "" %}
 				{% assign tagsp = tag_last %}
