@@ -48,7 +48,7 @@
         "beea1299-e4c5-4f59-8075-6a064a49bfe0": {
           "type": "collection_select",
           "settings": {
-            "collection_sel": "cantata-blends"
+            "collection_sel": "gifts"
           }
         }
       },
@@ -278,7 +278,8 @@
             "add_ln_3": "Belgium",
             "website": "www.lorum.com",
             "email": "info@lorum.be",
-            "phone": "03 452 78 55"
+            "phone": "03 452 78 55",
+            "hours": ""
           }
         },
         "959ffff6-cc34-4558-aae9-740ea5e19756": {
@@ -290,7 +291,8 @@
             "add_ln_3": "B",
             "website": "asdf",
             "email": "adsf",
-            "phone": "456486"
+            "phone": "456486",
+            "hours": ""
           }
         },
         "f48a4924-f832-494a-aa2e-bd705f9208a4": {
@@ -302,7 +304,8 @@
             "add_ln_3": "zxcgsdfg",
             "website": "zcxvadf",
             "email": "dvcb",
-            "phone": "46356"
+            "phone": "46356",
+            "hours": ""
           }
         },
         "99d89ba4-af2c-4bd8-ac75-428b296c1b59": {
@@ -314,7 +317,8 @@
             "add_ln_3": "sfndgh",
             "website": "sfbghcm",
             "email": "fdfhdgyj",
-            "phone": "15646"
+            "phone": "15646",
+            "hours": ""
           }
         },
         "62a57632-e713-4236-948a-45772b978f9c": {
@@ -326,7 +330,8 @@
             "add_ln_3": "cgnmhd",
             "website": "zsdghm",
             "email": "fgjxf",
-            "phone": "5464864"
+            "phone": "5464864",
+            "hours": ""
           }
         },
         "bc7b4f90-dc21-41b6-8415-104fc08c4045": {
@@ -338,7 +343,8 @@
             "add_ln_3": "srtrgsd",
             "website": "shdtyj",
             "email": "gaerhd",
-            "phone": "48676"
+            "phone": "48676",
+            "hours": ""
           }
         },
         "b61cde10-df90-495f-b2a2-f12008bafabe": {
@@ -350,7 +356,8 @@
             "add_ln_3": "xfgcv,",
             "website": "dxffjm",
             "email": "dfy",
-            "phone": "456653"
+            "phone": "456653",
+            "hours": ""
           }
         },
         "524158dc-9bb4-4725-8268-62988127e74a": {
@@ -362,7 +369,8 @@
             "add_ln_3": "fxhfukh",
             "website": "strtiul",
             "email": "bvmguio",
-            "phone": "12322648"
+            "phone": "12322648",
+            "hours": ""
           }
         },
         "6a42c1cb-522d-433c-a480-1b8b26e6d3b2": {
@@ -374,7 +382,8 @@
             "add_ln_3": "yjthsrg",
             "website": "bndgs",
             "email": "yjdzg",
-            "phone": "78612318"
+            "phone": "78612318",
+            "hours": ""
           }
         },
         "25622426-8529-42c6-848f-f1b0e4d7b8d5": {
@@ -386,7 +395,8 @@
             "add_ln_3": "sftsrtag",
             "website": "sdrsgbdfn",
             "email": "resgdfgnd",
-            "phone": "4863123"
+            "phone": "4863123",
+            "hours": ""
           }
         }
       },
