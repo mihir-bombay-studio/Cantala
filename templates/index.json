@@ -504,6 +504,7 @@
     },
     "16348950151b380d71": {
       "type": "faq",
+      "disabled": true,
       "blocks": {
         "1f36edfe-c2a9-4fad-9890-cc953350ea66": {
           "type": "faq",
