@@ -41,20 +41,20 @@
                       {% if forloop.index0 == index_no %}
 						{% unless tags contains tag_last %}
                         {% if forloop.last %}
-                            {% assign superstring = superstring | append: stringbuilder %}{% assign tagsp = superstring %}{{ tagsp }}---
+                            {% assign superstring = superstring | append: stringbuilder %}
                         {% else %}
-                            {% assign superstring = superstring | append: stringbuilder | append: "|" %}{% assign tagsp = superstring %}{{ tagsp }}---
+                            {% assign superstring = superstring | append: stringbuilder | append: "|" %}
                         {% endif %}
 						{% endunless %}
                       {% else %}
                         {% if forloop.last %}
-                            {% assign superstring = superstring | append: tags %}{% assign tagsp = superstring %}{{ tagsp }}---
+                            {% assign superstring = superstring | append: tags %}
                         {% else %}
-                            {% assign superstring = superstring | append: tags | append: "|" %}{% assign tagsp = superstring %}{{ tagsp }}---
+                            {% assign superstring = superstring | append: tags | append: "|" %}
                         {% endif %}
                       {% endif %}
                   {% endfor %}
-					
+					{% assign tagsp = superstring %}{{ tagsp }}---
 				{% endif %}
 			{% endif %}
       {% endif %}
