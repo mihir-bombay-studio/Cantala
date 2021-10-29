@@ -45,6 +45,12 @@
                         {% else %}
                             {% assign superstring = superstring | append: stringbuilder | append: "|" %}
                         {% endif %}
+						{% else %}
+							{% if forloop.last %}
+                                {% assign superstring = superstring | append: tags %}
+                            {% else %}
+                                {% assign superstring = superstring | append: tags | append: "|" %}
+                            {% endif %}
 						{% endunless %}
                       {% else %}
                         {% if forloop.last %}
