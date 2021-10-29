@@ -70,6 +70,9 @@
 	.tig-title {
     top: -103px;
 }
+  .tig-desc {
+    margin-top: 20px;
+}
 }
 
 @media (max-width: 992px){

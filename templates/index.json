@@ -26,7 +26,7 @@
       ],
       "settings": {
         "hero_img": "shopify:\/\/shop_images\/hero_img.png",
-        "hero_heading": "Your Symphony of taste.",
+        "hero_heading": "Your symphony of taste.",
         "hero_desc": "Ontdek het grootste en lekkerste aanbod koffie en thee in België."
       }
     },
@@ -48,7 +48,7 @@
         "beea1299-e4c5-4f59-8075-6a064a49bfe0": {
           "type": "collection_select",
           "settings": {
-            "collection_sel": "cantata-blends"
+            "collection_sel": "gifts"
           }
         }
       },
