@@ -1,7 +1,7 @@
 .hero-wrapper {
     background-color: var(--background-main);
       padding-bottom: 160px;
-      height: calc(66.666666666666667vw - 135px);
+      height: 66.666666666666667vw;
     max-height: 100vh;
     width: 100%;
     overflow: hidden;
