@@ -355,7 +355,7 @@
         </div>
         
         
-        
+        {% paginate mycollection.products by 500 %}
         {% for product in collection.products %}
         <a href="{{ product.url }}" title="{{ product.title | escape  }}" class="card-product paketten">            
           <div class="card-product-image">
@@ -380,6 +380,7 @@
           </div>
         </a>
         {% endfor %}
+        {% endpaginate %}
       </div>
     </div>
   </div>
