@@ -533,7 +533,7 @@
         <!-- End TrustBox widget -->
       </div>
 
-      <div class="accordion-description">  
+      <div class="accordion-description accordion-active">  
         <p class="rel">Beschrijving <span class="symbol symbol-plus">{% include "icon-plus" %}</span></p><span class="symbol symbol-minus">{% include "icon-minus" %}</span></p>
         <hr class="product-seperator">
       </div>
@@ -594,7 +594,7 @@
       }
     });
   }
-  
+  $(".accordion-description.accordion-active").next().css("max-height",$(".accordion-description.accordion-active").next().prop('scrollHeight') + "px");
   
   function refreshRates() {
     if($('#product-json').length > 0) {
