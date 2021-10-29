@@ -67,8 +67,7 @@
     {% endfor %}
   {% endfor %}
 {% endpaginate %}
-{{categoryp}}
-{{tagsp}}
+
 <style>
   .accordion-filter {
   cursor: pointer;
@@ -283,11 +282,17 @@
       <div class="sticky-nav sub-marg-bottom">
         <p class="accordion-filter"><span class="close-filter">{% include "icon-arrow-right" %}</span>FILTER</p>
         <div class="nav-colors panel-filter">
-          <p class="accordion-filter"><strong>Smaak</strong> {% render 'icon-caret' %}</p>
+          {% assign split_filter = categoryp | split: "," %}
+          {% assign tags_filter = tagsp | split: "|" %}
+          {% for filter in split_filter %}
+          <p class="accordion-filter"><strong>{{filter}}</strong> {% render 'icon-caret' %}</p>
           <div class="panel">
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="paketten">Pakete</a>
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="navullingen">Refills</a>
+          {% assign tags = tags_filter[forloop.index0] | split: "," %}
+            {% for tag in tags %}
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{filter | strip}}-{{tag}}">{{tag}}</a>
+            {% endfor %}
           </div>
+          {% endfor %}
           <p class="accordion-filter"><strong>Organic</strong> {% render 'icon-caret' %}</p>
           <div class="panel">
             <a href="#" class="favourites only-border" onClick="return false;" data-value="reinigers">Putzen</a>
