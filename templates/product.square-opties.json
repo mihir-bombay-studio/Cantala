@@ -5,16 +5,14 @@
       "settings": {
       }
     },
-    "1634062859fd044c05": {
-      "type": "collection_products",
+    "16354901882bf6a3f7": {
+      "type": "collection_recommended_products",
       "settings": {
-        "collection_products_title": "Deze thee valt waarschijnlijk ook in de smaak...",
-        "collection_select": "all"
       }
     }
   },
   "order": [
     "main",
-    "1634062859fd044c05"
+    "16354901882bf6a3f7"
   ]
 }
