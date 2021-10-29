@@ -28,7 +28,7 @@
 					{% assign tagsp = tagsp | append: "|" | append: tag_last %}
 				{% else %}
                   {% for tags in tagsp_split %}
-                      {% if forloop.index0 == index_no %}
+                      {% if forloop.index0 == index_no %}---
                           {% unless tags contains tag_last %}
 							{% assign tagsp_split[index_no] = tagsp_split[index_no] | append: "," | append: tag_last %}
                           {% endunless %}
