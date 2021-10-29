@@ -17,6 +17,7 @@
 			{% if tagsp == "" %}
 				{% assign tagsp = tag_last %}
 			{% else %}
+				{% assign stringbuilder = "" %}
 				{% assign categoryp_split = categoryp | split: "," %}
 				{% assign index_no = 0 %}
 				{% for categories in categoryp_split %}
@@ -30,8 +31,7 @@
                   {% for tags in tagsp_split %}
                       {% if forloop.index0 == index_no %}
                           {% unless tags contains tag_last %}
-							{% assign tagsp_split_2 = tagsp | split: "|" %}{{tagsp_split_2[index_no]}}--
-							{% assign tagsp_split_2[index_no] = tagsp_split_2[index_no] | append: ",,,,,,,,," %}{{tagsp_split_2[index_no]}}
+							{% assign stringbuilder = tags | append: "," | append: tag_last %}{{stringbuilder}}
                           {% endunless %}
                       {% endif %}
                   {% endfor %}
