@@ -30,7 +30,8 @@
                   {% for tags in tagsp_split %}
                       {% if forloop.index0 == index_no %}
                           {% unless tags contains tag_last %}
-							{% assign tagsp_split[index_no] = tags | append: "," | append: tag_last %}{{tag_last}}
+							{% assign tagsp_split_2 = tagsp | split: "|" %}
+							{% assign tagsp_split_2[index_no] = tags | append: "," | append: tag_last %}{{tagsp_split_2[index_no]}}
                           {% endunless %}
                       {% endif %}
                   {% endfor %}
