@@ -14,7 +14,7 @@
       <div class="article-image">{{ article.image | img_url: '500x' | img_tag }}</div>
       <div class="article-text">
       <h3 class="article-title">{{ article.title }}</h3>
-      <div class="article-desc">{{ article.content }}</div>
+        <a href="{{ article.url }}"><div class="article-desc">{{ article.content }}</div></a>
       <a href="{{ article.url }}" class="article-url">Lees meer</a>
       </div>
     </div>
