@@ -20,6 +20,7 @@
 .product-img-wrap {
   margin-bottom: 20px;
   overflow: hidden;
+  display: block;
 }
 
 .product-img-wrap img{
