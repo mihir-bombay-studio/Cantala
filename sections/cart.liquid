@@ -405,7 +405,7 @@
               <span class="total-text">Verzending</span>
             </div>
             <div class="cart-product-col">
-              <span class="total-text">{% if cart.total_price > 9999 %}Free{% else %}Ber. volgende stap{% endif %}</span>
+              <span class="total-text">{% if cart.total_price > 9999 %}Free{% else %}Zie volgende stap{% endif %}</span>
             </div>
           </div>
           <div class="cart-product-row sub-marg-bottom">
@@ -607,7 +607,7 @@
               $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Free');
             } else {
               $('.cart-sub-head').addClass('no-vis');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
             }
           } else {
             $(".cart-quantity").addClass("no-disp");
@@ -615,14 +615,14 @@
             $(".cart-total-block").addClass('no-disp');
             $(".cart-empty").removeClass('no-disp');
             $('.cart-sub-head').addClass('no-vis');
-            $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+            $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
           }
           if(data.total_price/100 > 99.99) {
             $('.cart-sub-head').removeClass('no-vis');
             $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Free');
           } else {
             $('.cart-sub-head').addClass('no-vis');
-            $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+            $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
           }
           removeProductBtn();
           plusProductBtn();
@@ -664,7 +664,7 @@
                 $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Free');
               } else {
                 $('.cart-sub-head').addClass('no-vis');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
               }
             } else {              
               $(".cart-quantity").addClass("no-disp");
@@ -672,14 +672,14 @@
               $(".cart-total-block").addClass('no-disp');
               $(".cart-empty").removeClass('no-disp');
               $('.cart-sub-head').addClass('no-vis');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
             }
             if(data.total_price/100 > 99.99) {
               $('.cart-sub-head').removeClass('no-vis');
               $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Free');
             } else {
               $('.cart-sub-head').addClass('no-vis');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
             }
           })
           .fail(function(error) {
@@ -732,7 +732,7 @@
                 $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Free');
               } else {
                 $('.cart-sub-head').addClass('no-vis');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
               }
             } else {
             $(".cart-quantity").addClass("no-disp");
@@ -740,14 +740,14 @@
             $(".cart-total-block").addClass('no-disp');
               $(".cart-empty").removeClass('no-disp');
               $('.cart-sub-head').addClass('no-vis');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
             }
             if(data.total_price/100 > 99.99) {
               $('.cart-sub-head').removeClass('no-vis');
               $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Free');
             } else {
               $('.cart-sub-head').addClass('no-vis');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
             }
           })
           .fail(function(error) {
@@ -801,7 +801,7 @@
                   $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Free');
                 } else {
                   $('.cart-sub-head').addClass('no-vis');
-                  $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+                  $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
                 }
               } else {
             $(".cart-quantity").addClass("no-disp");
@@ -809,14 +809,14 @@
             $(".cart-total-block").addClass('no-disp');
                 $(".cart-empty").removeClass('no-disp');
                 $('.cart-sub-head').addClass('no-vis');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
               }
               if(data.total_price/100 > 99.99) {
                 $('.cart-sub-head').removeClass('no-vis');
                 $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Free');
               } else {
                 $('.cart-sub-head').addClass('no-vis');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Ber. volgende stap');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
               }
             })
             .fail(function(error) {
