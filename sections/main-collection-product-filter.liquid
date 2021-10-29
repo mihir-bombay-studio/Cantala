@@ -26,7 +26,7 @@
 				{% assign tagsp_split_size = tagsp_split | size | minus: 1 %}
 				{% if index_no > tagsp_split_size %}
 					{% assign tagsp = tagsp | append: "|" | append: tag_last %}
-				{% else %}
+				{% else %}---
                   {% for tags in tagsp_split %}
                       {% if forloop.index0 == index_no %}
                           {% unless tags contains tag_last %}
