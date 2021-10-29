@@ -27,7 +27,7 @@
       	{% endfor %}
       {% endpaginate %}
     </div>
-        <a href="/collections/types?q={{ product.type | url_encode }}" class="btn center-it medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %} module">
+        <a href="/collections/types?q={{ product.type | url_encode }}" class="btn center-it medium btn-dark module">
         	Laat meer zien
         </a>
   </div>
@@ -35,54 +35,11 @@
 
 {% schema %}
   {
-    "name": "Collection Products",
-    "settings": [
-		{
-        "id": "collection_products_title",
-        "type": "text",
-        "label": "Section Heading"
-        },
-		{
-			"id": "collection_select",
-			"type": "collection",
-			"label": "Select Collection"
-		}
-	],
-	"blocks": [
-			{
-                "type": "button",
-                "name": "Button",
-				"limit": 1,
-                "settings": [
-
-                {
-                "id": "button_text",
-                "type": "text",
-                "label": "Button Text"
-
-                },
-				{
-                  "type": "select",
-                  "id": "button-color",
-                  "options": [
-                    {
-                      "value": "light",
-                      "label": "Light"
-                    },
-                    {
-                      "value": "dark",
-                      "label": "Dark"
-                    }
-                  ],
-                  "default": "dark",
-                  "label": "Dark"
-                }
-              ]
-            }
-		],
+    "name": "Collection Products recom",
+    "settings": [],
 	"presets": [
     {
-      "name": "Collection Products",
+      "name": "Collection Products recom",
 		"category":"section"
     }
   ]
