@@ -6,10 +6,10 @@
   <div class="container">
     <h2 class="collection-products-title text-center heading-2 module">Deze {{ product.type }} valt waarschijnlijk ook in de smaak...</h2>
     <div class="coll-products module">
-      {% paginate collections.all.products by 500 %}hhhh
-    	{% for product in collections.all.products %}pppp
-      {% unless proSelect == product.handle %}eeeeeeeeeee
-      {% if proType == product.type and limit < 8 %}ddddddddddddd
+      {% paginate collections.all.products by 500 %}
+    	{% for product in collections.all.products %}
+      {% unless proSelect == product.handle %}
+      {% if proType == product.type and limit < 8 %}
       <div class="coll-product">
         <a href="{{ product.url }}" class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
