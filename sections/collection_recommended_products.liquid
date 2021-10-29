@@ -8,8 +8,8 @@
     <div class="coll-products module">
       {% paginate collections[all].products by 500 %}
     	{% for product in collections[all].products %}
-      {% unless proSelect == product.handle %}
-      {% if proType == product.type and limit < 8 %}
+      {% unless proSelect == product.handle %}eeeeeeeeeee
+      {% if proType == product.type and limit < 8 %}ddddddddddddd
       <div class="coll-product">
         <a href="{{ product.url }}" class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
