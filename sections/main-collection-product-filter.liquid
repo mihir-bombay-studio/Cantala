@@ -21,7 +21,7 @@
 				{% assign index_no = 0 %}
 				{% for categories in categoryp_split %}
 					{% if categories == tag_first %}{% assign index_no = forloop.index0 %}{% endif %}
-				{% endfor %}{{index_no}}
+				{% endfor %}
 				{% assign tagsp_split = tagsp | split: "|" %}
 				{% assign tagsp_split_size = tagsp_split | size | minus: 1 %}
 				{% if index_no > tagsp_split_size %}
