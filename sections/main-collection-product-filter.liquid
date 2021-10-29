@@ -1,3 +1,24 @@
+{% paginate collection.products by 500 %}
+  {% for product in collection.products %}
+    {% assign categoryp = "" %}
+	{% assign tagsp = "" %}
+    {% for tag in product.tags %}
+      {% if tag contains "filter:" or tag contains "Filter:" %}
+      	{% assign tagx = tag | split: "-" %}
+      	{% assign tag_first = tagx[0] | strip %}
+		{% unless categoryp contains tag_first %}
+			{% if categoryp == "" %}
+				{% assign categoryp = tag_first %}
+			{% else %}
+				{% assign categoryp = categoryp | append: "," | append: tag_first %}
+			{% endif %}
+		{% endunless %}
+		{{ tag[1] | strip | replace: " ","-" }} 
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endpaginate %}
+
 <style>
   .accordion-filter {
   cursor: pointer;
