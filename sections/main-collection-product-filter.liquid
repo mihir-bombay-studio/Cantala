@@ -432,7 +432,7 @@
         
         {% paginate collection.products by 500 %}
         {% for product in collection.products %}
-        <a href="{{ product.url }}" title="{{ product.title | escape  }}" class="card-product {% for tag in product.tags %}{{ tag }}{% if tag contains "filter:" or tag contains "Filter:" %}{% assign tagx = tag | split: "-" %}{{ tagx[0] | replace: "Filter:","" | replace: "filter:","" | strip }}-{{ tagx[1] | strip | replace: " ","-" }} {% endif %}{% endfor %}">            
+        <a href="{{ product.url }}" title="{{ product.title | escape  }}" class="card-product {% for tag in product.tags %}{% if tag contains "filter:" or tag contains "Filter:" %}{% assign tagx = tag | split: "-" %}{{ tagx[0] | replace: "Filter:","" | replace: "filter:","" | strip }}-{{ tagx[1] | strip | replace: " ","-" }} {% endif %}{% endfor %}">            
           <div class="card-product-image">
             <img src="{{ product.featured_image.src | product_img_url: '590x' }}" alt="{{ product.title | escape  }}" />
           </div>
