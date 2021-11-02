@@ -96,3 +96,9 @@
     margin-bottom: 10px;
 }
 }
+@media (min-width: 1200px) {
+
+  .trustbox-wrapper {
+    right: -88px;
+  }
+}
