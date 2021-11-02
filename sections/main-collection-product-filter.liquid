@@ -524,7 +524,7 @@
     
     if($("#search-box").val() != "") {
       $('.card-product').each(function() {
-        if($(this).find(".card-product-title").text().toLowerCase().indexOf($("#search-box").val().toLowerCase()) > -1 || $(this).find(".tagged").text().toLowerCase().indexOf($("#search-box").val().toLowerCase()) > -1) {
+        if($(this).find(".card-product-title").text().toLowerCase().indexOf($("#search-box").val().toLowerCase()) > -1 || $(this).find(".tagged").text().toLowerCase().indexOf($("#search-box").val().toLowerCase()) > -1 || $(this).attr('class').toLowerCase().indexOf($("#search-box").val().toLowerCase()) > -1) {
           $(this).addClass('fop');
         }
       });
