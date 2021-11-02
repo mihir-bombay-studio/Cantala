@@ -120,7 +120,14 @@ textarea {
 .promotional-gift-contact-wrapper{
 	margin-bottom: 247px;
 }
-
+@media(min-width: 993px) {
+  .pgc-right {
+  	top: -220px;
+  }
+  .contact-us-form-wrapper {
+    margin-top: 220px;
+  }
+}
 @media (max-width: 992px){
   .abs-background {
     width: 100%;
