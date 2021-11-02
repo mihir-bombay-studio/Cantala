@@ -243,6 +243,9 @@
           $(".drawer-menu").addClass("drawn");
           $(".background-drawer").addClass("drawn");
           $("body").addClass("no-scroll");
+          $(".drawer-menu").css("top", $("header").height() + "px");          
+          $(".drawer-menu").css("height", "calc(100vh - "+$("header").height()+"px)");
+          
         }  
       });
       
