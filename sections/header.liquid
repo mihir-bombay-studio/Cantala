@@ -238,7 +238,7 @@
 
     // Grabbing all search forms on the page, and adding a .search-results list to each.
     var searchForms = 
-        $('form[action="/search"]').each(function() {
+        $('form[action="/search"]:not(#Search-In-Template)').each(function() {
 
           // Grabbing text input.
           var input = $(this).find('input[name="q"]');
