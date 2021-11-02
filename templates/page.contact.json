@@ -65,13 +65,28 @@
             "weekend": "",
             "weekend_time": ""
           }
+        },
+        "693fac34-891c-48bc-9a72-8e5b2a7677f6": {
+          "type": "address",
+          "settings": {
+            "store_name": "Shopping Nivelles",
+            "add_ln_1": "Chaussée de Mons 28A,",
+            "add_ln_2": "B-1400 Nijvel",
+            "add_ln_3": "",
+            "phone": "+32 (0)6 721 16 49",
+            "days": "Maandag - zaterdag:",
+            "days_time": "08.30 tot 19.00 uur",
+            "weekend": "Vrijdag:",
+            "weekend_time": "08.30 tot 20.00 uur"
+          }
         }
       },
       "block_order": [
         "57dc3651-d134-46fd-bf89-3da8c28a8767",
         "3550671f-9eec-4a49-a227-555826bec8b3",
         "262cdc9d-5f06-43e6-9a78-5a19eca80102",
-        "46b0cdf8-a7fb-4730-9899-5042d9c44ffd"
+        "46b0cdf8-a7fb-4730-9899-5042d9c44ffd",
+        "693fac34-891c-48bc-9a72-8e5b2a7677f6"
       ],
       "settings": {
         "heading": "Contacteer ons of spring binnen in één van onze winkels"
