@@ -16,7 +16,7 @@
         "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
         "name": "Cantata Coffee, Tea & Gifts",
         "phone": "03 452 78 55",
-        "storeid": "012"
+        "storeid": "01"
       }
     },
     {
@@ -34,7 +34,7 @@
         "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
         "name": "Cantata Koffie, Thee & Gifts Stockel Square",
         "phone": "+32 2 725 39 84",
-        "storeid": "022"
+        "storeid": "02"
       }
     },
     {
@@ -52,7 +52,25 @@
         "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
         "name": "Cantata Koffie, Thee & Gifts Waasland",
         "phone": "+32 3 422 59 76",
-        "storeid": "032"
+        "storeid": "03"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.3097163,
+          50.590901
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "category": "cafe",
+        "hours": "10am - 7pm",
+        "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
+        "name": "CANTATA Coffee, Tea & Gifts",
+        "phone": "+32 9 222 19 10",
+        "storeid": "04"
       }
     },
     {
@@ -68,9 +86,9 @@
         "category": "cafe",
         "hours": "10am - 7pm",
         "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
-        "name": "CANTATA Coffee, Tea & Gifts",
-        "phone": "+32 9 222 19 10",
-        "storeid": "042"
+        "name": "Cantata Café, Thé & Cadeaux Nivelles",
+        "phone": "",
+        "storeid": "05"
       }
     }
   ]
