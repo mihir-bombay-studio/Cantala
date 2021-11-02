@@ -23,6 +23,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          3.7276131,
+          51.048374
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "category": "cafe",
+        "hours": "10am - 7pm",
+        "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
+        "name": "Cantata Café, Thé & Cadeaux Nivelles",
+        "phone": "",
+        "storeid": "055"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           4.4626335,
           50.8412903
         ]
@@ -71,24 +89,6 @@
         "name": "CANTATA Coffee, Tea & Gifts",
         "phone": "+32 9 222 19 10",
         "storeid": "044"
-      }
-    },
-    {
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          3.7276131,
-          51.048374
-        ]
-      },
-      "type": "Feature",
-      "properties": {
-        "category": "cafe",
-        "hours": "10am - 7pm",
-        "description": "Coffee, tea &amp; Gifts Mixing melody and taste in coffee and tea ☕️ 📍 Wijnegem &amp; Waasland Shopping 📦 Webshop 24\/7",
-        "name": "Cantata Café, Thé & Cadeaux Nivelles",
-        "phone": "",
-        "storeid": "055"
       }
     }
   ]
