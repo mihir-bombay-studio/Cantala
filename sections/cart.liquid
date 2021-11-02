@@ -4,14 +4,16 @@
     position: fixed;
     height: 100%;
     background-color: #342D2540;
-    right: -100vw;
+    right: 0;
     top: 0;
-    z-index: 8;
+    z-index: -1;
+    opacity: 0;
     display: block !important;
     transition: .4s ease;
   }
   .background-drawer-cart.drawn {
-    right: 0;
+    opacity: 1;
+    z-index: 8;
   }
   .drawer-cart {
     display: block;
