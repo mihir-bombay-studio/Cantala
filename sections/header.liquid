@@ -241,7 +241,7 @@
         $('form[action="/search"]:not(#Search-In-Template)').each(function() {
 
           // Grabbing text input.
-          var input = $(this).find('input[name="q"]');
+          var input = $(this).find('input[name="q"]:not(#Search-In-Template)');
 
           // Adding a list for showing search results.
           var offSet = input.position().top + input.innerHeight();
