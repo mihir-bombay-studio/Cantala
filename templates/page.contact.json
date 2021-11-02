@@ -51,12 +51,27 @@
             "weekend": "Zaterdag:",
             "weekend_time": "09.30 tot 19.00 uur"
           }
+        },
+        "46b0cdf8-a7fb-4730-9899-5042d9c44ffd": {
+          "type": "address",
+          "settings": {
+            "store_name": "Stockel Square",
+            "add_ln_1": "Kerkstraat 96\/A,",
+            "add_ln_2": "B-1150",
+            "add_ln_3": "Sint-Pieters-Woluwe",
+            "phone": "+32 (0)2 725 39 84",
+            "days": "Maandag - zaterdag:",
+            "days_time": "08.00 tot 18.00 uur",
+            "weekend": "",
+            "weekend_time": ""
+          }
         }
       },
       "block_order": [
         "57dc3651-d134-46fd-bf89-3da8c28a8767",
         "3550671f-9eec-4a49-a227-555826bec8b3",
-        "262cdc9d-5f06-43e6-9a78-5a19eca80102"
+        "262cdc9d-5f06-43e6-9a78-5a19eca80102",
+        "46b0cdf8-a7fb-4730-9899-5042d9c44ffd"
       ],
       "settings": {
         "heading": "Contacteer ons of spring binnen in één van onze winkels"
