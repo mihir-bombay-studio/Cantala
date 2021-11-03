@@ -6,22 +6,28 @@
     	{% for block in section.blocks %}
         {% if block.type == "address" %}
       		<div class="store-info-wrap">
-              <div class="store-name medium">{{ block.settings.store_name }}</div>
-              <div class="store-address-wrap">
-              	<div class="store-address">{{ block.settings.add_ln_1 }}</div>
-                <div class="store-address">{{ block.settings.add_ln_2 }}</div>
-                <div class="store-address">{{ block.settings.add_ln_3 }}</div>
+              <div class="store-upper">
+                <div class="store-name medium">{{ block.settings.store_name }}</div>
+                <div class="store-address-wrap">
+                  <div class="store-address">{{ block.settings.add_ln_1 }}</div>
+                  <div class="store-address">{{ block.settings.add_ln_2 }}</div>
+                  <div class="store-address">{{ block.settings.add_ln_3 }}</div>
+                </div>
               </div>
+
               <hr class="addr-hr">
-              <div class="store-website">{{ block.settings.website }}</div>
-              <div class="store-email"><a href="mailto:{{ block.settings.email }}">{{ block.settings.email }}</a></div>
-              <div class="store-phone"><a href="tel:{{ block.settings.phone }}">{{ block.settings.phone }}</a></div>
-              <div class="store-hours flex-box justify-between medium">
-                <div class="store-hours-text">Openingstijden</div>
-                <div class="down-chevron">{% include 'icon-down-chevron-brown' %}</div>
-              </div>
-              <div class="panel store-hour">
-                {{ block.settings.hours }}
+
+              <div class="store-lower">
+                <div class="store-website">{{ block.settings.website }}</div>
+                <div class="store-email"><a href="mailto:{{ block.settings.email }}">{{ block.settings.email }}</a></div>
+                <div class="store-phone"><a href="tel:{{ block.settings.phone }}">{{ block.settings.phone }}</a></div>
+                <div class="store-hours flex-box justify-between medium">
+                  <div class="store-hours-text">Openingstijden</div>
+                  <div class="down-chevron">{% include 'icon-down-chevron-brown' %}</div>
+                </div>
+                <div class="panel store-hour">
+                  {{ block.settings.hours }}
+                </div>
               </div>
       		</div>
         {% endif %}
