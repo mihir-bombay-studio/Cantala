@@ -1,6 +1,6 @@
 {{ 'about-us-composer.css' | asset_url | stylesheet_tag }}
 <style>
-  a.btn.centr-it.medium.btn-dark.module {
+  a.btn.medium.btn-dark.module {
     padding-left: 24px;
     padding-right: 24px;
     margin-top: 24px;
@@ -23,7 +23,7 @@
         </div>
         <div class="sub-para">{{ section.settings.para_two }}</div>
         {% if section.settings.button_text != blank %}
-        <a href="{{ section.settings.button_url }}" class="btn center-it medium btn-dark module">
+        <a href="{{ section.settings.button_url }}" class="btn medium btn-dark module">
         	{{ section.settings.button_text | escape }}
         </a>
         {% endif %}
