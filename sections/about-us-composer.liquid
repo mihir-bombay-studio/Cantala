@@ -16,6 +16,11 @@
         	<img class="main-img" src="{{ section.settings.main_img | img_url: '700x' }}" alt = "sub-img">
         </div>
         <div class="sub-para">{{ section.settings.para_two }}</div>
+        {% if section.settings.button_text != blank %}
+        <a href="{{ product_handle.url }}" class="btn center-it medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %} module">
+        	{{ block.settings.button_text | escape }}
+        </a>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -54,6 +59,16 @@
 			"id": "para_two",
         	"type": "html",
         	"label": "Sub Paragraph"
+		},
+		{
+			"id": "button_text",
+        	"type": "text",
+        	"label": "CTA text"
+		},
+		{
+			"id": "button_link",
+        	"type": "url",
+        	"label": "CTA link"
 		}
 	],
 	"presets": [
