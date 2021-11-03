@@ -7,6 +7,25 @@
     },
     "product-grid": {
       "type": "main-collection-product-filter-custom",
+      "blocks": {
+        "8919ab10-69f8-41d4-b1ce-9538611927cd": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Theesmaak",
+            "filter_tag1": "Bessen",
+            "filter_tag2": "kruidig",
+            "filter_tag3": "floraal",
+            "filter_tag4": "creamy",
+            "filter_tag5": "tropische vruchten",
+            "filter_tag6": "pure thee",
+            "filter_tag7": "pitfruit",
+            "filter_tag8": "Citrus"
+          }
+        }
+      },
+      "block_order": [
+        "8919ab10-69f8-41d4-b1ce-9538611927cd"
+      ],
       "settings": {
       }
     },
