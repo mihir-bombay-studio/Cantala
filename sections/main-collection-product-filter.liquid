@@ -285,7 +285,7 @@
     <div class="category-wrapper row-nav marg-top">
       <div class="underlay"></div>
       <div class="sticky-nav sub-marg-bottom">
-        <p class="accordion-filter"><span class="close-filter">{% include "icon-arrow-right" %}</span>FILTER</p>
+        <p class="accordion-filter">{% unless split_filter == "" %}<span class="close-filter">{% include "icon-arrow-right" %}</span>FILTER</p>{% endunless %}
         <div class="nav-colors panel-filter">
           {% assign split_filter = categoryp | split: "," %}
           {% assign tags_filter = tagsp | split: "|" %}
