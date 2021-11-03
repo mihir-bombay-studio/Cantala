@@ -289,13 +289,30 @@
         <div class="nav-colors panel-filter">
           {% assign split_filter = categoryp | split: "," %}
           {% assign tags_filter = tagsp | split: "|" %}
-          {% for filter in split_filter %}
-          <p class="accordion-filter"><strong>{{filter}}</strong> {% render 'icon-caret' %}</p>
+          {% for block in section.blocks %}
+          <p class="accordion-filter"><strong>{{ block.settings.filter_name | strip }}</strong> {% render 'icon-caret' %}</p>
           <div class="panel">
-          {% assign tags = tags_filter[forloop.index0] | split: "," %}
-            {% for tag in tags %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{filter | strip}}-{{tag}}">{{tag}}</a>
-            {% endfor %}
+            {% if block.settings.filter_tag1 != blank %}
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag1 | strip}}">{{block.settings.filter_tag1 | strip}}</a>
+            {% endif %}          
+            {% if block.settings.filter_tag2 != blank %}
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag2 | strip}}">{{block.settings.filter_tag2 | strip}}</a>
+            {% endif %}
+            {% if block.settings.filter_tag3 != blank %}
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag3 | strip}}">{{block.settings.filter_tag3 | strip}}</a>
+            {% endif %}
+            {% if block.settings.filter_tag4 != blank %}
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag4 | strip}}">{{block.settings.filter_tag4 | strip}}</a>
+            {% endif %}
+            {% if block.settings.filter_tag5 != blank %}
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag5 | strip}}">{{block.settings.filter_tag5 | strip}}</a>
+            {% endif %}
+            {% if block.settings.filter_tag6 != blank %}
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag6 | strip}}">{{block.settings.filter_tag6 | strip}}</a>
+            {% endif %}
+            {% if block.settings.filter_tag7 != blank %}
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag7 | strip}}">{{block.settings.filter_tag7 | strip}}</a>
+            {% endif %}
           </div>
           {% endfor %}
         </div>
