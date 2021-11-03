@@ -7,38 +7,6 @@
     },
     "product-grid": {
       "type": "main-collection-product-filter-custom",
-      "blocks": {
-        "938a8c0b-2076-4c5c-8a15-a7e52a245ecd": {
-          "type": "filter",
-          "settings": {
-            "filter_name": "Cafeinevrij",
-            "filter_tag1": "Nee",
-            "filter_tag2": "Ja",
-            "filter_tag3": "",
-            "filter_tag4": "",
-            "filter_tag5": "",
-            "filter_tag6": "",
-            "filter_tag7": ""
-          }
-        },
-        "cc157deb-5271-4468-b51b-4871f9ba8baf": {
-          "type": "filter",
-          "settings": {
-            "filter_name": "Herkomst",
-            "filter_tag1": "",
-            "filter_tag2": "",
-            "filter_tag3": "",
-            "filter_tag4": "",
-            "filter_tag5": "",
-            "filter_tag6": "",
-            "filter_tag7": ""
-          }
-        }
-      },
-      "block_order": [
-        "938a8c0b-2076-4c5c-8a15-a7e52a245ecd",
-        "cc157deb-5271-4468-b51b-4871f9ba8baf"
-      ],
       "settings": {
       }
     },
