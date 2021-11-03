@@ -35,41 +35,11 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
-        },
-        "996e07ad-9474-4d2b-a688-8c746311c914": {
-          "type": "filter",
-          "settings": {
-            "filter_name": "Allergenen",
-            "filter_tag1": "ja",
-            "filter_tag2": "nee",
-            "filter_tag3": "",
-            "filter_tag4": "",
-            "filter_tag5": "",
-            "filter_tag6": "",
-            "filter_tag7": "",
-            "filter_tag8": ""
-          }
-        },
-        "b25f52b3-f8c5-4be5-9632-83db0272546d": {
-          "type": "filter",
-          "settings": {
-            "filter_name": "Gesuikerd",
-            "filter_tag1": "ja",
-            "filter_tag2": "nee",
-            "filter_tag3": "",
-            "filter_tag4": "",
-            "filter_tag5": "",
-            "filter_tag6": "",
-            "filter_tag7": "",
-            "filter_tag8": ""
-          }
         }
       },
       "block_order": [
         "09378220-5b07-4d8b-b4f6-939829e5565f",
-        "e817f21c-1fc0-48f9-b235-ca5870ac5d58",
-        "996e07ad-9474-4d2b-a688-8c746311c914",
-        "b25f52b3-f8c5-4be5-9632-83db0272546d"
+        "e817f21c-1fc0-48f9-b235-ca5870ac5d58"
       ],
       "settings": {
       }
