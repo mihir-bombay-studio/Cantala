@@ -6,7 +6,7 @@
         "6b15cc37-1b4d-4795-b744-7803d8fa8889": {
           "type": "Collection",
           "settings": {
-            "collection_id": "all"
+            "collection_id": "thee"
           }
         },
         "f7b73be3-7e8e-48c8-8c53-b24a63764c47": {
@@ -30,7 +30,7 @@
         "004615da-59a1-43e4-b384-3ad3dace01a6": {
           "type": "Collection",
           "settings": {
-            "collection_id": "bestsellers"
+            "collection_id": "thee-gifts"
           }
         }
       },
