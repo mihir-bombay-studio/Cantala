@@ -293,28 +293,28 @@
           <p class="accordion-filter"><strong>{{ block.settings.filter_name | strip }}</strong> {% render 'icon-caret' %}</p>
           <div class="panel">
             {% if block.settings.filter_tag1 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag1 | strip}}">{{block.settings.filter_tag1 | strip}}</a>
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip | replace: " ","-" }}-{{block.settings.filter_tag1 | strip}}">{{block.settings.filter_tag1 | strip}}</a>
             {% endif %}          
             {% if block.settings.filter_tag2 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag2 | strip}}">{{block.settings.filter_tag2 | strip}}</a>
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip | replace: " ","-" }}-{{block.settings.filter_tag2 | strip}}">{{block.settings.filter_tag2 | strip}}</a>
             {% endif %}
             {% if block.settings.filter_tag3 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag3 | strip}}">{{block.settings.filter_tag3 | strip}}</a>
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip | replace: " ","-" }}-{{block.settings.filter_tag3 | strip}}">{{block.settings.filter_tag3 | strip}}</a>
             {% endif %}
             {% if block.settings.filter_tag4 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag4 | strip}}">{{block.settings.filter_tag4 | strip}}</a>
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip | replace: " ","-" }}-{{block.settings.filter_tag4 | strip}}">{{block.settings.filter_tag4 | strip}}</a>
             {% endif %}
             {% if block.settings.filter_tag5 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag5 | strip}}">{{block.settings.filter_tag5 | strip}}</a>
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip | replace: " ","-" }}-{{block.settings.filter_tag5 | strip}}">{{block.settings.filter_tag5 | strip}}</a>
             {% endif %}
             {% if block.settings.filter_tag6 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag6 | strip}}">{{block.settings.filter_tag6 | strip}}</a>
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip | replace: " ","-" }}-{{block.settings.filter_tag6 | strip}}">{{block.settings.filter_tag6 | strip}}</a>
             {% endif %}
             {% if block.settings.filter_tag7 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag7 | strip}}">{{block.settings.filter_tag7 | strip}}</a>
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip | replace: " ","-" }}-{{block.settings.filter_tag7 | strip}}">{{block.settings.filter_tag7 | strip}}</a>
             {% endif %}
             {% if block.settings.filter_tag8 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag8 | strip}}">{{block.settings.filter_tag8 | strip}}</a>
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip | replace: " ","-" }}-{{block.settings.filter_tag8 | strip}}">{{block.settings.filter_tag8 | strip}}</a>
             {% endif %}
           </div>
           {% endfor %}
