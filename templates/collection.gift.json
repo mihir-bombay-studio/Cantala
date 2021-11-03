@@ -21,10 +21,25 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "a8e32d5d-8839-4862-b1c4-2904eaef6e1c": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Soort koffie",
+            "filter_tag1": "Gemalen-koffie",
+            "filter_tag2": "Koffiebonen",
+            "filter_tag3": "Cups",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
-        "ddda9470-ac41-4159-aae0-6e8d35c7eaf8"
+        "ddda9470-ac41-4159-aae0-6e8d35c7eaf8",
+        "a8e32d5d-8839-4862-b1c4-2904eaef6e1c"
       ],
       "settings": {
       }
