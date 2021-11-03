@@ -1,0 +1,58 @@
+{
+  "sections": {
+    "collection-head": {
+      "type": "collection-head",
+      "settings": {
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-filter-custom",
+      "blocks": {
+        "627d8e62-5168-402f-bd80-d9c901d42fd2": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Cafeinevrij",
+            "filter_tag1": "Ja",
+            "filter_tag2": "Nee",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": ""
+          }
+        },
+        "db2de16c-1784-4948-a614-fb887d2d6fa0": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "sjdvfjsvdgfj",
+            "filter_tag1": "",
+            "filter_tag2": "",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": ""
+          }
+        }
+      },
+      "block_order": [
+        "627d8e62-5168-402f-bd80-d9c901d42fd2",
+        "db2de16c-1784-4948-a614-fb887d2d6fa0"
+      ],
+      "settings": {
+      }
+    },
+    "16340230414b0d66a6": {
+      "type": "cookie-popup",
+      "settings": {
+        "header_text": "Have a cookie next to your tea or coffee",
+        "sub_header_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at dapibus elit. Maecenas ut mauris mattis, eleifend."
+      }
+    }
+  },
+  "order": [
+    "collection-head",
+    "product-grid",
+    "16340230414b0d66a6"
+  ]
+}
