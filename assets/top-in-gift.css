@@ -1,8 +1,11 @@
 .top-in-gift-wrapper{
 	padding-top: 52px;
   padding-bottom: 336px;
-  margin-bottom: 255px;
+  margin-bottom: 296px;
   margin-top: 235px;
+}
+.main .top-in-gift-wrapper:last-child {	
+  margin-bottom: 220px;
 }
 
 .top-in-gift-background{
