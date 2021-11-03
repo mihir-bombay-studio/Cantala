@@ -7,6 +7,25 @@
     },
     "product-grid": {
       "type": "main-collection-product-filter-custom",
+      "blocks": {
+        "ddda9470-ac41-4159-aae0-6e8d35c7eaf8": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Smaakprofiel",
+            "filter_tag1": "Fruitig",
+            "filter_tag2": "Krachtig",
+            "filter_tag3": "Licht",
+            "filter_tag4": "Vol",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
+        }
+      },
+      "block_order": [
+        "ddda9470-ac41-4159-aae0-6e8d35c7eaf8"
+      ],
       "settings": {
       }
     },
