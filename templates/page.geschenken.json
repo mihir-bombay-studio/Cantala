@@ -6,31 +6,31 @@
         "6b15cc37-1b4d-4795-b744-7803d8fa8889": {
           "type": "Collection",
           "settings": {
-            "collection_id": "all"
+            "collection_id": "gifts"
           }
         },
         "f7b73be3-7e8e-48c8-8c53-b24a63764c47": {
           "type": "Collection",
           "settings": {
-            "collection_id": "koffie"
+            "collection_id": "gifts-koffie-tot-50-euro"
           }
         },
         "719a7840-807d-45fe-8705-93f469ab62c2": {
           "type": "Collection",
           "settings": {
-            "collection_id": "thee"
+            "collection_id": "thee-gifts"
           }
         },
         "0b3fe1be-7b5d-407e-b574-2f3682340a36": {
           "type": "Collection",
           "settings": {
-            "collection_id": "espresso-blend"
+            "collection_id": "gifts"
           }
         },
         "004615da-59a1-43e4-b384-3ad3dace01a6": {
           "type": "Collection",
           "settings": {
-            "collection_id": "bestsellers"
+            "collection_id": "relatiegeschenken-b2b"
           }
         }
       },
