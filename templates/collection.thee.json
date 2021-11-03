@@ -21,10 +21,25 @@
             "filter_tag7": "pitfruit",
             "filter_tag8": "Citrus"
           }
+        },
+        "8ceec26c-e4f9-4f9a-b88d-40d950e2ea4f": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Biologisch",
+            "filter_tag1": "ja",
+            "filter_tag2": "nee",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
-        "8919ab10-69f8-41d4-b1ce-9538611927cd"
+        "8919ab10-69f8-41d4-b1ce-9538611927cd",
+        "8ceec26c-e4f9-4f9a-b88d-40d950e2ea4f"
       ],
       "settings": {
       }
