@@ -17,8 +17,8 @@
         </div>
         <div class="sub-para">{{ section.settings.para_two }}</div>
         {% if section.settings.button_text != blank %}
-        <a href="{{ product_handle.url }}" class="btn center-it medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %} module">
-        	{{ block.settings.button_text | escape }}
+        <a href="{{ section.settings.button_url }}" class="btn center-it medium btn-dark module">
+        	{{ section.settings.button_text | escape }}
         </a>
         {% endif %}
       </div>
