@@ -52,6 +52,9 @@
     /*background-color: #fff;*/
     right: -25px;
 }
+.trustbox-wrapper2 {
+    margin-top: 10px;
+}
 
 @media (max-width: 992px){
   .hero-wrapper {
