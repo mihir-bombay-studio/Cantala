@@ -35,11 +35,26 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "b5b933b7-1409-4adc-9ca1-d166dc934b06": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Roast",
+            "filter_tag1": "Light",
+            "filter_tag2": "Medium",
+            "filter_tag3": "Dark",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
         "d91d0b94-e8b3-4ae4-b758-bccf99a5d9c0",
-        "9e77ef62-d9f7-439c-be7a-47a50e2c88e1"
+        "9e77ef62-d9f7-439c-be7a-47a50e2c88e1",
+        "b5b933b7-1409-4adc-9ca1-d166dc934b06"
       ],
       "settings": {
       }
