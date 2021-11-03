@@ -1,5 +1,12 @@
 {{ 'about-us-rnd.css' | asset_url | stylesheet_tag }}
 
+<style>
+  a.btn.medium.btn-dark.module {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 24px;
+}
+</style>
 <div class="about-us-rnd-wrapper">
   <div class="container">
     <div class="aur-wrapper flex-box justify-between">
@@ -17,6 +24,11 @@
         	<img class="sub-img" src="{{ section.settings.sub_img | img_url: '500x' }}" alt = "sub-img">
         </div>
         <div class="third-para">{{ section.settings.para_three }}</div>
+        {% if section.settings.button_text != blank %}
+        <a href="{{ section.settings.button_link }}" class="btn medium btn-dark module">
+        	{{ section.settings.button_text | escape }}
+        </a>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -60,6 +72,16 @@
 			"id": "para_three",
         	"type": "text",
         	"label": "Third Paragraph"
+		},
+		{
+			"id": "button_text",
+        	"type": "text",
+        	"label": "CTA text"
+		},
+		{
+			"id": "button_link",
+        	"type": "url",
+        	"label": "CTA link"
 		}
 	],
 	"presets": [
