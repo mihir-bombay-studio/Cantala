@@ -313,6 +313,9 @@
             {% if block.settings.filter_tag7 != blank %}
             <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag7 | strip}}">{{block.settings.filter_tag7 | strip}}</a>
             {% endif %}
+            {% if block.settings.filter_tag8 != blank %}
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{ block.settings.filter_name | strip }}-{{block.settings.filter_tag8 | strip}}">{{block.settings.filter_tag8 | strip}}</a>
+            {% endif %}
           </div>
           {% endfor %}
         </div>
@@ -649,6 +652,11 @@ for (i = 0; i < acc.length; i++) {
                 "id": "filter_tag7",
                 "type": "text",
                 "label": "Filter tag 7"
+                },
+                {
+                "id": "filter_tag8",
+                "type": "text",
+                "label": "Filter tag 8"
                 }
               ]
             }
