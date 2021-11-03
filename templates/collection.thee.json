@@ -26,14 +26,14 @@
           "type": "filter",
           "settings": {
             "filter_name": "Herkomst",
-            "filter_tag1": "China",
-            "filter_tag2": "India",
-            "filter_tag3": "Kenia",
-            "filter_tag4": "Nepal",
-            "filter_tag5": "Japan",
-            "filter_tag6": "Taiwan",
-            "filter_tag7": "Sri Lanka",
-            "filter_tag8": "Zuid Afrika"
+            "filter_tag1": "Azië",
+            "filter_tag2": "Zuid-Amerika",
+            "filter_tag3": "Afrika",
+            "filter_tag4": "Centraal-Amerika",
+            "filter_tag5": "Noord-Amerika",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
           }
         },
         "996e07ad-9474-4d2b-a688-8c746311c914": {
