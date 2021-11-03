@@ -23,7 +23,7 @@
         </div>
         <div class="sub-para">{{ section.settings.para_two }}</div>
         {% if section.settings.button_text != blank %}
-        <a href="{{ section.settings.button_url }}" class="btn medium btn-dark module">
+        <a href="{{ section.settings.button_link }}" class="btn medium btn-dark module">
         	{{ section.settings.button_text | escape }}
         </a>
         {% endif %}
