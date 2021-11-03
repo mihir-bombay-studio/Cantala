@@ -14,8 +14,8 @@
               </div>
               <hr class="addr-hr">
               <div class="store-website">{{ block.settings.website }}</div>
-              <div class="store-email">{{ block.settings.email }}</div>
-              <div class="store-phone">{{ block.settings.phone }}</div>
+              <div class="store-email"><a href="mailto:{{ block.settings.email }}">{{ block.settings.email }}</a></div>
+              <div class="store-phone"><a href="tel:{{ block.settings.phone }}">{{ block.settings.phone }}</a></div>
               <div class="store-hours flex-box justify-between medium">
                 <div class="store-hours-text">Openingstijden</div>
                 <div class="down-chevron">{% include 'icon-down-chevron-brown' %}</div>
