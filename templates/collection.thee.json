@@ -91,20 +91,6 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
-        },
-        "fb9d39d1-2ad3-4cc2-89da-57dc909074c9": {
-          "type": "filter",
-          "settings": {
-            "filter_name": "Soort",
-            "filter_tag1": "Zwarte thee",
-            "filter_tag2": "Groene thee",
-            "filter_tag3": "witte thee",
-            "filter_tag4": "oolong",
-            "filter_tag5": "Rooibos",
-            "filter_tag6": "honeybush",
-            "filter_tag7": "kruiden infusie",
-            "filter_tag8": "Fruit melange"
-          }
         }
       },
       "block_order": [
@@ -113,8 +99,7 @@
         "09378220-5b07-4d8b-b4f6-939829e5565f",
         "e817f21c-1fc0-48f9-b235-ca5870ac5d58",
         "996e07ad-9474-4d2b-a688-8c746311c914",
-        "b25f52b3-f8c5-4be5-9632-83db0272546d",
-        "fb9d39d1-2ad3-4cc2-89da-57dc909074c9"
+        "b25f52b3-f8c5-4be5-9632-83db0272546d"
       ],
       "settings": {
       }
