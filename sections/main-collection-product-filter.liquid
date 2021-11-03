@@ -294,7 +294,7 @@
           <div class="panel">
           {% assign tags = tags_filter[forloop.index0] | split: "," %}
             {% for tag in tags %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{filter | strip | replace: " ","-"}}-{{tag}}">{{tag}}</a>
+            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{filter | strip | replace: " ","-"}}-{{tag | replace: " ","-" | capitalize}}">{{tag | replace: " ","-" | capitalize}}</a>
             {% endfor %}
           </div>
           {% endfor %}
@@ -434,7 +434,7 @@
         
         {% paginate collection.products by 500 %}
         {% for product in collection.products %}
-        <a href="{{ product.url }}" title="{{ product.title | escape  }}" class="card-product {% for tag in product.tags %}{% if tag contains "filter:" or tag contains "Filter:" %}{% assign tagx = tag | split: "-" %}{{ tagx[0] | replace: "Filter:","" | replace: "filter:","" | strip | replace: " ","-" }}-{{ tagx[1] | strip | replace: " ","-" }} {% endif %}{% endfor %}">            
+        <a href="{{ product.url }}" title="{{ product.title | escape  }}" class="card-product {% for tag in product.tags %}{% if tag contains "filter:" or tag contains "Filter:" %}{% assign tagx = tag | split: "-" %}{{ tagx[0] | replace: "Filter:","" | replace: "filter:","" | strip | replace: " ","-" }}-{{ tagx[1] | strip | replace: " ","-" | capitalize }} {% endif %}{% endfor %}">            
           <div class="card-product-image">
             <img src="{{ product.featured_image.src | product_img_url: '590x' }}" alt="{{ product.title | escape  }}" />
           </div>
