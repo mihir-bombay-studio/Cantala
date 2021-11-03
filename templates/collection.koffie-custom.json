@@ -7,6 +7,38 @@
     },
     "product-grid": {
       "type": "main-collection-product-filter-custom",
+      "blocks": {
+        "627d8e62-5168-402f-bd80-d9c901d42fd2": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Cafeinevrij",
+            "filter_tag1": "Ja",
+            "filter_tag2": "Nee",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": ""
+          }
+        },
+        "db2de16c-1784-4948-a614-fb887d2d6fa0": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "sjdvfjsvdgfj",
+            "filter_tag1": "",
+            "filter_tag2": "",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": ""
+          }
+        }
+      },
+      "block_order": [
+        "627d8e62-5168-402f-bd80-d9c901d42fd2",
+        "db2de16c-1784-4948-a614-fb887d2d6fa0"
+      ],
       "settings": {
       }
     },
