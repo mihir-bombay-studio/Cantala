@@ -975,7 +975,7 @@ then close all select boxes:*/
 <div class="cart-popup-block" style="display: none;">    
   <div class="container flex-box justify-between align-center">
     <div>
-      <h2 class="default-h2">{{ product.title | truncatewords: 9, "..." }}</h2>
+      <h2 class="default-h2">{{ product.title | truncatewords: 12, "..." }}</h2>
       <p class="default-text"><span class="variant-name"></span> - <span class="variant-price">{{product.selected_or_first_available_variant.price | money}}</span></p>
     </div>
     <div>
