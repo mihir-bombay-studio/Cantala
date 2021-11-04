@@ -133,6 +133,20 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "fd8b0089-adfd-4f1c-93b3-cdee2f7548bd": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Zetwijze",
+            "filter_tag1": "Espresso",
+            "filter_tag2": "Filter",
+            "filter_tag3": "Lungo",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
@@ -144,7 +158,8 @@
         "6e804a5a-c6f2-4cf3-88d3-ab03005fae26",
         "ff9c907a-d6da-4d21-b267-1ccc795e0050",
         "94893cb2-1704-4d0a-817e-cdfc9a9bbcff",
-        "e417a033-4899-4a95-968e-08235dc66b27"
+        "e417a033-4899-4a95-968e-08235dc66b27",
+        "fd8b0089-adfd-4f1c-93b3-cdee2f7548bd"
       ],
       "settings": {
       }
