@@ -7,6 +7,25 @@
     },
     "product-grid": {
       "type": "main-collection-product-filter-custom",
+      "blocks": {
+        "9358f901-84bd-4122-80ec-5388094f7298": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Accessoires",
+            "filter_tag1": "Bereiding",
+            "filter_tag2": "Servering",
+            "filter_tag3": "Bewaren",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
+        }
+      },
+      "block_order": [
+        "9358f901-84bd-4122-80ec-5388094f7298"
+      ],
       "settings": {
       }
     },
