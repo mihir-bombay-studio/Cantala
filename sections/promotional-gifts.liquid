@@ -7,9 +7,11 @@
         <h2 class="promotional-gifts-heading heading-2">{{ section.settings.heading }}</h2>
         <div class="promotional-gifts-desc">{{ section.settings.desc }}</div>
         {% if section.settings.button_text != blank %}
-        <a href="{{ section.settings.button_link }}" class="btn medium btn-dark module">
+        <div class="img-with-text-btn">
+        <a href="{{ section.settings.button_link }}" class="btn btn-dark">
         	{{ section.settings.button_text | escape }}
         </a>
+        </div>
         {% endif %}
       </div>
       <div class="promotional-gifts-right">
