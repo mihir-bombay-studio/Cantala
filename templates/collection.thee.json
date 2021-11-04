@@ -77,6 +77,20 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "3758a8b4-d5eb-44a8-b413-5496b31aa47e": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Biologisch",
+            "filter_tag1": "Ja",
+            "filter_tag2": "Nee",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
@@ -84,7 +98,8 @@
         "d857116b-cbbb-4831-b05a-8968f97dd21a",
         "78e522e0-890a-4923-add9-b5487b2803f7",
         "e817f21c-1fc0-48f9-b235-ca5870ac5d58",
-        "375b5433-45f4-45d7-beab-49ca4ccf0def"
+        "375b5433-45f4-45d7-beab-49ca4ccf0def",
+        "3758a8b4-d5eb-44a8-b413-5496b31aa47e"
       ],
       "settings": {
       }
