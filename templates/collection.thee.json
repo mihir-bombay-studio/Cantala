@@ -26,13 +26,13 @@
           "type": "filter",
           "settings": {
             "filter_name": "Herkomst",
-            "filter_tag1": "Azië",
-            "filter_tag2": "Zuid-Amerika",
-            "filter_tag3": "Afrika",
-            "filter_tag4": "Centraal-Amerika",
-            "filter_tag5": "Noord-Amerika",
-            "filter_tag6": "",
-            "filter_tag7": "",
+            "filter_tag1": "China",
+            "filter_tag2": "India",
+            "filter_tag3": "Japan",
+            "filter_tag4": "Kenia",
+            "filter_tag5": "Nepal",
+            "filter_tag6": "Sri-lanka",
+            "filter_tag7": "Tiawan",
             "filter_tag8": ""
           }
         }
