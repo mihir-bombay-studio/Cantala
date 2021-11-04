@@ -20,7 +20,10 @@
     </div>
 	{% endfor %}
     </div>
+    {% assign blogsize = blog.articles | size %}
+    {% if blogsize > 8 %}
     <div class="load-more">Load more</div>
+    {% endif %}
   </div>
 </div>
 
