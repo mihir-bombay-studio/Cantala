@@ -8,20 +8,6 @@
     "product-grid": {
       "type": "main-collection-product-filter-custom",
       "blocks": {
-        "09378220-5b07-4d8b-b4f6-939829e5565f": {
-          "type": "filter",
-          "settings": {
-            "filter_name": "Cafeïnevrij",
-            "filter_tag1": "Ja",
-            "filter_tag2": "Nee",
-            "filter_tag3": "",
-            "filter_tag4": "",
-            "filter_tag5": "",
-            "filter_tag6": "",
-            "filter_tag7": "",
-            "filter_tag8": ""
-          }
-        },
         "d857116b-cbbb-4831-b05a-8968f97dd21a": {
           "type": "filter",
           "settings": {
@@ -105,16 +91,45 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "09378220-5b07-4d8b-b4f6-939829e5565f": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Cafeïnevrij",
+            "filter_tag1": "Ja",
+            "filter_tag2": "Nee",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
+        },
+        "3d4f9605-04de-4298-8a10-ef69783ab8ef": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Accessoires",
+            "filter_tag1": "Bereiding",
+            "filter_tag2": "Thee",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
-        "09378220-5b07-4d8b-b4f6-939829e5565f",
         "d857116b-cbbb-4831-b05a-8968f97dd21a",
         "78e522e0-890a-4923-add9-b5487b2803f7",
         "e817f21c-1fc0-48f9-b235-ca5870ac5d58",
         "375b5433-45f4-45d7-beab-49ca4ccf0def",
         "3758a8b4-d5eb-44a8-b413-5496b31aa47e",
-        "20486e27-4eae-4106-9894-c30144be7191"
+        "20486e27-4eae-4106-9894-c30144be7191",
+        "09378220-5b07-4d8b-b4f6-939829e5565f",
+        "3d4f9605-04de-4298-8a10-ef69783ab8ef"
       ],
       "settings": {
       }
