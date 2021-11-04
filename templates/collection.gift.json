@@ -8,6 +8,20 @@
     "product-grid": {
       "type": "main-collection-product-filter-custom",
       "blocks": {
+        "92b11f74-977c-4002-9b06-d3e20ef9181a": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Soort thee",
+            "filter_tag1": "Groene-thee",
+            "filter_tag2": "Kruiden-infusie",
+            "filter_tag3": "Witte-thee",
+            "filter_tag4": "Fruit-melange",
+            "filter_tag5": "Zwarte-thee",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
+        },
         "ddda9470-ac41-4159-aae0-6e8d35c7eaf8": {
           "type": "filter",
           "settings": {
@@ -29,6 +43,20 @@
             "filter_tag1": "Gemalen-koffie",
             "filter_tag2": "Koffiebonen",
             "filter_tag3": "Cups",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
+        },
+        "fd8b0089-adfd-4f1c-93b3-cdee2f7548bd": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Zetwijze",
+            "filter_tag1": "Espresso",
+            "filter_tag2": "Filter",
+            "filter_tag3": "Lungo",
             "filter_tag4": "",
             "filter_tag5": "",
             "filter_tag6": "",
@@ -134,34 +162,6 @@
             "filter_tag8": ""
           }
         },
-        "fd8b0089-adfd-4f1c-93b3-cdee2f7548bd": {
-          "type": "filter",
-          "settings": {
-            "filter_name": "Zetwijze",
-            "filter_tag1": "Espresso",
-            "filter_tag2": "Filter",
-            "filter_tag3": "Lungo",
-            "filter_tag4": "",
-            "filter_tag5": "",
-            "filter_tag6": "",
-            "filter_tag7": "",
-            "filter_tag8": ""
-          }
-        },
-        "92b11f74-977c-4002-9b06-d3e20ef9181a": {
-          "type": "filter",
-          "settings": {
-            "filter_name": "Soort",
-            "filter_tag1": "Groene-thee",
-            "filter_tag2": "Kruiden-infusie",
-            "filter_tag3": "Witte-thee",
-            "filter_tag4": "Fruit-melange",
-            "filter_tag5": "Zwarte-thee",
-            "filter_tag6": "",
-            "filter_tag7": "",
-            "filter_tag8": ""
-          }
-        },
         "2226a013-8243-403f-b756-f0c8c57e2623": {
           "type": "filter",
           "settings": {
@@ -178,8 +178,10 @@
         }
       },
       "block_order": [
+        "92b11f74-977c-4002-9b06-d3e20ef9181a",
         "ddda9470-ac41-4159-aae0-6e8d35c7eaf8",
         "a8e32d5d-8839-4862-b1c4-2904eaef6e1c",
+        "fd8b0089-adfd-4f1c-93b3-cdee2f7548bd",
         "f4365793-a93f-4b8d-9cb2-84556b2bcdee",
         "9319be65-05e6-4729-b9ee-42f2f644c82d",
         "ae750629-27d9-43e2-a688-f838b2a5a425",
@@ -187,8 +189,6 @@
         "ff9c907a-d6da-4d21-b267-1ccc795e0050",
         "94893cb2-1704-4d0a-817e-cdfc9a9bbcff",
         "e417a033-4899-4a95-968e-08235dc66b27",
-        "fd8b0089-adfd-4f1c-93b3-cdee2f7548bd",
-        "92b11f74-977c-4002-9b06-d3e20ef9181a",
         "2226a013-8243-403f-b756-f0c8c57e2623"
       ],
       "settings": {
