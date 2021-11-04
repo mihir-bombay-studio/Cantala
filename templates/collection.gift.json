@@ -63,13 +63,28 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "ae750629-27d9-43e2-a688-f838b2a5a425": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Cafeinevrij",
+            "filter_tag1": "Ja",
+            "filter_tag2": "Nee",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
         "ddda9470-ac41-4159-aae0-6e8d35c7eaf8",
         "a8e32d5d-8839-4862-b1c4-2904eaef6e1c",
         "f4365793-a93f-4b8d-9cb2-84556b2bcdee",
-        "9319be65-05e6-4729-b9ee-42f2f644c82d"
+        "9319be65-05e6-4729-b9ee-42f2f644c82d",
+        "ae750629-27d9-43e2-a688-f838b2a5a425"
       ],
       "settings": {
       }
