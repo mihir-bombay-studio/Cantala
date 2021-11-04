@@ -17,7 +17,9 @@
       "settings": {
         "heading": "Relatiegeschenken",
         "desc": "Wil jij jouw klanten, business contacten of leveranciers in de bloemetjes zetten? Geen probleem! Met de Cantata cadeaupakketten kies je voor een heerlijk relatiegeschenk dat iedereen kan smaken.",
-        "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png"
+        "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png",
+        "button_text": "Onze Cadeaupakketten",
+        "button_link": "shopify:\/\/collections\/gifts"
       }
     },
     "163528025616017219": {
