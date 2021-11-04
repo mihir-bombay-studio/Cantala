@@ -147,6 +147,20 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "92b11f74-977c-4002-9b06-d3e20ef9181a": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Soort",
+            "filter_tag1": "Groene-thee",
+            "filter_tag2": "Kruiden-infusie",
+            "filter_tag3": "Witte-thee",
+            "filter_tag4": "Fruit-melange",
+            "filter_tag5": "Zwarte-thee",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
@@ -159,7 +173,8 @@
         "ff9c907a-d6da-4d21-b267-1ccc795e0050",
         "94893cb2-1704-4d0a-817e-cdfc9a9bbcff",
         "e417a033-4899-4a95-968e-08235dc66b27",
-        "fd8b0089-adfd-4f1c-93b3-cdee2f7548bd"
+        "fd8b0089-adfd-4f1c-93b3-cdee2f7548bd",
+        "92b11f74-977c-4002-9b06-d3e20ef9181a"
       ],
       "settings": {
       }
