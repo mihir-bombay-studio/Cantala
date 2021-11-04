@@ -4,7 +4,7 @@
 {% assign limit = 0 %}
 <div class="collection-products-wrapper recommend">
   <div class="container">
-    <h2 class="collection-products-title text-center heading-2 module">Deze {{ product.type | replace: "Gifts","Gift" | replace: "Accessories","Accessory" }} valt waarschijnlijk ook in de smaak...</h2>
+    <h2 class="collection-products-title text-center heading-2 module">Deze {{ product.type | replace: "Gifts","Gift" | replace: "Accessoires","Accessoire" }} valt waarschijnlijk ook in de smaak...</h2>
     <div class="coll-products module">
       {% paginate collections.all.products by 500 %}
     	{% for product in collections.all.products %}
