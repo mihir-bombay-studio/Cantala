@@ -6,6 +6,11 @@
       <div class="promotional-gifts-left">
         <h2 class="promotional-gifts-heading heading-2">{{ section.settings.heading }}</h2>
         <div class="promotional-gifts-desc">{{ section.settings.desc }}</div>
+        {% if section.settings.button_text != blank %}
+        <a href="{{ section.settings.button_link }}" class="btn medium btn-dark module">
+        	{{ section.settings.button_text | escape }}
+        </a>
+        {% endif %}
       </div>
       <div class="promotional-gifts-right">
         <div class="img-background"></div>
@@ -35,7 +40,17 @@
         "id": "image",
         "type": "image_picker",
         "label": "Section Image"
-        }
+        },
+		{
+			"id": "button_text",
+        	"type": "text",
+        	"label": "CTA text"
+		},
+		{
+			"id": "button_link",
+        	"type": "url",
+        	"label": "CTA link"
+		}
 	],
 	"presets": [
     {
