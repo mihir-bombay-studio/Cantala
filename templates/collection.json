@@ -9,18 +9,10 @@
       "type": "main-collection-product-filter",
       "settings": {
       }
-    },
-    "16340230414b0d66a6": {
-      "type": "cookie-popup",
-      "settings": {
-        "header_text": "Have a cookie next to your tea or coffee",
-        "sub_header_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at dapibus elit. Maecenas ut mauris mattis, eleifend."
-      }
     }
   },
   "order": [
     "collection-head",
-    "product-grid",
-    "16340230414b0d66a6"
+    "product-grid"
   ]
 }
