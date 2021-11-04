@@ -77,6 +77,20 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "6e804a5a-c6f2-4cf3-88d3-ab03005fae26": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Exclusief",
+            "filter_tag1": "Ja",
+            "filter_tag2": "Nee",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
@@ -84,7 +98,8 @@
         "a8e32d5d-8839-4862-b1c4-2904eaef6e1c",
         "f4365793-a93f-4b8d-9cb2-84556b2bcdee",
         "9319be65-05e6-4729-b9ee-42f2f644c82d",
-        "ae750629-27d9-43e2-a688-f838b2a5a425"
+        "ae750629-27d9-43e2-a688-f838b2a5a425",
+        "6e804a5a-c6f2-4cf3-88d3-ab03005fae26"
       ],
       "settings": {
       }
