@@ -22,20 +22,6 @@
             "filter_tag8": ""
           }
         },
-        "e817f21c-1fc0-48f9-b235-ca5870ac5d58": {
-          "type": "filter",
-          "settings": {
-            "filter_name": "Herkomst",
-            "filter_tag1": "China",
-            "filter_tag2": "India",
-            "filter_tag3": "Japan",
-            "filter_tag4": "Kenia",
-            "filter_tag5": "Nepal",
-            "filter_tag6": "Sri-lanka",
-            "filter_tag7": "Tiawan",
-            "filter_tag8": ""
-          }
-        },
         "d857116b-cbbb-4831-b05a-8968f97dd21a": {
           "type": "filter",
           "settings": {
@@ -63,13 +49,42 @@
             "filter_tag7": "Citrus",
             "filter_tag8": "Floraal"
           }
+        },
+        "e817f21c-1fc0-48f9-b235-ca5870ac5d58": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Herkomst",
+            "filter_tag1": "China",
+            "filter_tag2": "India",
+            "filter_tag3": "Japan",
+            "filter_tag4": "Kenia",
+            "filter_tag5": "Nepal",
+            "filter_tag6": "Sri-lanka",
+            "filter_tag7": "Tiawan",
+            "filter_tag8": ""
+          }
+        },
+        "375b5433-45f4-45d7-beab-49ca4ccf0def": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Allergenen",
+            "filter_tag1": "Ja",
+            "filter_tag2": "Nee",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
         "09378220-5b07-4d8b-b4f6-939829e5565f",
-        "e817f21c-1fc0-48f9-b235-ca5870ac5d58",
         "d857116b-cbbb-4831-b05a-8968f97dd21a",
-        "78e522e0-890a-4923-add9-b5487b2803f7"
+        "78e522e0-890a-4923-add9-b5487b2803f7",
+        "e817f21c-1fc0-48f9-b235-ca5870ac5d58",
+        "375b5433-45f4-45d7-beab-49ca4ccf0def"
       ],
       "settings": {
       }
