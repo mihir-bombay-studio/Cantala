@@ -49,12 +49,27 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "9319be65-05e6-4729-b9ee-42f2f644c82d": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Herkomst",
+            "filter_tag1": "Afrika",
+            "filter_tag2": "Azië",
+            "filter_tag3": "Centraal-amerika",
+            "filter_tag4": "Zuid-amerika",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
         "ddda9470-ac41-4159-aae0-6e8d35c7eaf8",
         "a8e32d5d-8839-4862-b1c4-2904eaef6e1c",
-        "f4365793-a93f-4b8d-9cb2-84556b2bcdee"
+        "f4365793-a93f-4b8d-9cb2-84556b2bcdee",
+        "9319be65-05e6-4729-b9ee-42f2f644c82d"
       ],
       "settings": {
       }
