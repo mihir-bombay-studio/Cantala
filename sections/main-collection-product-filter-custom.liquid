@@ -506,7 +506,7 @@
     var colors = [];
     var undertones = [];
     var favourites = [];
-    {% for i in (1..8) %}
+    {% for i in (1..12) %}
     var undertones_{{ forloop.index }} = [];
     
     $( ".undertones-{{ forloop.index }}.filtered" ).each(function( index ) {
@@ -543,7 +543,7 @@
       $('.card-product').addClass('sp');
     }
   
-    {% for i in (1..8) %}
+    {% for i in (1..12) %}
   
     if(undertones_{{ forloop.index }}.length > 0) {
       for (i = 0; i < undertones_{{ forloop.index }}.length; i++) {
@@ -572,12 +572,12 @@
     } else {
       $('.card-product').addClass('fop');
     }
-      $('.card-product.fp.sp.tp.fop{%- for i in (1..8) -%}.sp-{{ forloop.index }}{%- endfor -%}').removeClass('no-disp');
+      $('.card-product.fp.sp.tp.fop{%- for i in (1..12) -%}.sp-{{ forloop.index }}{%- endfor -%}').removeClass('no-disp');
     $('.fp').removeClass('fp');
     $('.sp').removeClass('sp');
     $('.tp').removeClass('tp');
     $('.fop').removeClass('fop');
-    {%- for i in (1..8) -%}
+    {%- for i in (1..12) -%}
       $('.sp-{{ forloop.index }}').removeClass('sp-{{ forloop.index }}');
       {%- endfor -%}
     
