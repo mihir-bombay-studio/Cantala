@@ -404,6 +404,9 @@
     "checkout": {
       "customer_account": {
         "save_my_information_label": "Deze informatie opslaan om volgende keer sneller af te rekenen"
+      },
+      "general": {
+        "continue_to_shipping_method": "Verder met bestellen"
       }
     }
   }
