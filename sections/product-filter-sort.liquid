@@ -11,7 +11,7 @@
             <div class="sort" data-sort="htol">Price, high to low<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
           </div>
           <div class="filters">
-            {% for product in collections['all'].products limit:1 %}
+            {% for product in collections['relatiegeschenken-b2b'].products limit:1 %}
             	{% for tag in product.tags limit:2 %}
                 <div class="filter" data-tag="{{ tag }}">{{ tag }}<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
                 {% endfor %}
