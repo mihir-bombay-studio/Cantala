@@ -12,7 +12,7 @@
           </div>
           <div class="filters">
             {% for product in collections['relatiegeschenken-b2b'].products limit:1 %}
-            	{% for tag in product.tags limit:2 %}
+            	{% for tag in product.tags limit:1 %}
                 <div class="filter" data-tag="{{ tag }}">{{ tag }}<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
                 {% endfor %}
             {% endfor %}
