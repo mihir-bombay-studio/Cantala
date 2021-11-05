@@ -505,7 +505,13 @@
   function runFilter() {
     var colors = [];
     var undertones = [];
-    var favourites = [];
+    {% for i in (1..8) %}
+    var undertones_{{ forloop.index }} = [];
+    
+    $( ".undertones-{{ forloop.index }}.filtered" ).each(function( index ) {
+      undertones_{{ forloop.index }}.push($(this).data('value'));
+    });
+    {% endfor %}
     var classString = "";
     $( ".colors-wrapper.filtered" ).each(function( index ) {
       colors.push($(this).data('value'));
@@ -535,6 +541,18 @@
     } else {
       $('.card-product').addClass('sp');
     }
+  
+    {% for i in (1..8) %}
+  
+    if(undertones_{{ forloop.index }}.length > 0) {
+      for (i = 0; i < undertones_{{ forloop.index }}.length; i++) {
+        $('.card-product.'+undertones_{{ forloop.index }}[i]).addClass('sp');
+        $('.filter-row').append(`<span class="filter-added" data-val="` +undertones_{{ forloop.index }}[i]+ `"><span class="filter-content">Gebruik: `+undertones_{{ forloop.index }}[i]+`</span><span class="pop-close">{% include "icon-x" %}</span></span>`);
+      }
+    } else {
+      $('.card-product').addClass('sp');
+    }
+  {% endfor %}
     if(favourites.length > 0) {
       for (i = 0; i < favourites.length; i++) {
         $('.card-product.'+favourites[i]).addClass('tp');
