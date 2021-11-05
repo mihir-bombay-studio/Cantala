@@ -531,7 +531,7 @@
           </div>
 
           <div class="m-row grouped">
-            <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">{% if product.has_only_default_variant and product.first_available_variant.available %}Uitverkocht{% else %}Voeg toe aan winkelwagen{% endif %}</span> 
+            <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">{% if product.has_only_default_variant and product.first_available_variant.available != true %}Uitverkocht{% else %}Voeg toe aan winkelwagen{% endif %}</span> 
           </div>
         </div>
 
