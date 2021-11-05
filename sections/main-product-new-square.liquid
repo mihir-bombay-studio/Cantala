@@ -676,6 +676,7 @@
     a = document.createElement("DIV");
     a.setAttribute("class", "select-selected");
     a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    console.log(selElmnt.options[selElmnt.selectedIndex].innerHTML);
     x[i].appendChild(a);
     /*for each element, create a new DIV that will contain the option list:*/
     b = document.createElement("DIV");
