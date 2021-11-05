@@ -106,7 +106,7 @@
           "type": "button",
           "settings": {
             "button_text": "Shop een geschenk",
-            "button_link": "shopify:\/\/products\/around-the-world-in-8-days-ontdekkingspakket-koffie",
+            "button_link": "shopify:\/\/pages\/geschenken",
             "button-color": "light"
           }
         }
