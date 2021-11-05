@@ -1,0 +1,86 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "disabled": true,
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "adapt"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "share",
+        "content"
+      ],
+      "settings": {
+      }
+    },
+    "1634210560f62e8d1c": {
+      "type": "new-blog-article",
+      "blocks": {
+        "c10b9c38-2d93-4d18-b6d3-1d697fcc97a5": {
+          "type": "product",
+          "settings": {
+            "featured_product": "pumpkin-spice"
+          }
+        },
+        "eb6b1c00-45ef-43a4-8b17-2a90b68ec617": {
+          "type": "product",
+          "settings": {
+            "featured_product": "matcha-hoshino-bio-groene-thee-uit-japan-blikje-40g"
+          }
+        },
+        "167fff63-50b8-42b9-bf51-00b1f52cc04a": {
+          "type": "product",
+          "settings": {
+            "featured_product": "matcha-chasen"
+          }
+        },
+        "c3d96132-be1a-4c77-82b3-7d01e730b94c": {
+          "type": "button",
+          "settings": {
+            "button_text": "Producten shoppen",
+            "button_link": "shopify:\/\/collections\/all",
+            "button-color": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "c10b9c38-2d93-4d18-b6d3-1d697fcc97a5",
+        "eb6b1c00-45ef-43a4-8b17-2a90b68ec617",
+        "167fff63-50b8-42b9-bf51-00b1f52cc04a",
+        "c3d96132-be1a-4c77-82b3-7d01e730b94c"
+      ],
+      "settings": {
+        "heading": "Explore our flavours, compose your ritual"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1634210560f62e8d1c"
+  ]
+}
