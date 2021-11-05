@@ -293,28 +293,28 @@
           <p class="accordion-filter"><strong>{{ block.settings.filter_name | strip }}</strong> {% render 'icon-caret' %}</p>
           <div class="panel">
             {% if block.settings.filter_tag1 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag1 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag1 | strip | replace: " ","-" | capitalize}}</a>
+            <a href="#" class="undertones-{{ forloop.index }} only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag1 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag1 | strip | replace: " ","-" | capitalize}}</a>
             {% endif %}          
             {% if block.settings.filter_tag2 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag2 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag2 | strip | replace: " ","-" | capitalize}}</a>
+            <a href="#" class="undertones-{{ forloop.index }} only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag2 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag2 | strip | replace: " ","-" | capitalize}}</a>
             {% endif %}
             {% if block.settings.filter_tag3 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag3 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag3 | strip | replace: " ","-" | capitalize}}</a>
+            <a href="#" class="undertones-{{ forloop.index }} only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag3 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag3 | strip | replace: " ","-" | capitalize}}</a>
             {% endif %}
             {% if block.settings.filter_tag4 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag4 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag4 | strip | replace: " ","-" | capitalize}}</a>
+            <a href="#" class="undertones-{{ forloop.index }} only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag4 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag4 | strip | replace: " ","-" | capitalize}}</a>
             {% endif %}
             {% if block.settings.filter_tag5 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag5 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag5 | strip | replace: " ","-" | capitalize}}</a>
+            <a href="#" class="undertones-{{ forloop.index }} only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag5 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag5 | strip | replace: " ","-" | capitalize}}</a>
             {% endif %}
             {% if block.settings.filter_tag6 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag6 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag6 | strip | replace: " ","-" | capitalize}}</a>
+            <a href="#" class="undertones-{{ forloop.index }} only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag6 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag6 | strip | replace: " ","-" | capitalize}}</a>
             {% endif %}
             {% if block.settings.filter_tag7 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag7 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag7 | strip | replace: " ","-" | capitalize}}</a>
+            <a href="#" class="undertones-{{ forloop.index }} only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag7 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag7 | strip | replace: " ","-" | capitalize}}</a>
             {% endif %}
             {% if block.settings.filter_tag8 != blank %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag8 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag8 | strip | replace: " ","-" | capitalize}}</a>
+            <a href="#" class="undertones-{{ forloop.index }} only-border" onClick="return false;" data-value="{% if template == "collection.gift" %}{{ block.settings.filter_name | strip | replace: " ","-" | replace: "Soort-thee","Soort" }}{% else %}{{ block.settings.filter_name | strip | replace: " ","-" }}{% endif %}-{{block.settings.filter_tag8 | strip | replace: " ","-" | capitalize}}">{{block.settings.filter_tag8 | strip | replace: " ","-" | capitalize}}</a>
             {% endif %}
           </div>
           {% endfor %}
@@ -506,6 +506,13 @@
     var colors = [];
     var undertones = [];
     var favourites = [];
+    {% for i in (1..8) %}
+    var undertones_{{ forloop.index }} = [];
+    
+    $( ".undertones-{{ forloop.index }}.filtered" ).each(function( index ) {
+      undertones_{{ forloop.index }}.push($(this).data('value'));
+    });
+    {% endfor %}
     var classString = "";
     $( ".colors-wrapper.filtered" ).each(function( index ) {
       colors.push($(this).data('value'));
@@ -535,6 +542,18 @@
     } else {
       $('.card-product').addClass('sp');
     }
+  
+    {% for i in (1..8) %}
+  
+    if(undertones_{{ forloop.index }}.length > 0) {
+      for (i = 0; i < undertones_{{ forloop.index }}.length; i++) {
+        $('.card-product.'+undertones_{{ forloop.index }}[i]).addClass('sp-{{ forloop.index }}');
+        $('.filter-row').append(`<span class="filter-added" data-val="` +undertones_{{ forloop.index }}[i]+ `"><span class="filter-content">Gebruik: `+undertones_{{ forloop.index }}[i]+`</span><span class="pop-close">{% include "icon-x" %}</span></span>`);
+      }
+    } else {
+      $('.card-product').addClass('sp-{{ forloop.index }}');
+    }
+  {% endfor %}
     if(favourites.length > 0) {
       for (i = 0; i < favourites.length; i++) {
         $('.card-product.'+favourites[i]).addClass('tp');
@@ -553,12 +572,14 @@
     } else {
       $('.card-product').addClass('fop');
     }
-    $('.card-product.fp.sp.tp.fop').removeClass('no-disp');
+      $('.card-product.fp.sp.tp.fop{%- for i in (1..8) -%}.sp-{{ forloop.index }}{%- endfor -%}').removeClass('no-disp');
     $('.fp').removeClass('fp');
     $('.sp').removeClass('sp');
     $('.tp').removeClass('tp');
     $('.fop').removeClass('fop');
-    
+    {%- for i in (1..8) -%}
+      $('.sp-{{ forloop.index }}').removeClass('sp-{{ forloop.index }}');
+      {%- endfor -%}
     
     $('.category-content .pop-close:not(.added)').click(function() {
       var filter = $(this).parent().data('val');
