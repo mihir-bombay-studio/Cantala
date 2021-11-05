@@ -11,7 +11,7 @@
             <div class="sort" data-sort="htol">Price, high to low<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
           </div>
           <div class="filters">
-            {% for product in collections['all'].products limit:1 %}
+            {% for product in collections['relatiegeschenken-b2b'].products limit:1 %}
             	{% for tag in product.tags limit:2 %}
                 <div class="filter" data-tag="{{ tag }}">{{ tag }}<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
                 {% endfor %}
@@ -21,7 +21,7 @@
       </div>
       <div class="pfs-right flex-box">
         
-      	{% for product in collections['all'].products %}
+      	{% for product in collections['relatiegeschenken-b2b'].products %}
         <div class="pfs-product" data-tags="{% for tag in product.tags %}{% if forloop.last %}{{ tag }}{% else %}{{ tag }} {% endif %}{% endfor %}" data-price="{{ product.price }}">
         	 <div class="product-img-wrap">
         	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
