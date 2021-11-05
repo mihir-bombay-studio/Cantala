@@ -22,6 +22,12 @@
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
+    {% if template == 'cart' %}  
+    <meta http-equiv="refresh" content = "0; url = https://{{ shop.domain }}?cartopen=true">
+    <script>
+      window.location.replace("https://{{ shop.domain }}?cartopen=true");
+    </script>
+    {% endif %}
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
