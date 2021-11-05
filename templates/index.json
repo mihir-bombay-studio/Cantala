@@ -202,7 +202,7 @@
           "type": "button",
           "settings": {
             "button_text": "Ontdek meer",
-            "button_link": "shopify:\/\/collections",
+            "button_link": "shopify:\/\/pages\/voor-bedrijven",
             "button-color": "light"
           }
         }
