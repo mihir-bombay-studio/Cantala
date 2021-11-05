@@ -290,11 +290,12 @@
           {% assign split_filter = categoryp | split: "," %}
           {% assign tags_filter = tagsp | split: "|" %}
           {% for filter in split_filter %}
+          {% assign floopindex = forloop.index %}
           <p class="accordion-filter"><strong>{{filter}}</strong> {% render 'icon-caret' %}</p>
           <div class="panel">
           {% assign tags = tags_filter[forloop.index0] | split: "," %}
             {% for tag in tags %}
-            <a href="#" class="undertones only-border" onClick="return false;" data-value="{{filter | strip | replace: " ","-"}}-{{tag | replace: " ","-" | capitalize}}">{{tag | replace: " ","-" | capitalize}}</a>
+            <a href="#" class="undertones-{{floopindex}} only-border" onClick="return false;" data-value="{{filter | strip | replace: " ","-"}}-{{tag | replace: " ","-" | capitalize}}">{{tag | replace: " ","-" | capitalize}}</a>
             {% endfor %}
           </div>
           {% endfor %}
@@ -486,6 +487,13 @@
     var colors = [];
     var undertones = [];
     var favourites = [];
+    {% for i in (1..12) %}
+    var undertones_{{ forloop.index }} = [];
+    
+    $( ".undertones-{{ forloop.index }}.filtered" ).each(function( index ) {
+      undertones_{{ forloop.index }}.push($(this).data('value'));
+    });
+    {% endfor %}
     var classString = "";
     $( ".colors-wrapper.filtered" ).each(function( index ) {
       colors.push($(this).data('value'));
@@ -515,6 +523,18 @@
     } else {
       $('.card-product').addClass('sp');
     }
+  
+    {% for i in (1..12) %}
+  
+    if(undertones_{{ forloop.index }}.length > 0) {
+      for (i = 0; i < undertones_{{ forloop.index }}.length; i++) {
+        $('.card-product.'+undertones_{{ forloop.index }}[i]).addClass('sp-{{ forloop.index }}');
+        $('.filter-row').append(`<span class="filter-added" data-val="` +undertones_{{ forloop.index }}[i]+ `"><span class="filter-content">Gebruik: `+undertones_{{ forloop.index }}[i]+`</span><span class="pop-close">{% include "icon-x" %}</span></span>`);
+      }
+    } else {
+      $('.card-product').addClass('sp-{{ forloop.index }}');
+    }
+  {% endfor %}
     if(favourites.length > 0) {
       for (i = 0; i < favourites.length; i++) {
         $('.card-product.'+favourites[i]).addClass('tp');
@@ -533,11 +553,14 @@
     } else {
       $('.card-product').addClass('fop');
     }
-    $('.card-product.fp.sp.tp.fop').removeClass('no-disp');
+    $('.card-product.fp.sp.tp.fop{%- for i in (1..12) -%}.sp-{{ forloop.index }}{%- endfor -%}').removeClass('no-disp');
     $('.fp').removeClass('fp');
     $('.sp').removeClass('sp');
     $('.tp').removeClass('tp');
     $('.fop').removeClass('fop');
+    {%- for i in (1..12) -%}
+      $('.sp-{{ forloop.index }}').removeClass('sp-{{ forloop.index }}');
+      {%- endfor -%}
     
     
     $('.category-content .pop-close:not(.added)').click(function() {
