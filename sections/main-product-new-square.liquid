@@ -519,7 +519,7 @@
           </div>
 
           <div class="m-row grouped">
-            <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">Voeg toe aan winkelwagen</span> 
+            <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">{% if product.has_only_default_variant and product.first_available_variant.available != true %}Uitverkocht{% else %}Voeg toe aan winkelwagen{% endif %}</span> 
           </div>
         </div>
 
@@ -967,7 +967,7 @@ then close all select boxes:*/
     </div>
     <div>
     <button type="submit" class="btn" name="commit" id="popupaddtocart" data-value="{{ product.selected_or_first_available_variant.id }}" aria-label="Inschrijven">
-      Voeg toe aan winkelwagen
+      {% if product.has_only_default_variant and product.first_available_variant.available != true %}Uitverkocht{% else %}Voeg toe aan winkelwagen{% endif %}
     </button>
     </div>
   </div>
