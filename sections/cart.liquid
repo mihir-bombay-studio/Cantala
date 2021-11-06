@@ -342,7 +342,7 @@
 
 <div class="drawer-cart">
   <div class="drawer-cart-wrapper rel">
-    <div class="cart-sub-head rel">
+    <div class="cart-sub-head rel {% if cart.item_count == 0 %}no-vis{% endif %}">
       <span class="truck">{% include "icon-truck" %}</span><span class="cart-sub-head-text">{% if cart.total_price > 3499 %}Hoera! We verzenden je bestelling gratis.{% else %}voeg {{ 3500 | minus: cart.total_price | money }} aan producten toe om gratis verzending te krijgen{% endif %}</span>
       <div class="progress">
         <div class="progress-value" style="width:{% if cart.total_price < 3500 %}{{ cart.total_price | divided_by: 35 }}%{% else %}100%{% endif %};"><span></span></div>
