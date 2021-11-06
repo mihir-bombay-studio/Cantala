@@ -46,7 +46,7 @@
         {% if block.type == "product" %}
       	{% assign product = block.settings.featured_product %}
       		<div class="explore-product">
-              <div class="ep-image"><img class="product-img" src="{{ product.featured_image.src | img_url: 'x300' }}"></div>
+              <div class="ep-image"><a href="{{ product.url }}"><img class="product-img" src="{{ product.featured_image.src | img_url: 'x300' }}"></a></div>
               <div class="ep-title"><a href="{{ product.url }}">{{ product.title | escape }}</a></div>
       		</div>
         {% endif %}
