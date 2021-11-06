@@ -314,6 +314,30 @@
   display: inline-block;
   z-index: 0;
 }
+
+.progress {
+  background: rgb(240 235 236);
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    padding: 0 5px;
+    display: flex;
+    height: 14px;
+    width: 100%;
+    bottom: -13px;
+}
+
+.progress-value {    
+    -webkit-transition:1s ease-in;
+    -moz-transition:1s ease-in;
+    -o-transition: 1s ease-in;
+    transition: 1s ease-in;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #e6af7b;
+    height: 8px;
+    width: 0;
+}
 </style>
 
 <div class="drawer-cart">
