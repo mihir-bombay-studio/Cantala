@@ -169,13 +169,13 @@
         "2874687e-ea54-456d-8334-7781f1936997": {
           "type": "article_block",
           "settings": {
-            "featured_article": "news\/coffie"
+            "featured_article": "news\/pumpkin"
           }
         },
         "9dd3ce41-e13b-4bf5-bdda-f591d93cc494": {
           "type": "article_block",
           "settings": {
-            "featured_article": "news\/dummy"
+            "featured_article": "news\/matcha"
           }
         }
       },
