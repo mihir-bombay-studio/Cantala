@@ -20,7 +20,6 @@
       </div>
     </div>
     <div class="hero-right rel module">
-    	<img class="hero-img" src="{{ section.settings.hero_img | img_url: '1280x' }}" alt = "hero-img">
       <img srcset="{%- if section.settings.hero_img.width >= 165 -%}{{ section.settings.hero_img | img_url: '165x' }} 165w,{%- endif -%}
             {%- if section.settings.hero_img.width >= 360 -%}{{ section.settings.hero_img | img_url: '360x' }} 360w,{%- endif -%}
             {%- if section.settings.hero_img.width >= 535 -%}{{ section.settings.hero_img | img_url: '535x' }} 535w,{%- endif -%}
