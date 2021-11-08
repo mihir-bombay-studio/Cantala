@@ -20,7 +20,7 @@
         {% assign article = block.settings.featured_article %}
         	<div class="featured-article">
               <div class="article-img">
-                <a href="{{ article.url }}">{{ article.image | img_url: '320x' | img_tag }}</a>
+                <a href="{{ article.url }}"><img loading="lazy" src="{{ article.image | img_url: '300x' }}" alt="{{ article.title }}"></a>
               </div>
               <a href="{{ article.url }}" class="article-title">{{ article.title }}</a>
         	</div>
@@ -34,7 +34,7 @@
         {% assign article = block.settings.featured_article %}
         	<div class="featured-article">
               <div class="article-img">
-                <a href="{{ article.url }}">{{ article.image | img_url: '320x' | img_tag }}</a>
+                <a href="{{ article.url }}"><img loading="lazy" src="{{ article.image | img_url: '300x' }}" alt="{{ article.title }}"></a>
               </div>
               <a href="{{ article.url }}" class="article-title">{{ article.title }}</a>
         	</div>
