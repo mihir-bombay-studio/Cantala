@@ -204,7 +204,7 @@
         "type": "cookie-popup",
         "settings": {
           "header_text": "Have a cookie next to your tea or coffee",
-          "sub_header_text": "Visit <a class=\"label-link\" href=\"\/pages\/privacy-policy\">privacy policy<\/a> page for more information."
+          "sub_header_text": "Visit <a class=\"label-link\" href=\"\/pages\/privacy\">privacy policy<\/a> page for more information."
         }
       }
     },
