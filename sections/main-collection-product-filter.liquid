@@ -449,7 +449,7 @@
             </div>
             <div class="row">
               <p class="card-product-title">
-                {{ product.title | escape  }}
+                {{ product.title | escape  }} {% if product.has_only_default_variant and product.first_available_variant.available != true %}<span class="soldout">(Uitverkocht)</span>{% endif %}
               </p>
             </div>
             <div class="row flex-box">
