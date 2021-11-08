@@ -9,7 +9,7 @@
       {% unless proSelect == product.handle %}
       <div class="coll-product">
         <a href="{{ product.url }}" class="product-img-wrap">
-        	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
+        	<img loading="lazy" class="product-img" src="{{ product.featured_image.src | img_url: 'x270' }}" alt="{{ product.title }}">
         </a>
         <div class="product-tag bold">{{ product.type }}</div>
         <div class="product-title"><a href="{{ product.url }}">{{ product.title | escape }}</a></div>
