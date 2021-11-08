@@ -451,8 +451,14 @@
               <span class="tagged">{{ product.type }}</span>
             </div>
             <div class="row">
+              {% assign pavaliable = false %}
+              {% for variant in product.variants %}
+                {% if variant.available %}
+              		{% assign pavaliable = true %}
+                {% endif %}
+              {% endfor %}
               <p class="card-product-title">
-                {{ product.title | escape  }} {% if product.has_only_default_variant and product.first_available_variant.available != true %}<span class="soldout">(Uitverkocht)</span>{% endif %}
+                {{ product.title | escape  }} {% if pavaliable == false %}<span class="soldout">(Uitverkocht)</span>{% endif %}
               </p>
             </div>
             <div class="row flex-box">
