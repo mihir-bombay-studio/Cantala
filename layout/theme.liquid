@@ -59,6 +59,20 @@
       {{ body_font_italic | font_face: font_display: 'swap' }}
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
+    @font-face {
+        font-family: 'Athelas';
+        font-style: normal;
+        font-weight: 400;
+  		font-display: swap;
+        src: local('Athelas'), url('https://fonts.cdnfonts.com/s/14475/Athelas-Regular.woff') format('woff');
+    }
+    @font-face {
+        font-family: 'Athelas';
+        font-style: normal;
+        font-weight: 700;
+  		font-display: swap;
+        src: local('Athelas'), url('https://fonts.cdnfonts.com/s/14475/Athelas-Bold.woff') format('woff');
+    }
 
       :root {
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
@@ -122,7 +136,9 @@
         }
       }
     {% endstyle %}
+    {% comment %}
     <link href="https://fonts.cdnfonts.com/css/athelas?styles=16703,26088" rel="stylesheet">
+    {% endcomment %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {% style %}
