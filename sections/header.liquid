@@ -25,10 +25,10 @@
           </div>
         </div>
         <div class="header-upper-right-icon user-icon">
-        	<a href="/account">{% include 'icon-account-new' %}</a>
+        	<a href="/account" title="account">{% include 'icon-account-new' %}</a>
         </div>
         <div class="header-upper-right-icon cart-icon">
-          <a href="#" class="rel">{% include 'icon-cart-new' %}<span class="cart-quantity {% if cart.item_count == 0 %}no-disp{% endif %}">{{ cart.item_count }}</span></a>
+          <a href="#" class="rel" title="cart">{% include 'icon-cart-new' %}<span class="cart-quantity {% if cart.item_count == 0 %}no-disp{% endif %}">{{ cart.item_count }}</span></a>
         </div>
         <div class="lang-icon rel">
           <a href="#" class="flex-box align-center"><span class="main-lang">{{ request.locale.iso_code | upcase }}</span> <span class="down-chevron">{% include 'icon-down-chevron-brown' %}</span></a>
@@ -73,7 +73,7 @@
       </div>
       
       <div class="header-lower-middle brand-logo flex-box justify-center">
-      	<a href="/">
+      	<a href="/" title="Cantata">
           {% if section.settings.brand_logo != blank %}
           <img
                srcset="{% if section.settings.brand_logo.width >= 174 %}{{ section.settings.brand_logo | img_url: '174x' }} 174w{% endif %}"
@@ -104,7 +104,7 @@
       </button>
     </nav>
       <div class="header-mobile-logo brand-logo flex-box justify-center">
-      	<a href="/">
+      	<a href="/" title="cantata">
           {% if section.settings.brand_logo != blank %}
           <img
                srcset="{% if section.settings.brand_logo.width >= 174 %}{{ section.settings.brand_logo | img_url: '174x' }} 174w{% endif %}"
@@ -115,7 +115,7 @@
       </div>
       <div class="header-mobile-right flex-box justify-between align-center">
         <div class="header-upper-right-icon cart-icon">
-        	<a class="rel" href="#">{% include 'icon-cart-new' %}<span class="cart-quantity {% if cart.item_count == 0 %}no-disp{% endif %}">{{ cart.item_count }}</span></a>
+        	<a class="rel" href="#" title="cart">{% include 'icon-cart-new' %}<span class="cart-quantity {% if cart.item_count == 0 %}no-disp{% endif %}">{{ cart.item_count }}</span></a>
         </div>
       </div>
     </div>
@@ -170,12 +170,14 @@
                   <div class="hover-content-wrapper">
                     <div class="main-link-title back-to-main-menu medium align-center flex-box"><span class="down-chevron back-chevron">{% include 'icon-right-chevron' %}</span><span>Taal</span></div>
                       <ul class="content-list">
-                        <li id="lang-nl selected">
-                			<a href="#">DL</a>
-              			</li>
-                          <li id="lang-nl">
-                  			<a href="#">FR</a>
-                		</li>
+                             
+                                  {% for locale in shop.published_locales %}   
+                                  {% unless request.locale.iso_code == locale.iso_code  %}
+                                    <li>
+                                        <a href="{{ shop.url }}{{locale.root_url}}">{{ locale.iso_code | upcase }}</a>
+                                    </li>
+                                  {% endunless %}
+                                  {% endfor %}
                       </ul>
                   </div>
                 </div>
@@ -185,7 +187,7 @@
       </div>
       <form action="/search" class="search flex-box justify-between">
       	<input class="mobile-menu-search" type="text" name="q" placeholder="Zoeken">
-        <a href="#">{% include 'icon-search' %}</a>
+        <a href="#" title="search">{% include 'icon-search' %}</a>
       </form>
     </div>
   </div>
