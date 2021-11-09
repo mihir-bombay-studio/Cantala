@@ -446,7 +446,7 @@ a.page-selected {
     height: calc( 100vh - 124px );
     width: 100vw;
 /*     max-width: 487px; */
-    top: 124px;
+    top: 100px;
     background-color: var(--background-main);
       padding: 0 20px 60px;
     left: -100vw;
