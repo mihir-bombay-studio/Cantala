@@ -8,13 +8,13 @@
 		</div>
   <div class="header-wrapper header-container rel no-t-m">
     <div class="header-upper-section flex-box justify-between">
-      <div class="header-upper-left flex-box justify-between">
+      <ul class="header-upper-left flex-box justify-between">
         {% for block in section.blocks %}
         {% for link in linklists[block.settings.nav_list].links %}
         <li class="upper-left-nav-list"><a class="header-link" href="{{link.url}}">{{link.title}}</a></li>
         {% endfor %}
         {% endfor %}
-      </div>
+      </ul>
       <div class="header-upper-right flex-box justify-between align-center">
         <div class="header-upper-right-icon search-icon">
           <div id="searchBox" class="search-container">
@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="header-lower flex-box justify-between align-center">
-      <div class="header-lower-left flex-box">
+      <ul class="header-lower-left flex-box">
         {% for block in section.blocks %}
         {% for link in linklists[block.settings.nav_list_lower_left].links %}
         <li class="header-link lower-left-nav-list" data-name="{{link.title}}"><a href="{{link.url}}" class="lower-left-nav-item flex-box align-center">{{link.title}}{% if link.links != blank %}<span class="down-chevron">{% include 'icon-down-chevron-brown' %}</span>{% endif %}</a>
@@ -70,7 +70,7 @@
         </li>
         {% endfor %}
         {% endfor %}
-      </div>
+      </ul>
       
       <div class="header-lower-middle brand-logo flex-box justify-center">
       	<a href="/" title="Cantata">
@@ -84,13 +84,13 @@
       </div>
       
       <div class="header-lower-right">
-        <div class="header-lower-right-inner flex-box">
+        <ul class="header-lower-right-inner flex-box">
           {% for block in section.blocks %}
           {% for link in linklists[block.settings.nav_list_lower_right].links %}
           <li class="lower-right-nav-list {% if page.url == link.url %} page-selected{% endif %}"><a href="{{link.url}}" class="lower-right-nav-item header-link">{{link.title}}</a></li>
           {% endfor %}
           {% endfor %}
-        </div>
+        </ul>
       </div>
     </div>
   </div>
@@ -122,7 +122,7 @@
     
     <div class="drawer-menu">
     <div class="drawer-content">
-      <div class="header-lower-left">
+      <ul class="header-lower-left">
         {% for block in section.blocks %}
         {% for link in linklists[block.settings.nav_list_lower_left].links %}
         <li class="lower-left-nav-list mobile-main-menu medium"><a {% if link.links == blank %}href="{{link.url}}"{% endif %} class="lower-left-nav-item flex-box justify-between align-center"><span>{{link.title}}</span>{% if link.links != blank %}<span class="down-chevron">{% include 'icon-right-chevron' %}</span>{% endif %}</a>
@@ -147,15 +147,15 @@
         </li>
         {% endfor %}
         {% endfor %}
-      </div>
-      <div class="header-lower-right-inner">
+      </ul>
+      <ul class="header-lower-right-inner">
           {% for block in section.blocks %}
           {% for link in linklists[block.settings.nav_list_lower_right].links %}
           <li class="lower-right-nav-list medium"><a href="{{link.url}}" class="lower-right-nav-item">{{link.title}}</a></li>
           {% endfor %}
           {% endfor %}
-        </div>
-      <div class="header-upper-left">
+        </ul>
+      <ul class="header-upper-left">
         {% for block in section.blocks %}
         {% for link in linklists[block.settings.nav_list].links %}
         <li class="upper-left-nav-list"><a href="{{link.url}}">{{link.title}}</a></li>
@@ -184,7 +184,7 @@
               </div>
             </div>
         </li>
-      </div>
+      </ul>
       <form action="/search" class="search flex-box justify-between">
       	<input class="mobile-menu-search" type="text" name="q" placeholder="Zoeken">
         <a href="#" title="search">{% include 'icon-search' %}</a>
