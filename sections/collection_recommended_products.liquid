@@ -12,7 +12,7 @@
       {% if proType == product.type and limit < 8 %}
       <div class="coll-product">
         <a href="{{ product.url }}" class="product-img-wrap">
-        	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
+        	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x270' }}" alt="{{ product.title | escape }}" loading="lazy">
         </a>
         <div class="product-tag bold">{{ product.type }}</div>
         <div class="product-title"><a href="{{ product.url }}">{{ product.title | escape }}</a></div>
