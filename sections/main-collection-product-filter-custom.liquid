@@ -1,6 +1,6 @@
 {% assign categoryp = "" %}
 {% assign tagsp = "" %}
-{% paginate collection.products by 500 %}
+{% paginate collection.products by 900 %}
   {% for product in collection.products %}
     {% for tag in product.tags %}
       {% if tag contains "filter:" or tag contains "Filter:" %}
@@ -459,7 +459,7 @@
         </div>
         
         
-        {% paginate collection.products by 500 %}
+        {% paginate collection.products by 900 %}
         {% for product in collection.products %}
         <a href="{{ product.url }}" title="{{ product.title | escape  }}" class="card-product {% for tag in product.tags %}{% if tag contains "filter:" or tag contains "Filter:" %}{% assign tagx = tag | split: "-" %}{{ tagx[0] | replace: "Filter:","" | replace: "filter:","" | strip | replace: " ","-" }}-{{ tagx[1] | strip | replace: " ","-" | capitalize }} {% endif %}{% endfor %}">            
           <div class="card-product-image">
