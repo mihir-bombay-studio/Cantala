@@ -444,7 +444,7 @@
         {% for product in collection.products %}
         <a href="{{ product.url }}" title="{{ product.title | escape  }}" class="card-product {% for tag in product.tags %}{% if tag contains "filter:" or tag contains "Filter:" %}{% assign tagx = tag | split: "-" %}{{ tagx[0] | replace: "Filter:","" | replace: "filter:","" | strip | replace: " ","-" }}-{{ tagx[1] | strip | replace: " ","-" | capitalize }} {% endif %}{% endfor %}">            
           <div class="card-product-image">
-            <img src="{{ product.featured_image.src | product_img_url: '330x' }}" alt="{{ product.title | escape  }}" />
+            <img src="{{ product.featured_image.src | product_img_url: '330x' }}" alt="{{ product.title | escape  }}" loading="lazy" />
           </div>
           <div class="card-product-details">
             <div class="row">
