@@ -297,14 +297,14 @@
              }
            });
 
-           resultsList.append('<li><br></li>');             
-           resultsList.append('<li><br></li>');
            $(".drawer-menu").animate({ scrollTop: $(".drawer-menu").height() }, "fast");
            // The Ajax request will return at the most 10 results.
            // If there are more than 10, let's link to the search results page.
            if(data.results_total > 10) {
              resultsList.append('<li><span class="title"><a href="' + searchURL + '">See all results (' + data.results_total + ')</a></span></li>');
            }
+           resultsList.append('<li><br></li>');             
+           resultsList.append('<li><br></li>');
            resultsList.fadeIn(200);
          }        
        });
