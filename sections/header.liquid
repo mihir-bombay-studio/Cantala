@@ -293,9 +293,9 @@
              link.append('<span class="title">' + item.title + '</span>');
              link.wrap('<li></li>');
              resultsList.append(link.parent());
-             $(".drawer-menu").animate({ scrollTop: $(".drawer-menu").height() }, "fast");
            });
 
+           $(".drawer-menu").animate({ scrollTop: $(".drawer-menu").height() }, "fast");
            // The Ajax request will return at the most 10 results.
            // If there are more than 10, let's link to the search results page.
            if(data.results_count > 10) {
