@@ -496,10 +496,6 @@ a.page-selected {
   .lower-left-nav-list:hover {
 	border-bottom: none;
 }
-    ul.search-results {
-      margin: 0 20px;
-      width: calc( 100% - 40px );
-    }
   .header-container.flex-box.justify-center.small-font.align-center.rel {
     justify-content: left !important;
     padding-right: 40px;
