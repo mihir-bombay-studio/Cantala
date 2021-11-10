@@ -293,6 +293,7 @@
              link.append('<span class="title">' + item.title + '</span>');
              link.wrap('<li></li>');
              resultsList.append(link.parent());
+             $(".drawer-menu").animate({ scrollTop: $(".drawer-menu").height() }, "fast");
            });
 
            // The Ajax request will return at the most 10 results.
