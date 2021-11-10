@@ -407,6 +407,7 @@ a.page-selected {
   
   .drawer-content {
     padding-top: 26px;
+    padding-bottom: 40px;
 }
   
   .lower-left-nav-list, .lower-right-nav-list {
