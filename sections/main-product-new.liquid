@@ -152,12 +152,21 @@
   .qty-btn.symbol-minus {
     opacity: .5;
   }
-  .qty-number {}
+  .qty-number {
+  background-color: transparent;
+    border: 0;
+    width: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
   .qty-btn {
     height: 8px;
     width: 8px;
     cursor: pointer;
+    display: inline-flex;
   }
   .qty-btn svg {
     width: 100%;
@@ -167,6 +176,7 @@
     display: flex;
     width: 58px;
     justify-content: space-between;
+    align-items: center;
   }
   .m-row.grouped:first-child {
     width: 46%;
@@ -524,7 +534,7 @@
               <span class="qty-name">Aantal:</span>
               <span class="qty-container">
                 <span class="qty-btn symbol-minus">{% include "icon-minus" %}</span>
-                <span class="qty-number">1</span>
+                <input type="text" class="qty-number" value="1">
                 <span class="qty-btn symbol-plus">{% include "icon-plus" %}</span>
               </span>
             </div>
@@ -575,7 +585,7 @@
   $(".qty-wrapper .symbol-plus").click(function(){
       var adder = 1;
       $(this).parent().parent().data("quantity",parseInt($(this).parent().parent().data("quantity"))+1);
-      $(this).parent().find('.qty-number').text($(this).parent().parent().data("quantity"));   
+      $(this).parent().find('.qty-number').val($(this).parent().parent().data("quantity"));   
       if($(this).parent().parent().data("quantity") < 2) {
         $(this).parent().find('.symbol-minus').css('opacity','0.5');
       } else {
@@ -587,7 +597,7 @@
       if($(this).parent().parent().data("quantity") > 1) {
       	var adder = 1;
         $(this).parent().parent().data("quantity",parseInt($(this).parent().parent().data("quantity"))-1);
-        $(this).parent().find('.qty-number').text($(this).parent().parent().data("quantity")); 
+        $(this).parent().find('.qty-number').val($(this).parent().parent().data("quantity")); 
         if($(this).parent().parent().data("quantity") < 2) {
         	$(this).css('opacity','0.5');
         } else {
@@ -595,7 +605,19 @@
         }
       //$(".product-price").text("€"+cartBtnPrice());
       }
-    });   
+    });      
+  $(".qty-number").change(function() {
+    $(this).val(this.value.match(/[0-9]*/));
+    if($(this).val() == "" || $(this).val() == 0) {
+      $(this).val(1);
+    }
+    $(this).parent().parent().data("quantity",parseInt($(this).val()));
+    if($(this).val() < 2) {
+      $(this).parent().find('.symbol-minus').css('opacity','0.5');
+    } else {
+      $(this).parent().find('.symbol-minus').css('opacity','1');
+    }
+  });
   
   //faq script
   var acc = document.getElementsByClassName("accordion-description");
