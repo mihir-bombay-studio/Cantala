@@ -390,7 +390,7 @@ a.page-selected {
   .header-upper-left {
     width: 100%;
     max-width: unset;
-    padding-bottom: 93px;
+    padding-bottom: 20px;
 }
   
   .header-lower-left .down-chevron, .upper-left-nav-list .down-chevron {
