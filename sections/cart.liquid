@@ -517,17 +517,17 @@
         formData = {
           'items': [{
             'id': 39340777767090,
-            'quantity': parseInt($(".qty-container .qty-number").text())
+            'quantity': parseInt($(".qty-container .qty-number").val())
           },{
             'id': parseInt($(this).data('value')),
-            'quantity': parseInt($(".qty-container .qty-number").text())
+            'quantity': parseInt($(".qty-container .qty-number").val())
           }]
         };
       } else {
         formData = {
           'items': [{
             'id': parseInt($(this).data('value')),
-            'quantity': parseInt($(".qty-container .qty-number").text())
+            'quantity': parseInt($(".qty-container .qty-number").val())
           }]
         };
       }
