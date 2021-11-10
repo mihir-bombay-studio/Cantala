@@ -339,6 +339,15 @@
     height: 8px;
     width: 0;
 }
+  .cart-product-amount {
+    background-color: transparent;
+    border: 0;
+    width: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 </style>
 
 <div class="drawer-cart">
@@ -386,8 +395,8 @@
 
                 <div class="cart-product-row">
                   <div class="cart-product-col rel cart-qty-wrap">
-                    <span class="symbol symbol-minus" {% if item.quantity == 1 %}style="opacity: 0.5"{% endif %}>{% include "icon-minus" %}</span>
-                    <span class="cart-product-amount" data-value="{{item.quantity}}">{{item.quantity}}</span>
+                    <span class="symbol symbol-minus" {% if item.quantity == 1 %}style="opacity: 0.5"{% endif %}>{% include "icon-minus" %}</span>                   
+                    <input type="text" class="cart-product-amount" value="{{item.quantity}}">
                     <span class="symbol symbol-plus">{% include "icon-plus" %}</span>
                   </div>    
                   <div class="cart-product-col">
@@ -613,7 +622,7 @@
                       <div class="cart-product-row">
                         <div class="cart-product-col rel cart-qty-wrap">
                           <span class="symbol symbol-minus" `+minus_opacity+`>{% include "icon-minus" %}</span>
-                          <span class="cart-product-amount" data-value="`+this.quantity+`">`+this.quantity+`</span>
+						  <input type="text" class="cart-product-amount" value="`+this.quantity+`">
                           <span class="symbol symbol-plus">{% include "icon-plus" %}</span>
                         </div>    
                         <div class="cart-product-col">
@@ -734,7 +743,7 @@
       function plusProductBtn() {
         $(".cart-product-content .symbol-plus:not(.added)").click(function(){     
           var holder = parseInt($(this).closest('.cart-product-content').find('.cart-product-remove').data("variant"));
-          var qty = parseInt($(this).closest('.cart-product-row').find('.cart-product-amount').data("value"))+1;
+          var qty = parseInt($(this).closest('.cart-product-row').find('.cart-product-amount').val())+1;
           var clicked = $(this);
           var variant = {
             'id': holder,
@@ -752,8 +761,7 @@
             var looping = data.items;  
             $(looping).each(function(index){
               if(this.variant_id == holder){
-                $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").text(this.quantity);
-                $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").data("value",this.quantity);
+                $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").val(this.quantity);
                 $(clicked).closest( ".cart-product-content" ).find(".cart-product-price").text('€'+(this.final_line_price/100));
                 if(this.quantity > 1) {
                   $(clicked).closest(".cart-product-row").find(".symbol-minus").css('opacity','1');
@@ -807,7 +815,7 @@
       function minusProductBtn() {
         $(".cart-product-content .symbol-minus:not(.added)").click(function(){     
           var holder = parseInt($(this).closest('.cart-product-content').find('.cart-product-remove').data("variant"));
-          var qty = parseInt($(this).closest('.cart-product-row').find('.cart-product-amount').data("value"))-1;
+          var qty = parseInt($(this).closest('.cart-product-row').find('.cart-product-amount').val())-1;
           if(qty > 0) {
             var clicked = $(this);
             var variant = {
@@ -826,8 +834,7 @@
               var looping = data.items;  
               $(looping).each(function(index){
                 if(this.variant_id == holder){                 
-                  $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").text(this.quantity);
-                  $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").data("value",this.quantity);
+                  $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").val(this.quantity);
                   $(clicked).closest( ".cart-product-content" ).find(".cart-product-price").text('€'+(this.final_line_price/100));
                   if(this.quantity == 1) {
                     $(clicked).closest(".cart-product-row").find(".symbol-minus").css('opacity','0.5');
