@@ -671,6 +671,7 @@
           removeProductBtn();
           plusProductBtn();
           minusProductBtn();
+          qtyProductBtn();
         })
         .fail(function(error) {
           console.log( error );
@@ -883,7 +884,85 @@
         });
         $(".cart-product-content .symbol-minus:not(.added)").addClass("added");
       } 
-      minusProductBtn()
+      minusProductBtn();
+        
+    //update qty from cart
+    function qtyProductBtn() {
+      $(".cart-product-content .cart-product-amount:not(.added)").change(function() {
+        $(this).val(this.value.match(/[0-9]*/));
+        if($(this).val() == "" || $(this).val() == 0) {
+          $(this).closest('.cart-product-content').find('.cart-product-remove').trigger('click');
+        } else {
+          var holder = parseInt($(this).closest('.cart-product-content').find('.cart-product-remove').data("variant"));
+          var qty = parseInt($(this).closest('.cart-product-row').find('.cart-product-amount').val());
+          var clicked = $(this);
+          var variant = {
+            'id': holder,
+            'quantity': qty
+          };
+          $.ajax({
+            url: "/cart/change.js",
+            method: "POST",
+            dataType: "json",
+            data: variant,
+            async: false
+          })
+          .done(function( data ) {
+            window.data = data;
+            var looping = data.items;  
+            $(looping).each(function(index){
+              if(this.variant_id == holder){
+                $(clicked).closest( ".cart-product-row" ).find(".cart-product-amount").val(this.quantity);
+                $(clicked).closest( ".cart-product-content" ).find(".cart-product-price").text('€'+(this.final_line_price/100));
+                if(this.quantity > 1) {
+                  $(clicked).closest(".cart-product-row").find(".symbol-minus").css('opacity','1');
+                } else {
+                	$(clicked).closest(".cart-product-row").find(".symbol-minus").css('opacity','0.5');
+                }
+              }
+            });
+            $(".total-price").text('€'+(data.total_price/100));
+            if(data.item_count > 0) {
+              $(".cart-quantity").removeClass("no-disp");
+              $(".cart-quantity").text(data.item_count);
+              $(".cart-products-parent").removeClass('no-disp');
+              $(".cart-total-block").removeClass('no-disp');
+              $(".cart-empty").addClass('no-disp');
+              if(data.total_price/100 > 34.99) {
+                $('.cart-sub-head .cart-sub-head-text').text('Hoera! We verzenden je bestelling gratis.');
+                $('.progress-value').css('width','100%');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Free');
+              } else {
+                $('.cart-sub-head .cart-sub-head-text').text('Voeg €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' aan producten toe om gratis verzending te krijgen');
+                $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+              }
+            } else {
+              $(".cart-quantity").addClass("no-disp");
+              $(".cart-products-parent").addClass('no-disp');
+              $(".cart-total-block").addClass('no-disp');
+              $(".cart-empty").removeClass('no-disp');
+              $('.cart-sub-head').addClass('no-vis');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+            }
+            if(data.total_price/100 > 34.99) {
+              $('.cart-sub-head .cart-sub-head-text').text('Hoera! We verzenden je bestelling gratis.');
+              $('.progress-value').css('width','100%');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Free');
+            } else {
+              $('.cart-sub-head .cart-sub-head-text').text('Voeg €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' aan producten toe om gratis verzending te krijgen');
+              $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+            }
+          })
+          .fail(function(error) {
+            console.log( error );
+          });
+        }
+      });
+        $(".cart-product-content .cart-product-amount:not(.added)").addClass("added");
+    }
+    qtyProductBtn();
 
     
     
