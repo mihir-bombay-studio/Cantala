@@ -74,6 +74,9 @@
     margin: 0 auto;
   margin-bottom: 115px;
 }
+.article-content a {
+	text-decoration: underline;
+}
 
 .article-content h3 {
     font-size: 22px;
