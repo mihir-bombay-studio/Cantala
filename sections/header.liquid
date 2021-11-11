@@ -1,10 +1,10 @@
 {{ 'header.css' | asset_url | stylesheet_tag }}
 <header>
   <div class="header-anouncement" style="display: none;">
-    <span class="header-container flex-box justify-center small-font align-center rel">
+    <{% if section.settings.announcement_link %}a href="{{section.settings.announcement_link}}"{%else%}span{%endif%} class="header-container flex-box justify-center small-font align-center rel">
     	{{ section.settings.announcement_text }}
 			<span id="header-anouncement-close" data-hide="{{ section.settings.announcement_hide_days }}">{% include 'icon-close-white' %}</span>
-    </span>
+    </{% if section.settings.announcement_link %}a{%else%}span{%endif%}>
 		</div>
   <div class="header-wrapper header-container rel no-t-m">
     <div class="header-upper-section flex-box justify-between">
@@ -336,6 +336,12 @@
           "type": "number",
           "label": "Announcement Hide days",
 		  "default": 2
+        },
+		{
+          "id": "announcement_link",
+          "type": "url",
+          "label": "Announcement link"
+
         },
         {
         "id": "brand_logo",
