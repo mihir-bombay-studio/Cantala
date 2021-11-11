@@ -13,7 +13,15 @@
           <div class="filters">
             {% for product in collections['relatiegeschenken-b2b'].products limit:1 %}
             	{% for tag in product.tags limit:1 %}
-                <div class="filter" data-tag="{{ tag }}">{{ tag }}<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
+            	{% assign temptag = tag %}
+                {% if request.locale.iso_code == "de" %}
+            		{% if tag == "Price, low to high" %}
+            			{% assign temptag = "Prijs, laag naar hoog" %}
+            		{% elsif tag == "Price, high to low" %}
+            			{% assign temptag = "Prijs, hoog naar laag" %}
+            		{% endif %}
+                {% endif %}
+                <div class="filter" data-tag="{{ tag }}">{{ temptag }}<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
                 {% endfor %}
             {% endfor %}
           </div>
