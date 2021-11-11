@@ -14,7 +14,7 @@ or
 {%- for i in (1..1) -%}
 
   {%- assign debug = false -%}
-  {%- assign datesSupported = 'English,Norwegian,French,Spanish' | split:',' -%}
+  {%- assign datesSupported = 'English,Norwegian,French,Spanish,Dutch' | split:',' -%}
   {%- assign dateFormat = format | default:'%A %B %d, %Y' -%}
 
   {%- if debug -%}
@@ -33,6 +33,9 @@ or
 
   {%- assign daysFrench = 'lundi,mardi,mercredi,jeudi,vendredi,samedi,dimanche' | split:',' -%}
   {%- assign monthsFrench = 'janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre' | split:',' -%}
+
+  {%- assign daysDutch = 'lundi,mardi,mercredi,jeudi,vendredi,samedi,dimanche' | split:',' -%}
+  {%- assign monthsDutch = 'jan,feb,maart,apr,mei,juni,juli,aug,sept,okt,nov,dec' | split:',' -%}
 
   {%- assign daysSpanish = 'lunes,martes,miércoles,jueves,viernes,sábado,domingo' | split:',' -%}
   {%- assign monthsSpanish = 'enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre' | split:',' -%}
