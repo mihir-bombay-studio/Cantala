@@ -19,8 +19,7 @@
         <div class="article-img no-d">
           {{ article.image | img_url: '500x' | img_tag }}
         </div>
-        {%- assign newDate = 'now' | date:'%A %B %d, %Y' -%}
-        <div class="article-date">{{ article.created_at | date: "%d %b %Y" }}{%- include "date-translate", dateString:newDate language:'Dutch' -%}</div>
+        <div class="article-date">{{ article.created_at | date: "%d %b %Y" }}</div>
         <div class="article-excerpt"><span>{{ article.excerpt }}</span></div>
       </div>
     </div>
