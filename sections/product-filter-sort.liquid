@@ -38,7 +38,7 @@
       	{% for product in collections['relatiegeschenken-b2b'].products %}
         <div class="pfs-product" data-tags="{% for tag in product.tags %}{% if forloop.last %}{{ tag }}{% else %}{{ tag }} {% endif %}{% endfor %}" data-price="{{ product.price }}">
         	 <div class="product-img-wrap">
-        	<img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}">
+               <a href="{{ product.url }}"><img class="product-img" src="{{ product.featured_image.src | img_url: 'x512' }}"></a>
         </div>
           <div class="product-tag bold">{% for tag in product.tags limit:1 %}{{ tag }}{% endfor %}</div>
           <div class="product-title"><a href="{{ product.url }}">{{ product.title | escape }}</a></div>
