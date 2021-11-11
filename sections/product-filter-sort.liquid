@@ -7,13 +7,14 @@
         <div class="pfs-heading medium">{{ section.settings.heading }}</div>
         <div class="filter-and-sorting">
           <div class="sorting">
-            <div class="sort" data-sort="ltoh">Price, low to high<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
-            <div class="sort" data-sort="htol">Price, high to low<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
+            <div class="sort" data-sort="ltoh">Prijs, laag naar hoog<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
+            <div class="sort" data-sort="htol">Prijs, hoog naar laag<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
           </div>
+          {% comment %}
           <div class="filters">
             {% for product in collections['relatiegeschenken-b2b'].products limit:1 %}
             	{% for tag in product.tags limit:1 %}
-            	{% assign temptag = tag %}{{tag}}
+            	{% assign temptag = tag %}
                 {% if request.locale.iso_code == "nl" %}yes
             		{% if tag == "Price, low to high" %}
             			{% assign temptag = "Prijs, laag naar hoog" %}
@@ -25,6 +26,7 @@
                 {% endfor %}
             {% endfor %}
           </div>
+          {% endcomment %}
         </div>
       </div>
       <div class="pfs-right flex-box">
