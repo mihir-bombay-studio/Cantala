@@ -13,7 +13,7 @@
           <div class="filters">
             {% for product in collections['relatiegeschenken-b2b'].products limit:1 %}
             	{% for tag in product.tags limit:1 %}
-            	{% assign temptag = tag %}
+            	{% assign temptag = tag %}{{tag}}
                 {% if request.locale.iso_code == "nl" %}yes
             		{% if tag == "Price, low to high" %}
             			{% assign temptag = "Prijs, laag naar hoog" %}
