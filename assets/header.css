@@ -465,6 +465,7 @@ a.page-selected {
     width: 100%;
     position: absolute;
     left: 0px;
+    z-index: -1;
   }
   
   .bar1.rotate {
