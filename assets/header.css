@@ -457,7 +457,15 @@ a.page-selected {
   
   .drawer-menu.drawn, .mobile-sub-menu-wrapper.drawn {
     left: 0;
-}
+  }
+  .drawer-menu form.search.flex-box.justify-between.rel::after {
+    content: "";
+    display: block;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+  }
   
   .bar1.rotate {
     transform: translateY(1px) rotate(45deg);
