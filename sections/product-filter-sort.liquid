@@ -14,7 +14,7 @@
             {% for product in collections['relatiegeschenken-b2b'].products limit:1 %}
             	{% for tag in product.tags limit:1 %}
             	{% assign temptag = tag %}
-                {% if request.locale.iso_code == "de" %}
+                {% if request.locale.iso_code == "nl" %}
             		{% if tag == "Price, low to high" %}
             			{% assign temptag = "Prijs, laag naar hoog" %}
             		{% elsif tag == "Price, high to low" %}
