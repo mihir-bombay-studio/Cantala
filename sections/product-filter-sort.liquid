@@ -10,7 +10,7 @@
             <div class="sort" data-sort="ltoh">Price, low to high<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
             <div class="sort" data-sort="htol">Price, high to low<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
           </div>
-          <div class="filters">
+          <div class="filters">{{request.locale.iso_code}}
             {% for product in collections['relatiegeschenken-b2b'].products limit:1 %}
             	{% for tag in product.tags limit:1 %}
             	{% assign temptag = tag %}
