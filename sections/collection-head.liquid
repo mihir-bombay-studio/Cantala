@@ -54,10 +54,10 @@
 <div class="container">
   <div class="breadcrums">
     <a href="/" class="breadcrum">Home</a>
-    <a class="breadcrum active">{{ collection.title | escape }}</a>
+    <a class="breadcrum active">{% unless collection.title == "All Products" %}{{ collection.title | escape }}{% else %}Alle producten{% endunless %}</a>
   </div>
   <h1 class="main-page-title page-title h0">
-    {{ collection.title | escape }} {% unless template == "collection.custom" %}<span class="mobile-filter">{% include "icon-filter-2" %}</span>{% endunless %}
+    {% unless collection.title == "All Products" %}{{ collection.title | escape }}{% else %}Alle producten{% endunless %} {% unless template == "collection.custom" %}<span class="mobile-filter">{% include "icon-filter-2" %}</span>{% endunless %}
   </h1>
 </div>
 
