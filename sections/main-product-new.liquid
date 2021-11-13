@@ -459,6 +459,9 @@
       </div>
       
       <ul class="checklist no-t-m">
+        {%- for block in section.blocks -%}
+        	<li>{{ block.settings.bullet_point }}</li>
+        {%- endfor -%}
         <li>Voor 12u besteld - morgen geleverd (<a class="underline" href="/pages/verzending-levering" target="_blank">verzendvoorwaarden</a>)</li>
         <li>Focus op duurzaamheid</li>
         <li>Grootste assortiment in premium koffie & thee in Benelux</li>
