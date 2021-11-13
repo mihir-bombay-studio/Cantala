@@ -2,6 +2,45 @@
   "sections": {
     "main": {
       "type": "main-product-new",
+      "blocks": {
+        "3b04f7f8-0007-41c7-af5b-44942da42017": {
+          "type": "bullets",
+          "settings": {
+            "bullet_point": "Voor 12u besteld - morgen geleverd (<a class=\"underline\" href=\"\/pages\/verzending-levering\" target=\"_blank\">verzendvoorwaarden<\/a>)"
+          }
+        },
+        "e3e10949-b219-439c-915c-35f4da256de2": {
+          "type": "bullets",
+          "settings": {
+            "bullet_point": "Focus op duurzaamheid"
+          }
+        },
+        "1f8ba17d-2b9e-42a6-ae94-dc5cb992b624": {
+          "type": "bullets",
+          "settings": {
+            "bullet_point": "Grootste assortiment in premium koffie &amp; thee in Benelux"
+          }
+        },
+        "3b6ce226-9a6a-4ad7-96b3-25a5e6aca4e1": {
+          "type": "bullets",
+          "settings": {
+            "bullet_point": "Gratis verzending vanaf €35 \n<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"24\" height=\"16\" viewbox=\"0 0 24 16\">\n  <g id=\"Group_5604\" data-name=\"Group 5604\" transform=\"translate(-407 -948)\">\n    <rect id=\"Rectangle_2480\" data-name=\"Rectangle 2480\" width=\"8\" height=\"16\" transform=\"translate(407 948)\"><\/rect>\n    <rect id=\"Rectangle_2479\" data-name=\"Rectangle 2479\" width=\"8\" height=\"16\" transform=\"translate(415 948)\" fill=\"#fae33d\"><\/rect>\n    <rect id=\"Rectangle_2478\" data-name=\"Rectangle 2478\" width=\"8\" height=\"16\" transform=\"translate(423 948)\" fill=\"#ec2636\"><\/rect>\n  <\/g>\n<\/svg>\n - \n<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"20\" height=\"16\" viewbox=\"0 0 20 16\">\n  <g id=\"Group_5379\" data-name=\"Group 5379\" transform=\"translate(-1138 -1039)\">\n    <rect id=\"Rectangle_2430\" data-name=\"Rectangle 2430\" width=\"20\" height=\"5\" transform=\"translate(1138 1039)\" fill=\"#ae1522\"><\/rect>\n    <rect id=\"Rectangle_2431\" data-name=\"Rectangle 2431\" width=\"20\" height=\"6\" transform=\"translate(1138 1044)\" fill=\"#fff\"><\/rect>\n    <rect id=\"Rectangle_2432\" data-name=\"Rectangle 2432\" width=\"20\" height=\"5\" transform=\"translate(1138 1050)\" fill=\"#1b448d\"><\/rect>\n  <\/g>\n<\/svg>"
+          }
+        },
+        "56419fba-430f-4453-9ac5-39d767032c48": {
+          "type": "bullets",
+          "settings": {
+            "bullet_point": "Beleef met cantata je eigen wow-effect"
+          }
+        }
+      },
+      "block_order": [
+        "3b04f7f8-0007-41c7-af5b-44942da42017",
+        "e3e10949-b219-439c-915c-35f4da256de2",
+        "1f8ba17d-2b9e-42a6-ae94-dc5cb992b624",
+        "3b6ce226-9a6a-4ad7-96b3-25a5e6aca4e1",
+        "56419fba-430f-4453-9ac5-39d767032c48"
+      ],
       "settings": {
       }
     },
