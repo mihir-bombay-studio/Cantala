@@ -1,0 +1,4 @@
+{%- capture tagstring -%}
+{% for tag in product.tags %}{% if tag contains "filter:" or tag contains "Filter:" %}{% assign tagx = tag | split: "-" %}{{ tagx[0] | replace: "Filter:","" | replace: "filter:","" | strip | replace: " ","-" }}-{{ tagx[1] | strip | replace: " ","-" | capitalize }} {% endif %}{% endfor %}
+{%- endcapture -%}
+{% assign tagstring = tagstring | replace: "Cafeinevrij-Nee","décaféiné-Non" | replace: "Cafeinevrij-Ja","décaféiné-Oui" %}
