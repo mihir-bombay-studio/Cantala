@@ -61,14 +61,14 @@
         font-style: normal;
         font-weight: 400;
   		font-display: swap;
-        src: local('Athelas'), url('https://fonts.cdnfonts.com/s/14475/Athelas-Regular.woff') format('woff');
+        src: local('Athelas'), url('{{ "Athelas-Regular.woff" | asset_url }}') format('woff');
     }
     @font-face {
         font-family: 'Athelas';
         font-style: normal;
         font-weight: 700;
   		font-display: swap;
-        src: local('Athelas'), url('https://fonts.cdnfonts.com/s/14475/Athelas-Bold.woff') format('woff');
+        src: local('Athelas'), url('{{ "Athelas-Bold.woff " | asset_url }}') format('woff');
     }
 
       :root {
