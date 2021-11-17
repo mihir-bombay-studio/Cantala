@@ -269,6 +269,7 @@
           $(".mobile-main-menu").removeClass('full-opacity');
           $(".background-drawer").removeClass("drawn");
           $("body").removeClass("no-scroll");
+          $("body").removeClass("menu-open");
         } else {
           $(".drawer-menu").css("top", $("header").height() + "px");          
           $(".drawer-menu").css("height", "calc(100vh - "+$("header").height()+"px)");
@@ -276,6 +277,7 @@
           $(".drawer-menu").addClass("drawn");
           $(".background-drawer").addClass("drawn");
           $("body").addClass("no-scroll");
+          $("body").addClass("menu-open");
           
         }  
       });
