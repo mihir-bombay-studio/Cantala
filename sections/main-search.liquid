@@ -160,6 +160,7 @@
                 <li class="grid__item{% unless item.object_type == 'product' %} grid__item--small{% endunless %}">
                   {%- case item.object_type -%}
                     {%- when 'product' -%}
+                  	{% unless item.type == "gift" %}
                       {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
                       {% render 'product-card',
                         product_card_product: item,
@@ -170,6 +171,7 @@
                         show_image_outline: section.settings.show_image_outline,
                         show_rating: section.settings.show_rating
                       %}
+                  	{% endunless %}
                     {%- when 'article' -%}
                       <a href="{{ item.url }}" class="card-wrapper">
                         <div class="card card--search card--soft{% unless item.image %} card--text-only{% endunless %}">
