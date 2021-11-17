@@ -124,6 +124,10 @@
             {% if block.type == "design" %}
             {{ block.settings.designed_by_text }}
           	<a href="{{ block.settings.designed_by_link }}" class="designed-by-link" target="_blank">{{ block.settings.designed_by_link_text }}</a>
+          	<br>
+          
+            {{ block.settings.designed_by_text2 }}
+          	<a href="{{ block.settings.designed_by_link2 }}" class="designed-by-link" target="_blank">{{ block.settings.designed_by_link_text2 }}</a>
             {% endif %}
             {% endfor %}
         </div>
