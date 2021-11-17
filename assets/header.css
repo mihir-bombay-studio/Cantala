@@ -328,6 +328,10 @@ a.page-selected {
     padding-bottom: 5px;
 }
 
+body.menu-open .proof-factor-notification-box {
+  z-index: 2;
+}
+
 @media (max-width: 1250px){
 .lower-left-nav-list {
     margin-left: 20px;
