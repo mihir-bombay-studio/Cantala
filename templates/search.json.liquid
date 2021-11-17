@@ -7,6 +7,7 @@ The final file name would be search.json.liquid
 {% paginate search.results by 1000 %}
  {% capture output %}
  {% for result in search.results %}
+{% unless result.title == "Gift Wrap" or result.title == "Gift Message" %}  
         {% assign resultURL = result.url %}
         {% assign thumbURL = result.images[0] | product_img_url: 'thumb' %}
 
@@ -14,6 +15,7 @@ The final file name would be search.json.liquid
            "url":"{{ result.url   | replace: '\\', '\\\\' | replace: '"', '\\"' | replace:  '/','\\/' }}",
          "thumb":"{{ thumbURL     | replace: '\\', '\\\\' | replace: '"', '\\"' | replace:  '/','\\/' }}",
             "id":{{result.id}} }{% unless forloop.last %},{% endunless %}
+{% endunless %}
     {% endfor %}
 {% endcapture %}
 
