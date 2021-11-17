@@ -443,31 +443,33 @@
         {% paginate collection.products by 900 %}
         {% for product in collection.products %}
         <a href="{{ product.url }}" title="{{ product.title | escape  }}" class="card-product {% for tag in product.tags %}{% if tag contains "filter:" or tag contains "Filter:" %}{% assign tagx = tag | split: "-" %}{{ tagx[0] | replace: "Filter:","" | replace: "filter:","" | strip | replace: " ","-" }}-{{ tagx[1] | strip | replace: " ","-" | capitalize }} {% endif %}{% endfor %}">            
-          <div class="card-product-image">
-            <img src="{{ product.featured_image.src | product_img_url: '330x' }}" alt="{{ product.title | escape  }}" loading="lazy" />
-          </div>
-          <div class="card-product-details">
-            <div class="row">
-              <span class="tagged">{{ product.type }}</span>
+          <div>
+            <div class="card-product-image">
+              <img src="{{ product.featured_image.src | product_img_url: '330x' }}" alt="{{ product.title | escape  }}" loading="lazy" />
             </div>
-            <div class="row">
-              {% assign pavaliable = false %}
-              {% for variant in product.variants %}
+            <div class="card-product-details">
+              <div class="row">
+                <span class="tagged">{{ product.type }}</span>
+              </div>
+              <div class="row">
+                {% assign pavaliable = false %}
+                {% for variant in product.variants %}
                 {% if variant.available %}
-              		{% assign pavaliable = true %}
+                {% assign pavaliable = true %}
                 {% endif %}
-              {% endfor %}
-              <p class="card-product-title">
-                {{ product.title | escape  }} {% if pavaliable == false %}<span class="soldout">(Uitverkocht)</span>{% endif %}
-              </p>
+                {% endfor %}
+                <p class="card-product-title">
+                  {{ product.title | escape  }} {% if pavaliable == false %}<span class="soldout">(Uitverkocht)</span>{% endif %}
+                </p>
+              </div>
             </div>
-            <div class="row flex-box">
-              <span href="#" class="vanaf">Vanaf</span>
-              
-              <p class="card-product-price text-center">
-                {{ cart.currency.iso_code }}  <span class="only-money">{{ product.price | money_without_currency  }}</span>
-              </p>
-            </div>
+          </div>
+          <div class="row flex-box">
+            <span href="#" class="vanaf">Vanaf</span>
+
+            <p class="card-product-price text-center">
+              {{ cart.currency.iso_code }}  <span class="only-money">{{ product.price | money_without_currency  }}</span>
+            </p>
           </div>
         </a>
         {% endfor %}
