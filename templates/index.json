@@ -130,7 +130,7 @@
           "type": "button",
           "settings": {
             "button_text": "Meer over ons",
-            "button_link": "shopify:\/\/collections",
+            "button_link": "shopify:\/\/pages\/over-ons",
             "button-color": "dark"
           }
         },
@@ -138,7 +138,7 @@
           "type": "button",
           "settings": {
             "button_text": "Ontdek onze geheimen",
-            "button_link": "shopify:\/\/collections",
+            "button_link": "shopify:\/\/blogs\/news",
             "button-color": "light"
           }
         }
