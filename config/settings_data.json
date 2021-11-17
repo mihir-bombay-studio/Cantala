@@ -174,7 +174,10 @@
             "settings": {
               "designed_by_text": "Coded by",
               "designed_by_link_text": "dear digital",
-              "designed_by_link": "https:\/\/deardigital.be\/"
+              "designed_by_link": "https:\/\/deardigital.be\/",
+              "designed_by_text2": "Sparked by",
+              "designed_by_link_text2": "Absintt",
+              "designed_by_link2": "https:\/\/absintt.be\/"
             }
           }
         },
