@@ -397,9 +397,9 @@
 
                 <div class="cart-product-row">
                   <div class="cart-product-col rel cart-qty-wrap">
-                    <span class="symbol symbol-minus" {% if item.quantity == 1 %}style="opacity: 0.5"{% endif %}>{% include "icon-minus" %}</span>                   
-                    <input type="text" class="cart-product-amount" value="{{item.quantity}}">
-                    <span class="symbol symbol-plus">{% include "icon-plus" %}</span>
+                    <span class="symbol symbol-minus {% if item.product.metafields.inventory.ShappifyHidden == 'true'%}no-pointer{% endif %}" {% if item.quantity == 1 %}style="opacity: 0.5"{% endif %}>{% include "icon-minus" %}</span>                   
+                    <input type="text" class="cart-product-amount" value="{{item.quantity}}" {% if item.product.metafields.inventory.ShappifyHidden == 'true'%} readonly {% endif %}>
+                    <span class="symbol symbol-plus {% if item.product.metafields.inventory.ShappifyHidden == 'true'%}no-pointer{% endif %}">{% include "icon-plus" %}</span>
                   </div>    
                   <div class="cart-product-col">
                     <p class="cart-product-price">{{ item.original_line_price | money }}</p>   
