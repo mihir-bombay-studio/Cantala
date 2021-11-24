@@ -16,7 +16,8 @@
           </div>
           {% comment %}
           <div class="filters">
-            {% for product in collections['relatiegeschenken-b2b'].products limit:1 %}
+            {% for product in collections['relatiegeschenken-b2b'].products limit:1 %}{% if product.metafields.inventory.ShappifyHidden %}{% continue %}{% endif %}
+
             	{% for tag in product.tags limit:1 %}
             	{% assign temptag = tag %}
                 {% if request.locale.iso_code == "nl" %}yes
@@ -35,7 +36,8 @@
       </div>
       <div class="pfs-right flex-box">
         
-      	{% for product in collections['relatiegeschenken-b2b'].products %}
+      	{% for product in collections['relatiegeschenken-b2b'].products %}{% if product.metafields.inventory.ShappifyHidden %}{% continue %}{% endif %}
+
         <div class="pfs-product" data-tags="{% for tag in product.tags %}{% if forloop.last %}{{ tag }}{% else %}{{ tag }} {% endif %}{% endfor %}" data-price="{{ product.price }}">
         	 <div class="product-img-wrap">
                <a href="{{ product.url }}"><img class="product-img" src="{{ product.featured_image.src | img_url: '300x' }}" loading="lazy"></a>
