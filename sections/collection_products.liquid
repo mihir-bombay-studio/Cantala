@@ -5,7 +5,8 @@
   <div class="container">
     <h2 class="collection-products-title text-center heading-2 module">{{ section.settings.collection_products_title }}</h2>
     <div class="coll-products module">
-    	{% for product in collections[product_handle].products %}
+    	{% for product in collections[product_handle].products %}{% if product.metafields.inventory.ShappifyHidden %}{% continue %}{% endif %}
+
       {% unless proSelect == product.handle %}
       <div class="coll-product">
         <a href="{{ product.url }}" class="product-img-wrap">
