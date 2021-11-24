@@ -6,8 +6,10 @@ The final file name would be search.json.liquid
 {% comment %} Inspired by: http://ecommerce.shopify.com/c/ecommerce-design/t/diy-implementing-autocomplete-with-search-144104 {% endcomment %}
 {% paginate search.results by 1000 %}
  {% capture output %}
- {% for result in search.results %}
-{% unless result.title == "Gift Wrap" or result.title == "Gift Message" %}  
+ {% for result in search.results %}{% if result.metafields.inventory.ShappifyHidden %}{% continue %}{% endif %}
+
+{% unless result.title == "Gift Wrap" or result.title == "Gift Message" %}
+
         {% assign resultURL = result.url %}
         {% assign thumbURL = result.images[0] | product_img_url: 'thumb' %}
 
