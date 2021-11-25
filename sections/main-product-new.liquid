@@ -703,11 +703,19 @@
       $(".variant-name").text(title_string);
       $(".variant-price").text("€"+parseFloat((w.price/100).toFixed(2)));
       
+        $(".slider-nav img").each(function(index) {
+          if($(this).attr('src') != null && w.featured_image != null) {
+            if(w.featured_image.src.indexOf($(this).attr('src')) > -1) {
+              $('.slider-nav').slick('slickGoTo', index);
+            }
+          }
+        });
     }
   }
   $( document ).ready(function() {
   refreshRates();
   });
+  
 </script>
 
 
@@ -1042,6 +1050,8 @@ then close all select boxes:*/
     } else {
       $(".cart-popup-block").fadeOut();
     }
-  });   
+  });    
+  
+  
 </script>
 
