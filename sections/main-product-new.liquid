@@ -703,8 +703,8 @@
       $(".variant-name").text(title_string);
       $(".variant-price").text("€"+parseFloat((w.price/100).toFixed(2)));
       
-        $(".slider-nav img").each(function(index) {console.log('here');
-          if($(this).attr('src') != null && w.featured_image != null) {
+        $(".slider-nav img").each(function(index) {
+          if($(this).attr('src') != null && w.featured_image != null) {console.log('here');
             if(w.featured_image.src.indexOf($(this).attr('src')) > -1) {
               $('.slider-nav').slick('slickGoTo', index);
             }
