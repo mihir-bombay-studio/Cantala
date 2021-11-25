@@ -706,7 +706,7 @@
         $(".slider-nav img").each(function(index) {
           if($(this).attr('src') != null && w.featured_image != null) {
             if(w.featured_image.src.indexOf($(this).attr('src')) > -1) {
-              $('.slider-nav').slick('slickGoTo', index);
+              $('.slider-nav').slick('slickGoTo', index);console.log('here')
             }
           }
         });
