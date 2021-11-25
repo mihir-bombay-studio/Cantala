@@ -706,7 +706,15 @@
         $(".slider-nav img").each(function(index) {
           if($(this).attr('src') != null && w.featured_image != null) {console.log(w.featured_image.src);console.log($(this).attr('src'));
             if(w.featured_image.src.indexOf($(this).attr('src').replace("_200x.",".")) > -1) {
-              $('.slider-nav').slick('slickGoTo', index);
+              
+              var id = setInterval(frame, 300);
+              function frame() {
+                if (typeof $('.slider-nav').slick === "function") {
+                  $('.slider-nav').slick('slickGoTo', index);
+                  clearInterval(id);
+                }
+              }              
+              
             }
           }
         });
