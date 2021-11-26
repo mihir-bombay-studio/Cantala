@@ -975,7 +975,9 @@
     function myTimer() {
       if($('.smAddGiftToCart').length > 0 || iteration > 8) {
         $('.smAddGiftToCart').click(function(){
-          setTimeout(function(){ getCart(); }, 1000);
+          setTimeout(function(){ getCart();
+        $(".drawer-cart").addClass("drawn");
+        $(".background-drawer-cart").addClass("drawn");}, 1000);
         });
         clearInterval(myVar);
       }
