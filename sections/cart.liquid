@@ -970,10 +970,18 @@
     qtyProductBtn();
 
     
+    var myVar = setInterval(myTimer, 1000);
+	var iteration = 0;
+    function myTimer() {
+      if($('.smAddGiftToCart').length > 0 || iteration > 8) {
+        $('.smAddGiftToCart').click(function(){
+          setTimeout(function(){ getcart(); }, 1000);
+        });
+      }
+      iteration++;
+    }
     
-    $('.smAddGiftToCart').click(function(){
-      getcart();
-    });
+    
     
   });
   
