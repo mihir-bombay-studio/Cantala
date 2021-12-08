@@ -1,6 +1,6 @@
 .collection-products-wrapper{
 /* 	background-color: var(--background-main); */
-  margin-bottom: 131px;
+  margin-bottom: 140px;
 }
 
 .collection-products-title {
@@ -24,10 +24,11 @@
 }
 
 .product-img-wrap img{
-	width: 100%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  background-color: rgba(235,220,194,0.35);
 }
 
 .product-tag{
@@ -83,7 +84,11 @@
     margin-bottom: 56px;
 	}
   
-  .coll-products {
-    margin-bottom: 48px;
-}
+  .coll-product {
+    margin: 0 12px;
+  }
+  
+  .collection-products-wrapper{
+    margin-bottom: 100px;
+  }
 }
