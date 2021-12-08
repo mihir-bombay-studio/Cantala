@@ -446,19 +446,19 @@ body.menu-open .proof-factor-notification-box {
   }
   
   .drawer-menu {
-    display: block;
-    position: fixed;
-    z-index: 10;
-    height: calc( 100vh - 124px );
-    width: 100vw;
-/*     max-width: 487px; */
-    top: 124px;
-    background-color: var(--background-main);
+      display: block;
+      position: fixed;
+      z-index: 10;
+      height: calc( 100vh - 124px );
+      width: 100vw;
+      /*     max-width: 487px; */
+      top: 124px;
+      background-color: var(--background-main);
       padding: 0 20px 60px;
-    left: -100vw;
-    transition: .4s ease;
-    overflow-y: scroll;
-}
+      left: -100vw;
+      transition: .4s ease;
+      overflow-y: scroll;
+  }
   .mobile-sub-menu-wrapper {
       display: block;
       position: fixed;
