@@ -16,7 +16,7 @@
           "settings": {
             "button_text": "Onze 200 thees",
             "button_link": "shopify:\/\/collections\/thee",
-            "button-color": "light"
+            "button-color": "dark"
           }
         }
       },
