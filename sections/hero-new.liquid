@@ -1,28 +1,49 @@
 {{ 'hero.css' | asset_url | stylesheet_tag }}
 
-<div class="hero-wrapper">
+<div class="hero-wrapper rel">
   <div class="container">
-  <div class="hero flex-box justify-between align-center">
-    <div class="hero-left rel module">
-      <h1 class="hero-heading main-title">{{ section.settings.hero_heading }}</h1>
-      <div class="hero-desc">{{ section.settings.hero_desc }}</div>
-      <div class="hero-btns flex-box">
-      	{% for block in section.blocks %}
-        {% if block.type == "button" %}
-        <a href="{{ block.settings.button_link }}" class="btn medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
-        	{{ block.settings.button_text | escape }}
+    <div class="hero flex-box justify-between align-start">
+      <div class="hero-left rel module">
+        <h1 class="hero-heading main-title marg-top ligature">{{ section.settings.hero_heading }}</h1>
+        <div class="hero-desc">{{ section.settings.hero_desc }}</div>
+        <div class="hero-btns flex-box">
+          {% for block in section.blocks %}
+          {% if block.type == "button" %}
+          <a href="{{ block.settings.button_link }}" class="btn medium {% if block.settings.button-color == 'light' %}btn-light{% else %}btn-dark{% endif %}">
+            {{ block.settings.button_text | escape }}
+          </a>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <div class="trustbox-wrapper2">
+          <a href="https://nl-be.trustpilot.com/review/cantata.be" target="_blank" title="cantata trustpilot"><img src="{{ "Trustpilot_label_-_transparent_2x.png" | asset_url }}" alt="trustpilot review cantata"></a>
+        </div>
+      </div>
+      <div class="hero-right module">
+        <div class="hero-img-div" style="background: linear-gradient( rgba(52, 45, 37, 0.1), rgba(52, 45, 37, 0.4) ), url({{ section.settings.hero_img | img_url: '1000x' }});background-position: top center;background-size: cover;"></div>
+        {% comment %}<img class="hero-img" src="{{ section.settings.hero_img | img_url: '1000x' }}" alt="Your symphony of taste" style="background: linear-gradient( rgba(52, 45, 37, 0.1), rgba(52, 45, 37, 0.4) ), url({{ section.settings.hero_img | img_url: '1000x' }});">{% endcomment %}
+        <a href="https://nl-be.trustpilot.com/review/cantata.be" target="_blank" title="cantata trustpilot" class="trustpilot-ratings-m no-d">
+          <div class="flex-box justify-between align-center">
+            <img src="{{ "Trustpilot_image.png" | asset_url }}" class="trustpilot_image" alt="trustpilot image cantata">
+            <div class="flex-box align-center">
+              <img src="{{ "Trustpilot_ratings.png" | asset_url }}" class="trustpilot_ratings" alt="trustpilot review cantata">
+              <p class="ratings_text">We are rated 4.5 out of 5</p>
+            </div>
+          </div>
         </a>
-        {% endif %}
-        {% endfor %}
       </div>
-      <div class="trustbox-wrapper2">
-        <a href="https://nl-be.trustpilot.com/review/cantata.be" target="_blank" title="cantata trustpilot"><img src="{{ "Trustpilot_label_-_transparent_2x.png" | asset_url }}" alt="trustpilot review cantata"></a>
-      </div>
-    </div>
-    <div class="hero-right rel module">
-    	<img class="hero-img" src="{{ section.settings.hero_img | img_url: '1000x' }}" alt="Your symphony of taste">
     </div>
   </div>
+  <div class="trustbox-wrapper2 no-t-m">
+    <div class="container rel">
+      <a href="https://nl-be.trustpilot.com/review/cantata.be" target="_blank" title="cantata trustpilot">
+        <img src="{{ "Trustpilot_image.png" | asset_url }}" class="trustpilot_image" alt="trustpilot image cantata">
+        <div class="flex-box align-center">
+          <img src="{{ "Trustpilot_ratings.png" | asset_url }}" class="trustpilot_ratings" alt="trustpilot review cantata">
+          <p class="ratings_text">We are rated 4.5 out of 5</p>
+        </div>
+      </a>
+    </div>
   </div>
 </div>
 
