@@ -356,6 +356,7 @@ body.menu-open .proof-factor-notification-box {
   .small-font {
     font-size: 11px;
     letter-spacing: .06px;
+    line-height: 16px;
 }
   
   .header-mobile{
@@ -444,7 +445,7 @@ body.menu-open .proof-factor-notification-box {
     height: 16px;
   }
   
-  .drawer-menu, .mobile-sub-menu-wrapper {
+  .drawer-menu {
     display: block;
     position: fixed;
     z-index: 10;
@@ -458,6 +459,20 @@ body.menu-open .proof-factor-notification-box {
     transition: .4s ease;
     overflow-y: scroll;
 }
+  .mobile-sub-menu-wrapper {
+      display: block;
+      position: fixed;
+      z-index: 10;
+      height: calc( 100vh - 94px );
+      width: 100vw;
+      /*     max-width: 487px; */
+      top: 94px;
+      background-color: var(--background-main);
+      padding: 0 20px 60px;
+      left: -100vw;
+      transition: .4s ease;
+      overflow-y: scroll;
+   }
   
   .drawer-menu.drawn, .mobile-sub-menu-wrapper.drawn {
     left: 0;
