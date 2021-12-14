@@ -8,13 +8,13 @@
 }
 
 .hero-left{
-    width: 30%;
+    width: 28%;
     height: fit-content;
     z-index: 2;
 }
 
 .hero-right{
-    width: 66%;
+    width: 70%;
     height: 70vh;
     max-height: 560px;
     margin: 0 auto;
@@ -40,7 +40,7 @@
     margin-top: 40px;
     margin-bottom: 36px;
 /*     position: absolute; */
-    width: 450px;
+    width: 520px;
     z-index: 2;
 }
 
