@@ -15,8 +15,8 @@
 
 .hero-right{
     width: 66%;
-    height: 80vh;
-    max-height: 637px;
+    height: 70vh;
+    max-height: 595px;
     margin: 0 auto;
     z-index: 1;
 }
@@ -40,13 +40,13 @@
     margin-top: 40px;
     margin-bottom: 36px;
 /*     position: absolute; */
-    width: 567px;
+    width: 450px;
     z-index: 2;
 }
 
 .hero-desc {
-    font-size: 25px;
-    line-height: 36px;
+    font-size: 18px;
+    line-height: 24px;
   margin-bottom: 36px;
 /*   margin-top: 218px; */
 }
@@ -69,7 +69,7 @@
   display: block;
   bottom: 0;
   background-color: var(--background-slight-dark);
-  padding: 60px 0 150px;
+  padding: 60px 0 220px;
   z-index: 0;
 }
 .trustbox-wrapper2 a {
