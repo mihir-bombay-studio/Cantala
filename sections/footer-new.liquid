@@ -10,7 +10,7 @@
             {% if section.settings.brand_logo != blank %}
             <img
                  srcset="{% if section.settings.brand_logo.width >= 174 %}{{ section.settings.brand_logo | img_url: '174x' }} 174w{% endif %}"
-                 class="brand-logo-size no-t-m" src="{{ section.settings.brand_logo  | img_url: '150x150', scale: 2 }}"
+                 class="brand-logo-size footer-new-logo-d no-t-m" src="{{ section.settings.brand_logo  | img_url: '150x150', scale: 2 }}"
                  loading="lazy" alt = "brand-logo">
             {% else %}{{ section.settings.brand_logo_svg }}{% endif %}
             <span class="no-d">{% include "footer-new-logo" %}</span>
