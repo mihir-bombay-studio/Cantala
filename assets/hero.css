@@ -15,8 +15,8 @@
 
 .hero-right{
     width: 66%;
-    height: 70vh;
-    max-height: 595px;
+    height: 66vh;
+    max-height: 560px;
     margin: 0 auto;
     z-index: 1;
 }
@@ -69,7 +69,7 @@
   display: block;
   bottom: 0;
   background-color: var(--background-slight-dark);
-  padding: 60px 0 190px;
+  padding: 60px 0 230px;
   z-index: 0;
 }
 .trustbox-wrapper2 a {
