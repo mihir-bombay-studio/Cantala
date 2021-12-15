@@ -28,8 +28,8 @@
 
 <div class="container">
   <div class="breadcrums">
-    <a href="/" class="breadcrum">Home</a>
-    <a class="breadcrum active">Contact</a>
+    <a href="/" class="breadcrum">{{ section.settings.home_breadcrum }}</a>
+    <a class="breadcrum active">{{ section.settings.contact_breadcrum }}</a>
   </div>
 </div>
 
@@ -98,6 +98,18 @@
         "id": "image",
         "type": "image_picker",
         "label": "Section Image"
+        },
+		{
+          "id": "home_breadcrum",
+          "type": "text",
+          "label": "Home Breadcum",
+          "default": "Home"
+        },
+		{
+          "id": "contact_breadcrum",
+          "type": "text",
+          "label": "Contact Breadcum",
+          "default": "Contact"
         },
 		{
           "id": "contact_name_placeholder",
