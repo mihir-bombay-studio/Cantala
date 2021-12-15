@@ -62,10 +62,10 @@
     {% if blog.next_article or blog.previous_article %}
     	<div class="article-nav flex-box justify-between{% unless blog.previous_article %} fl-end{% endunless %} module">
           {% if blog.previous_article %}
-            <a href="{{ blog.previous_article }}" class="btn btn-light left">Vorig artikel</a>
+            <a href="{{ blog.previous_article }}" class="btn btn-light left">{{ section.settings.previous_article }}</a>
           {% endif %}
           {% if blog.next_article %}
-              <a href="{{ blog.next_article }}" class="btn btn-light right">Volgend artikel</a>
+              <a href="{{ blog.next_article }}" class="btn btn-light right">{{ section.settings.next_article }}</a>
           {% endif %}
       {% endif %}
     	</div>
@@ -92,6 +92,18 @@
 			"id": "heading",
         	"type": "text",
         	"label": "Explore Products Heading"
+		},
+		{
+			"id": "previous_article",
+        	"type": "text",
+        	"label": "Previous Article",
+			"default": "Vorig artikel"
+		},
+		{
+			"id": "next_article",
+        	"type": "text",
+        	"label": "Next Article",
+			"default": "Volgend artikel"
 		}
 	],
 	"blocks": [
