@@ -703,8 +703,6 @@
         var x = JSON.parse($('#product-json').html());
         var w = x.find(item => {
           var tempVar = parseFloat(item.public_title)*1000;
-          $(".product-col .product-price").text("€"+parseFloat((w.price/100).toFixed(2)));
-          $(".variant-price").text("€"+parseFloat((w.price/100).toFixed(2)));
           return (tempVar.toString() == string);
         });
         $(".product-col .product-price").text("€"+parseFloat((w.price/100).toFixed(2)));
