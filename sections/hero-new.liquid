@@ -24,7 +24,7 @@
             <img src="{{ "Trustpilot_image.png" | asset_url }}" class="trustpilot_image" alt="trustpilot image cantata">
             <div class="flex-box align-center">
               <img src="{{ "Trustpilot_ratings.png" | asset_url }}" class="trustpilot_ratings" alt="trustpilot review cantata">
-              <p class="ratings_text">We are rated 4.5 out of 5</p>
+              <p class="ratings_text">{{ section.settings.ratings_desc }}</p>
             </div>
           </div>
         </a>
@@ -37,7 +37,7 @@
         <img src="{{ "Trustpilot_image.png" | asset_url }}" class="trustpilot_image" alt="trustpilot image cantata">
         <div class="flex-box align-center">
           <img src="{{ "Trustpilot_ratings.png" | asset_url }}" class="trustpilot_ratings" alt="trustpilot review cantata">
-          <p class="ratings_text">We are rated 4.5 out of 5</p>
+          <p class="ratings_text">{{ section.settings.ratings_desc }}</p>
         </div>
       </a>
     </div>
@@ -62,6 +62,12 @@
 				"id": "hero_desc",
 				"type": "text",
 				"label": "Hero Description"
+			},
+			{
+				"id": "ratings_desc",
+				"type": "text",
+				"label": "Ratings Description",
+				"default": "We are rated 4.5 out of 5"
 			}
 		],
 	"blocks": [
