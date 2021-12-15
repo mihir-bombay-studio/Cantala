@@ -676,7 +676,7 @@
       });
       
         var string2 = "";
-      var title_string = "";
+        var title_string = "";
         $(".selector.selected").each(function(index){
           if(string2 == "") {
             if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
@@ -702,8 +702,8 @@
           return item.public_title === string2;
         });
         $(".product-col .product-price").text("€"+parseFloat((w.price/100).toFixed(2)));
-      $(".variant-name").text(title_string);
-      $(".variant-price").text("€"+parseFloat((w.price/100).toFixed(2)));
+        $(".variant-name").text(title_string);
+      	$(".variant-price").text("€"+parseFloat((w.price/100).toFixed(2)));
       
         $(".slider-nav img").each(function(index) {
           if($(this).attr('src') != null && w.featured_image != null) {
