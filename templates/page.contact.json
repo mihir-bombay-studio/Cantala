@@ -5,7 +5,10 @@
       "settings": {
         "heading": "Contacteer ons",
         "image": "shopify:\/\/shop_images\/hero_img.png",
-        "newsletter_checkbox": "Ik ga akkoord met de <a class=\"label-link\" href=\"#\">voorwaarden<\/a> en heb de <a class=\"label-link\" href=\"#\">privacy policy<\/a> gelezen."
+        "contact_name_placeholder": "Naam*",
+        "contact_email_placeholder": "E-mailadres*",
+        "contact_message_placeholder": "Jouw boodschap",
+        "contact_checkbox": "Ik ga akkoord met de <a class=\"label-link\" href=\"\/pages\/voorwaarden\">voorwaarden<\/a> en heb de <a class=\"label-link\" href=\"\/pages\/privacy\">privacy policy<\/a> gelezen."
       }
     },
     "1635323390ba757103": {
