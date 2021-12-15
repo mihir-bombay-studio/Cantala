@@ -523,7 +523,8 @@
         console.log(string);
         var x = JSON.parse($('#product-json').html());
         var w = x.find(item => {
-          return item.public_title === string;
+          var tempVar = parseFloat(item.public_title)*1000;
+          return (tempVar.toString() == string);
         });
         $(this).data('value',w.id);
       }
