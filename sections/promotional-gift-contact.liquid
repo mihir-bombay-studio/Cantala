@@ -15,15 +15,15 @@
 
         {%- endif -%}
         <div class="half-inputs flex-box justify-between">
-          <input class="pgc-form-input half-input" type="text" name="contact[name]" placeholder="Naam*" required>
-          <input class="pgc-form-input half-input" type="email" name="contact[email]" placeholder="E-mailadres*" required>
+          <input class="pgc-form-input half-input" type="text" name="contact[name]" placeholder="{{ section.settings.contact_name_placeholder }}" required>
+          <input class="pgc-form-input half-input" type="email" name="contact[email]" placeholder="{{ section.settings.contact_email_placeholder }}" required>
         </div>
-        <input class="pgc-form-input full-input" type="text" name="contact[compnay_name]" placeholder="Jouw bedrijf*" required>
-        <textarea name="contact[message]" class="pgc-form-input full-input" rows="4" cols="50" placeholder="Jouw boodschap"></textarea>
+        <input class="pgc-form-input full-input" type="text" name="contact[compnay_name]" placeholder="{{ section.settings.contact_company_placeholder }}" required>
+        <textarea name="contact[message]" class="pgc-form-input full-input" rows="4" cols="50" placeholder="{{ section.settings.contact_message_placeholder }}"></textarea>
         <input type="checkbox" class="no-disp" id="tncg" name="contact[checkbox]" value="Terms">
         <div class="checkbox-wrap flex-box align-center">
           <span for="tncg" class="checkbox gift-checkbox rel"><span class="checked"></span></span>
-          <span class="checkbox-label">Ik ga akkoord met de <a class="label-link" href="#">voorwaarden</a> en heb de <a class="label-link" href="#">privacy policy</a> gelezen.</span>
+          <span class="checkbox-label">{{ section.settings.contact_checkbox }}</span>
         </div>
           <div class="submit-btn-wrap gift-submit-btn-wrap wrap-disabled">
         <button class="submit-btn btn gift-submit-btn btn-light disabled medium" type="submit" form="contact_form" value="Submit">
@@ -63,6 +63,35 @@
         "id": "image",
         "type": "image_picker",
         "label": "Section Image"
+        },
+		{
+          "id": "contact_name_placeholder",
+          "type": "text",
+          "label": "Contact Name Placeholder",
+		  "default": "Naam*"
+        },
+		{
+          "id": "contact_email_placeholder",
+          "type": "text",
+          "label": "Contact Email Placeholder",
+		  "default": "E-mailadres*"
+        },
+		{
+          "id": "contact_company_placeholder",
+          "type": "text",
+          "label": "Contact Company Placeholder",
+		  "default": "Jouw bedrijf*"
+        },
+		{
+          "id": "contact_message_placeholder",
+          "type": "text",
+          "label": "Contact Message Placeholder",
+		  "default": "Jouw boodschap"
+        },
+		{
+          "id": "contact_checkbox",
+          "type": "html",
+          "label": "Contact Checkbox"
         }
 	],
 	"presets": [
