@@ -153,7 +153,7 @@
             </div>
             <div class="grid-text-box">
               <h2 class="grid-heading-text">{{collections[block.settings.collection_id].title}}</h2>
-              <p class="grid-para">Shop nu</p>
+              <p class="grid-para">{{ section.settings.shop_btn_text }}</p>
             </div>
           </a>
         </div>
@@ -186,6 +186,12 @@
         "type": "html",
         "label": "Sub header text"
 
+        },
+		{
+        "id": "shop_btn_text",
+        "type": "text",
+        "label": "Shop Button text",
+		"default": "Shop nu"
         },
         {
         "id": "button_text",
