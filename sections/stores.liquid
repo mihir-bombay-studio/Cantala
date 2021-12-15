@@ -22,7 +22,7 @@
                 <div class="store-email"><a href="mailto:{{ block.settings.email }}">{{ block.settings.email }}</a></div>
                 <div class="store-phone"><a href="tel:{{ block.settings.phone }}">{{ block.settings.phone }}</a></div>
                 <div class="store-hours flex-box justify-between medium">
-                  <div class="store-hours-text">{{ section.settings.opening_hours }}</div>
+                  <div class="store-hours-text">{{ block.settings.opening_hours }}</div>
                   <div class="down-chevron">{% include 'icon-down-chevron-brown' %}</div>
                 </div>
                 <div class="panel store-hour">
@@ -69,14 +69,7 @@
 {% schema %}
   {
     "name": "Stores Addresses",
-    "settings": [
-		{
-          "id": "opening_hours",
-          "type": "text",
-          "label": "Opening Hours",
-		  "default": "Openingstijden"
-        }
-	],
+    "settings": [],
 	"blocks": [
 		{
                 "type": "address",
@@ -117,6 +110,12 @@
                 "id": "phone",
                 "type": "text",
                 "label": "Phone Number"
+                },
+				{
+                  "id": "opening_hours",
+                  "type": "text",
+                  "label": "Opening Hours Text",
+                  "default": "Openingstijden"
                 },
 				{
                 "id": "hours",
