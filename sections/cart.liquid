@@ -446,21 +446,21 @@
         <div class="cart-total-block {% if cart.item_count == 0 %}no-disp{% endif %}">
           <div class="cart-product-row marg-bottom-xs">
             <div class="cart-product-col">
-              <span class="total-text">Verzending</span>
+              <span class="total-text">{{ section.settings.shipping_text }}</span>
             </div>
             <div class="cart-product-col">
-              <span class="total-text">{% if cart.total_price > 9999 %}Gratis{% else %}Zie volgende stap{% endif %}</span>
+              <span class="total-text">{% if cart.total_price > 9999 %}{{ section.settings.shipping_free }}{% else %}{{ section.settings.shipping_price }}{% endif %}</span>
             </div>
           </div>
           <div class="cart-product-row sub-marg-bottom">
             <div class="cart-product-col">
-              <span class="total-text">Subtotaal</span>
+              <span class="total-text">{{ section.settings.subtotal_text }}</span>
             </div>
             <div class="cart-product-col">
               <span class="total-price">{{ cart.total_price | money_without_trailing_zeros }}</span>
             </div>
           </div>
-          <a id="checkout-btn" class="btn btn-center btn-default" href="/checkout">Afrekenen</a>
+          <a id="checkout-btn" class="btn btn-center btn-default" href="/checkout">{{ section.settings.checkout_btn_text }}</a>
         </div>
       
     </div>
@@ -476,6 +476,36 @@
           "id": "cart_empty_text",
           "type": "html",
           "label": "Cart Empty Text"
+        },
+		{
+          "id": "shipping_text",
+          "type": "text",
+          "label": "Shipping",
+		  "default": "Verzending"
+        },
+		{
+          "id": "shipping_free",
+          "type": "text",
+          "label": "Shipping Free text",
+		  "default": "Gratis"
+        },
+		{
+          "id": "shipping_price",
+          "type": "text",
+          "label": "Shipping Price text",
+		  "default": "Zie volgende stap"
+        },
+		{
+          "id": "subtotal_text",
+          "type": "text",
+          "label": "Subtotal text",
+		  "default": "Subtotaal"
+        },
+		{
+          "id": "checkout_btn_text",
+          "type": "text",
+          "label": "Checkout Button text",
+		  "default": "Afrekenen"
         }
 	]
   }
