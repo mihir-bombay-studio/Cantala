@@ -681,7 +681,8 @@
           if(string2 == "") {
             if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
               string2 += $(this).data("val");
-              title_string += parseFloat($(this).data("val")*1000) + "g";
+              title_string += parseFloat($(this).data("val"));
+              title_string = (title_string*1000) + "g";
             } else {
               string2 += $(this).val();
               title_string += $(this).val();
@@ -690,7 +691,8 @@
 
             if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
               string2 += " / " + $(this).data("val");
-              title_string += " / " + parseFloat($(this).data("val")*1000) + "g";
+              title_string += " / " + parseFloat($(this).data("val"));
+              title_string = (title_string*1000) + "g";
             } else {
               string2 += " / " + $(this).val();
               title_string += " / " + $(this).val();
