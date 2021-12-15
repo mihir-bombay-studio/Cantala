@@ -27,7 +27,8 @@
       "settings": {
         "hero_img": "shopify:\/\/shop_images\/01-09-2020_2x_d9892258-4a1a-49b2-af74-1abe7fb87bef.png",
         "hero_heading": "Your symphony of taste.",
-        "hero_desc": "Ontdek het grootste en lekkerste aanbod koffie en thee in België."
+        "hero_desc": "Ontdek het grootste en lekkerste aanbod koffie en thee in België.",
+        "ratings_desc": "We are rated 4.5 out of 5"
       }
     },
     "1633586848e30c4728": {
@@ -77,7 +78,8 @@
       ],
       "settings": {
         "collection_products_title": "Onze bestverkopende koffies",
-        "collection_select": "koffie"
+        "collection_select": "koffie",
+        "from_text": "vanaf"
       }
     },
     "16336031087ad04252": {
@@ -96,7 +98,8 @@
       ],
       "settings": {
         "collection_products_title": "Thee die in de smaak valt",
-        "collection_select": "thee"
+        "collection_select": "thee",
+        "from_text": "vanaf"
       }
     },
     "1633672137a5d73e94": {
@@ -199,7 +202,10 @@
     "1633697619cc244f04": {
       "type": "newsletter-subs",
       "settings": {
-        "nl_sub_heading": "Schrijf je in op onze nieuwsbrief."
+        "nl_sub_heading": "Schrijf je in op onze nieuwsbrief.",
+        "newsletter_email_placeholder": "Jouw e-mailadres",
+        "newsletter_btn_text": "Inschrijven",
+        "newsletter_checkbox": "Ik ga akkoord met de <a class=\"label-link\" href=\"\/pages\/voorwaarden\">voorwaarden<\/a> en heb de <a class=\"label-link\" href=\"\/pages\/privacy\">privacy policy<\/a> gelezen."
       }
     },
     "1633678277ec1a08eb": {
