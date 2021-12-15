@@ -4,7 +4,8 @@
       "type": "contact-us-contact-form",
       "settings": {
         "heading": "Contacteer ons",
-        "image": "shopify:\/\/shop_images\/hero_img.png"
+        "image": "shopify:\/\/shop_images\/hero_img.png",
+        "newsletter_checkbox": "Ik ga akkoord met de <a class=\"label-link\" href=\"#\">voorwaarden<\/a> en heb de <a class=\"label-link\" href=\"#\">privacy policy<\/a> gelezen."
       }
     },
     "1635323390ba757103": {
