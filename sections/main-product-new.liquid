@@ -670,8 +670,8 @@
         }
         var x = JSON.parse($('#product-json').html());
         var w = x.find(item => {
-          console.log ("variant match: "+(parseFloat(item.public_title)*1000) === string)
-          return ((parseFloat(item.public_title)*1000) === string);
+          console.log ("variant match: "+((parseFloat(item.public_title)*1000).toString()) === string)
+          return (((parseFloat(item.public_title)*1000).toString()) === string);
         });
         $(this).find('.box-price').text("€"+parseFloat((w.price/100).toFixed(2)));
       });
