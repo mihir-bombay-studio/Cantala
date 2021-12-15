@@ -48,13 +48,20 @@
       "type": "promotional-gift-contact",
       "settings": {
         "heading": "Contacteer ons",
-        "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png"
+        "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png",
+        "contact_name_placeholder": "Naam*",
+        "contact_email_placeholder": "E-mailadres*",
+        "contact_company_placeholder": "Jouw bedrijf*",
+        "contact_message_placeholder": "Jouw boodschap",
+        "contact_checkbox": "Ik ga akkoord met de <a class=\"label-link\" href=\"#\">voorwaarden<\/a> en heb de <a class=\"label-link\" href=\"#\">privacy policy<\/a> gelezen."
       }
     },
     "16352804408fb6e4ce": {
       "type": "product-filter-sort",
       "settings": {
-        "heading": "Filter op"
+        "heading": "Filter op",
+        "sort_ltoh": "Prijs, laag naar hoog",
+        "sort_htol": "Prijs, hoog naar laag"
       }
     },
     "1635280471c9182c51": {
