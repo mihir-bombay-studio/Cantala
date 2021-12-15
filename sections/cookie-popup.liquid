@@ -141,10 +141,10 @@
     
     <div class="btn-cluster">
       <button class="btn btn-orange"id="decline">
-        Decline
+        {{ section.settings.decline_text }}
       </button>
       <button class="btn"id="accept">
-        Accept all
+        {{ section.settings.accept_text }}
       </button>
     </div>
   </div>
@@ -194,13 +194,23 @@ for (i = 0; i < acc.length; i++) {
           "id": "header_text",
           "type": "text",
           "label": "Header text"
-
         },
         {
         "id": "sub_header_text",
         "type": "html",
         "label": "Sub header text"
-
+        },
+		{
+          "id": "accept_text",
+          "type": "text",
+          "label": "Accept text",
+		  "default": "Accept all"
+        },
+		{
+          "id": "decline_text",
+          "type": "text",
+          "label": "Decline text",
+		  "default": "Decline"
         }
 	],
 "presets": [
