@@ -33,7 +33,7 @@
         </ul>
         </div>
         <div class="social-icons-newslatter-mail">
-          <div class="social-title medium">Volg ons</div>
+          <div class="social-title medium">{{ section.settings.volg_text }}</div>
           <div class="social-icons flex-box">
           	{% for block in section.blocks %}
             {% if block.type == "Social_Icons" %}
@@ -150,7 +150,12 @@
         "id": "brand_logo_svg",
         "type": "text",
         "label": "Brand Logo SVG"
-
+        },
+		{
+        "id": "volg_text",
+        "type": "text",
+        "label": "Volg ons text",
+		"default": "Volg ons"
         }
 	],
 	"blocks": [
