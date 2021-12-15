@@ -6,12 +6,12 @@
       <div class="store-locator-left">
         <h2 class="store-locator-heading heading-2">{{ section.settings.heading }}</h2>
         <div class="pin-code">
-        	<input type="number" class="locator-pin-code" placeholder="Vul de postcode in">
-          <button class="btn btn-center">Search</button>
+        	<input type="number" class="locator-pin-code" placeholder="{{ section.settings.pincode_placeholder }}">
+          <button class="btn btn-center">{{ section.settings.search_btn }}</button>
         </div>
         <hr class="locator-hr">
         <div class="search-nearby">
-          <h3 class="medium search-nearby-title">Zoek in de buurt</h3>
+          <h3 class="medium search-nearby-title">{{ section.settings.search_nearby }}</h3>
           <div class="distances flex-box">
             <div class="distance selected" data-dist="12">
               <div class="radio-wrap flex-box align-center">
@@ -135,6 +135,24 @@
 			"id": "heading",
 			"type": "text",
 			"label": "Section Heading"
+		},
+		{
+			"id": "pincode_placeholder",
+			"type": "text",
+			"label": "Pincode placeholder",
+			"default": "Vul de postcode in"
+		},
+		{
+			"id": "search_btn",
+			"type": "text",
+			"label": "Search Button",
+			"default": "Search"
+		},
+		{
+			"id": "search_nearby",
+			"type": "text",
+			"label": "Search Nearby",
+			"default": "Zoek in de buurt"
 		}
 	],
 	"presets": [
