@@ -48,17 +48,17 @@
 
         {%- endif -%}
         <div class="half-inputs flex-box justify-between">
-          <input class="pgc-form-input half-input" type="text" name="contact[name]" placeholder="Naam*" required>
-          <input class="pgc-form-input half-input" type="email" name="contact[email]" placeholder="E-mailadres*" required>
+          <input class="pgc-form-input half-input" type="text" name="contact[name]" placeholder="{{ section.settings.contact_name_placeholder }}" required>
+          <input class="pgc-form-input half-input" type="email" name="contact[email]" placeholder="{{ section.settings.contact_email_placeholder }}" required>
         </div>
           {% comment %}
         <input class="pgc-form-input full-input" type="text" name="contact[compnay_name]" placeholder="Jouw bedrijf*" required>
           {% endcomment %}
-        <textarea name="contact[message]" class="pgc-form-input full-input" rows="4" cols="50" placeholder="Jouw boodschap"></textarea>
+        <textarea name="contact[message]" class="pgc-form-input full-input" rows="4" cols="50" placeholder="{{ section.settings.contact_message_placeholder }}"></textarea>
         <input type="checkbox" class="no-disp" id="tncg" name="contact[checkbox]" value="Terms">
         <div class="checkbox-wrap flex-box align-center">
           <span for="tncg" class="checkbox gift-checkbox rel"><span class="checked"></span></span>
-          <span class="checkbox-label">{{ section.settings.newsletter_checkbox }}</span>
+          <span class="checkbox-label">{{ section.settings.contact_checkbox }}</span>
         </div>
           <div class="submit-btn-wrap gift-submit-btn-wrap wrap-disabled">
         <button class="submit-btn btn gift-submit-btn btn-light disabled medium" type="submit" form="contact_form" value="Submit">
@@ -100,9 +100,27 @@
         "label": "Section Image"
         },
 		{
-          "id": "newsletter_checkbox",
+          "id": "contact_name_placeholder",
+          "type": "text",
+          "label": "Contact Name Placeholder",
+		  "default": "Naam*"
+        },
+		{
+          "id": "contact_email_placeholder",
+          "type": "text",
+          "label": "Contact Email Placeholder",
+		  "default": "E-mailadres*"
+        },
+		{
+          "id": "contact_message_placeholder",
+          "type": "text",
+          "label": "Contact Message Placeholder",
+		  "default": "Jouw boodschap"
+        },
+		{
+          "id": "contact_checkbox",
           "type": "html",
-          "label": "Newsletter Checkbox"
+          "label": "Contact Checkbox"
         }
 	],
 	"presets": [
