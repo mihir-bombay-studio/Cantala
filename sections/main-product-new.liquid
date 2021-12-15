@@ -697,6 +697,8 @@
             }           
           }
         });
+      	$(".variant-name").text(title_string);
+      
         var x = JSON.parse($('#product-json').html());
         var w = x.find(item => {
           return item.public_title === string2;
