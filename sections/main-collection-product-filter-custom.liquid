@@ -294,7 +294,7 @@
     <div class="category-wrapper row-nav marg-top">
       <div class="underlay"></div>
       <div class="sticky-nav sub-marg-bottom">
-        {% unless template == "collection.custom" %}<p class="accordion-filter"><span class="close-filter">{% include "icon-arrow-right" %}</span>FILTER</p>{% endunless %}
+        {% unless template == "collection.custom" %}<p class="accordion-filter"><span class="close-filter">{% include "icon-arrow-right" %}</span>{{ section.settings.filter_text }}</p>{% endunless %}
         <div class="nav-colors panel-filter">
           {% assign split_filter = categoryp | split: "," %}
           {% assign tags_filter = tagsp | split: "|" %}
@@ -450,10 +450,10 @@
                        class="default-input"
                        value="{{ form.email }}"
                        autocapitalize="off"
-                       placeholder="Waar ben je naar op zoek?"
+                       placeholder="{{ section.settings.search_placeholder }}"
                        >
                 <button type="submit" class="btn" name="commit" id="Search" aria-label="Inschrijven">
-                  Zoeken
+                  {{ section.settings.search_btn }}
                 </button>
               </div>
             </div>
@@ -709,7 +709,26 @@ for (i = 0; i < acc.length; i++) {
 {% schema %}
   {
     "name": "collection filter custom",
-    "settings": [],
+    "settings": [
+        {
+          "id": "filter_text",
+          "type": "text",
+          "label": "Filter_text",
+		  "default": "FILTER"
+        },
+		{
+          "id": "search_placeholder",
+          "type": "text",
+          "label": "Search Placeholder",
+		  "default": "Waar ben je naar op zoek?"
+        },
+		{
+          "id": "search_btn",
+          "type": "text",
+          "label": "Search Button",
+		  "default": "Zoeken"
+        }
+	],
 	"blocks": [
 		{
                 "type": "filter",
