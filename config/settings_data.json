@@ -124,7 +124,9 @@
             "type": "nl_sub",
             "settings": {
               "subscription_heading": "Nieuwsbrief",
-              "submit_btn_text": "Inschrijven"
+              "footer_email_placeholder": "Jouw e-mailadres",
+              "submit_btn_text": "Inschrijven",
+              "footer_newsletter_checkbox": "Ik ga akkoord met de <a class=\"label-link\" href=\"\/pages\/voorwaarden\">voorwaarden<\/a> en heb de <a class=\"label-link\" href=\"\/pages\/privacy\">privacy policy<\/a> gelezen."
             }
           },
           "9d6c444c-ebb3-4431-9a30-e70af56db39a": {
