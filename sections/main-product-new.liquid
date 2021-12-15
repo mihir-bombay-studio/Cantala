@@ -538,7 +538,7 @@
         <div class="flex-box">
           <div class="m-row grouped">
             <div class="qty-wrapper" data-quantity="1">
-              <span class="qty-name">Aantal:</span>
+              <span class="qty-name">{{ section.settings.qty_text }}</span>
               <span class="qty-container">
                 <span class="qty-btn symbol-minus">{% include "icon-minus" %}</span>
                 <input type="text" class="qty-number" value="1">
@@ -554,7 +554,7 @@
               		{% assign pavaliable = true %}
                 {% endif %}
               {% endfor %}
-            <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">{% if pavaliable == false %}Uitverkocht{% else %}Voeg toe aan winkelwagen{% endif %}</span> 
+            <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">{% if pavaliable == false %}Uitverkocht{% else %}{{ section.settings.add_to_cart_text }}{% endif %}</span> 
           </div>
         </div>
 
@@ -681,7 +681,7 @@
           if(string2 == "") {
             if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
               string2 += $(this).data("val");
-              title_string += parseFloat($(this).data("val")*1000) + "g";
+              title_string += parseFloat($(this).data("val")) + "g";
             } else {
               string2 += $(this).val();
               title_string += $(this).val();
@@ -690,7 +690,7 @@
 
             if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
               string2 += " / " + $(this).data("val");
-              title_string += " / " + parseFloat($(this).data("val")*1000) + "g";
+              title_string += " / " + parseFloat($(this).data("val")) + "g";
             } else {
               string2 += " / " + $(this).val();
               title_string += " / " + $(this).val();
@@ -814,7 +814,20 @@ then close all select boxes:*/
 {% schema %}
   {
     "name": "Product section",
-    "settings": [],
+    "settings": [
+		{
+          "id": "qty_text",
+          "type": "text",
+          "label": "Quantity text",
+          "default": "Aantal:"
+        },
+		{
+          "id": "add_to_cart_text",
+          "type": "text",
+          "label": "Add To Cart Button text",
+          "default": "Voeg toe aan winkelwagen"
+        }
+	],
   "blocks": [
     {
       "type": "bullets",
@@ -1044,7 +1057,7 @@ then close all select boxes:*/
     </div>
     <div>
     <button type="submit" class="btn" name="commit" id="popupaddtocart" data-value="{{ product.selected_or_first_available_variant.id }}" aria-label="Inschrijven">
-      {% if pavaliable == false %}Uitverkocht{% else %}Voeg toe aan winkelwagen{% endif %}
+      {% if pavaliable == false %}Uitverkocht{% else %}{{ section.settings.add_to_cart_text }}{% endif %}
     </button>
     </div>
   </div>
