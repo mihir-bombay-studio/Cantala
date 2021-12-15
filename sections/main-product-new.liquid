@@ -500,7 +500,7 @@
               <div class="option-wrapper">
               <div class="option-name">{{option.name}}</div>
               	{%- for value in option.values -%}
-                  {% if option.name == "Gewicht" %}
+                  {% if option.name == "Gewicht" or option.name == "Poids" %}
                 	{% if forloop.first %}
               			<div class="box-selector-wrapper">
                     {% endif %}
