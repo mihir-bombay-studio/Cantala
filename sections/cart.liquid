@@ -419,7 +419,7 @@
       
       
       <div class="cart-empty {% if cart.item_count > 0 %}no-disp{% endif %}">
-        <span class="cart-empty-text">Start <a class="underline" href="/collections">adding items</a> your cart!</span>
+        <span class="cart-empty-text">{{ section.settings.cart_empty_text }}</span>
         
         <div id="wrap">
           <div class="steam" id="steam-one"><span></span></div>
@@ -471,7 +471,13 @@
 {% schema %}
   {
     "name": "Ajax Cart",
-    "settings": []
+    "settings": [
+		{
+          "id": "cart_empty_text",
+          "type": "html",
+          "label": "Cart Empty Text"
+        }
+	]
   }
 {% endschema %}
 
