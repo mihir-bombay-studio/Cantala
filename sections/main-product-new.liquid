@@ -538,7 +538,7 @@
         <div class="flex-box">
           <div class="m-row grouped">
             <div class="qty-wrapper" data-quantity="1">
-              <span class="qty-name">Aantal:</span>
+              <span class="qty-name">{{ section.settings.qty_text }}</span>
               <span class="qty-container">
                 <span class="qty-btn symbol-minus">{% include "icon-minus" %}</span>
                 <input type="text" class="qty-number" value="1">
@@ -554,13 +554,13 @@
               		{% assign pavaliable = true %}
                 {% endif %}
               {% endfor %}
-            <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">{% if pavaliable == false %}Uitverkocht{% else %}Voeg toe aan winkelwagen{% endif %}</span> 
+            <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">{% if pavaliable == false %}{{ section.settings.out_of_stock }}{% else %}{{ section.settings.add_to_cart }}{% endif %}</span> 
           </div>
         </div>
 
         <div class="checkbox-wrap flex-box align-center">
           <span class="checkbox rel"><span class="checked"></span></span>
-          <span class="checkbox-label">Voeg een geschenkverpakking toe (€1,50)</span>
+          <span class="checkbox-label">{{ section.settings.gift_box_text }}</span>
         </div>
       </div>
       
@@ -814,7 +814,32 @@ then close all select boxes:*/
 {% schema %}
   {
     "name": "Product section",
-    "settings": [],
+    "settings": [
+		{
+          "id": "qty_text",
+          "type": "text",
+          "label": "Quantity text",
+          "default": "Aantal:"
+        },
+		{
+          "id": "gift_box_text",
+          "type": "text",
+          "label": "Gift Box text",
+          "default": "Voeg een geschenkverpakking toe (€1,50)"
+        },
+		{
+          "id": "add_to_cart",
+          "type": "text",
+          "label": "Add To Cart Button text",
+          "default": "Voeg toe aan winkelwagen"
+        },
+		{
+          "id": "out_of_stock",
+          "type": "text",
+          "label": "Out Of Stock text",
+          "default": "Uitverkocht"
+        }
+	],
   "blocks": [
     {
       "type": "bullets",
@@ -1044,7 +1069,7 @@ then close all select boxes:*/
     </div>
     <div>
     <button type="submit" class="btn" name="commit" id="popupaddtocart" data-value="{{ product.selected_or_first_available_variant.id }}" aria-label="Inschrijven">
-      {% if pavaliable == false %}Uitverkocht{% else %}Voeg toe aan winkelwagen{% endif %}
+      {% if pavaliable == false %}{{ section.settings.out_of_stock }}{% else %}{{ section.settings.add_to_cart }}{% endif %}
     </button>
     </div>
   </div>
