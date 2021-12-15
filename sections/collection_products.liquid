@@ -15,7 +15,7 @@
         <div class="product-tag bold">{{ product.type }}</div>
         <div class="product-title"><a href="{{ product.url }}">{{ product.title | escape }}</a></div>
         <div class="product-price-wrap flex-box align-center justify-between">
-          <div class="from-text">vanaf</div>
+          <div class="from-text">{{ section.settings.from_text }}</div>
           <div class="product-price"><span class="currency">EUR{{ currency.iso_code }}</span><span class="price medium">{{ product.price | money_without_currency }}</span></div>
         </div>
       </div>
@@ -45,7 +45,13 @@
 			"id": "collection_select",
 			"type": "collection",
 			"label": "Select Collection"
-		}
+		},
+		{
+        "id": "from_text",
+        "type": "text",
+        "label": "From text",
+		"default": "vanaf"
+        }
 	],
 	"blocks": [
 			{
