@@ -490,7 +490,7 @@
             </div>   
           </div>
           <div class="row flex-box">
-            <span href="#" class="vanaf">Vanaf</span>
+            <span href="#" class="vanaf">{{ section.settings.from_text }}</span>
 
             <p class="card-product-price text-center">
               {{ cart.currency.iso_code }}  <span class="only-money">{{ product.price | money_without_currency  }}</span>
@@ -727,6 +727,12 @@ for (i = 0; i < acc.length; i++) {
           "type": "text",
           "label": "Search Button",
 		  "default": "Zoeken"
+        },
+		{
+          "id": "from_text",
+          "type": "text",
+          "label": "From text",
+          "default": "vanaf"
         }
 	],
 	"blocks": [
