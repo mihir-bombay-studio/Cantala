@@ -17,7 +17,7 @@
               </div>
               <div class="coll-title-url">
                 <div class="coll-title heading-4">{{ collection_handle.title }}</div>
-                <div class="coll-url"><span class="underline" href="{{ collection_handle.url }}">Shop hier</span></div>
+                <div class="coll-url"><span class="underline" href="{{ collection_handle.url }}">{{ section.settings.shop_hier }}</span></div>
               </div>
       		</a>
       {% endif %}
@@ -34,7 +34,13 @@
         "id": "ytob-heading",
         "type": "text",
         "label": "Section Heading"
-        }	
+        },
+		{
+        "id": "shop_hier",
+        "type": "text",
+        "label": "Shop hier button",
+		"default": "Shop hier"
+        }
 	],
 	"blocks": [
 		{
