@@ -662,7 +662,7 @@
           }           
         }
         if($(".option-wrapper").length > 1) {
-          if($(".option-wrapper").last().find(".selector").hasClass("box-selector")) {
+          if($(".option-wrapper").last().child().find(".selector").hasClass("box-selector")) {
             string += " / " +$(".option-wrapper").last().find(".selector").data("val");
           } else {
             string += " / " + $(".option-wrapper").last().find(".selector").val();
