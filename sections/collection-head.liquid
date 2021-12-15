@@ -53,18 +53,31 @@
 
 <div class="container">
   <div class="breadcrums">
-    <a href="/" class="breadcrum">Home</a>
-    <a class="breadcrum active">{% unless collection.title == "All Products" %}{{ collection.title | escape }}{% else %}Alle producten{% endunless %}</a>
+    <a href="/" class="breadcrum">{{ section.settings.home_text }}</a>
+    <a class="breadcrum active">{% unless collection.title == "All Products" %}{{ collection.title | escape }}{% else %}{{ section.settings.all_products_text }}{% endunless %}</a>
   </div>
   <h1 class="main-page-title page-title h0">
-    {% unless collection.title == "All Products" %}{{ collection.title | escape }}{% else %}Alle producten{% endunless %} {% unless template == "collection.custom" %}<span class="mobile-filter">{% include "icon-filter-2" %}</span>{% endunless %}
+    {% unless collection.title == "All Products" %}{{ collection.title | escape }}{% else %}{{ section.settings.all_products_text }}{% endunless %} {% unless template == "collection.custom" %}<span class="mobile-filter">{% include "icon-filter-2" %}</span>{% endunless %}
   </h1>
 </div>
 
 {% schema %}
   {
     "name": "collection-head",
-    "settings": []
+    "settings": [
+		{
+          "id": "home_text",
+          "type": "text",
+          "label": "Home",
+          "default": "Home"
+        },
+		{
+          "id": "all_products_text",
+          "type": "text",
+          "label": "All Products",
+          "default": "Alle producten"
+        }
+	]
   }
 {% endschema %}
 
