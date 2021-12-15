@@ -3,9 +3,9 @@
 <div class="new-blog-posts-wrapper">
   <div class="container">
     <div class="article-filter-wrapper flex-box">
-      <div class="article-filter">Koffie<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
-      <div class="article-filter">Thee<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
-      <div class="article-filter">Geschenken<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
+      <div class="article-filter">{{ section.settings.koffie_filter }}<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
+      <div class="article-filter">{{ section.settings.thee_filter }}<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
+      <div class="article-filter">{{ section.settings.geschenken_filter }}<span class="close-btn no-disp">{% include 'icon-close-white' %}</span></div>
     </div>
     
     <div class="blog-page-articles flex-box">
@@ -22,7 +22,7 @@
     </div>
     {% assign blogsize = blog.articles | size %}
     {% if blogsize > 8 %}
-    <div class="load-more">Load more</div>
+    <div class="load-more">{{ section.settings.load_more }}</div>
     {% endif %}
   </div>
 </div>
@@ -46,7 +46,30 @@
   {
     "name": "New Blog Posts",
     "settings": [
-		
+		{
+			"id": "koffie_filter",
+        	"type": "text",
+        	"label": "Koffie Filter Text",
+			"default": "Koffie"
+		},
+		{
+			"id": "thee_filter",
+        	"type": "text",
+        	"label": "Thee Filter Text",
+			"default": "Thee"
+		},
+		{
+			"id": "geschenken_filter",
+        	"type": "text",
+        	"label": "Geschenken Filter Text",
+			"default": "Geschenken"
+		},
+		{
+			"id": "load_more",
+        	"type": "text",
+        	"label": "Load More Btn Text",
+			"default": "Load more"
+		}
 	],
 	"presets": [
     {
