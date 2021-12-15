@@ -68,7 +68,7 @@
                 {%- endif -%}
               <div class="fns-form-input-wrap">
                 <div class="fns-sub-form-input-wrap flex-box">
-                <input class="subscription-form-input" type="email" name="contact[email]" placeholder="Jouw e-mailadres" required>
+                <input class="subscription-form-input" type="email" name="contact[email]" placeholder="{% for block in section.blocks %}{% if block.type == "nl_sub" %}{{block.settings.footer_email_placeholder}}{% endif %}{% endfor %}" required>
                   <div class="submit-btn-wrap wrap-disabled">
                 <button class="submit-btn btn medium disabled" type="submit" name="commit" id="Subscribe" value="Submit">
                   {% for block in section.blocks %}
@@ -83,7 +83,7 @@
               <input type="checkbox" class="no-disp" id="tncf" name="contact[tags]" value="newsletter">
               <div class="checkbox-wrap flex-box align-center">
                 <span for="tncf" class="checkbox rel"><span class="checked"></span></span>
-                <span class="checkbox-label">Ik ga akkoord met de <a class="label-link" href="/pages/voorwaarden">voorwaarden</a> en heb de <a class="label-link" href="/pages/privacy">privacy policy</a> gelezen.</span>
+                <span class="checkbox-label">{% for block in section.blocks %}{% if block.type == "nl_sub" %}{{block.settings.footer_newsletter_checkbox}}{% endif %}{% endfor %}</span>
               </div>
               {% endform %}
             </div>
@@ -271,10 +271,21 @@
               "id": "subscription_heading",
               "label": "Subscription Heading"
             },
+			{
+              "id": "footer_email_placeholder",
+              "type": "text",
+              "label": "Newsletter Email Placeholder",
+              "default": "Jouw e-mailadres"
+            },
             {
               "type": "text",
               "id": "submit_btn_text",
               "label": "Submit Button Text"
+            },
+			{
+              "id": "footer_newsletter_checkbox",
+              "type": "html",
+              "label": "Newsletter Checkbox"
             }
 		]
 	}
