@@ -504,7 +504,7 @@
                 	{% if forloop.first %}
               			<div class="box-selector-wrapper">
                     {% endif %}
-                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape | replace: ",","." |  replace: "0.","" }}">{% include "icon-weight" %}<span class="box-title">{{ value | escape | replace: ",","." |  replace: "0.","" }} {% if request.locale.iso_code == "nl" %}GRAM{% else %}g de thé en vrac{% endif %}</span><span class="box-price">{{ product.price | money }}</span><span class="discount">{% if forloop.index == 2 %}5% discount on kilo price{% elsif forloop.index == 3 %}10% discount on kilo price{% endif %}</span></div>
+                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape | replace: ",","." |  replace: "0.","" }}">{% include "icon-weight" %}<span class="box-title">{{ value | escape | replace: ",","." |  replace: "0.","" }} GRAM</span><span class="box-price">{{ product.price | money }}</span><span class="discount">{% if forloop.index == 2 %}5% discount on kilo price{% elsif forloop.index == 3 %}10% discount on kilo price{% endif %}</span></div>
                           
                 	{% if forloop.last %}
                 	</div>
