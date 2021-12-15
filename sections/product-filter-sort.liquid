@@ -7,8 +7,8 @@
         <div class="pfs-heading medium">{{ section.settings.heading }}</div>
         <div class="filter-and-sorting">
           <div class="sorting">
-            <div class="sort" data-sort="ltoh">Prijs, laag naar hoog<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
-            <div class="sort" data-sort="htol">Prijs, hoog naar laag<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
+            <div class="sort" data-sort="ltoh">{{ section.settings.sort_ltoh }}<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
+            <div class="sort" data-sort="htol">{{ section.settings.sort_htol }}<span class="close-icon no-t-m no-disp">{% include 'icon-close-brown' %}</span></div>
           </div>
           
           <div class="filters">
@@ -172,6 +172,18 @@
         "id": "heading",
         "type": "text",
         "label": "Section Heading"
+        },
+		{
+        "id": "sort_ltoh",
+        "type": "text",
+        "label": "Sort Price Low to High",
+		"default": "Prijs, laag naar hoog"
+        },
+		{
+        "id": "sort_htol",
+        "type": "text",
+        "label": "Sort Price High to Low",
+		"default": "Prijs, hoog naar laag"
         }
 	],
 	
