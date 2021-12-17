@@ -163,6 +163,20 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "98b0f46b-9a0c-406d-8c3c-1d4adfea9a9d": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Proefpakket",
+            "filter_tag1": "Ja",
+            "filter_tag2": "",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
@@ -176,7 +190,8 @@
         "f0658793-cc94-4693-b5ed-16f2b4d3c373",
         "0ca3e142-bd45-427e-8fdb-50d243ed7303",
         "eead3e1e-3340-4d2a-913e-2135f8ec1b31",
-        "453fb227-7fd7-445d-820d-5d747f91452e"
+        "453fb227-7fd7-445d-820d-5d747f91452e",
+        "98b0f46b-9a0c-406d-8c3c-1d4adfea9a9d"
       ],
       "settings": {
         "filter_text": "FILTER",
