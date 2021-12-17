@@ -3,18 +3,45 @@
     "collection-head": {
       "type": "collection-head",
       "settings": {
+        "home_text": "Home",
+        "all_products_text": "Alle producten"
       }
     },
     "product-grid": {
       "type": "main-collection-product-filter-custom",
+      "blocks": {
+        "b334c1d5-76f4-4eb7-9e13-48115325c397": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Soort",
+            "filter_tag1": "Zwarte-thee",
+            "filter_tag2": "Fruit-melange",
+            "filter_tag3": "Kruiden-infusie",
+            "filter_tag4": "Rooibos",
+            "filter_tag5": "Groene-thee",
+            "filter_tag6": "Witte-thee",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
+        }
+      },
+      "block_order": [
+        "b334c1d5-76f4-4eb7-9e13-48115325c397"
+      ],
       "settings": {
+        "filter_text": "FILTER",
+        "search_placeholder": "Waar ben je naar op zoek?",
+        "search_btn": "Zoeken",
+        "from_text": "Vanaf"
       }
     },
     "16340230414b0d66a6": {
       "type": "cookie-popup",
       "settings": {
         "header_text": "Have a cookie next to your tea or coffee",
-        "sub_header_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at dapibus elit. Maecenas ut mauris mattis, eleifend."
+        "sub_header_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at dapibus elit. Maecenas ut mauris mattis, eleifend.",
+        "accept_text": "Accept all",
+        "decline_text": "Decline"
       }
     }
   },
