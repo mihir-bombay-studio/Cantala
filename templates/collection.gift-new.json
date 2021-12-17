@@ -107,6 +107,20 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "f0658793-cc94-4693-b5ed-16f2b4d3c373": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Organic",
+            "filter_tag1": "Ja",
+            "filter_tag2": "Nee",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
@@ -116,7 +130,8 @@
         "6789a9f7-b005-404a-b3cf-c8896098e145",
         "c7414d7a-784c-49aa-9804-3c4bd1e2707e",
         "63de7fb6-260a-43ed-91e6-3cb9e2db63a3",
-        "d56145f8-bc0e-4194-a223-98b118fcfb1c"
+        "d56145f8-bc0e-4194-a223-98b118fcfb1c",
+        "f0658793-cc94-4693-b5ed-16f2b4d3c373"
       ],
       "settings": {
         "filter_text": "FILTER",
