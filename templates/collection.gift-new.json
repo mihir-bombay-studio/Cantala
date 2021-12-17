@@ -23,10 +23,25 @@
             "filter_tag7": "",
             "filter_tag8": ""
           }
+        },
+        "abed14ed-f22f-4707-9e04-ee57c02eafc9": {
+          "type": "filter",
+          "settings": {
+            "filter_name": "Gesuikerd",
+            "filter_tag1": "Ja",
+            "filter_tag2": "",
+            "filter_tag3": "",
+            "filter_tag4": "",
+            "filter_tag5": "",
+            "filter_tag6": "",
+            "filter_tag7": "",
+            "filter_tag8": ""
+          }
         }
       },
       "block_order": [
-        "b334c1d5-76f4-4eb7-9e13-48115325c397"
+        "b334c1d5-76f4-4eb7-9e13-48115325c397",
+        "abed14ed-f22f-4707-9e04-ee57c02eafc9"
       ],
       "settings": {
         "filter_text": "FILTER",
