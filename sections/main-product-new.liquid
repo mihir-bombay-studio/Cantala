@@ -622,16 +622,22 @@
       var inventoryPolicy = w.inventory_policy;
       var inventoryManagement = w.inventory_management;
       
-      console.log("var id: "+variantId);
-      console.log("var availability: "+availability);
-      console.log("var quantAvailable: "+quantAvailable);
-      console.log("var inventoryPolicy: "+inventoryPolicy);
-      console.log("var inventoryManagement: "+inventoryManagement);
+//       console.log("var id: "+variantId);
+//       console.log("var availability: "+availability);
+//       console.log("var quantAvailable: "+quantAvailable);
+//       console.log("var inventoryPolicy: "+inventoryPolicy);
+//       console.log("var inventoryManagement: "+inventoryManagement);
 
       if(inventoryManagement != null) {
-        if(availability == true && $(".qty-number").val() <= quantAvailable) {
-          $("#popupaddtocart").attr("disabled",false);
-          $("#AddToCart").removeClass("span-disabled");
+        if(availability == true) {
+          if($(".qty-number").val() <= quantAvailable) {
+            $("#popupaddtocart").attr("disabled",false);
+            $("#AddToCart").removeClass("span-disabled");
+          }
+          else {
+            $(" #popupaddtocart").attr("disabled",true);
+            $("#AddToCart").addClass("span-disabled");
+          }
         }
         else {
           if(inventoryPolicy == "deny") {
