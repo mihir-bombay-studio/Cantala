@@ -607,11 +607,11 @@
       var w = x.find(item => {
         return item.public_title === string3;
       });
-      
+
       var variantId = w.id;
-	  var quantAvailable = w.inventory_quantity;
+      var quantAvailable = w.inventory_quantity;
       var inventoryPolicy = w.inventory_policy;
-      
+
       if(quantAvailable < 1) {
         if(inventoryPolicy == "deny") {
           $("#AddToCart, #popupaddtocart").attr("disabled",true);
@@ -619,6 +619,7 @@
         else {
           $("#AddToCart, #popupaddtocart").attr("disabled",false);
         }
+      }
     }
   }
   checkAvailability();
