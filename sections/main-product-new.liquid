@@ -584,45 +584,6 @@
 
 <script>
   
-  function checkAvailability() {
-    if($('#product-json').length > 0) {
-      var string3 = "";
-      $(".selector.selected").each(function(index){
-        if(string3 == "") {
-          if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
-            string3 += $(this).data("val");
-          } else {
-            string3 += $(this).val();
-          }          
-        } else {
-
-          if($(this).hasClass("box-selector") &&  $(this).hasClass("selected")) {
-            string3 += " / " + $(this).data("val");
-          } else {
-            string3 += " / " + $(this).val();
-          }           
-        }
-      });
-      console.log(string3);
-      var x = JSON.parse($('#product-json').html());
-      var w = x.find(item => {
-        return item.public_title === string3;
-      });
-      
-      var variantId = w.id;
-	  var quantAvailable = w.inventory_quantity;
-      var inventoryPolicy = w.inventory_policy;
-      
-      if(quantAvailable < 1) {
-        if(inventoryPolicy == "deny") {
-          $("#AddToCart, #popupaddtocart").attr("disabled",true);
-        }
-        else {
-          $("#AddToCart, #popupaddtocart").attr("disabled",false);
-        }
-    }
-  }
-  
   $(".selector.box-selector").click(function() {
     $(this).parent().find(".box-selector").removeClass("selected");
     $(this).addClass("selected");
