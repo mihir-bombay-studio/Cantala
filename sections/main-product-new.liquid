@@ -671,20 +671,24 @@
           if($(".qty-number").val() <= quantAvailable) {
             $("#popupaddtocart").attr("disabled",false);
             $("#AddToCart").removeClass("span-disabled");
+            $("#AddToCart, #popupaddtocart").text("{{ section.settings.add_to_cart }}");
           }
           else {
             $(" #popupaddtocart").attr("disabled",true);
             $("#AddToCart").addClass("span-disabled");
+            $("#AddToCart, #popupaddtocart").text("{{ section.settings.out_of_stock }}");
           }
         }
         else {
           if(inventoryPolicy == "deny") {
             $(" #popupaddtocart").attr("disabled",true);
             $("#AddToCart").addClass("span-disabled");
+              $("#AddToCart, #popupaddtocart").text("{{ section.settings.out_of_stock }}");
           }
           else {
             $("#popupaddtocart").attr("disabled",false);
             $("#AddToCart").removeClass("span-disabled");
+              $("#AddToCart, #popupaddtocart").text("{{ section.settings.add_to_cart }}");
           }
         }
       }
