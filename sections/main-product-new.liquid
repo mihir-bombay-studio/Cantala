@@ -613,6 +613,12 @@
       var quantAvailable = w.inventory_quantity;
       var inventoryPolicy = w.inventory_policy;
       var inventoryManagement = w.inventory_management;
+      
+      console.log("var id: "+variantId);
+      console.log("var availability: "+availability);
+      console.log("var quantAvailable: "+quantAvailable);
+      console.log("var inventoryPolicy: "+inventoryPolicy);
+      console.log("var inventoryManagement: "+inventoryManagement);
 
       if(inventoryManagement != null) {
         if(availability == true && $(".qty-number").val() < quantAvailable) {
