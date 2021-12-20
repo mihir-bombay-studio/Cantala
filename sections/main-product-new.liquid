@@ -539,45 +539,6 @@
         </div>
         {%- endunless -%}
         
-        {% if product.has_only_default_variant %}
-          <div class="variant-options-wrapper no-disp">
-            <variant-radios class="no-js-hidden">
-              <div class="fieldset-wrapper style-scrollbar">
-                {%- for option in product.options_with_values -%}
-                <div class="option-wrapper">
-                <div class="option-name">{{option.name}}</div>
-                  {%- for value in option.values -%}
-                    {% if option.name == "Gewicht" or option.name == "Poids" %}
-                      {% if forloop.first %}
-                          <div class="box-selector-wrapper">
-                      {% endif %}
-                            <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape }}">{% include "icon-weight" %}<span class="box-title">{% if request.locale.iso_code == "nl" %}{{ value | escape | replace: ",","." | times: 1000 | replace: ".0" }} GRAM{% elsif request.locale.iso_code == "fr" %}{{ value | escape }}{% endif %}</span><span class="box-price">{{ product.price | money }}</span><span class="discount">{% if forloop.index == 2 %}5% discount on kilo price{% elsif forloop.index == 3 %}10% discount on kilo price{% endif %}</span></div>
-
-                      {% if forloop.last %}
-                      </div>
-                      {% endif %}
-                    {% else %}
-                      {% if forloop.first %}
-                      <div class="custom-select">
-                      <select class="selector drop-selector selected" name="{{option.name}}" id="selector-{{ forloop.index }}">
-                        {% endif %}
-                        <option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value | escape }}</option>
-                        {% if forloop.last %}
-                      </select>
-                      </div>
-                      {% endif %}
-                    {% endif %}
-                  {%- endfor -%}
-                </div>
-                {%- endfor -%}
-              </div>
-              <script id="product-json" type="application/json">
-                {{ product.variants | json }}
-              </script>
-            </variant-radios>
-          </div>
-        {% endif %}
-        
       </div>
 
       <div class="product-details">
@@ -651,7 +612,7 @@
       console.log(string3);
       var x = JSON.parse($('#product-json').html());
       var w = x.find(item => {
-        return item.title === string3;
+        return item.public_title === string3;
       });
 
       var variantId = w.id;
