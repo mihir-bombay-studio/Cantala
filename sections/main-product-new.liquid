@@ -629,7 +629,7 @@
       console.log("var inventoryManagement: "+inventoryManagement);
 
       if(inventoryManagement != null) {
-        if(availability == true && $(".qty-number").val() < quantAvailable) {
+        if(availability == true && $(".qty-number").val() <= quantAvailable) {
           $("#popupaddtocart").attr("disabled",false);
           $("#AddToCart").removeClass("span-disabled");
         }
