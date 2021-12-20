@@ -630,19 +630,23 @@
 
       if(inventoryManagement != null) {
         if(availability == true && $(".qty-number").val() < quantAvailable) {
-          $("#AddToCart, #popupaddtocart").attr("disabled",false);
+          $("#popupaddtocart").attr("disabled",false);
+          $("#AddToCart").removeClass("span-disabled");
         }
         else {
           if(inventoryPolicy == "deny") {
-            $("#AddToCart, #popupaddtocart").attr("disabled",true);
+            $(" #popupaddtocart").attr("disabled",true);
+            $("#AddToCart").addClass("span-disabled");
           }
           else {
-            $("#AddToCart, #popupaddtocart").attr("disabled",false);
+            $("#popupaddtocart").attr("disabled",false);
+            $("#AddToCart").removeClass("span-disabled");
           }
         }
       }
       else {
-        $("#AddToCart, #popupaddtocart").attr("disabled",false);
+        $("#popupaddtocart").attr("disabled",false);
+        $("#AddToCart").removeClass("span-disabled");
       }
     }
   }
