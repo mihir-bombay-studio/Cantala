@@ -189,7 +189,7 @@
     width: 54%;
     padding-left:6px;
   }
-  span#AddToCart {
+  #AddToCart {
     margin-top: 0;
     width: 100%;
     padding: 17.5px 18px;
@@ -202,7 +202,7 @@
     color: #F4EDE2;
     text-align: center;
 }
-  span#AddToCart:disabled {
+  #AddToCart:disabled {
     opacity: 0.5;
   }
   #popupaddtocart:disabled {
@@ -349,7 +349,7 @@
     .product-details .flex-box {
       flex-wrap: wrap;
     }
-    span#AddToCart {
+    #AddToCart {
       width: 100%;
     }
     .cart-popup-block .default-h2 {
@@ -560,7 +560,7 @@
               		{% assign pavaliable = true %}
                 {% endif %}
               {% endfor %}
-            <span class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">{% if pavaliable == false %}{{ section.settings.out_of_stock }}{% else %}{{ section.settings.add_to_cart }}{% endif %}</span> 
+            <button class="addcart btn" id="AddToCart" data-value="{{ product.selected_or_first_available_variant.id }}">{% if pavaliable == false %}{{ section.settings.out_of_stock }}{% else %}{{ section.settings.add_to_cart }}{% endif %}</button> 
           </div>
         </div>
 
