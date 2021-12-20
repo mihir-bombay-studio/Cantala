@@ -609,12 +609,16 @@
       });
 
       var variantId = w.id;
+      var availability = w.available;
       var quantAvailable = w.inventory_quantity;
       var inventoryPolicy = w.inventory_policy;
       var inventoryManagement = w.inventory_management;
 
       if(inventoryManagement != null) {
-        if(quantAvailable < 1) {
+        if(availability == true && $(".qty-number").val() < quantAvailable) {
+          $("#AddToCart, #popupaddtocart").attr("disabled",false);
+        }
+        else {
           if(inventoryPolicy == "deny") {
             $("#AddToCart, #popupaddtocart").attr("disabled",true);
           }
