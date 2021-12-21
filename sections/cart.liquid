@@ -363,7 +363,7 @@
 <div class="drawer-cart">
   <div class="drawer-cart-wrapper rel">
     <div class="cart-sub-head rel {% if cart.item_count == 0 %}no-vis{% endif %}">
-      <span class="truck">{% include "icon-truck" %}</span><span class="cart-sub-head-text">{% if cart.total_price > 3499 %}Hoera! We verzenden je bestelling gratis.{% else %}voeg {{ 3500 | minus: cart.total_price | money }} aan producten toe om gratis verzending te krijgen{% endif %}</span>
+      <span class="truck">{% include "icon-truck" %}</span><span class="cart-sub-head-text">{% if cart.total_price > 3499 %}{{ section.settings.free_shipping_text }}{% else %}{{ section.settings.add_text }} {{ 3500 | minus: cart.total_price | money }} {{ section.settings.qualify_shipping_text }}{% endif %}</span>
       <div class="progress">
         <div class="progress-value" style="width:{% if cart.total_price < 3500 %}{{ cart.total_price | divided_by: 35 }}%{% else %}100%{% endif %};"><span></span></div>
       </div>
@@ -481,6 +481,24 @@
           "id": "cart_empty_text",
           "type": "html",
           "label": "Cart Empty Text"
+        },
+		{
+          "id": "free_shipping_text",
+          "type": "text",
+          "label": "Free Shipping Text",
+		  "default": "Hoera! We verzenden je bestelling gratis."
+        },
+		{
+          "id": "add_text",
+          "type": "text",
+          "label": "Add text",
+		  "default": "voeg"
+        },
+		{
+          "id": "qualify_shipping_text",
+          "type": "text",
+          "label": "Qualify Shipping Text",
+		  "default": "aan producten toe om gratis verzending te krijgen"
         },
 		{
           "id": "shipping_text",
