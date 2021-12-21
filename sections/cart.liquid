@@ -716,7 +716,7 @@
               $('.progress-value').css('width','100%');
               $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_free }}');
             } else {
-              $('.cart-sub-head .cart-sub-head-text').text({{ section.settings.add_text }} '€'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' {{ section.settings.qualify_shipping_text }}');
+              $('.cart-sub-head .cart-sub-head-text').text({{ section.settings.add_text }}+' €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+ {{ section.settings.qualify_shipping_text }});
               $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
               $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
             }
@@ -734,7 +734,7 @@
               $('.progress-value').css('width','100%');
             $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_free }}');
           } else {
-              $('.cart-sub-head .cart-sub-head-text').text({{ section.settings.add_text }} '€'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' {{ section.settings.qualify_shipping_text }}');
+              $('.cart-sub-head .cart-sub-head-text').text({{ section.settings.add_text }}+' €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+ {{ section.settings.qualify_shipping_text }});
               $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
             $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
           }
