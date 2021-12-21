@@ -771,6 +771,9 @@
             $(clicked).closest( ".cart-products-block" ).remove();
             window.data = data;
             $(".total-price").text('€'+(data.total_price/100));
+            var shippingText = '{{ section.settings.add_text }}'
+            shippingText += ' €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")
+            shippingText += ' {{ section.settings.qualify_shipping_text }}'
             if(data.item_count > 0) {              
             $(".cart-quantity").removeClass("no-disp");
             $(".cart-quantity").text(data.item_count);
@@ -778,13 +781,13 @@
             $(".cart-total-block").removeClass('no-disp');
               $(".cart-empty").addClass('no-disp');
               if(data.total_price/100 > 34.99) {
-              $('.cart-sub-head .cart-sub-head-text').text('Hoera! We verzenden je bestelling gratis.');
+              $('.cart-sub-head .cart-sub-head-text').text('{{ section.settings.free_shipping_text }}');
               $('.progress-value').css('width','100%');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Gratis');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_free }}');
               } else {
-              $('.cart-sub-head .cart-sub-head-text').text('Voeg €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' aan producten toe om gratis verzending te krijgen');
+              $('.cart-sub-head .cart-sub-head-text').text(shippingText);
               $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
               }
             $('.cart-sub-head').removeClass('no-vis');
             } else {              
@@ -793,16 +796,16 @@
               $(".cart-total-block").addClass('no-disp');
               $(".cart-empty").removeClass('no-disp');
               $('.cart-sub-head').addClass('no-vis');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
             }
             if(data.total_price/100 > 34.99) {
-              $('.cart-sub-head .cart-sub-head-text').text('Hoera! We verzenden je bestelling gratis.');
+              $('.cart-sub-head .cart-sub-head-text').text('{{ section.settings.free_shipping_text }}');
               $('.progress-value').css('width','100%');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Gratis');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_free }}');
             } else {
-              $('.cart-sub-head .cart-sub-head-text').text('Voeg €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' aan producten toe om gratis verzending te krijgen');
+              $('.cart-sub-head .cart-sub-head-text').text(shippingText);
               $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
             }
           })
           .fail(function(error) {
@@ -843,6 +846,9 @@
               }
             });
             $(".total-price").text('€'+(data.total_price/100));
+            var shippingText = '{{ section.settings.add_text }}'
+            shippingText += ' €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")
+            shippingText += ' {{ section.settings.qualify_shipping_text }}'
             if(data.item_count > 0) {
               $(".cart-quantity").removeClass("no-disp");
               $(".cart-quantity").text(data.item_count);
@@ -850,13 +856,13 @@
               $(".cart-total-block").removeClass('no-disp');
               $(".cart-empty").addClass('no-disp');
               if(data.total_price/100 > 34.99) {
-              $('.cart-sub-head .cart-sub-head-text').text('Hoera! We verzenden je bestelling gratis.');
+              $('.cart-sub-head .cart-sub-head-text').text('{{ section.settings.free_shipping_text }}');
               $('.progress-value').css('width','100%');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Gratis');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_free }}');
               } else {
-              $('.cart-sub-head .cart-sub-head-text').text('Voeg €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' aan producten toe om gratis verzending te krijgen');
+              $('.cart-sub-head .cart-sub-head-text').text(shippingText);
               $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
               }
             $('.cart-sub-head').removeClass('no-vis');
             } else {
@@ -865,16 +871,16 @@
             $(".cart-total-block").addClass('no-disp');
               $(".cart-empty").removeClass('no-disp');
               $('.cart-sub-head').addClass('no-vis');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
             }
             if(data.total_price/100 > 34.99) {
-              $('.cart-sub-head .cart-sub-head-text').text('Hoera! We verzenden je bestelling gratis.');
+              $('.cart-sub-head .cart-sub-head-text').text('{{ section.settings.free_shipping_text }}');
               $('.progress-value').css('width','100%');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Gratis');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_free }}');
             } else {
-              $('.cart-sub-head .cart-sub-head-text').text('Voeg €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' aan producten toe om gratis verzending te krijgen');
+              $('.cart-sub-head .cart-sub-head-text').text(shippingText);
               $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
             }
           })
           .fail(function(error) {
@@ -916,6 +922,9 @@
                 }
               });
               $(".total-price").text('€'+(data.total_price/100));
+              var shippingText = '{{ section.settings.add_text }}'
+              shippingText += ' €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")
+              shippingText += ' {{ section.settings.qualify_shipping_text }}'
               if(data.item_count > 0) {
             $(".cart-quantity").removeClass("no-disp");
             $(".cart-quantity").text(data.item_count);
@@ -923,13 +932,13 @@
             $(".cart-total-block").removeClass('no-disp');
                 $(".cart-empty").addClass('no-disp');
                 if(data.total_price/100 > 34.99) {
-              $('.cart-sub-head .cart-sub-head-text').text('Hoera! We verzenden je bestelling gratis.');
+              $('.cart-sub-head .cart-sub-head-text').text('{{ section.settings.free_shipping_text }}');
               $('.progress-value').css('width','100%');
-                  $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Gratis');
+                  $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_free }}');
                 } else {
-              $('.cart-sub-head .cart-sub-head-text').text('Voeg €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' aan producten toe om gratis verzending te krijgen');
+              $('.cart-sub-head .cart-sub-head-text').text(shippingText);
               $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
-                  $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+                  $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
                 }
             $('.cart-sub-head').removeClass('no-vis');
               } else {
@@ -938,16 +947,16 @@
             $(".cart-total-block").addClass('no-disp');
                 $(".cart-empty").removeClass('no-disp');
                 $('.cart-sub-head').addClass('no-vis');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
               }
               if(data.total_price/100 > 34.99) {
-              $('.cart-sub-head .cart-sub-head-text').text('Hoera! We verzenden je bestelling gratis.');
+              $('.cart-sub-head .cart-sub-head-text').text('{{ section.settings.free_shipping_text }}');
               $('.progress-value').css('width','100%');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Gratis');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_free }}');
               } else {
-              $('.cart-sub-head .cart-sub-head-text').text('Voeg €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' aan producten toe om gratis verzending te krijgen');
+              $('.cart-sub-head .cart-sub-head-text').text(shippingText);
               $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
               }
             })
             .fail(function(error) {
@@ -995,6 +1004,9 @@
               }
             });
             $(".total-price").text('€'+(data.total_price/100));
+            var shippingText = '{{ section.settings.add_text }}'
+            shippingText += ' €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")
+            shippingText += ' {{ section.settings.qualify_shipping_text }}'
             if(data.item_count > 0) {
               $(".cart-quantity").removeClass("no-disp");
               $(".cart-quantity").text(data.item_count);
@@ -1002,13 +1014,13 @@
               $(".cart-total-block").removeClass('no-disp');
               $(".cart-empty").addClass('no-disp');
               if(data.total_price/100 > 34.99) {
-                $('.cart-sub-head .cart-sub-head-text').text('Hoera! We verzenden je bestelling gratis.');
+                $('.cart-sub-head .cart-sub-head-text').text('{{ section.settings.free_shipping_text }}');
                 $('.progress-value').css('width','100%');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Gratis');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_free }}');
               } else {
-                $('.cart-sub-head .cart-sub-head-text').text('Voeg €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' aan producten toe om gratis verzending te krijgen');
+                $('.cart-sub-head .cart-sub-head-text').text(shippingText);
                 $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
-                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+                $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
               }
             } else {
               $(".cart-quantity").addClass("no-disp");
@@ -1016,16 +1028,16 @@
               $(".cart-total-block").addClass('no-disp');
               $(".cart-empty").removeClass('no-disp');
               $('.cart-sub-head').addClass('no-vis');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
             }
             if(data.total_price/100 > 34.99) {
-              $('.cart-sub-head .cart-sub-head-text').text('Hoera! We verzenden je bestelling gratis.');
+              $('.cart-sub-head .cart-sub-head-text').text('{{ section.settings.free_shipping_text }}');
               $('.progress-value').css('width','100%');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Gratis');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_free }}');
             } else {
-              $('.cart-sub-head .cart-sub-head-text').text('Voeg €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")+' aan producten toe om gratis verzending te krijgen');
+              $('.cart-sub-head .cart-sub-head-text').text(shippingText);
               $('.progress-value').css('width',(((data.total_price/100)*100)/35)+'%');
-              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Zie volgende stap');
+              $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('{{ section.settings.shipping_price }}');
             }
           })
           .fail(function(error) {
