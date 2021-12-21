@@ -712,7 +712,7 @@
             $(".cart-total-block").removeClass('no-disp');
             $(".cart-empty").addClass('no-disp');
             if(data.total_price/100 > 34.99) {
-              $('.cart-sub-head .cart-sub-head-text').text('Hoera! We verzenden je bestelling gratis.');
+              $('.cart-sub-head .cart-sub-head-text').text('{{ section.settings.free_shipping_text }}');
               $('.progress-value').css('width','100%');
               $('.cart-product-row:not(.sub-marg-bottom) .total-text').last().text('Gratis');
             } else {
