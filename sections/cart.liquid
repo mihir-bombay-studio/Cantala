@@ -713,7 +713,7 @@
             $(".cart-empty").addClass('no-disp');
             var shippingText = '{{ section.settings.add_text }}'
             shippingText += ' €'+(35-data.total_price/100).toFixed(2).replace(/\.?0+$/, "")
-            shippingText += '{{ section.settings.qualify_shipping_text }}'
+            shippingText += ' {{ section.settings.qualify_shipping_text }}'
             if(data.total_price/100 > 34.99) {
               $('.cart-sub-head .cart-sub-head-text').text('{{ section.settings.free_shipping_text }}');
               $('.progress-value').css('width','100%');
