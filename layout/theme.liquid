@@ -228,8 +228,12 @@
     
     <script>
       
+      function scrollToTop() {
+      	$(window).scrollTop(0);
+      }
+      
       $(window).on('load', function() {
-        setTimeout($(window).scrollTop(0), 1000);
+        setTimeout(scrollToTop, 1000);
       });
       
        //cookie code start
