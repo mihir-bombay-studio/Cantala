@@ -484,7 +484,7 @@
                 {% endif %}
                 {% endfor %}
                 <p class="card-product-title">
-                  {{ product.title | escape  }} {% if pavaliable == false %}<span class="soldout">(Uitverkocht)</span>{% endif %}
+                  {{ product.title | escape  }} {% if pavaliable == false %}<span class="soldout">({{ section.settings.sold_out }})</span>{% endif %}
                 </p>
               </div>
             </div>   
@@ -733,6 +733,12 @@ for (i = 0; i < acc.length; i++) {
           "type": "text",
           "label": "From text",
           "default": "Vanaf"
+        },
+		{
+          "id": "sold_out",
+          "type": "text",
+          "label": "Out of Stock text",
+          "default": "Uitverkocht"
         }
 	],
 	"blocks": [
