@@ -419,7 +419,7 @@
           </div>      
           {% endfor %}
         </div>
-        <div class="remarks-box"><textarea class="cart-remarks" placeholder="Opmerkingen">{{cart.note}}</textarea></div>
+        <div class="remarks-box"><textarea class="cart-remarks" placeholder="{{ section.settings.comments }}">{{cart.note}}</textarea></div>
       </div>
       
       
@@ -465,7 +465,7 @@
               <span class="total-price">{{ cart.total_price | money_without_trailing_zeros }}</span>
             </div>
           </div>
-          <a id="checkout-btn" class="btn btn-center btn-default" href="{% if request.locale.root_url != '/' %}{{ request.locale.root_url }}{% endif %}/checkout">{{ section.settings.checkout_btn_text }}</a>
+          <a id="checkout-btn" class="btn btn-center btn-default" href="{{ request.locale.root_url }}/checkout">{{ section.settings.checkout_btn_text }}</a>
         </div>
       
     </div>
@@ -501,6 +501,12 @@
 		  "default": "Zie volgende stap"
         },
 		{
+          "id": "comments",
+          "type": "text",
+          "label": "Comments text",
+		  "default": "Opmerkingen"
+        },
+		{
           "id": "subtotal_text",
           "type": "text",
           "label": "Subtotal text",
@@ -511,11 +517,6 @@
           "type": "text",
           "label": "Checkout Button text",
 		  "default": "Afrekenen"
-        },
-		{
-          "id": "checkout_url",
-          "type": "url",
-          "label": "Checkout URL"
         }
 	]
   }
