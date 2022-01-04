@@ -3,7 +3,10 @@
     "163410338821e0284f": {
       "type": "store-locator-map",
       "settings": {
-        "heading": "Onze winkels"
+        "heading": "Onze winkels",
+        "pincode_placeholder": "Vul de postcode in",
+        "search_btn": "Search",
+        "search_nearby": "Zoek in de buurt"
       }
     },
     "16340375883eb7d54e": {
@@ -19,6 +22,7 @@
             "website": "",
             "email": "contact@cantata.be",
             "phone": "+32 3 452 78 55",
+            "opening_hours": "Openingstijden",
             "hours": "Maandag - zaterdag:<br>\n10.00 tot 20.00 uur<br>\nVrijdag:<br>\n10.00 tot 21.00 uur<br>"
           }
         },
@@ -32,6 +36,7 @@
             "website": "",
             "email": "contact@cantata.be",
             "phone": "+32 2 725 39 84",
+            "opening_hours": "Openingstijden",
             "hours": "Maandag - zaterdag:<br>\n09.00 tot 19.00 uur"
           }
         },
@@ -45,6 +50,7 @@
             "website": "",
             "email": "contact@cantata.be",
             "phone": "+32 3 422 59 76",
+            "opening_hours": "Openingstijden",
             "hours": "Maandag - zaterdag:<br>\n10.00 tot 20.00 uur<br>\nVrijdag:<br>\n10.00 tot 21.00 uur<br>"
           }
         },
@@ -58,6 +64,7 @@
             "website": "",
             "email": "contact@cantata.be",
             "phone": "+32 9 222 19 10",
+            "opening_hours": "Openingstijden",
             "hours": "Maandag - zaterdag:<br>\n10.00 tot 19.00 uur<br>"
           }
         },
@@ -71,7 +78,8 @@
             "website": "",
             "email": "contact@cantata.be",
             "phone": "+32 6 721 16 49",
-            "hours": "Maandag - zaterdag:<br>\n08.30 tot 19.00 uur<br>\nVrijdag:<br>\n08.30 tot 20.00 uur"
+            "opening_hours": "Openingstijden",
+            "hours": "Maandag - zaterdag:<br>\n09.30 tot 19.00 uur<br>\nVrijdag:<br>\n09.30 tot 20.00 uur"
           }
         },
         "52747e44-62cd-406e-a95c-7d2e67798bb3": {
@@ -84,6 +92,7 @@
             "website": "",
             "email": "contact@cantata.be",
             "phone": "+32 6 721 16 49",
+            "opening_hours": "Openingstijden",
             "hours": "Maandag - donderdag &amp; zaterdag:<br>\n10.00 tot 19.00 uur<br>\nVrijdag:<br>\n10.00 tot 20.00 uur<br>\nZondag:<br>\n11.00 tot 18.00 uur<br>"
           }
         },
@@ -97,6 +106,7 @@
             "website": "",
             "email": "contact@cantata.be",
             "phone": "",
+            "opening_hours": "Openingstijden",
             "hours": "Maandag - vrijdag:<br>\n09.00 tot 17.00 uur<br>"
           }
         }
