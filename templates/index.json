@@ -59,7 +59,8 @@
         "beea1299-e4c5-4f59-8075-6a064a49bfe0"
       ],
       "settings": {
-        "ytob-heading": "Jouw smaak. Onze blends."
+        "ytob-heading": "Jouw smaak. Onze blends.",
+        "shop_hier": "Shop hier"
       }
     },
     "16335966771c2e33e9": {
@@ -172,7 +173,7 @@
         "2874687e-ea54-456d-8334-7781f1936997": {
           "type": "article_block",
           "settings": {
-            "featured_article": "news\/win-5-jaar-gratis-koffie"
+            "featured_article": "news\/succesvolle-koffie-en-theewinkel-cantata-opent-zevende-vestiging-op-turnovasite"
           }
         },
         "9dd3ce41-e13b-4bf5-bdda-f591d93cc494": {
@@ -270,7 +271,12 @@
       "disabled": true,
       "settings": {
         "heading": "Contacteer ons",
-        "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png"
+        "image": "shopify:\/\/shop_images\/Group_5132_2x_1308ce9e-dadb-48b2-a127-526aa8ffcb62.png",
+        "contact_name_placeholder": "Naam*",
+        "contact_email_placeholder": "E-mailadres*",
+        "contact_company_placeholder": "Jouw bedrijf*",
+        "contact_message_placeholder": "Jouw boodschap",
+        "contact_checkbox": ""
       }
     },
     "16340375883eb7d54e": {
@@ -287,6 +293,7 @@
             "website": "www.lorum.com",
             "email": "info@lorum.be",
             "phone": "03 452 78 55",
+            "opening_hours": "Openingstijden",
             "hours": ""
           }
         },
@@ -300,6 +307,7 @@
             "website": "asdf",
             "email": "adsf",
             "phone": "456486",
+            "opening_hours": "Openingstijden",
             "hours": ""
           }
         },
@@ -313,6 +321,7 @@
             "website": "zcxvadf",
             "email": "dvcb",
             "phone": "46356",
+            "opening_hours": "Openingstijden",
             "hours": ""
           }
         },
@@ -326,6 +335,7 @@
             "website": "sfbghcm",
             "email": "fdfhdgyj",
             "phone": "15646",
+            "opening_hours": "Openingstijden",
             "hours": ""
           }
         },
@@ -339,6 +349,7 @@
             "website": "zsdghm",
             "email": "fgjxf",
             "phone": "5464864",
+            "opening_hours": "Openingstijden",
             "hours": ""
           }
         },
@@ -352,6 +363,7 @@
             "website": "shdtyj",
             "email": "gaerhd",
             "phone": "48676",
+            "opening_hours": "Openingstijden",
             "hours": ""
           }
         },
@@ -365,6 +377,7 @@
             "website": "dxffjm",
             "email": "dfy",
             "phone": "456653",
+            "opening_hours": "Openingstijden",
             "hours": ""
           }
         },
@@ -378,6 +391,7 @@
             "website": "strtiul",
             "email": "bvmguio",
             "phone": "12322648",
+            "opening_hours": "Openingstijden",
             "hours": ""
           }
         },
@@ -391,6 +405,7 @@
             "website": "bndgs",
             "email": "yjdzg",
             "phone": "78612318",
+            "opening_hours": "Openingstijden",
             "hours": ""
           }
         },
@@ -404,6 +419,7 @@
             "website": "sdrsgbdfn",
             "email": "resgdfgnd",
             "phone": "4863123",
+            "opening_hours": "Openingstijden",
             "hours": ""
           }
         }
@@ -427,14 +443,20 @@
       "type": "store-locator-map",
       "disabled": true,
       "settings": {
-        "heading": "Winkelpunten"
+        "heading": "Winkelpunten",
+        "pincode_placeholder": "Vul de postcode in",
+        "search_btn": "Search",
+        "search_nearby": "Zoek in de buurt"
       }
     },
     "1634119612adf2ad5c": {
       "type": "product-filter-sort",
       "disabled": true,
       "settings": {
-        "heading": "Filter op"
+        "heading": "Filter op",
+        "sort_ltoh": "Prijs, laag naar hoog",
+        "sort_htol": "Prijs, hoog naar laag",
+        "show_all": "Toon alle pakketten"
       }
     },
     "1634124860995a6222": {
