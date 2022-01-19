@@ -44,19 +44,19 @@
         "c10b9c38-2d93-4d18-b6d3-1d697fcc97a5": {
           "type": "product",
           "settings": {
-            "featured_product": "matcha-bowl"
+            "featured_product": "lake-kivu-kivu-organic"
           }
         },
         "eb6b1c00-45ef-43a4-8b17-2a90b68ec617": {
           "type": "product",
           "settings": {
-            "featured_product": "matcha-hoshino-bio-groene-thee-uit-japan-blikje-40g"
+            "featured_product": "nespresso-compatble-gift-box-the-luxe-collection"
           }
         },
         "167fff63-50b8-42b9-bf51-00b1f52cc04a": {
           "type": "product",
           "settings": {
-            "featured_product": "matcha-chasen"
+            "featured_product": "lake-kivu-congo-organic-voor-nespresso"
           }
         },
         "c3d96132-be1a-4c77-82b3-7d01e730b94c": {
@@ -75,7 +75,9 @@
         "c3d96132-be1a-4c77-82b3-7d01e730b94c"
       ],
       "settings": {
-        "heading": "Explore our flavours, compose your ritual"
+        "heading": "Explore our flavours, compose your ritual",
+        "previous_article": "Vorig artikel",
+        "next_article": "Volgend artikel"
       }
     }
   },
