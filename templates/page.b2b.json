@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "16342908747a1ab997": {
+      "type": "about-us-composer",
+      "settings": {
+        "heading": "Composer of taste",
+        "sub_heading": "",
+        "para_one": "Koffie en thee, twee delicatessen die we vandaag in bijna elk huishouden kunnen terugvinden. Je kan er de dag opgewekt mee beginnen, en later in alle rust mee afsluiten. Ze brengen smaken samen en doen je dromen van verre reizen. Met meer dan <strong>260 verschillende soorten koffie en thee<\/strong> neemt Cantata je mee op avontuur. Wij brengen internationale producten uit meer dan <strong>70 verschillende landen<\/strong> tot in je woonkamer.",
+        "main_img": "shopify:\/\/shop_images\/DSC00377_2x_2fee49c6-fc5b-4259-9666-9f4cb11a113d.png",
+        "sub_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.03.11_2x_68e87a64-c5bd-4215-8078-6df7cf8b8a7a.png",
+        "para_two": "Cantata maakt sinds 2000 deel uit van een internationale groep. Met ruim 350 winkels in en buiten Europa, brengen we onze koffies en thees tot bij jou.",
+        "button_text": "ONZE WINKELS",
+        "button_link": "shopify:\/\/pages\/winkels"
+      }
+    },
+    "163429310107f8d2c2": {
+      "type": "about-us-how",
+      "settings": {
+        "heading": "Knowhow",
+        "para_one": "Onze koffies en thees worden zorgvuldig samengesteld door onze <strong>Taste Composers<\/strong>. Zij brengen smaken en geuren in perfecte symbiose. Zo weten we dat elke kop Cantata koffie of thee voldoet aan jouw smaak.",
+        "main_img": "shopify:\/\/shop_images\/IMG_6515_2x_d8f451da-c6a4-469e-bcd5-df7f2af17a3a.png",
+        "button_text": "ONTDEK ONS ASSORTIMENT",
+        "button_link": "shopify:\/\/collections\/volledig-assortiment"
+      }
+    },
+    "163429485630472be7": {
+      "type": "about-us-rnd",
+      "settings": {
+        "heading": "R&D",
+        "sub_heading": "",
+        "para_one": "Onze Cantata Taste Composers zijn open-minded ontdekkingsreizigers. Ze hebben de moed om dagelijks te innoveren en brengen het ‘wow’-effect in elke kop Cantata. Een effect dat dat niet alleen draait om aroma en smaak, maar om de volledig ervaring.",
+        "main_img": "shopify:\/\/shop_images\/05-03-2021_2x_9abc3119-b28c-4851-a9c5-1ee9b057cc41.png",
+        "sub_img": "shopify:\/\/shop_images\/ravi-pinisetti-ySQXoZLAsmc-unsplash_2x_e4ce2adc-fa21-45bb-ab19-ecc685151765.png",
+        "para_two": "We gaan aan de slag met jullie suggesties, onze grootste bron van inspiratie. We luisteren naar jullie koffie- en thee ervaringen en vragen. Innoveren doen we niet alleen door onze technieken te verbeteren, maar ook door te werken in functie van de ‘koffie- en thee belever’.",
+        "para_three": "Daarnaast hebben we als groep een maatschappelijke verantwoordelijkheid en een onbetwistbare impact op het milieu. Duurzaamheid is een geïntegreerd onderdeel van onze filosofie en R&D geworden. Onze wil om een positieve impact te hebben op de planeet en op de samenleving is een van onze kernwaarden.  Wil jij jouw Cantata-ervaring met ons delen?",
+        "button_text": "CONTACTEER ONS",
+        "button_link": "shopify:\/\/pages\/contacteer-ons"
+      }
+    },
+    "16353171566a1eda40": {
+      "type": "about-jobs-shops",
+      "blocks": {
+        "92465f36-898a-4ad4-aec6-908272efc86f": {
+          "type": "links_in_img",
+          "settings": {
+            "link_img": "shopify:\/\/shop_images\/Screenshot_2021-09-20_at_14.04.34_2x_6988e2ce-9460-4fc4-b7ac-6210177e9a2e.png",
+            "link_heading": "We zoeken jou!",
+            "link_text": "Alle jobs",
+            "link_url": "shopify:\/\/pages\/jobs"
+          }
+        },
+        "0e7472fe-3c20-40de-bb15-d0172eab5e3e": {
+          "type": "links_in_img",
+          "settings": {
+            "link_img": "shopify:\/\/shop_images\/hero_img.png",
+            "link_heading": "Winkelpunten",
+            "link_text": "Zoek Cantata winkels",
+            "link_url": "shopify:\/\/pages\/winkels"
+          }
+        }
+      },
+      "block_order": [
+        "92465f36-898a-4ad4-aec6-908272efc86f",
+        "0e7472fe-3c20-40de-bb15-d0172eab5e3e"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "16342908747a1ab997",
+    "163429310107f8d2c2",
+    "163429485630472be7",
+    "16353171566a1eda40"
+  ]
+}
