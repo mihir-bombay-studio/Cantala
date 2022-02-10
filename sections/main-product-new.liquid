@@ -512,7 +512,7 @@
                 	{% if forloop.first %}
               			<div class="box-selector-wrapper">
                     {% endif %}
-                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape }}">{% include "icon-weight" %}<span class="box-title">{% if request.locale.iso_code == "nl" %}{{ value | escape | replace: ",","." | times: 1000 | replace: ".0" }} GRAM{% elsif request.locale.iso_code == "fr" %}{{ value | escape }}{% endif %}</span><span class="box-price money" data-product-id="{{ product.id }}">{{ product.price | money }}</span><span class="discount">{% if forloop.index == 2 %}5% discount on kilo price{% elsif forloop.index == 3 %}10% discount on kilo price{% endif %}</span></div>
+                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape }}">{% include "icon-weight" %}<span class="box-title">{% if request.locale.iso_code == "nl" %}{{ value | escape | replace: ",","." | times: 1000 | replace: ".0" }} GRAM{% elsif request.locale.iso_code == "fr" %}{{ value | escape }}{% endif %}</span><span class="box-price">{{ product.price | money }}</span><span class="discount">{% if forloop.index == 2 %}5% discount on kilo price{% elsif forloop.index == 3 %}10% discount on kilo price{% endif %}</span></div>
                           
                 	{% if forloop.last %}
                 	</div>
@@ -1156,7 +1156,7 @@ then close all select boxes:*/
   <div class="container flex-box justify-between align-center">
     <div>
       <h2 class="default-h2">{{ product.title | truncatewords: 12, "..." }}</h2>
-      <p class="default-text"><span class="variant-name"></span> - <span class="variant-price money" data-product-id="{{ product.id }}">{{product.selected_or_first_available_variant.price | money}}</span></p>
+      <p class="default-text"><span class="variant-name"></span> - <span class="variant-price">{{product.selected_or_first_available_variant.price | money}}</span></p>
     </div>
     <div>
     <button type="submit" class="btn" name="commit" id="popupaddtocart" data-value="{{ product.selected_or_first_available_variant.id }}" aria-label="Inschrijven">
