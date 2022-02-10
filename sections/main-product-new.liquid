@@ -557,7 +557,7 @@
                   data-price="{{ variant.price | money_without_trailing_zeros }}">
             {{ variant.title }}
           </option>
-          <span class="money {{ variant.title }}" data-variant-id="{{ variant.id }}">{{ variant.price | money_without_trailing_zeros }}</span>
+          <span class="money" data-variant-id="{{ variant.id }}">{{ variant.price | money }}</span>
           {% endfor %}
         </select>
         
