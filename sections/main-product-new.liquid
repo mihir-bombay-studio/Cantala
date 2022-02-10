@@ -490,7 +490,7 @@
             <h1 class="product-title">{{ product.title | escape  }}</h1>
           </div>
           <div class="product-col">
-            <span class="product-price money" data-product-id="{{ product.id }}">{{ product.price | money  }}</span>
+            <span class="product-price">{{ product.price | money  }}</span>
           </div>
         </div>
         
@@ -1177,7 +1177,7 @@ then close all select boxes:*/
   <div class="container flex-box justify-between align-center">
     <div>
       <h2 class="default-h2">{{ product.title | truncatewords: 12, "..." }}</h2>
-      <p class="default-text"><span class="variant-name"></span> - <span class="variant-price money" data-variant-id="{{ product.selected_or_first_available_variant.id }}">{{product.selected_or_first_available_variant.price | money}}</span></p>
+      <p class="default-text"><span class="variant-name"></span> - <span class="variant-price">{{product.selected_or_first_available_variant.price | money}}</span></p>
     </div>
     <div>
     <button type="submit" class="btn" name="commit" id="popupaddtocart" data-value="{{ product.selected_or_first_available_variant.id }}" aria-label="Inschrijven">
