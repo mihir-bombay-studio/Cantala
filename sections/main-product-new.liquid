@@ -539,6 +539,10 @@
         </div>
         {%- endunless -%}
         
+      </div>
+
+      <div class="product-details">
+        
         <select name="id" id="ProductSelect" class="product-single__variants money no-disp">
           {% for variant in product.variants %}                  
           <option class="money" {% if variant == product.selected_or_first_available_variant %}
@@ -556,9 +560,6 @@
           {% endfor %}
         </select>
         
-      </div>
-
-      <div class="product-details">
         <div class="flex-box">
           <div class="m-row grouped">
             <div class="qty-wrapper" data-quantity="1">
