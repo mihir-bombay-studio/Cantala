@@ -545,13 +545,13 @@
         
         <select name="id" id="ProductSelect" class="product-single__variants no-disp">
           {% for variant in product.variants %}                  
-          <option {% if variant == product.selected_or_first_available_variant %}
+          <option class="money" {% if variant == product.selected_or_first_available_variant %}
                   selected="selected" {% endif %}
                   data-sku="{{ variant.sku }}"
                   data-avaliable="{% if variant.available %}yes{% else %}no{% endif %}"
                   data-sell-out-of-stock="{{ variant.inventory_policy }}"
                   data-quantity="{{ variant.inventory_quantity }}"
-                  data-variant-id="{{ variant.id }}"
+                  value="{{ variant.id }}"
                   variant-name="{{ variant.title }}"
                   data-compare="{{ variant.compare_at_price | money_without_trailing_zeros }}"
                   data-price="{{ variant.price | money_without_trailing_zeros }}">
