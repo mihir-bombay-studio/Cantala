@@ -780,15 +780,7 @@
         
         console.log(string);
         
-        $("#ProductSelect").each(function() {
-          var variantSelected;
-          var updatedPrice;
-          if($(this).attr("variant-name") === string) {
-			updatedPrice = $(this).text();
-            $(this).find('.box-price').text(updatedPrice);
-          }
-        });
-//         $(this).find('.box-price').text("€"+parseFloat((w.price/100).toFixed(2)));
+        $(this).find('.box-price').text("€"+parseFloat((w.price/100).toFixed(2)));
       });
       
         var string2 = "";
