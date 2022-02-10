@@ -551,13 +551,12 @@
                   data-avaliable="{% if variant.available %}yes{% else %}no{% endif %}"
                   data-sell-out-of-stock="{{ variant.inventory_policy }}"
                   data-quantity="{{ variant.inventory_quantity }}"
-                  value="{{ variant.id }}"
+                  data-variant-id="{{ variant.id }}"
                   variant-name="{{ variant.title }}"
                   data-compare="{{ variant.compare_at_price | money_without_trailing_zeros }}"
                   data-price="{{ variant.price | money_without_trailing_zeros }}">
             {{ variant.title }}
           </option>
-          <span class="money" data-variant-id="{{ variant.id }}">{{ variant.price | money }}</span>
           {% endfor %}
         </select>
         
