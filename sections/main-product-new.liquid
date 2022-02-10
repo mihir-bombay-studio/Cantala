@@ -749,7 +749,8 @@
   function refreshRates() {
     if($('#product-json').length > 0) {
       var string = "";
-      var isCustomPricing = {% if customer and customer.tags contains "wholesale" %}true{% endif %}
+      var isCustomPricing = {% if customer and customer.tags contains "wholesale" %}true{% endif %};
+      console.log("isCustomPricing: "+isCustomPricing);
       $(".option-wrapper .box-selector").each(function(index){
         string = "";
         if(string == "") {
@@ -776,7 +777,18 @@
         var w = x.find(item => {
           return item.public_title === string;
         });
-        $(this).find('.box-price').text("€"+parseFloat((w.price/100).toFixed(2)));
+        
+        console.log(string);
+        
+        $("#ProductSelect").each(function() {
+          var variantSelected;
+          var updatedPrice;
+          if($(this).attr("variant-name") === string) {
+			updatedPrice = $(this).text();
+            $(this).find('.box-price').text(updatedPrice);
+          }
+        });
+//         $(this).find('.box-price').text("€"+parseFloat((w.price/100).toFixed(2)));
       });
       
         var string2 = "";
