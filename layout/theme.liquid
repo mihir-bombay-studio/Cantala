@@ -46,6 +46,8 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {% include 'buddha-megamenu' %}
   {{ content_for_header }}
+    
+    {%- render 'bold-pr' -%}
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'medium'
