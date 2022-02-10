@@ -556,8 +556,8 @@
                   data-compare="{{ variant.compare_at_price | money_without_trailing_zeros }}"
                   data-price="{{ variant.price | money_without_trailing_zeros }}">
             {{ variant.title }}
-            <span class="money {{ variant.title }}" data-variant-id="{{ variant.id }}">{{ variant.price | money_without_trailing_zeros }}</span>
           </option>
+          <span class="money {{ variant.title }}" data-variant-id="{{ variant.id }}">{{ variant.price | money_without_trailing_zeros }}</span>
           {% endfor %}
         </select>
         
