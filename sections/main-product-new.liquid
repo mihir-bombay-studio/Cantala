@@ -653,7 +653,6 @@
       var w = x.find(item => {
         return item.title === string3;
       });
-
       var variantId = w.id;
       var availability = w.available;
       var quantAvailable = w.inventory_quantity;
@@ -794,7 +793,7 @@
         }
         var x = JSON.parse($('#product-json').html());
         var w = x.find(item => {
-          return item.public_title === string;
+          return item.title === string;
         });
         $(this).find('.box-price').text("€"+parseFloat((w.price/100).toFixed(2)));
       });
