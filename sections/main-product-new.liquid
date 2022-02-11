@@ -512,7 +512,7 @@
                 	{% if forloop.first %}
               			<div class="box-selector-wrapper">
                     {% endif %}
-                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape }}">{% include "icon-weight" %}<span class="box-title">{% if request.locale.iso_code == "nl" %}{{ value | escape | replace: ",","." | times: 1000 | replace: ".0" }} GRAM{% elsif request.locale.iso_code == "fr" %}{{ value | escape }}{% endif %}</span><span class="box-price money">{{ product.price | money }}</span><span class="discount">{% if forloop.index == 2 %}5% discount on kilo price{% elsif forloop.index == 3 %}10% discount on kilo price{% endif %}</span></div>
+                          <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape }}">{% include "icon-weight" %}<span class="box-title">{% if request.locale.iso_code == "nl" %}{{ value | escape | replace: ",","." | times: 1000 | replace: ".0" }} GRAM{% elsif request.locale.iso_code == "fr" %}{{ value | escape }}{% endif %}</span><span class="box-price">{{ product.price | money }}</span><span class="discount">{% if forloop.index == 2 %}5% discount on kilo price{% elsif forloop.index == 3 %}10% discount on kilo price{% endif %}</span></div>
                           
                 	{% if forloop.last %}
                 	</div>
@@ -539,27 +539,48 @@
         </div>
         {%- endunless -%}
         
+        {% if product.has_only_default_variant %}
+          <div class="variant-options-wrapper no-disp">
+            <variant-radios class="no-js-hidden">
+              <div class="fieldset-wrapper style-scrollbar">
+                {%- for option in product.options_with_values -%}
+                <div class="option-wrapper">
+                <div class="option-name">{{option.name}}</div>
+                  {%- for value in option.values -%}
+                    {% if option.name == "Gewicht" or option.name == "Poids" %}
+                      {% if forloop.first %}
+                          <div class="box-selector-wrapper">
+                      {% endif %}
+                            <div class="selector box-selector {% if option.selected_value == value %}selected{% endif %}" data-val="{{ value | escape }}">{% include "icon-weight" %}<span class="box-title">{% if request.locale.iso_code == "nl" %}{{ value | escape | replace: ",","." | times: 1000 | replace: ".0" }} GRAM{% elsif request.locale.iso_code == "fr" %}{{ value | escape }}{% endif %}</span><span class="box-price">{{ product.price | money }}</span><span class="discount">{% if forloop.index == 2 %}5% discount on kilo price{% elsif forloop.index == 3 %}10% discount on kilo price{% endif %}</span></div>
+
+                      {% if forloop.last %}
+                      </div>
+                      {% endif %}
+                    {% else %}
+                      {% if forloop.first %}
+                      <div class="custom-select">
+                      <select class="selector drop-selector selected" name="{{option.name}}" id="selector-{{ forloop.index }}">
+                        {% endif %}
+                        <option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value | escape }}</option>
+                        {% if forloop.last %}
+                      </select>
+                      </div>
+                      {% endif %}
+                    {% endif %}
+                  {%- endfor -%}
+                </div>
+                {%- endfor -%}
+              </div>
+              <script id="product-json" type="application/json">
+                {{ product.variants | json }}
+              </script>
+            </variant-radios>
+          </div>
+        {% endif %}
+        
       </div>
 
       <div class="product-details">
-        
-        <select name="id" id="ProductSelect" class="product-single__variants no-disp">
-          {% for variant in product.variants %}                  
-          <option class="money" {% if variant == product.selected_or_first_available_variant %}
-                  selected="selected" {% endif %}
-                  data-sku="{{ variant.sku }}"
-                  data-avaliable="{% if variant.available %}yes{% else %}no{% endif %}"
-                  data-sell-out-of-stock="{{ variant.inventory_policy }}"
-                  data-quantity="{{ variant.inventory_quantity }}"
-                  data-variant-id="{{ variant.id }}"
-                  variant-name="{{ variant.title }}"
-                  data-compare="{{ variant.compare_at_price | money_without_trailing_zeros }}"
-                  data-price="{{ variant.price | money_without_trailing_zeros }}">
-            {{ variant.title }}
-          </option>
-          {% endfor %}
-        </select>
-        
         <div class="flex-box">
           <div class="m-row grouped">
             <div class="qty-wrapper" data-quantity="1">
@@ -630,7 +651,7 @@
       console.log(string3);
       var x = JSON.parse($('#product-json').html());
       var w = x.find(item => {
-        return item.public_title === string3;
+        return item.title === string3;
       });
 
       var variantId = w.id;
@@ -749,8 +770,6 @@
   function refreshRates() {
     if($('#product-json').length > 0) {
       var string = "";
-      var isCustomPricing = {% if customer and customer.tags contains "wholesale" %}true{% endif %};
-      console.log("isCustomPricing: "+isCustomPricing);
       $(".option-wrapper .box-selector").each(function(index){
         string = "";
         if(string == "") {
@@ -777,7 +796,6 @@
         var w = x.find(item => {
           return item.public_title === string;
         });
-        
         $(this).find('.box-price').text("€"+parseFloat((w.price/100).toFixed(2)));
       });
       
