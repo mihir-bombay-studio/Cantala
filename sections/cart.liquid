@@ -588,7 +588,7 @@
         console.log(string);
         var x = JSON.parse($('#product-json').html());
         var w = x.find(item => {
-          return item.public_title === string;
+          return item.title === string;
         });
         $(this).data('value',w.id);
       }
