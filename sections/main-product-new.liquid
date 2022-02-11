@@ -826,7 +826,7 @@
         });
         var x = JSON.parse($('#product-json').html());
         var w = x.find(item => {
-          return item.public_title === string2;
+          return item.title === string2;
         });
         $(".product-col .product-price").text("€"+parseFloat((w.price/100).toFixed(2)));
       $(".variant-name").text(title_string);
