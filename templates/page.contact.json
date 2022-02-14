@@ -5,6 +5,8 @@
       "settings": {
         "heading": "Contacteer ons",
         "image": "shopify:\/\/shop_images\/hero_img.png",
+        "home_breadcrum": "Home",
+        "contact_breadcrum": "Contact",
         "contact_name_placeholder": "Naam*",
         "contact_email_placeholder": "E-mailadres*",
         "contact_message_placeholder": "Jouw boodschap",
@@ -23,7 +25,7 @@
             "add_ln_3": "Turnhoutsebaan 5, B-2110 Wijnegem",
             "phone": "+32 (0)3 353 65 60.",
             "days": "Maandag - zaterdag:",
-            "days_time": "10.00 tot 21.00 uur",
+            "days_time": "10.00 tot 20.00 uur",
             "weekend": "Vrijdag:",
             "weekend_time": "10.00 tot 21.00 uur"
           }
