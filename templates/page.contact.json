@@ -90,8 +90,8 @@
           "type": "address",
           "settings": {
             "store_name": "Belle-Île Liege",
-            "add_ln_1": "",
-            "add_ln_2": "Quai des vennes 1",
+            "add_ln_1": "Quai des vennes 1",
+            "add_ln_2": "B-4020 Luik",
             "add_ln_3": "",
             "phone": "",
             "days": "Maandag - zaterdag :",
