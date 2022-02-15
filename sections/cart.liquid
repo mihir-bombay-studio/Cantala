@@ -563,7 +563,7 @@
   $(document).ready(function(){
     
     $('.cart-remarks').on('input',function(e){
-      $('#checkout-btn').attr("href","/checkout?note="+$(this).val())
+      $('#checkout-btn').attr("href","{% if request.locale.root_url != "/" %}{{ request.locale.root_url }}{% endif %}/checkout?note="+$(this).val())
     });
     
     $(".card-add-cart, #AddToCart, #popupaddtocart").click(function(){
