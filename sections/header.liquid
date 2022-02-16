@@ -34,7 +34,7 @@
           <a href="#" class="flex-box align-center"><span class="main-lang">{{ request.locale.iso_code | upcase }}</span> <span class="down-chevron">{% include 'icon-down-chevron-brown' %}</span></a>
           <ul class="header-nav-list-sub lang-selector">            
                                   {% for locale in shop.published_locales %}
-            						<script>console.log('{{ locale | json }}');</script>
+            						<script>console.log('{{ locale.root_url }}');</script>
                                   {% unless request.locale.iso_code == locale.iso_code  %}
                                     <li>
                                         <a href="{{ shop.url }}{{locale.root_url}}">{{ locale.iso_code | upcase }}</a>
